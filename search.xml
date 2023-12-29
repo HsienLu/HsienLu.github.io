@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>在html使用ejs的方法</title>
-    <url>/2023/12/28/2023-12-28_%E5%9C%A8html%E4%BD%BF%E7%94%A8ejs%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+    <title>部落格介紹</title>
+    <url>/2023/12/29/20231228-first/</url>
+    <content><![CDATA[<h2 id="關於我"><a href="#關於我" class="headerlink" title="關於我"></a>關於我</h2><p>一位自稱前端工程師的全端工程師，平常喜歡看看技術文章，順便做做筆記，有時候也會寫一些奇怪的東西，歡迎來到我的部落格。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>在 html 使用 ejs 的方法</title>
+    <url>/2023/12/29/use-ejs-in-html/</url>
     <content><![CDATA[<h3 id="ejs-常用簡單語法介紹"><a href="#ejs-常用簡單語法介紹" class="headerlink" title="ejs 常用簡單語法介紹"></a>ejs 常用簡單語法介紹</h3><p>1.撰寫程式邏輯</p>
 <figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">&lt;% <span class="string">&quot;這裡寫程式邏輯&quot;</span> %&gt;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
 
 <p>2.傳遞參數</p>
 <figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">&lt;%= <span class="string">&quot;傳遞參數&quot;</span> %&gt;</span><br></pre></td></tr></table></figure>
 
 <p>3.傳遞 HTML 語法</p>
 <figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">&lt;%- <span class="string">&quot;傳遞HTML語法&quot;</span> %&gt;</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
 
 <p>&lt;%&#x3D; %&gt; 和 &lt;%- %&gt;差別<br>“&#x3D;”:會完整傳遞<br>“-“:它看得懂 HTML 語法</p>
 <p>4.匯入 ejs:有兩個參數<br>第一個參數是路徑<br>第二個參數是要傳進去的變數要用物件包起來，有點像 React 的 Props</p>
@@ -26,46 +32,77 @@
 
 <p>3.完成結果如下<br><img src="https://i.imgur.com/B91Jqx1.png"></p>
 ]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
       <tags>
         <tag>ejs</tag>
       </tags>
   </entry>
   <entry>
-    <title>json-server introduction</title>
-    <url>/2023/12/28/json-server%20introduction-introduction/</url>
-    <content><![CDATA[<h2 id="基本規則"><a href="#基本規則" class="headerlink" title="基本規則"></a>基本規則</h2><p>1.最外層是物件&#x3D;&#x3D;&gt;類比資料庫</p>
+    <title>window&amp;body</title>
+    <url>/2023/12/29/window-body/</url>
+    <content><![CDATA[<h2 id="文字版"><a href="#文字版" class="headerlink" title="文字版"></a>文字版</h2><p>在 JavaScript 中，window 和 document.body 是兩個重要的全局物件，它們代表瀏覽器視窗和網頁文件的主體部分。讓我們來看一下它們之間的差異：</p>
 <span id="more"></span>
 
-<p>2.每個資料表的最外層要是陣列;也可以放物件，但是只能存單筆資料</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;users&quot;</span>:[&#123;&#125;,&#123;&#125;,&#123;&#125;]</span><br><span class="line">    <span class="comment">//^^^^類比資料表名稱</span></span><br><span class="line">    <span class="string">&quot;teams&quot;</span>:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="網路請求規則"><a href="#網路請求規則" class="headerlink" title="網路請求規則"></a>網路請求規則</h2><p>1.傳資料一定要是 json 格式</p>
-<h3 id="post-新增資料"><a href="#post-新增資料" class="headerlink" title="post 新增資料"></a>post 新增資料</h3><p>1.新增資料，json-sever 會自動產生 ID</p>
-<h3 id="get-取得資料"><a href="#get-取得資料" class="headerlink" title="get 取得資料"></a>get 取得資料</h3><h3 id="patch-put-更新資料"><a href="#patch-put-更新資料" class="headerlink" title="patch,put 更新資料"></a>patch,put 更新資料</h3><h3 id="delete-刪除資料"><a href="#delete-刪除資料" class="headerlink" title="delete 刪除資料"></a>delete 刪除資料</h3><h2 id="篩選功能"><a href="#篩選功能" class="headerlink" title="篩選功能"></a>篩選功能</h2><h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><p>1.基本格式:<br>?屬性&#x3D;屬性值&amp;屬性&#x3D;屬性值</p>
-<p>2.可以用&amp;接不同的屬性和屬性值</p>
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">?name=a產品&amp;price=<span class="number">400</span></span><br></pre></td></tr></table></figure>
-
-<p>3.也可以用&amp;接相同屬性但是不同屬性值</p>
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">?id=<span class="number">1</span>&amp;id=<span class="number">2</span></span><br></pre></td></tr></table></figure>
-
-<p>4.用.可以讀深層物件值</p>
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">?language.<span class="property">en</span>-us=product</span><br></pre></td></tr></table></figure>
-
-<p>5.?q&#x3D;屬性值 為全域搜尋</p>
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">?q=產品</span><br></pre></td></tr></table></figure>
-
-<h3 id="分頁"><a href="#分頁" class="headerlink" title="分頁"></a>分頁</h3><p>1.基本格式:<br>?_page&#x3D;A&amp;_limit&#x3D;B<br>第 A 頁，一頁有 B 筆</p>
-<h3 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h3><p>?_sort&#x3D;屬性&amp;_order&#x3D;asc<br>依照屬性作 ASC(小&#x3D;&gt;大)排列</p>
-<h3 id="Operators"><a href="#Operators" class="headerlink" title="Operators"></a>Operators</h3><p>?屬性_gte&#x3D;屬性值&amp;屬性_lte&#x3D;屬性值</p>
-<h2 id="關連"><a href="#關連" class="headerlink" title="關連"></a>關連</h2><h3 id="基本格式"><a href="#基本格式" class="headerlink" title="基本格式"></a>基本格式</h3><p>?_expand&#x3D;屬性</p>
-<h3 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項</h3><p>對應的資料表要加 s</p>
-<h2 id="嵌套資源"><a href="#嵌套資源" class="headerlink" title="嵌套資源"></a>嵌套資源</h2><h3 id="GET-posts-1-comments"><a href="#GET-posts-1-comments" class="headerlink" title="GET &#x2F;posts&#x2F;1&#x2F;comments"></a>GET &#x2F;posts&#x2F;1&#x2F;comments</h3><p>&#x2F;posts&#x2F;1&#x2F;comments 表示一個 RESTful API 的端點，其中：</p>
-<p>&#x2F;posts 是主要資源，通常代表帖子或文章。<br>1 是一個特定的帖子的識別號（通常是帖子的唯一標識符）。<br>&#x2F;comments 是該帖子的子資源，代表該帖子的評論。</p>
-<h3 id="POST-posts-1-comments"><a href="#POST-posts-1-comments" class="headerlink" title="POST &#x2F;posts&#x2F;1&#x2F;comments"></a>POST &#x2F;posts&#x2F;1&#x2F;comments</h3><p>POST &#x2F;posts&#x2F;1&#x2F;comments 表示一個 RESTful API 的端點，用於在特定帖子下創建新的評論。讓我解釋一下：</p>
-<p>&#x2F;posts 是主要資源，代表帖子或文章。<br>1 是一個特定的帖子的識別號，用於識別要對其發布評論的帖子。<br>&#x2F;comments 是該帖子的子資源，代表該帖子的評論。<br>使用 POST 請求表示你想在這個特定帖子下創建新的評論。</p>
-<h4 id="也會自動新增-postId，但是注意會變為字串"><a href="#也會自動新增-postId，但是注意會變為字串" class="headerlink" title="也會自動新增 postId，但是注意會變為字串"></a>也會自動新增 postId，但是注意會變為字串</h4>]]></content>
+<ol>
+<li>window：</li>
+</ol>
+<ul>
+<li>window 是瀏覽器中的全局物件，代表整個瀏覽器視窗。</li>
+<li>它是所有全局變數和函式的最高級別的容器，可以透過它來訪問和操作全局範圍的變數和函式。</li>
+<li>它提供了許多瀏覽器相關的屬性和方法，比如 window.location 可以用來獲取當前網址，window.alert() 可以用來顯示警告對話框，等等。</li>
+</ul>
+<ol start="2">
+<li>document.body：</li>
+</ol>
+<ul>
+<li>document.body 是 document 物件的一部分，代表 HTML 文件的主體部分。</li>
+<li>它表示網頁中的 <body> 元素，即網頁中的主要內容區域。 *透過 document.body 可以訪問和操作網頁主體中的元素，例如透過 document.body.appendChild(element) 可以將元素添加到主體中。</li>
+</ul>
+<p>總結來說，window 是瀏覽器視窗的全局物件，而 document.body 是 HTML 文件的主體部分。它們都提供了許多功能來處理瀏覽器和網頁的相關操作。在網頁開發中，你會經常使用這兩個物件來操作網頁和處理事件。</p>
+<h2 id="表格整理版"><a href="#表格整理版" class="headerlink" title="表格整理版"></a>表格整理版</h2><p>當前瀏覽器視窗和網頁文件主體的差異如下：</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th><code>window</code></th>
+<th><code>document.body</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>定義位置</td>
+<td>全局範圍（在所有地方可訪問）</td>
+<td><code>document</code> 物件的一部分（HTML 文件內）</td>
+</tr>
+<tr>
+<td>代表的物件</td>
+<td>瀏覽器視窗</td>
+<td>HTML 文件的主體部分（<code>&lt;body&gt;</code> 元素）</td>
+</tr>
+<tr>
+<td>功能</td>
+<td>提供瀏覽器相關的屬性和方法</td>
+<td>提供操作網頁主體內容的屬性和方法</td>
+</tr>
+<tr>
+<td>例子</td>
+<td><code>window.location</code></td>
+<td><code>document.body.appendChild(element)</code></td>
+</tr>
+<tr>
+<td>使用場景</td>
+<td>瀏覽器操作、全局變數和函式</td>
+<td>操作網頁內容、處理網頁事件</td>
+</tr>
+</tbody></table>
+<p><code>window</code> 物件是瀏覽器中的全局物件，它提供了許多瀏覽器相關的屬性和方法，可以在任何地方訪問。而 <code>document.body</code> 則是 <code>document</code> 物件的一部分，代表 HTML 文件的主體部分，主要用於操作網頁主體內容，例如添加元素或處理事件。在網頁開發中，你會經常使用這兩個物件來處理瀏覽器和網頁的相關操作。</p>
+]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
       <tags>
-        <tag>json-server</tag>
+        <tag>html</tag>
       </tags>
   </entry>
 </search>

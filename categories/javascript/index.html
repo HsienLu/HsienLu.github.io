@@ -20,20 +20,18 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="基本規則1.最外層是物件&#x3D;&#x3D;&gt;類比資料庫">
-<meta property="og:type" content="article">
-<meta property="og:title" content="json-server introduction">
-<meta property="og:url" content="http://example.com/2023/12/28/json-server%20introduction-introduction/index.html">
+  <meta name="description" content="純放一些個人筆記分享">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HsienLu&#39;s Blog">
+<meta property="og:url" content="http://example.com/categories/javascript/index.html">
 <meta property="og:site_name" content="HsienLu&#39;s Blog">
-<meta property="og:description" content="基本規則1.最外層是物件&#x3D;&#x3D;&gt;類比資料庫">
+<meta property="og:description" content="純放一些個人筆記分享">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-12-28T16:30:24.000Z">
-<meta property="article:modified_time" content="2023-12-29T03:49:32.494Z">
 <meta property="article:author" content="HsienLu">
-<meta property="article:tag" content="json-server">
+<meta property="article:tag" content="前端,後端,全端,網頁,技術,心得,筆記">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2023/12/28/json-server%20introduction-introduction/">
+<link rel="canonical" href="http://example.com/categories/javascript/">
 
 
 <script id="page-configurations">
@@ -41,12 +39,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : true,
+    isPost : false,
     lang   : 'en'
   };
 </script>
 
-  <title>json-server introduction | HsienLu's Blog</title>
+  <title>Category: javascript | HsienLu's Blog</title>
   
 
 
@@ -127,17 +125,12 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">2</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">2</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -190,109 +183,51 @@
         <div class="content-wrap">
           
 
-          <div class="content post posts-expand">
+          <div class="content category">
             
 
-    
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/28/json-server%20introduction-introduction/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/136676022.jpg">
-      <meta itemprop="name" content="HsienLu">
-      <meta itemprop="description" content="純放一些個人筆記分享">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="HsienLu's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          json-server introduction
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2023-12-29 00:30:24 / Modified: 11:49:32" itemprop="dateCreated datePublished" datetime="2023-12-29T00:30:24+08:00">2023-12-29</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+  
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        <h2 class="collection-header">javascript
+          <small>Category</small>
+        </h2>
+      </div>
 
       
-        <h2 id="基本規則"><a href="#基本規則" class="headerlink" title="基本規則"></a>基本規則</h2><p>1.最外層是物件&#x3D;&#x3D;&gt;類比資料庫</p>
-<span id="more"></span>
-
-<p>2.每個資料表的最外層要是陣列;也可以放物件，但是只能存單筆資料</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;users&quot;</span>:[&#123;&#125;,&#123;&#125;,&#123;&#125;]</span><br><span class="line">    <span class="comment">//^^^^類比資料表名稱</span></span><br><span class="line">    <span class="string">&quot;teams&quot;</span>:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="網路請求規則"><a href="#網路請求規則" class="headerlink" title="網路請求規則"></a>網路請求規則</h2><p>1.傳資料一定要是 json 格式</p>
-<h3 id="post-新增資料"><a href="#post-新增資料" class="headerlink" title="post 新增資料"></a>post 新增資料</h3><p>1.新增資料，json-sever 會自動產生 ID</p>
-<h3 id="get-取得資料"><a href="#get-取得資料" class="headerlink" title="get 取得資料"></a>get 取得資料</h3><h3 id="patch-put-更新資料"><a href="#patch-put-更新資料" class="headerlink" title="patch,put 更新資料"></a>patch,put 更新資料</h3><h3 id="delete-刪除資料"><a href="#delete-刪除資料" class="headerlink" title="delete 刪除資料"></a>delete 刪除資料</h3><h2 id="篩選功能"><a href="#篩選功能" class="headerlink" title="篩選功能"></a>篩選功能</h2><h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><p>1.基本格式:<br>?屬性&#x3D;屬性值&amp;屬性&#x3D;屬性值</p>
-<p>2.可以用&amp;接不同的屬性和屬性值</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?name=a產品&amp;price=<span class="number">400</span></span><br></pre></td></tr></table></figure>
-
-<p>3.也可以用&amp;接相同屬性但是不同屬性值</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=<span class="number">1</span>&amp;id=<span class="number">2</span></span><br></pre></td></tr></table></figure>
-
-<p>4.用.可以讀深層物件值</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?language.<span class="property">en</span>-us=product</span><br></pre></td></tr></table></figure>
-
-<p>5.?q&#x3D;屬性值 為全域搜尋</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?q=產品</span><br></pre></td></tr></table></figure>
-
-<h3 id="分頁"><a href="#分頁" class="headerlink" title="分頁"></a>分頁</h3><p>1.基本格式:<br>?_page&#x3D;A&amp;_limit&#x3D;B<br>第 A 頁，一頁有 B 筆</p>
-<h3 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h3><p>?_sort&#x3D;屬性&amp;_order&#x3D;asc<br>依照屬性作 ASC(小&#x3D;&gt;大)排列</p>
-<h3 id="Operators"><a href="#Operators" class="headerlink" title="Operators"></a>Operators</h3><p>?屬性_gte&#x3D;屬性值&amp;屬性_lte&#x3D;屬性值</p>
-<h2 id="關連"><a href="#關連" class="headerlink" title="關連"></a>關連</h2><h3 id="基本格式"><a href="#基本格式" class="headerlink" title="基本格式"></a>基本格式</h3><p>?_expand&#x3D;屬性</p>
-<h3 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項</h3><p>對應的資料表要加 s</p>
-<h2 id="嵌套資源"><a href="#嵌套資源" class="headerlink" title="嵌套資源"></a>嵌套資源</h2><h3 id="GET-posts-1-comments"><a href="#GET-posts-1-comments" class="headerlink" title="GET &#x2F;posts&#x2F;1&#x2F;comments"></a>GET &#x2F;posts&#x2F;1&#x2F;comments</h3><p>&#x2F;posts&#x2F;1&#x2F;comments 表示一個 RESTful API 的端點，其中：</p>
-<p>&#x2F;posts 是主要資源，通常代表帖子或文章。<br>1 是一個特定的帖子的識別號（通常是帖子的唯一標識符）。<br>&#x2F;comments 是該帖子的子資源，代表該帖子的評論。</p>
-<h3 id="POST-posts-1-comments"><a href="#POST-posts-1-comments" class="headerlink" title="POST &#x2F;posts&#x2F;1&#x2F;comments"></a>POST &#x2F;posts&#x2F;1&#x2F;comments</h3><p>POST &#x2F;posts&#x2F;1&#x2F;comments 表示一個 RESTful API 的端點，用於在特定帖子下創建新的評論。讓我解釋一下：</p>
-<p>&#x2F;posts 是主要資源，代表帖子或文章。<br>1 是一個特定的帖子的識別號，用於識別要對其發布評論的帖子。<br>&#x2F;comments 是該帖子的子資源，代表該帖子的評論。<br>使用 POST 請求表示你想在這個特定帖子下創建新的評論。</p>
-<h4 id="也會自動新增-postId，但是注意會變為字串"><a href="#也會自動新增-postId，但是注意會變為字串" class="headerlink" title="也會自動新增 postId，但是注意會變為字串"></a>也會自動新增 postId，但是注意會變為字串</h4>
+    <div class="collection-year">
+      <span class="collection-header">2023</span>
     </div>
 
-    
-    
-    
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/json-server/" rel="tag"># json-server</a>
-          </div>
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2023-12-29T14:10:43+08:00"
+              content="2023-12-29">
+          12-29
+        </time>
+      </div>
 
-        
+      <div class="post-title">
+          <a class="post-title-link" href="/2023/12/29/use-ejs-in-html/" itemprop="url">
+            <span itemprop="name">在 html 使用 ejs 的方法</span>
+          </a>
+      </div>
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2023/12/28/2023-12-28_%E5%9C%A8html%E4%BD%BF%E7%94%A8ejs%E7%9A%84%E6%96%B9%E6%B3%95/" rel="prev" title="在html使用ejs的方法">
-      <i class="fa fa-chevron-left"></i> 在html使用ejs的方法
-    </a></div>
-      <div class="post-nav-item"></div>
-    </div>
-      </footer>
-    
+    </header>
   </article>
+
+    </div>
+  </div>
   
   
+  
+
   
 
 
@@ -345,7 +280,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%A6%8F%E5%89%87"><span class="nav-number">1.</span> <span class="nav-text">基本規則</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B6%B2%E8%B7%AF%E8%AB%8B%E6%B1%82%E8%A6%8F%E5%89%87"><span class="nav-number">2.</span> <span class="nav-text">網路請求規則</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#post-%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99"><span class="nav-number">2.1.</span> <span class="nav-text">post 新增資料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#get-%E5%8F%96%E5%BE%97%E8%B3%87%E6%96%99"><span class="nav-number">2.2.</span> <span class="nav-text">get 取得資料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#patch-put-%E6%9B%B4%E6%96%B0%E8%B3%87%E6%96%99"><span class="nav-number">2.3.</span> <span class="nav-text">patch,put 更新資料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#delete-%E5%88%AA%E9%99%A4%E8%B3%87%E6%96%99"><span class="nav-number">2.4.</span> <span class="nav-text">delete 刪除資料</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AF%A9%E9%81%B8%E5%8A%9F%E8%83%BD"><span class="nav-number">3.</span> <span class="nav-text">篩選功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#filter"><span class="nav-number">3.1.</span> <span class="nav-text">filter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E9%A0%81"><span class="nav-number">3.2.</span> <span class="nav-text">分頁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort"><span class="nav-number">3.3.</span> <span class="nav-text">sort</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Operators"><span class="nav-number">3.4.</span> <span class="nav-text">Operators</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%9C%E9%80%A3"><span class="nav-number">4.</span> <span class="nav-text">關連</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A0%BC%E5%BC%8F"><span class="nav-number">4.1.</span> <span class="nav-text">基本格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85"><span class="nav-number">4.2.</span> <span class="nav-text">注意事項</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B5%8C%E5%A5%97%E8%B3%87%E6%BA%90"><span class="nav-number">5.</span> <span class="nav-text">嵌套資源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GET-posts-1-comments"><span class="nav-number">5.1.</span> <span class="nav-text">GET &#x2F;posts&#x2F;1&#x2F;comments</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#POST-posts-1-comments"><span class="nav-number">5.2.</span> <span class="nav-text">POST &#x2F;posts&#x2F;1&#x2F;comments</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B9%9F%E6%9C%83%E8%87%AA%E5%8B%95%E6%96%B0%E5%A2%9E-postId%EF%BC%8C%E4%BD%86%E6%98%AF%E6%B3%A8%E6%84%8F%E6%9C%83%E8%AE%8A%E7%82%BA%E5%AD%97%E4%B8%B2"><span class="nav-number">5.2.1.</span> <span class="nav-text">也會自動新增 postId，但是注意會變為字串</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -359,11 +293,16 @@
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">2</span>
+          <a href="/archives">
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
@@ -375,10 +314,13 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/HsienLu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;HsienLu" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/HsienLu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;HsienLu" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
       </span>
       <span class="links-of-author-item">
-        <a href="mailto:sjps946403@gmail.com" title="E-Mail → mailto:sjps946403@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+        <a href="mailto:sjps946403@gmail.com" title="E-Mail → mailto:sjps946403@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.cakeresume.com/7cc5eb" title="cakerRes → https:&#x2F;&#x2F;www.cakeresume.com&#x2F;7cc5eb" rel="noopener" target="_blank"><i class="fa fa-id-card fa-fw"></i></a>
       </span>
   </div>
 
