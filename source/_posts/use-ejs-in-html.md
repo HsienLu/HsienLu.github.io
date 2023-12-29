@@ -1,7 +1,8 @@
 ---
-title: 在html使用ejs的方法
-date: 2023-12-28 17:46:05
+title: 在 html 使用 ejs 的方法
+date: 2023-12-29 14:10:43
 tags: ejs
+categories: javascript
 ---
 
 ### ejs 常用簡單語法介紹
@@ -11,6 +12,8 @@ tags: ejs
 ```jsx
 <% "這裡寫程式邏輯" %>
 ```
+
+<!-- more -->
 
 2.傳遞參數
 
@@ -23,8 +26,6 @@ tags: ejs
 ```jsx
 <%- "傳遞HTML語法" %>
 ```
-
-<!-- more -->
 
 <%= %> 和 <%- %>差別
 "=":會完整傳遞
