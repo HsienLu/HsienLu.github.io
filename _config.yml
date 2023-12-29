@@ -103,5 +103,5 @@ theme: next
 deploy:
   type: git
   repo: git@github.com:HsienLu/Hsienlu.github.io.git
-  branch: main
+  branch: gh-pages
   message: "ithelpt"
