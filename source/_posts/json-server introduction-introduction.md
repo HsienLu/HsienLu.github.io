@@ -1,7 +1,7 @@
 ---
 title: json-server introduction
 date: 2023-12-29 00:30:24
-tags:
+tags: json-server
 ---
 
 ## 基本規則
