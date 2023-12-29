@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>在html使用ejs的方法</title>
+    <url>/2023/12/28/2023-12-28_%E5%9C%A8html%E4%BD%BF%E7%94%A8ejs%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h3 id="ejs-常用簡單語法介紹"><a href="#ejs-常用簡單語法介紹" class="headerlink" title="ejs 常用簡單語法介紹"></a>ejs 常用簡單語法介紹</h3><p>1.撰寫程式邏輯</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">&lt;% <span class="string">&quot;這裡寫程式邏輯&quot;</span> %&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2.傳遞參數</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">&lt;%= <span class="string">&quot;傳遞參數&quot;</span> %&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3.傳遞 HTML 語法</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">&lt;%- <span class="string">&quot;傳遞HTML語法&quot;</span> %&gt;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<p>&lt;%&#x3D; %&gt; 和 &lt;%- %&gt;差別<br>“&#x3D;”:會完整傳遞<br>“-“:它看得懂 HTML 語法</p>
+<p>4.匯入 ejs:有兩個參數<br>第一個參數是路徑<br>第二個參數是要傳進去的變數要用物件包起來，有點像 React 的 Props</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">&lt;%- <span class="title function_">include</span>(<span class="string">&quot;./layout/test&quot;</span>,&#123;element,id&#125;) %&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><p>1.ejs 模板</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="comment">//檔名:test.ejs</span></span><br><span class="line">&lt;h1&gt;hello world &lt;%= element %&gt;&lt;%= id %&gt;&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2.要寫的 html，只列 body</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">&lt;% <span class="keyword">let</span> name=[<span class="string">&quot;Robin&quot;</span>,<span class="string">&quot;Amy&quot;</span>,<span class="string">&quot;Ann&quot;</span>] %&gt;<span class="comment">//這裡是定義變數，未來可能會打API存在這</span></span><br><span class="line">&lt;% name.<span class="title function_">map</span>(<span class="function">(<span class="params">element,id</span>)=&gt;</span> &#123; %&gt;<span class="comment">//因為中間要塞這個可以轉譯HTML的語法，所以拆開來寫</span></span><br><span class="line">&lt;%- <span class="title function_">include</span>(<span class="string">&quot;./layout/test&quot;</span>,&#123;element,id&#125;) %&gt;<span class="comment">//匯入剛剛的ejs模板並帶入變數</span></span><br><span class="line">&lt;% &#125;); %&gt;<span class="comment">//因為中間要塞這個可以轉譯HTML的語法，所以拆開來寫</span></span><br></pre></td></tr></table></figure>
+
+<p>3.完成結果如下<br><img src="https://i.imgur.com/B91Jqx1.png"></p>
+]]></content>
+      <tags>
+        <tag>ejs</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>json-server introduction</title>
     <url>/2023/12/29/json-server%20introduction-introduction/</url>
     <content><![CDATA[<h2 id="基本規則"><a href="#基本規則" class="headerlink" title="基本規則"></a>基本規則</h2><p>1.最外層是物件&#x3D;&#x3D;&gt;類比資料庫</p>
@@ -36,36 +66,6 @@
 <h4 id="也會自動新增-postId，但是注意會變為字串"><a href="#也會自動新增-postId，但是注意會變為字串" class="headerlink" title="也會自動新增 postId，但是注意會變為字串"></a>也會自動新增 postId，但是注意會變為字串</h4>]]></content>
       <tags>
         <tag>json-server</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在html使用ejs的方法</title>
-    <url>/2023/12/28/2023-12-28_%E5%9C%A8html%E4%BD%BF%E7%94%A8ejs%E7%9A%84%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h3 id="ejs-常用簡單語法介紹"><a href="#ejs-常用簡單語法介紹" class="headerlink" title="ejs 常用簡單語法介紹"></a>ejs 常用簡單語法介紹</h3><p>1.撰寫程式邏輯</p>
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">&lt;% <span class="string">&quot;這裡寫程式邏輯&quot;</span> %&gt;</span><br></pre></td></tr></table></figure>
-
-<p>2.傳遞參數</p>
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">&lt;%= <span class="string">&quot;傳遞參數&quot;</span> %&gt;</span><br></pre></td></tr></table></figure>
-
-<p>3.傳遞 HTML 語法</p>
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">&lt;%- <span class="string">&quot;傳遞HTML語法&quot;</span> %&gt;</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<p>&lt;%&#x3D; %&gt; 和 &lt;%- %&gt;差別<br>“&#x3D;”:會完整傳遞<br>“-“:它看得懂 HTML 語法</p>
-<p>4.匯入 ejs:有兩個參數<br>第一個參數是路徑<br>第二個參數是要傳進去的變數要用物件包起來，有點像 React 的 Props</p>
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">&lt;%- <span class="title function_">include</span>(<span class="string">&quot;./layout/test&quot;</span>,&#123;element,id&#125;) %&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><p>1.ejs 模板</p>
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="comment">//檔名:test.ejs</span></span><br><span class="line">&lt;h1&gt;hello world &lt;%= element %&gt;&lt;%= id %&gt;&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
-
-<p>2.要寫的 html，只列 body</p>
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">&lt;% <span class="keyword">let</span> name=[<span class="string">&quot;Robin&quot;</span>,<span class="string">&quot;Amy&quot;</span>,<span class="string">&quot;Ann&quot;</span>] %&gt;<span class="comment">//這裡是定義變數，未來可能會打API存在這</span></span><br><span class="line">&lt;% name.<span class="title function_">map</span>(<span class="function">(<span class="params">element,id</span>)=&gt;</span> &#123; %&gt;<span class="comment">//因為中間要塞這個可以轉譯HTML的語法，所以拆開來寫</span></span><br><span class="line">&lt;%- <span class="title function_">include</span>(<span class="string">&quot;./layout/test&quot;</span>,&#123;element,id&#125;) %&gt;<span class="comment">//匯入剛剛的ejs模板並帶入變數</span></span><br><span class="line">&lt;% &#125;); %&gt;<span class="comment">//因為中間要塞這個可以轉譯HTML的語法，所以拆開來寫</span></span><br></pre></td></tr></table></figure>
-
-<p>3.完成結果如下<br><img src="https://i.imgur.com/B91Jqx1.png"></p>
-]]></content>
-      <tags>
-        <tag>ejs</tag>
       </tags>
   </entry>
 </search>
