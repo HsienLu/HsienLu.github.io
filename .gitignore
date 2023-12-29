@@ -7,3 +7,5 @@ public/
 .deploy*/
 _multiconfig.yml
 .deploy_git
+actions-deploy-key
+actions-deploy-key.pub
