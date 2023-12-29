@@ -1,34 +1,32 @@
-name: "hexo deploy"
+name: Deploy
 
-## 監聽 master 分支若有 push 行為就執行
-on:
-  push:
-    branches:
-      - main
+on: [push]
+
+env:
+  TZ: "Asia/Taipei"
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    name: Deploy Hexo Blog
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
         with:
-          node-version: "12.x"
-      - name: init)init ssh
+          submodules: true # Checkout private submodules(themes or something else).
+      - name: Timezone set Asia/Taipei
+        run: sudo timedatectl set-timezone 'Asia/Taipei'
+      - name: Yarn Install
+        uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: install
+      - name: Hexo Deploy
+        id: deploy
+        uses: sma11black/hexo-action@v1.0.3
+        with:
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
+          user_name: <YOUR_GITHUB_USERNAME> # (or delete this input setting to use bot account)
+          user_email: <YOUR_GITHUB_EMAIL> # (or delete this input setting to use bot account)
+      - name: Get the output
         run: |
-          mkdir -p ~/.ssh/
-          echo "${{secrets.HEXO}}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git config --global user.name "HsienLu"
-          git config --global user.email "sjps946403@gmail.com"
-      - name: A)npm install
-        run: |
-          npm install
-      - name: B)npm install -g hexo-cli
-        run: |
-          npm install -g hexo-cli
-      - name: C) hexo d -g
-        run: |
-          hexo d -g
+          echo "${{ steps.deploy.outputs.notify }}"
