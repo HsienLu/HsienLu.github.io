@@ -102,6 +102,6 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/HsienLu/HsienLu.github.io.git
-  branch: gh-pages
-  message: "Site updated: ${ now('YYYY-MM-DD HH:mm:ss')}"
+  repo: git@github.com:HsienLu/Hsienlu.github.io.git
+  branch: main
+  message: "ithelpt"
