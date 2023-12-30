@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="簡介首先第一邊當然是介紹我們的生財工具 VS Code 啦~相信大家都有自己習慣的環境和模式，今天來分享我的 VS Code 相關的開發設定。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Day 2 My VS Code Tour">
+<meta property="og:url" content="http://example.com/2023/09/16/Day%202%20My%20VS%20Code%20Tour/index.html">
+<meta property="og:site_name" content="HsienLu&#39;s Blog">
+<meta property="og:description" content="簡介首先第一邊當然是介紹我們的生財工具 VS Code 啦~相信大家都有自己習慣的環境和模式，今天來分享我的 VS Code 相關的開發設定。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.imgur.com/HqOokUm.png">
+<meta property="og:image" content="https://i.imgur.com/6DvuhGx.png">
+<meta property="og:image" content="https://i.imgur.com/50RjKZ7.png">
+<meta property="og:image" content="https://i.imgur.com/7WeW5T9.png">
+<meta property="og:image" content="https://i.imgur.com/AhDGGGs.png">
+<meta property="og:image" content="https://i.imgur.com/7W1fruI.png">
+<meta property="og:image" content="https://i.imgur.com/cKBUsLk.png">
+<meta property="og:image" content="https://i.imgur.com/NX4vt3T.png">
+<meta property="og:image" content="https://i.imgur.com/UnhT9kU.png">
+<meta property="og:image" content="https://i.imgur.com/VABUQtm.png">
+<meta property="og:image" content="https://i.imgur.com/ApUQSBd.png">
+<meta property="og:image" content="https://i.imgur.com/7W1fruI.png">
+<meta property="og:image" content="https://i.imgur.com/7W1fruI.png">
+<meta property="og:image" content="https://i.imgur.com/cKBUsLk.png">
+<meta property="og:image" content="https://i.imgur.com/NX4vt3T.png">
+<meta property="og:image" content="https://i.imgur.com/UnhT9kU.png">
+<meta property="og:image" content="https://i.imgur.com/VABUQtm.png">
+<meta property="og:image" content="https://i.imgur.com/ApUQSBd.png">
+<meta property="og:image" content="https://i.imgur.com/7W1fruI.png">
+<meta property="article:published_time" content="2023-09-16T05:54:31.000Z">
+<meta property="article:modified_time" content="2023-12-30T02:51:04.454Z">
+<meta property="article:author" content="HsienLu">
+<meta property="article:tag" content="React">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgur.com/HqOokUm.png">
+
+<link rel="canonical" href="http://example.com/2023/09/16/Day%202%20My%20VS%20Code%20Tour/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Day 2 My VS Code Tour | HsienLu's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">HsienLu's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Sometime ever, sometime never</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">4</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">3</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/HsienLu" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/16/Day%202%20My%20VS%20Code%20Tour/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/136676022.jpg">
+      <meta itemprop="name" content="HsienLu">
+      <meta itemprop="description" content="純放一些個人筆記分享">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HsienLu's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Day 2 My VS Code Tour
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-09-16 13:54:31" itemprop="dateCreated datePublished" datetime="2023-09-16T13:54:31+08:00">2023-09-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-12-30 10:51:04" itemprop="dateModified" datetime="2023-12-30T10:51:04+08:00">2023-12-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/" itemprop="url" rel="index"><span itemprop="name">鐵人賽</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+          
+          <div class="post-tags">
+              <a href="/tags/React/" rel="tag"><i class="fa fa-tag"></i> React</a>
+              <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+          </div>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>首先第一邊當然是介紹我們的生財工具 VS Code 啦~相信大家都有自己習慣的環境和模式，今天來分享我的 VS Code 相關的開發設定。</p>
+<span id="more"></span>
+
+<h2 id="VS-Code-概述"><a href="#VS-Code-概述" class="headerlink" title="VS Code 概述"></a>VS Code 概述</h2><p>VS Code 是一個功能豐富的程式碼編輯器，支援多種程式語言，例如 JavaScript、HTML&#x2F;CSS 等等。對於軟體開發者來說，它是一個非常靈活且易於使用的工具。</p>
+<p>除了強大的基本功能外，VS Code 還可以透過安裝套件來擴展其功能。這些套件提供了各種方便的功能，幫助我們更有效率地開發。</p>
+<h2 id="背景知識"><a href="#背景知識" class="headerlink" title="背景知識"></a>背景知識</h2><ul>
+<li>VS Code</li>
+</ul>
+<h2 id="內容"><a href="#內容" class="headerlink" title="內容"></a>內容</h2><h3 id="一-VS-Code-常用基本設置"><a href="#一-VS-Code-常用基本設置" class="headerlink" title="(一) VS Code 常用基本設置"></a>(一) VS Code 常用基本設置</h3><ol>
+<li><p>自動換行</p>
+<ul>
+<li>設置方法:<ul>
+<li>點擊左下角小齒輪進入設定選單<br><img src="https://i.imgur.com/HqOokUm.png" alt="圖 0"></li>
+<li>搜尋欄搜尋 “Wrap”</li>
+<li>在 “Word Wrap” 設置中設定成 “On”<br><img src="https://i.imgur.com/6DvuhGx.png" alt="圖 1"></li>
+</ul>
+</li>
+<li>效果:<br>Before<br><img src="https://i.imgur.com/50RjKZ7.png" alt="圖 2"><br>After<br><img src="https://i.imgur.com/7WeW5T9.png" alt="圖 3"></li>
+</ul>
+</li>
+<li><p>括弧顏色:可以協助整理巢狀結構</p>
+<ul>
+<li>設置方法:<ul>
+<li>在設定中找到 “Colorized Bracket Pairs”，進入 setting.json，貼上下列程式碼<br><img src="https://i.imgur.com/AhDGGGs.png" alt="圖 4"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;editor.bracketPairColorization.enabled&quot;</span>: <span class="literal">true</span>, <span class="comment">//Bracket Pair Colorizer 協助大中小括號（&#123;&#125;、[]、()）一的獨立補上不同色彩(不用可以刪掉)</span></span><br><span class="line"><span class="string">&quot;editor.guides.bracketPairs&quot;</span>: <span class="string">&quot;active&quot;</span>, <span class="comment">//Bracket Pair Colorizer 協助大中小括號（&#123;&#125;、[]、()）一一(不用可以刪掉)</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>效果:<br><img src="https://i.imgur.com/7W1fruI.png" alt="圖 5"></li>
+</ul>
+</li>
+<li><p>自動儲存格式化(自動排版):可以幫忙整理排的散亂的程式碼</p>
+<ul>
+<li>設置方法:<ul>
+<li>找到下列選項設置 “Format On Save” 打勾，就完成了。<br><img src="https://i.imgur.com/cKBUsLk.png" alt="圖 8"></li>
+</ul>
+</li>
+<li>效果:<br>Before<br><img src="https://i.imgur.com/NX4vt3T.png" alt="圖 9"><br>After<br><img src="https://i.imgur.com/UnhT9kU.png" alt="圖 10"></li>
+</ul>
+</li>
+</ol>
+<h3 id="二-常用套件"><a href="#二-常用套件" class="headerlink" title="(二) 常用套件"></a>(二) 常用套件</h3><ul>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag">Auto Close Tag</a><br>HTML 自動封閉的套件</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">Auto Rename Tag</a><br>HTML 可以一起更改頭尾標籤的套件</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hant">Chinese (Traditional) Language</a><br>中文化套件</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker">Code Spell Checker</a><br>檢查拼字錯誤的套件，debug 的好幫手，效果有點像 Word 拼字檢查那樣<br><img src="https://i.imgur.com/VABUQtm.png" alt="圖 6"></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">Git Graph</a><br>對於 Git 有漂亮的 GUI 可以看，方便查閱分支以及版本紀錄<br><img src="https://i.imgur.com/ApUQSBd.png" alt="圖 7"></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow">Indent-rainbow</a><br>縮排好幫手，下圖彩虹就是它的效果<br><img src="https://i.imgur.com/7W1fruI.png" alt="圖 5"></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a><br>好用的網頁預覽套件，不過有時候要注意一下路徑位置</p>
+</li>
+</ul>
+<ul>
+<li><p>效果<br><img src="https://i.imgur.com/7W1fruI.png" alt="圖 5"></p>
+<p>3.自動儲存格式化(自動排版):可以幫忙整理排的散亂的程式碼</p>
+</li>
+<li><p>設置方法<br>(1)找到下列選項設置 Format On Save 打 V，就完成了。<br><img src="https://i.imgur.com/cKBUsLk.png" alt="圖 8"></p>
+</li>
+<li><p>效果<br>Before<br><img src="https://i.imgur.com/NX4vt3T.png" alt="圖 9"><br>After<br><img src="https://i.imgur.com/UnhT9kU.png" alt="圖 10"></p>
+</li>
+</ul>
+<h3 id="二-常用套件-1"><a href="#二-常用套件-1" class="headerlink" title="(二) 常用套件"></a>(二) 常用套件</h3><ul>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag">Auto Close Tag</a><br>HTML 自動封閉的套件</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">Auto Rename Tag</a><br>HTML 可以一起更改頭尾標籤的套件</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hant">Chinese (Traditional) Language</a><br>中文化套件</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker">Code Spell Checker</a><br>檢查拼字錯誤的套件，debug 的好幫手，效果有點像 word 拼字檢查那樣<br><img src="https://i.imgur.com/VABUQtm.png" alt="圖 6"></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">Git Graph</a><br>對於 git 有漂亮的 GUI 可以看，方便查閱分支以及版本紀錄<br><img src="https://i.imgur.com/ApUQSBd.png" alt="圖 7"></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow">Indent-rainbow</a><br>縮排好幫手，下圖彩虹就是它的效果<br><img src="https://i.imgur.com/7W1fruI.png" alt="圖 5"></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a><br>好用的網頁預覽套件，不過有時候要注意一下路徑位置</p>
+</li>
+</ul>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>總結而言，VS Code 擁有強大的功能和豐富的套件生態系統，適合各種程式開發需求。透過介紹常用的基本設置，如自動換行、括弧顏色設置以及自動儲存格式化，我們可以提高程式碼的可讀性和整潔性。此外，常用的套件如 Auto Close Tag、Auto Rename Tag、Chinese (Traditional) Language、Code Spell Checker、Git Graph、Indent-rainbow 以及 Live Server 更進一步提升了開發效率，讓我們能更專注於寫程式，而不用花費太多時間處理繁瑣的細節。</p>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">Related Posts</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/2023/09/15/Day 1 參賽動機以及題目選擇和預計大綱/" rel="bookmark">Day 1 參賽動機以及題目選擇和預計大綱</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/2023/09/24/Day 10 物件(Object)/" rel="bookmark">Day 10 物件(Object)</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/2023/09/25/Day 11 解構賦值(Destructuring assignment)/" rel="bookmark">Day11 解構賦值(Destructuring assignment)</a></div>
+    </li>
+  </ul>
+
+
+      <footer class="post-footer">
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/09/15/Day%201%20%E5%8F%83%E8%B3%BD%E5%8B%95%E6%A9%9F%E4%BB%A5%E5%8F%8A%E9%A1%8C%E7%9B%AE%E9%81%B8%E6%93%87%E5%92%8C%E9%A0%90%E8%A8%88%E5%A4%A7%E7%B6%B1/" rel="prev" title="Day 1 參賽動機以及題目選擇和預計大綱">
+      <i class="fa fa-chevron-left"></i> Day 1 參賽動機以及題目選擇和預計大綱
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/09/17/Day%203%20%E6%9F%A5%E8%A9%A2%E9%99%A3%E5%88%97%E7%9A%84%E6%96%B9%E6%B3%95-forEach%20&%20map/" rel="next" title="Day 3 查詢陣列的方法-forEach & map">
+      Day 3 查詢陣列的方法-forEach & map <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B0%A1%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">簡介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VS-Code-%E6%A6%82%E8%BF%B0"><span class="nav-number">2.</span> <span class="nav-text">VS Code 概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E7%9F%A5%E8%AD%98"><span class="nav-number">3.</span> <span class="nav-text">背景知識</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%A7%E5%AE%B9"><span class="nav-number">4.</span> <span class="nav-text">內容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80-VS-Code-%E5%B8%B8%E7%94%A8%E5%9F%BA%E6%9C%AC%E8%A8%AD%E7%BD%AE"><span class="nav-number">4.1.</span> <span class="nav-text">(一) VS Code 常用基本設置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C-%E5%B8%B8%E7%94%A8%E5%A5%97%E4%BB%B6"><span class="nav-number">4.2.</span> <span class="nav-text">(二) 常用套件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C-%E5%B8%B8%E7%94%A8%E5%A5%97%E4%BB%B6-1"><span class="nav-number">4.3.</span> <span class="nav-text">(二) 常用套件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B5%90%E8%AB%96"><span class="nav-number">5.</span> <span class="nav-text">結論</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="HsienLu"
+      src="/images/136676022.jpg">
+  <p class="site-author-name" itemprop="name">HsienLu</p>
+  <div class="site-description" itemprop="description">純放一些個人筆記分享</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/HsienLu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;HsienLu" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:sjps946403@gmail.com" title="E-Mail → mailto:sjps946403@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.cakeresume.com/7cc5eb" title="cakerRes → https:&#x2F;&#x2F;www.cakeresume.com&#x2F;7cc5eb" rel="noopener" target="_blank"><i class="fa fa-id-card fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-dragon"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">若要轉載文章，麻煩請保留原作者名稱與原始連結</span>
+</div>
+  <div id="site-runtime">
+  <span class="post-meta-item-icon">
+    <i class="fa fa-clock-o"></i>
+  </span>
+  <span id="runtime"></span>
+</div>
+
+<script language="javascript">
+  function isPC() {
+    var userAgentInfo = navigator.userAgent;
+    var agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+    for (var i = 0; i < agents.length; i++) {
+      if (userAgentInfo.indexOf(agents[i]) > 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function siteTime(openOnPC, start) {
+    window.setTimeout("siteTime(openOnPC, start)", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+      start = new Date("2023-12-28 18:00:00 +0800");
+    var now = new Date();
+    var year = now.getFullYear();
+    var month = now.getMonth() + 1;
+    var date = now.getDate();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    var diff = now - start;
+
+    var diffYears = Math.floor(diff / years);
+    var diffDays = Math.floor((diff / days) - diffYears * 365);
+    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+
+    if (openOnPC) {
+      document.getElementById("runtime").innerHTML = "Running: " + diffYears + " years " + diffDays + " days " + diffHours + " hours " + diffMinutes + " mins " + diffSeconds + " secs";
+    } else {
+      document.getElementById("runtime").innerHTML = "Running: " + diffYears + "y " + diffDays + "d " + diffHours + "h " + diffMinutes + "m " + diffSeconds + "s";
+    }
+  }
+# 這邊可以決定要在頁面上顯示的時間精度，我覺得顯示到小時比較順眼，因此我從+ diffHours + " hours " 後面分鐘與秒鐘的部分就刪掉了（未來要加回來再看這篇文就好ＸＤ這就是寫文章的好處）
+
+  var showOnMobile = false;
+  var openOnPC = isPC();
+  var start = new Date();
+  siteTime(openOnPC, start);
+
+  if (!openOnPC && !showOnMobile) {
+    document.getElementById('site-runtime').style.display = 'none';
+  }
+</script>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>
