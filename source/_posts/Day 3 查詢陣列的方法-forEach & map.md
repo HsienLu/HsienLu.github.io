@@ -27,7 +27,7 @@ array.forEach((value, index, array2) => {
 ```
 
 輸出結果:
-![](https://hackmd.io/_uploads/ryPOQz5p3.png)
+![](https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day3-1_fikkzu.png)
 
 ### .map()
 
@@ -43,7 +43,7 @@ array.map((value, index, array2) => {
 });
 ```
 
-![](https://hackmd.io/_uploads/ryJPBMqan.png)
+![](https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day3-2_pzsotb.png)
 
 但此方法==會回傳==一個新陣列，範例如下:
 
@@ -57,6 +57,6 @@ console.log(newArray); //輸出結果:[2,4,6,8,10]
 ```
 
 輸出結果:
-![](https://hackmd.io/_uploads/S14XPfca3.png)
+![](https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day3-3_j2oxp0.png)
 
 總之，forEach 主要用於執行操作而不生成新陣列，而 map 用於生成一個新陣列，其中包含經過處理後的值。

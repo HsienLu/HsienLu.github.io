@@ -56,7 +56,7 @@ callName();
 //會出現Tom與undefined
 ```
 
-## ![](https://hackmd.io/_uploads/SkwR1c3T2.png)
+## ![](https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897455/ith2023-article-pic/day9-1_cn1xwf.png)
 
 ```javascript
 function callName() {
@@ -66,7 +66,7 @@ callName();
 //不會出現undefined
 ```
 
-![](https://hackmd.io/_uploads/H1hseqhTn.png)
+![](https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897455/ith2023-article-pic/day9-2_akmg38.png)
 
 2. return 具有中斷函式的特性
 3. return 後方可以加入表達式
@@ -110,7 +110,7 @@ callName();
 ```
 
 無論是哪一種就不用還需要額外呼叫函示囉
-![](https://hackmd.io/_uploads/S1sDtqhp3.png)
+![](https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897455/ith2023-article-pic/day9-3_gl1jrm.png)
 
 ## 箭頭函式 arrow function
 

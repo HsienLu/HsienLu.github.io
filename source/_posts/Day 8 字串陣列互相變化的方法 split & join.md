@@ -21,7 +21,7 @@ let newArray = string.split();
 console.log(newArray);
 ```
 
-![](https://hackmd.io/_uploads/SynhKu2ph.png)
+![](https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day8-1_ckljel.png)
 
 狀況二:裡面有帶參數但其值為空,會把一個字一個字的拆開來變成陣列，換句話說每個字就是一個 index
 
@@ -31,7 +31,7 @@ let newArray = string.split("");
 console.log(newArray);
 ```
 
-![](https://hackmd.io/_uploads/ByOGcd3Tn.png)
+![](https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day8-2_a60vku.png)
 
 狀況三:裡面有帶參數其值為空白鍵字符
 
@@ -41,7 +41,7 @@ let newArray = string.split(" ");
 console.log(newArray);
 ```
 
-![](https://hackmd.io/_uploads/HyNkoO2T3.png)
+![](https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897455/ith2023-article-pic/day8-3_wrhtf1.png)
 
 ### .join()
 

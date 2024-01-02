@@ -7,7 +7,7 @@ categories: 鐵人賽
 
 相信大家都有看過類似下面這種圖，今天會針對 push,pop 做介紹
 
-![](https://hackmd.io/_uploads/H17Xz9jTh.jpg)
+![](https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day4-1_bqqann.jpg)
 
 <!-- more -->
 
@@ -40,7 +40,7 @@ console.log(array.push(["a", "b", "c"]));
 console.log(array);
 ```
 
-![](https://hackmd.io/_uploads/Hk3-kN362.png)
+![](https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day4-2_r0ln7l.png)
 
 如果需要完整合併需要用展開運算子
 
@@ -50,7 +50,7 @@ console.log(array.push(...["a", "b", "c"]));
 console.log(array);
 ```
 
-![](https://hackmd.io/_uploads/S1gQk43ah.png)
+![](https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day4-3_e6ymxz.png)
 
 ### .pop()
 

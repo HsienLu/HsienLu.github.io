@@ -7,7 +7,7 @@ categories: 鐵人賽
 
 接著昨天的陣列操作方法，今天會針對 shift,unshift 做介紹
 
-![](https://hackmd.io/_uploads/H17Xz9jTh.jpg)
+![](https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day5-1_bmz6gr.jpg)
 
 <!-- more -->
 
@@ -32,7 +32,7 @@ console.log(array);
 ```
 
 結果如下:
-![](https://hackmd.io/_uploads/ryJDSE2ph.png)
+![](https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day5-2_jyng9j.png)
 
 ### .unshift()
 
@@ -46,7 +46,7 @@ array.unshift("a");
 console.log(array);
 ```
 
-![](https://hackmd.io/_uploads/S1tOUNh6n.png)
+![](https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day5-3_halhye.png)
 
 也可以加入多個值
 
@@ -56,7 +56,7 @@ console.log(array.unshift("a", "b"));
 console.log(array);
 ```
 
-![](https://hackmd.io/_uploads/HyJ9UVhT3.png)
+![](https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day5-4_ogz53r.png)
 
 還可以加入一個陣列，不過裡面會真的變成一個陣列
 
@@ -66,7 +66,7 @@ console.log(array.unshift(["a", "b", "c"]));
 console.log(array);
 ```
 
-![](https://hackmd.io/_uploads/Bk_aI43Th.png)
+![](https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day5-5_ntdvi6.png)
 
 其實這組用法和 pop,push 用法幾乎一樣只是分別用在頭尾而已，接著還有其他的陣列用法，明天繼續~
 
