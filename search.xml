@@ -423,13 +423,7 @@
 </li>
 </ul>
 <ul>
-<li><p>效果<br><img src="https://i.imgur.com/7W1fruI.png" alt="圖 5"></p>
-<p>3.自動儲存格式化(自動排版):可以幫忙整理排的散亂的程式碼</p>
-</li>
-<li><p>設置方法<br>(1)找到下列選項設置 Format On Save 打 V，就完成了。<br><img src="https://i.imgur.com/cKBUsLk.png" alt="圖 8"></p>
-</li>
-<li><p>效果<br>Before<br><img src="https://i.imgur.com/NX4vt3T.png" alt="圖 9"><br>After<br><img src="https://i.imgur.com/UnhT9kU.png" alt="圖 10"></p>
-</li>
+<li>效果<br><img src="https://i.imgur.com/7W1fruI.png" alt="圖 5"></li>
 </ul>
 <h3 id="二-常用套件-1"><a href="#二-常用套件-1" class="headerlink" title="(二) 常用套件"></a>(二) 常用套件</h3><ul>
 <li><p><a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag">Auto Close Tag</a><br>HTML 自動封閉的套件</p>
