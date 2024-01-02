@@ -27,16 +27,16 @@
 <meta property="og:site_name" content="HsienLu&#39;s Blog">
 <meta property="og:description" content="函式 function在 React 中，會經常使用函數來建立和管理 React 中的各項元件，而 React 架構的網頁實際上又是由個元件組成的，所以在進入 React 之前了解一些 function 的觀念有其必要性存在。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://hackmd.io/_uploads/SkwR1c3T2.png">
-<meta property="og:image" content="https://hackmd.io/_uploads/H1hseqhTn.png">
-<meta property="og:image" content="https://hackmd.io/_uploads/S1sDtqhp3.png">
+<meta property="og:image" content="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897455/ith2023-article-pic/day9-1_cn1xwf.png">
+<meta property="og:image" content="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897455/ith2023-article-pic/day9-2_akmg38.png">
+<meta property="og:image" content="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897455/ith2023-article-pic/day9-3_gl1jrm.png">
 <meta property="article:published_time" content="2023-09-23T05:54:31.000Z">
-<meta property="article:modified_time" content="2024-01-02T01:23:56.022Z">
+<meta property="article:modified_time" content="2024-01-02T01:26:51.673Z">
 <meta property="article:author" content="HsienLu">
 <meta property="article:tag" content="React">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://hackmd.io/_uploads/SkwR1c3T2.png">
+<meta name="twitter:image" content="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897455/ith2023-article-pic/day9-1_cn1xwf.png">
 
 <link rel="canonical" href="http://example.com/2023/09/23/Day%209%20%E5%87%BD%E5%BC%8F%E8%88%87%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F/">
 
@@ -227,7 +227,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-01-02 09:23:56" itemprop="dateModified" datetime="2024-01-02T09:23:56+08:00">2024-01-02</time>
+                <time title="Modified: 2024-01-02 09:26:51" itemprop="dateModified" datetime="2024-01-02T09:26:51+08:00">2024-01-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -272,9 +272,9 @@
 </ol>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">callName</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Tom&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">callName</span>();</span><br><span class="line"><span class="comment">//會出現Tom與undefined</span></span><br></pre></td></tr></table></figure>
 
-<h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://hackmd.io/_uploads/SkwR1c3T2.png"></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">callName</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;Tom&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">callName</span>();</span><br><span class="line"><span class="comment">//不會出現undefined</span></span><br></pre></td></tr></table></figure>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897455/ith2023-article-pic/day9-1_cn1xwf.png"></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">callName</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;Tom&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">callName</span>();</span><br><span class="line"><span class="comment">//不會出現undefined</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://hackmd.io/_uploads/H1hseqhTn.png"></p>
+<p><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897455/ith2023-article-pic/day9-2_akmg38.png"></p>
 <ol start="2">
 <li>return 具有中斷函式的特性</li>
 <li>return 後方可以加入表達式</li>
@@ -293,7 +293,7 @@
 <p>第二種:第二個小括弧在裡面</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">function</span> <span class="title function_">callName</span>(<span class="params">name = <span class="string">&quot;Tom&quot;</span></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`<span class="subst">$&#123;name&#125;</span>`</span>);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
 
-<p>無論是哪一種就不用還需要額外呼叫函示囉<br><img src="https://hackmd.io/_uploads/S1sDtqhp3.png"></p>
+<p>無論是哪一種就不用還需要額外呼叫函示囉<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897455/ith2023-article-pic/day9-3_gl1jrm.png"></p>
 <h2 id="箭頭函式-arrow-function"><a href="#箭頭函式-arrow-function" class="headerlink" title="箭頭函式 arrow function"></a>箭頭函式 arrow function</h2><p>是一種函式的簡寫法，當然與原本 function 的形式還是有些許的不同</p>
 <h3 id="箭頭函式的寫法"><a href="#箭頭函式的寫法" class="headerlink" title="箭頭函式的寫法"></a>箭頭函式的寫法</h3><p>以上面的例子而言寫成箭頭函式的形式如下:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">callName</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Tom&quot;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>

@@ -439,21 +439,21 @@
 <span id="more"></span>
 
 <h2 id="環境建置前的準備-NPM-Node-Package-Manager"><a href="#環境建置前的準備-NPM-Node-Package-Manager" class="headerlink" title="環境建置前的準備-NPM(Node Package Manager)"></a>環境建置前的準備-NPM(Node Package Manager)</h2><p>在使用 Vite 部屬前需要安裝 node 套件管理器(npm)來方便進行 Vite 部屬，而 NPM 是 Node 的安裝管理套件，簡單來說就是綁定 Node，所以安裝 node 就可以使用囉!</p>
-<h3 id="Node-下載與安裝"><a href="#Node-下載與安裝" class="headerlink" title="Node 下載與安裝"></a>Node 下載與安裝</h3><p>Node.js:<a href="https://nodejs.org/en">https://nodejs.org/en</a><br>新手推薦 LTS 版本，因為是長期維護的版本使用起來也會比最新版本還穩定，而安裝方式跟其他應用程式一樣簡單，只要一直按下一步就可以安裝完成了。</p>
-<h2 id="使用-Vite-進行環境建置"><a href="#使用-Vite-進行環境建置" class="headerlink" title="使用 Vite 進行環境建置"></a>使用 Vite 進行環境建置</h2><p><strong>1.找到 VS Code 的終端機</strong><br><img src="https://hackmd.io/_uploads/r1H3p4BeT.png"></p>
+<h3 id="Node-下載與安裝"><a href="#Node-下載與安裝" class="headerlink" title="Node 下載與安裝"></a>Node 下載與安裝</h3><p>Node.js:<a href="https://nodejs.org/en">https://nodejs.org/en</a><br>推薦 LTS 版本，因為是長期維護的版本使用起來也會比最新版本還穩定，而安裝方式跟其他應用程式一樣簡單，只要一直按下一步就可以安裝完成了。</p>
+<h2 id="使用-Vite-進行環境建置"><a href="#使用-Vite-進行環境建置" class="headerlink" title="使用 Vite 進行環境建置"></a>使用 Vite 進行環境建置</h2><p><strong>1.找到 VS Code 的終端機</strong><br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897452/ith2023-article-pic/day20-1_txslex.png"></p>
 <p><strong>2.輸入指令</strong></p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">npm create vite@latest <span class="comment">//創建最新版本的專案</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>3.然後 vite 會詢問一系列的設定</strong></p>
-<p>(1)確定是否要執行程序&#x3D;&gt;按 y<br><img src="https://hackmd.io/_uploads/rJnEyrBgp.png"></p>
-<p>(2)取專案名子&#x3D;&gt;可以隨便取或是用預設<br><img src="https://hackmd.io/_uploads/rkVv1SHl6.png"></p>
-<p>(3)選擇哪一個框架&#x3D;&gt;選擇 React<br><img src="https://hackmd.io/_uploads/SJe91rSlT.png"></p>
-<p>(4)選擇使用哪一個語言&#x3D;&gt;選擇 JavaScript<br><img src="https://hackmd.io/_uploads/SJJA1HSgT.png"></p>
+<p>(1)確定是否要執行程序&#x3D;&gt;按 y<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897452/ith2023-article-pic/day20-2_iadmfb.png"></p>
+<p>(2)取專案名子&#x3D;&gt;可以隨便取或是用預設<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897452/ith2023-article-pic/day20-3_jh78me.png"></p>
+<p>(3)選擇哪一個框架&#x3D;&gt;選擇 React<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897452/ith2023-article-pic/day20-4_kqvokg.png"></p>
+<p>(4)選擇使用哪一個語言&#x3D;&gt;選擇 JavaScript<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day20-5_l0n73d.png"></p>
 <p>(5)基本上就大致完成了，接下來是進行測試有無建置成功的部份，也很單純就照著 vite 提供的指令一行一行打就好了</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">cd vite-project <span class="comment">//切換到專案目錄的資料夾</span></span><br><span class="line">npm install <span class="comment">//安裝模組</span></span><br><span class="line">npm run dev <span class="comment">//開啟測試環境</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>4.如此一來就完成了，理論上應該是可以在下列網址(<a href="http://localhost:5173/)%E4%B8%AD%E7%9C%8B%E5%88%B0%E4%B8%8B%E9%9D%A2%E7%9A%84%E7%95%AB%E9%9D%A2">http://localhost:5173/)中看到下面的畫面</a></strong><br>(1)終端機回饋的網址<br><img src="https://hackmd.io/_uploads/SJIfbSHlp.png"><br>(2)出現的測試畫面<br><img src="https://hackmd.io/_uploads/By-BZrSxp.png"></p>
-<p><strong>5.操作的檔案位置(src&#x3D;&gt;App.js)</strong><br>位在 src 資料夾的 App.js，未來的操作範例都可以在這個檔案進行。<br><img src="https://hackmd.io/_uploads/S1RLMSSxp.png"></p>
+<p><strong>4.如此一來就完成了，理論上應該是可以在下列網址(<a href="http://localhost:5173/)%E4%B8%AD%E7%9C%8B%E5%88%B0%E4%B8%8B%E9%9D%A2%E7%9A%84%E7%95%AB%E9%9D%A2">http://localhost:5173/)中看到下面的畫面</a></strong><br>(1)終端機回饋的網址<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day20-6_j7gjkt.png"><br>(2)出現的測試畫面<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day20-7_sihsxw.png"></p>
+<p><strong>5.操作的檔案位置(src&#x3D;&gt;App.js)</strong><br>位在 src 資料夾的 App.js，未來的操作範例都可以在這個檔案進行。<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day20-8_s5uoza.png"></p>
 <h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>雖然步驟還是有點多或是有點麻煩，但如果要在本地端開發，這已經是相對簡單快速的方法了，明天就會正式進入 React 囉~</p>
 ]]></content>
       <categories>
@@ -765,15 +765,15 @@
 <p>其方法是不能被&#x3D;&#x3D;中斷的&#x3D;&#x3D;，換句話說就是不能 return，也就是說不會回傳值。<br>範例如下:</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"></span><br><span class="line">array.<span class="title function_">forEach</span>(<span class="function">(<span class="params">value, index, array2</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;value:&quot;</span> + value);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;index:&quot;</span> + index);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(array2); <span class="comment">//陣列本身</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<p>輸出結果:<br><img src="https://hackmd.io/_uploads/ryPOQz5p3.png"></p>
+<p>輸出結果:<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day3-1_fikkzu.png"></p>
 <h3 id="map"><a href="#map" class="headerlink" title=".map()"></a>.map()</h3><p>同樣是可以遍歷陣列的一個方法，用法也跟 forEach 相似，也是需要帶一個 callback 裡面也是帶三個參數: 1.陣列裡面的值 2.陣列的 index 3.陣列本身</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"></span><br><span class="line">array.<span class="title function_">map</span>(<span class="function">(<span class="params">value, index, array2</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;value:&quot;</span> + value);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;index:&quot;</span> + index);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(array2); <span class="comment">//陣列本身</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://hackmd.io/_uploads/ryJPBMqan.png"></p>
+<p><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day3-2_pzsotb.png"></p>
 <p>但此方法&#x3D;&#x3D;會回傳&#x3D;&#x3D;一個新陣列，範例如下:</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> newArray = array.<span class="title function_">map</span>(<span class="function">(<span class="params">value, index, array2</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> value * <span class="number">2</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArray); <span class="comment">//輸出結果:[2,4,6,8,10]</span></span><br></pre></td></tr></table></figure>
 
-<p>輸出結果:<br><img src="https://hackmd.io/_uploads/S14XPfca3.png"></p>
+<p>輸出結果:<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day3-3_j2oxp0.png"></p>
 <p>總之，forEach 主要用於執行操作而不生成新陣列，而 map 用於生成一個新陣列，其中包含經過處理後的值。</p>
 ]]></content>
       <categories>
@@ -788,7 +788,7 @@
     <title>Day 4 操作陣列的方法 Part.1-push &amp; pop</title>
     <url>/2023/09/18/Day%204%20%E6%93%8D%E4%BD%9C%E9%99%A3%E5%88%97%E7%9A%84%E6%96%B9%E6%B3%95%20Part.1-push%20&amp;%20pop/</url>
     <content><![CDATA[<p>相信大家都有看過類似下面這種圖，今天會針對 push,pop 做介紹</p>
-<p><img src="https://hackmd.io/_uploads/H17Xz9jTh.jpg"></p>
+<p><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day4-1_bqqann.jpg"></p>
 <span id="more"></span>
 
 <h3 id="push"><a href="#push" class="headerlink" title=".push()"></a>.push()</h3><p>push 顧名思義就是推東西的意思，在這裡就把它當成是推某個東西都陣列的尾巴，此方法會將一個值或多個值也可以說是陣列加進陣列的尾端，回傳值為新陣列的長度。用法是在小括弧內塞進要加入的東西<br>範例如下:</p>
@@ -801,11 +801,11 @@
 <p>還可以加入一個陣列，不過裡面會真的變成一個陣列</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array.<span class="title function_">push</span>([<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>]));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://hackmd.io/_uploads/Hk3-kN362.png"></p>
+<p><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day4-2_r0ln7l.png"></p>
 <p>如果需要完整合併需要用展開運算子</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array.<span class="title function_">push</span>(...[<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>]));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://hackmd.io/_uploads/S1gQk43ah.png"></p>
+<p><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day4-3_e6ymxz.png"></p>
 <h3 id="pop"><a href="#pop" class="headerlink" title=".pop()"></a>.pop()</h3><p>pop 當作動詞在劍橋字典裡翻成-使什麼彈出的意思，在這裡它的作用是使陣列的末端彈出一個值，說直白一點就是刪除陣列末端的值。裡面不需要帶任何參數，但是如果對空陣列使用會回傳 undefined。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array.<span class="title function_">pop</span>());</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br></pre></td></tr></table></figure>
 
@@ -826,7 +826,7 @@
     <title>Day 5 操作陣列的方法 Part.2-shift &amp; unshift</title>
     <url>/2023/09/19/Day%205%20%E6%93%8D%E4%BD%9C%E9%99%A3%E5%88%97%E7%9A%84%E6%96%B9%E6%B3%95%20Part.2-shift%20&amp;%20unshift/</url>
     <content><![CDATA[<p>接著昨天的陣列操作方法，今天會針對 shift,unshift 做介紹</p>
-<p><img src="https://hackmd.io/_uploads/H17Xz9jTh.jpg"></p>
+<p><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day5-1_bmz6gr.jpg"></p>
 <span id="more"></span>
 
 <h3 id="shift"><a href="#shift" class="headerlink" title=".shift()"></a>.shift()</h3><p>shift 有移除的意思，這這裡也確實是移除陣列的值，但只有移除首位，裡面不帶參數，但對空陣列使用會回傳 undefined。範例如下</p>
@@ -835,20 +835,20 @@
 <p>對空陣列使用</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [];</span><br><span class="line">array.<span class="title function_">shift</span>(); <span class="comment">//會回傳undefined</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br></pre></td></tr></table></figure>
 
-<p>結果如下:<br><img src="https://hackmd.io/_uploads/ryJDSE2ph.png"></p>
+<p>結果如下:<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day5-2_jyng9j.png"></p>
 <h3 id="unshift"><a href="#unshift" class="headerlink" title=".unshift()"></a>.unshift()</h3><p>在英文裡有 un 就有相反的意思，所以與上面的語法相反就是增加，它可以在陣列首位增加一個會多個值也可以是陣列，用法是在小括弧裡面塞進要添加的東西，範例如下:</p>
 <p>可以加入單一值</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">array.<span class="title function_">unshift</span>(<span class="string">&quot;a&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://hackmd.io/_uploads/S1tOUNh6n.png"></p>
+<p><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day5-3_halhye.png"></p>
 <p>也可以加入多個值</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array.<span class="title function_">unshift</span>(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://hackmd.io/_uploads/HyJ9UVhT3.png"></p>
+<p><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day5-4_ogz53r.png"></p>
 <p>還可以加入一個陣列，不過裡面會真的變成一個陣列</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array.<span class="title function_">unshift</span>([<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>]));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://hackmd.io/_uploads/Bk_aI43Th.png"></p>
+<p><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day5-5_ntdvi6.png"></p>
 <p>其實這組用法和 pop,push 用法幾乎一樣只是分別用在頭尾而已，接著還有其他的陣列用法，明天繼續~</p>
 <h3 id="另外補充-會回傳新陣列的語法-concat"><a href="#另外補充-會回傳新陣列的語法-concat" class="headerlink" title="另外補充-會回傳新陣列的語法 .concat()"></a>另外補充-會回傳新陣列的語法 .concat()</h3><p>介紹了很多陣列語法，他們都有共同的特點就是不會回傳新陣列，那會回傳新陣列的語法又是怎麼回事呢?<br>這裡以.concat()為例，這個語法的的作用在於合併兩個陣列，並回傳一個新陣列，用法如下:</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]; <span class="comment">//要合併的陣列a</span></span><br><span class="line"><span class="keyword">let</span> b = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]; <span class="comment">//要合併的陣列b</span></span><br><span class="line"><span class="keyword">let</span> c = a.<span class="title function_">concat</span>(b); <span class="comment">//合併完後的結果陣列c</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">//跟原本一樣</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(b); <span class="comment">//跟原本一樣</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(c); <span class="comment">//合併完後的結果</span></span><br></pre></td></tr></table></figure>
@@ -982,15 +982,15 @@
 <p>狀況一:裡面不帶值，會把一串字串包在同一個陣列的 index 裡，也就是長度為 1 的陣列</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">&quot;12345&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> newArray = string.<span class="title function_">split</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArray);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://hackmd.io/_uploads/SynhKu2ph.png"></p>
+<p><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day8-1_ckljel.png"></p>
 <p>狀況二:裡面有帶參數但其值為空,會把一個字一個字的拆開來變成陣列，換句話說每個字就是一個 index</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">&quot;12345&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> newArray = string.<span class="title function_">split</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArray);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://hackmd.io/_uploads/ByOGcd3Tn.png"></p>
+<p><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897454/ith2023-article-pic/day8-2_a60vku.png"></p>
 <p>狀況三:裡面有帶參數其值為空白鍵字符</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">&quot;1 2 3 4 5&quot;</span>; <span class="comment">//用空白鍵字符分開</span></span><br><span class="line"><span class="keyword">let</span> newArray = string.<span class="title function_">split</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArray);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://hackmd.io/_uploads/HyNkoO2T3.png"></p>
+<p><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897455/ith2023-article-pic/day8-3_wrhtf1.png"></p>
 <h3 id="join"><a href="#join" class="headerlink" title=".join()"></a>.join()</h3><p>使用方法其實與 split 極為相似只是整個倒過來了，小括弧裡決定要用什麼連接成字串，以陣列而言通常是”,”預設也是”,”</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> string = array.<span class="title function_">join</span>(<span class="string">&quot;,&quot;</span>); <span class="comment">//決定要用什麼連接成字串，以陣列而言通常是&quot;,&quot;預設也是&quot;,&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(string);</span><br></pre></td></tr></table></figure>
 
@@ -1026,9 +1026,9 @@
 </ol>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">callName</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Tom&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">callName</span>();</span><br><span class="line"><span class="comment">//會出現Tom與undefined</span></span><br></pre></td></tr></table></figure>
 
-<h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://hackmd.io/_uploads/SkwR1c3T2.png"></h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">callName</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;Tom&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">callName</span>();</span><br><span class="line"><span class="comment">//不會出現undefined</span></span><br></pre></td></tr></table></figure>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897455/ith2023-article-pic/day9-1_cn1xwf.png"></h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">callName</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;Tom&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">callName</span>();</span><br><span class="line"><span class="comment">//不會出現undefined</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://hackmd.io/_uploads/H1hseqhTn.png"></p>
+<p><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897455/ith2023-article-pic/day9-2_akmg38.png"></p>
 <ol start="2">
 <li>return 具有中斷函式的特性</li>
 <li>return 後方可以加入表達式</li>
@@ -1047,7 +1047,7 @@
 <p>第二種:第二個小括弧在裡面</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="keyword">function</span> <span class="title function_">callName</span>(<span class="params">name = <span class="string">&quot;Tom&quot;</span></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`<span class="subst">$&#123;name&#125;</span>`</span>);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
 
-<p>無論是哪一種就不用還需要額外呼叫函示囉<br><img src="https://hackmd.io/_uploads/S1sDtqhp3.png"></p>
+<p>無論是哪一種就不用還需要額外呼叫函示囉<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897455/ith2023-article-pic/day9-3_gl1jrm.png"></p>
 <h2 id="箭頭函式-arrow-function"><a href="#箭頭函式-arrow-function" class="headerlink" title="箭頭函式 arrow function"></a>箭頭函式 arrow function</h2><p>是一種函式的簡寫法，當然與原本 function 的形式還是有些許的不同</p>
 <h3 id="箭頭函式的寫法"><a href="#箭頭函式的寫法" class="headerlink" title="箭頭函式的寫法"></a>箭頭函式的寫法</h3><p>以上面的例子而言寫成箭頭函式的形式如下:</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">callName</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Tom&quot;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
