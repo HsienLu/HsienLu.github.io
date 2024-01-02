@@ -15,6 +15,8 @@
     <header class="post-header">
 
       <div class="post-meta">
+
+
         <time itemprop="dateCreated"
               datetime="{{ moment(post.date).format() }}"
               content="{{ date(post.date, config.date_format) }}">
