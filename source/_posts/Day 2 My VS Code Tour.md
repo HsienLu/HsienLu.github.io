@@ -87,17 +87,6 @@ VS Code 是一個功能豐富的程式碼編輯器，支援多種程式語言，
 * 效果
   ![圖 5](https://i.imgur.com/7W1fruI.png)
 
-  3.自動儲存格式化(自動排版):可以幫忙整理排的散亂的程式碼
-
-* 設置方法  
-  (1)找到下列選項設置 Format On Save 打 V，就完成了。
-  ![圖 8](https://i.imgur.com/cKBUsLk.png)
-* 效果
-  Before
-  ![圖 9](https://i.imgur.com/NX4vt3T.png)  
-  After
-  ![圖 10](https://i.imgur.com/UnhT9kU.png)
-
 ### (二) 常用套件
 
 - [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)  
