@@ -9,6 +9,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -17,7 +19,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="不知不覺鐵人賽已經寫超過一半了，用 JavaScript 水內容也水的差不多了 XD，但是我真心認為前面的內容都是我恨不得在學 React 之前能夠所學好的內容，至少在操做 React 的時候不會因為 JavaScript 而卡東卡西的，而且 React 本身已經夠難懂了。 在今天這個算是中場休息的時間，來稍微整理前面的內容，和提出接下來要進行的架構。依然是遵從本系列的定位，盡可能地減少在學習 R">
@@ -28,7 +30,7 @@
 <meta property="og:description" content="不知不覺鐵人賽已經寫超過一半了，用 JavaScript 水內容也水的差不多了 XD，但是我真心認為前面的內容都是我恨不得在學 React 之前能夠所學好的內容，至少在操做 React 的時候不會因為 JavaScript 而卡東卡西的，而且 React 本身已經夠難懂了。 在今天這個算是中場休息的時間，來稍微整理前面的內容，和提出接下來要進行的架構。依然是遵從本系列的定位，盡可能地減少在學習 R">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-10-02T05:54:31.000Z">
-<meta property="article:modified_time" content="2024-01-05T07:32:56.733Z">
+<meta property="article:modified_time" content="2024-01-05T07:43:51.903Z">
 <meta property="article:author" content="HsienLu">
 <meta property="article:tag" content="React">
 <meta property="article:tag" content="JavaScript">
@@ -178,7 +180,7 @@
     <span>0%</span>
   </div>
 
-  <a href="https://github.com/HsienLu" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL0hzaWVuTHU=" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
 
 
     <main class="main">
@@ -224,7 +226,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-01-05 15:32:56" itemprop="dateModified" datetime="2024-01-05T15:32:56+08:00">2024-01-05</time>
+                <time title="Modified: 2024-01-05 15:43:51" itemprop="dateModified" datetime="2024-01-05T15:43:51+08:00">2024-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -255,7 +257,7 @@
 <p>在今天這個算是中場休息的時間，來稍微整理前面的內容，和提出接下來要進行的架構。依然是遵從本系列的定位，盡可能地減少在學習 React 之前的落差，所以並不會提到太多太難的內容，因為比較難的內容我相信版上已經有很多大神寫文章了，我能做到的是盡量地做銜接。</p>
 <span id="more"></span>
 
-<h2 id="JavaScript-複習篇"><a href="#JavaScript-複習篇" class="headerlink" title="JavaScript 複習篇"></a>JavaScript 複習篇</h2><p><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10314432">Day1 參賽動機以及題目選擇和預計大綱</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10318692">Day2 My VS Code Tour</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10319059">Day3 查詢陣列的方法-forEach &amp; map</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10320980">Day4 操作陣列的方法 Part.1-push &amp; pop</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10322325">Day5 操作陣列的方法 Part.2-shift &amp; unshift</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10323240">Day6 其他的陣列方法 slice &amp; splice</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10323987">Day7 搜尋陣列的方法-find,findIndex &amp; filter</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10324828">Day8 字串陣列互相變化的方法 split &amp; join</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10325604">Day9 函式與箭頭函式</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10326624">Day10 物件(Object)</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10327826">Day11 解構賦值(Destructuring assignment)</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10328990">Day12 其餘運算子 &amp; 展開運算子(Spread Operator &amp; Rest Operator)</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10329570">Day13 JavaScript 模組(Modules)</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10330248">Day14 同步&amp;非同步(Synchronous &amp; Asynchronous)</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10330683">Day15 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.1</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10331221">Day16 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.2-Promise</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10331931">Day17 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.3-Async Await</a></p>
+<h2 id="JavaScript-複習篇"><a href="#JavaScript-複習篇" class="headerlink" title="JavaScript 複習篇"></a>JavaScript 複習篇</h2><p><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMxNDQzMg==">Day1 參賽動機以及題目選擇和預計大綱<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMxODY5Mg==">Day2 My VS Code Tour<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMxOTA1OQ==">Day3 查詢陣列的方法-forEach &amp; map<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyMDk4MA==">Day4 操作陣列的方法 Part.1-push &amp; pop<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyMjMyNQ==">Day5 操作陣列的方法 Part.2-shift &amp; unshift<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyMzI0MA==">Day6 其他的陣列方法 slice &amp; splice<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyMzk4Nw==">Day7 搜尋陣列的方法-find,findIndex &amp; filter<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyNDgyOA==">Day8 字串陣列互相變化的方法 split &amp; join<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyNTYwNA==">Day9 函式與箭頭函式<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyNjYyNA==">Day10 物件(Object)<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyNzgyNg==">Day11 解構賦值(Destructuring assignment)<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyODk5MA==">Day12 其餘運算子 &amp; 展開運算子(Spread Operator &amp; Rest Operator)<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyOTU3MA==">Day13 JavaScript 模組(Modules)<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMzMDI0OA==">Day14 同步&amp;非同步(Synchronous &amp; Asynchronous)<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMzMDY4Mw==">Day15 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.1<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMzMTIyMQ==">Day16 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.2-Promise<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMzMTkzMQ==">Day17 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.3-Async Await<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="React-預計大綱"><a href="#React-預計大綱" class="headerlink" title="React 預計大綱"></a>React 預計大綱</h2><p>Day19 React 介紹<br>Day20 React 環境建置<br>Day21 React 元件的形式<br>Day22 React 的語法-JSX<br>Day23 React 中的 JavaScript<br>Day24 React 的橋樑-Prpos<br>Day25 React 的渲染-JSX 與三元運算子的關係<br>Day26 React 的多重渲染-列表與 Key<br>Day27 React 的純函數元件<br>Day28 React 的 Hello World-Hook-useState<br>Day29 React 的玄學<br>Day30 總結</p>
 <h2 id="中場休息之小小心得"><a href="#中場休息之小小心得" class="headerlink" title="中場休息之小小心得"></a>中場休息之小小心得</h2><p>其實我很驚訝我能走到這裡，身為一個前端小菜雞，縱使知道自己寫的沒有很理想，但還是不知羞恥的寫下去，希望能透過這次的鐵人賽，能對這段時間的學習有個交代。</p>
 <p>如果你是跟我一樣剛接觸 React 的新手或是讀到這裡的讀者可能對 React 產生一點興趣的人，期待我們能在各自的天空繼續走下去。</p>
@@ -390,13 +392,13 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/HsienLu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;HsienLu" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0hzaWVuTHU=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;HsienLu"><i class="fab fa-github fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <a href="mailto:sjps946403@gmail.com" title="E-Mail → mailto:sjps946403@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+        <span class="exturl" data-url="bWFpbHRvOnNqcHM5NDY0MDNAZ21haWwuY29t" title="E-Mail → mailto:sjps946403@gmail.com"><i class="fa fa-envelope fa-fw"></i></span>
       </span>
       <span class="links-of-author-item">
-        <a href="https://www.cakeresume.com/7cc5eb" title="cakerRes → https:&#x2F;&#x2F;www.cakeresume.com&#x2F;7cc5eb" rel="noopener" target="_blank"><i class="fa fa-id-card fa-fw"></i></a>
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cuY2FrZXJlc3VtZS5jb20vN2NjNWVi" title="cakerRes → https:&#x2F;&#x2F;www.cakeresume.com&#x2F;7cc5eb"><i class="fa fa-id-card fa-fw"></i></span>
       </span>
   </div>
 
@@ -518,6 +520,31 @@
 
 
   
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
 
 
 

@@ -212,7 +212,7 @@
 <h3 id="key-值的作用"><a href="#key-值的作用" class="headerlink" title="key 值的作用"></a>key 值的作用</h3><p>仔細看上述的程式碼，會發現與正常遍歷陣列的方法不同的是多了一個 Key 值，它的作用是讓 react 能區別每一筆資料，雖然如果不給 key 值 react 會預設 index 當作 key 值，但是這不是一個好的寫法，因為可能會產生不穩定性(像是在對陣列操作增加、刪除之類的)，造成渲染畫面的不確定性。</p>
 <p>所以設定 key 值需要注意以下條件: 1.唯一性 2.必須從外部設定，不要再遍歷函示產生 3.不能隨意地被改變</p>
 <h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>以上就是渲染陣列物件基本的方法，而且會與後續在使用 Hook 的順暢度會有直接的關係。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a href="https://react.dev/">React 官方網站</a></p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><span class="exturl" data-url="aHR0cHM6Ly9yZWFjdC5kZXYv">React 官方網站<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <categories>
         <category>鐵人賽</category>
@@ -254,7 +254,7 @@
 <li>三元運算子 提供了簡潔的寫法，適用於簡單的條件選擇。</li>
 <li>邏輯運算子 (&amp;&amp;) 適合單一條件，不需要額外 else 或 return null。</li>
 </ul>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a href="https://react.dev/">React 官方網站</a></p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><span class="exturl" data-url="aHR0cHM6Ly9yZWFjdC5kZXYv">React 官方網站<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <categories>
         <category>鐵人賽</category>
@@ -340,7 +340,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;react/prop-types&quot;: &quot;off&quot;,</span><br></pre></td></tr></table></figure>
 
 <h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>props 使用起來蠻直覺的，但是有其限制所在，如果需要更進一步的活用，要了解更後面的內容包刮 Hook 之類的內容，基本上在這著系列應該沒有什麼機會介紹到，畢竟是入門向的文章，如果有機會後續再作補充，明天就會介紹到比較偏向實作的內容了。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a href="https://react.dev/">React 官方網站</a></p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><span class="exturl" data-url="aHR0cHM6Ly9yZWFjdC5kZXYv">React 官方網站<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <categories>
         <category>鐵人賽</category>
@@ -375,7 +375,7 @@
 <p>2.單標籤自閉合 3.小駝峰命名</p>
 <h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>JSX 看似很囉唆但是裡面的每個規則都有相對的道理在，如果能去理解其實這些規則就相對應的記起來了。</p>
 <p>預告一下，明日就是介紹如何在 JSX 寫 JavaScript 囉~</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a href="https://react.dev/">React 官方網站</a></p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><span class="exturl" data-url="aHR0cHM6Ly9yZWFjdC5kZXYv">React 官方網站<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <categories>
         <category>鐵人賽</category>
@@ -394,7 +394,7 @@
 <h2 id="如何定義元件-component"><a href="#如何定義元件-component" class="headerlink" title="如何定義元件(component)"></a>如何定義元件(component)</h2><p>這與其多說，不如來看範例吧!下列就是一個元件</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">Comp</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">h1</span>&gt;</span>我是一個元件<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>是不是跟 function 一模一樣，只是在 React 規定中元件開頭一定要<strong>大寫</strong>，然後要<strong>return</strong>出來是因為需要給其他地方使用，所以也需要匯出模組(<a href="https://ithelp.ithome.com.tw/articles/10329570">ESM</a>)給其他檔案使用。其實還有一點，不過是 JSX 的語法問題，最上層需要有個這樣的&lt;&gt;&lt;&#x2F;&gt;根元素包住，換句話說 JSX 只能返回一個跟元素。</p>
+<p>是不是跟 function 一模一樣，只是在 React 規定中元件開頭一定要<strong>大寫</strong>，然後要<strong>return</strong>出來是因為需要給其他地方使用，所以也需要匯出模組(<span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyOTU3MA==">ESM<i class="fa fa-external-link-alt"></i></span>)給其他檔案使用。其實還有一點，不過是 JSX 的語法問題，最上層需要有個這樣的&lt;&gt;&lt;&#x2F;&gt;根元素包住，換句話說 JSX 只能返回一個跟元素。</p>
 <p>整理上述所說的 React 元件基本架構有那些呢?</p>
 <h3 id="React-元件的基本架構"><a href="#React-元件的基本架構" class="headerlink" title="React 元件的基本架構"></a>React 元件的基本架構</h3><p>1.元件開頭命名一定要大寫 2.裡面需要 return 返回 3.最外層要有唯一一個標籤包住通常是&lt;&gt;&lt;&#x2F;&gt;，當然也可以是其它標籤 4.如果要給其它檔案使用一定要匯出</p>
 <h4 id="補充-進入點"><a href="#補充-進入點" class="headerlink" title="補充:進入點"></a>補充:進入點</h4><p>說的直白點所謂的進入點，就是專案架構的最上層，但以剛入門 React 的人來說通常不會先理會這層，以 vite 而言所謂的進入點就是 main.js，初始設定長下面這樣。</p>
@@ -408,7 +408,7 @@
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;/* 可以重複利用 */&#125;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Comp</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Comp</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Comp</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//React 的元件形式</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Comp</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">h1</span>&gt;</span>我是一個元件<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>元件是 React 中基本的形式，整個架構幾乎都是由元件構成的，當然還有其中很重要的構成是 JSX 雖然一直提到，但還沒做詳細介紹，這部分明日會做比較詳細的介紹。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a href="https://react.dev/">React 官方網站</a></p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><span class="exturl" data-url="aHR0cHM6Ly9yZWFjdC5kZXYv">React 官方網站<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <categories>
         <category>鐵人賽</category>
@@ -425,7 +425,7 @@
 <span id="more"></span>
 
 <h2 id="環境建置前的準備-NPM-Node-Package-Manager"><a href="#環境建置前的準備-NPM-Node-Package-Manager" class="headerlink" title="環境建置前的準備-NPM(Node Package Manager)"></a>環境建置前的準備-NPM(Node Package Manager)</h2><p>在使用 Vite 部屬前需要安裝 node 套件管理器(npm)來方便進行 Vite 部屬，而 NPM 是 Node 的安裝管理套件，簡單來說就是綁定 Node，所以安裝 node 就可以使用囉!</p>
-<h3 id="Node-下載與安裝"><a href="#Node-下載與安裝" class="headerlink" title="Node 下載與安裝"></a>Node 下載與安裝</h3><p>Node.js:<a href="https://nodejs.org/en">https://nodejs.org/en</a><br>推薦 LTS 版本，因為是長期維護的版本使用起來也會比最新版本還穩定，而安裝方式跟其他應用程式一樣簡單，只要一直按下一步就可以安裝完成了。</p>
+<h3 id="Node-下載與安裝"><a href="#Node-下載與安裝" class="headerlink" title="Node 下載與安裝"></a>Node 下載與安裝</h3><p>Node.js:<span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL2Vu">https://nodejs.org/en<i class="fa fa-external-link-alt"></i></span><br>推薦 LTS 版本，因為是長期維護的版本使用起來也會比最新版本還穩定，而安裝方式跟其他應用程式一樣簡單，只要一直按下一步就可以安裝完成了。</p>
 <h2 id="使用-Vite-進行環境建置"><a href="#使用-Vite-進行環境建置" class="headerlink" title="使用 Vite 進行環境建置"></a>使用 Vite 進行環境建置</h2><p><strong>1.找到 VS Code 的終端機</strong><br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897452/ith2023-article-pic/day20-1_txslex.png"></p>
 <p><strong>2.輸入指令</strong></p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">npm create vite@latest <span class="comment">//創建最新版本的專案</span></span><br></pre></td></tr></table></figure>
@@ -438,7 +438,7 @@
 <p>(5)基本上就大致完成了，接下來是進行測試有無建置成功的部份，也很單純就照著 vite 提供的指令一行一行打就好了</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">cd vite-project <span class="comment">//切換到專案目錄的資料夾</span></span><br><span class="line">npm install <span class="comment">//安裝模組</span></span><br><span class="line">npm run dev <span class="comment">//開啟測試環境</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>4.如此一來就完成了，理論上應該是可以在下列網址(<a href="http://localhost:5173/)%E4%B8%AD%E7%9C%8B%E5%88%B0%E4%B8%8B%E9%9D%A2%E7%9A%84%E7%95%AB%E9%9D%A2">http://localhost:5173/)中看到下面的畫面</a></strong><br>(1)終端機回饋的網址<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day20-6_j7gjkt.png"><br>(2)出現的測試畫面<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day20-7_sihsxw.png"></p>
+<p><strong>4.如此一來就完成了，理論上應該是可以在下列網址(<span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo1MTczLyklRTQlQjglQUQlRTclOUMlOEIlRTUlODglQjAlRTQlQjglOEIlRTklOUQlQTIlRTclOUElODQlRTclOTUlQUIlRTklOUQlQTI=">http://localhost:5173/)中看到下面的畫面<i class="fa fa-external-link-alt"></i></span></strong><br>(1)終端機回饋的網址<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day20-6_j7gjkt.png"><br>(2)出現的測試畫面<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day20-7_sihsxw.png"></p>
 <p><strong>5.操作的檔案位置(src&#x3D;&gt;App.js)</strong><br>位在 src 資料夾的 App.js，未來的操作範例都可以在這個檔案進行。<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day20-8_s5uoza.png"></p>
 <h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>雖然步驟還是有點多或是有點麻煩，但如果要在本地端開發，這已經是相對簡單快速的方法了，明天就會正式進入 React 囉~</p>
 ]]></content>
@@ -464,8 +464,8 @@
 <p>3.如果單獨元件有更新資料，可以只對單獨的元件進行重新渲染，不用刷新整個頁面</p>
 <p>4.專注在畫面的呈現處理</p>
 <h2 id="為什麼選擇-React"><a href="#為什麼選擇-React" class="headerlink" title="為什麼選擇 React"></a>為什麼選擇 React</h2><p>綜合上述特色，加上龐大的使用者社群，在學習上的資源也相對多，雖然入門的門檻高了點，但跨過了，就可以感受到 React 的方便性了。</p>
-<p>##參考資料<br><a href="https://www.youtube.com/watch?v=8pDqJVdNa44&t=4s">Origin Story: How A Small Team of Developers Created React.js at Facebook</a></p>
-<p><a href="https://react.dev/">React 官方網站</a></p>
+<p>##參考資料<br><span class="exturl" data-url="aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj04cERxSlZkTmE0NCZ0PTRz">Origin Story: How A Small Team of Developers Created React.js at Facebook<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9yZWFjdC5kZXYv">React 官方網站<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <categories>
         <category>鐵人賽</category>
@@ -482,7 +482,7 @@
 <p>在今天這個算是中場休息的時間，來稍微整理前面的內容，和提出接下來要進行的架構。依然是遵從本系列的定位，盡可能地減少在學習 React 之前的落差，所以並不會提到太多太難的內容，因為比較難的內容我相信版上已經有很多大神寫文章了，我能做到的是盡量地做銜接。</p>
 <span id="more"></span>
 
-<h2 id="JavaScript-複習篇"><a href="#JavaScript-複習篇" class="headerlink" title="JavaScript 複習篇"></a>JavaScript 複習篇</h2><p><a href="https://ithelp.ithome.com.tw/articles/10314432">Day1 參賽動機以及題目選擇和預計大綱</a><br><a href="https://ithelp.ithome.com.tw/articles/10318692">Day2 My VS Code Tour</a><br><a href="https://ithelp.ithome.com.tw/articles/10319059">Day3 查詢陣列的方法-forEach &amp; map</a><br><a href="https://ithelp.ithome.com.tw/articles/10320980">Day4 操作陣列的方法 Part.1-push &amp; pop</a><br><a href="https://ithelp.ithome.com.tw/articles/10322325">Day5 操作陣列的方法 Part.2-shift &amp; unshift</a><br><a href="https://ithelp.ithome.com.tw/articles/10323240">Day6 其他的陣列方法 slice &amp; splice</a><br><a href="https://ithelp.ithome.com.tw/articles/10323987">Day7 搜尋陣列的方法-find,findIndex &amp; filter</a><br><a href="https://ithelp.ithome.com.tw/articles/10324828">Day8 字串陣列互相變化的方法 split &amp; join</a><br><a href="https://ithelp.ithome.com.tw/articles/10325604">Day9 函式與箭頭函式</a><br><a href="https://ithelp.ithome.com.tw/articles/10326624">Day10 物件(Object)</a><br><a href="https://ithelp.ithome.com.tw/articles/10327826">Day11 解構賦值(Destructuring assignment)</a><br><a href="https://ithelp.ithome.com.tw/articles/10328990">Day12 其餘運算子 &amp; 展開運算子(Spread Operator &amp; Rest Operator)</a><br><a href="https://ithelp.ithome.com.tw/articles/10329570">Day13 JavaScript 模組(Modules)</a><br><a href="https://ithelp.ithome.com.tw/articles/10330248">Day14 同步&amp;非同步(Synchronous &amp; Asynchronous)</a><br><a href="https://ithelp.ithome.com.tw/articles/10330683">Day15 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.1</a><br><a href="https://ithelp.ithome.com.tw/articles/10331221">Day16 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.2-Promise</a><br><a href="https://ithelp.ithome.com.tw/articles/10331931">Day17 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.3-Async Await</a></p>
+<h2 id="JavaScript-複習篇"><a href="#JavaScript-複習篇" class="headerlink" title="JavaScript 複習篇"></a>JavaScript 複習篇</h2><p><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMxNDQzMg==">Day1 參賽動機以及題目選擇和預計大綱<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMxODY5Mg==">Day2 My VS Code Tour<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMxOTA1OQ==">Day3 查詢陣列的方法-forEach &amp; map<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyMDk4MA==">Day4 操作陣列的方法 Part.1-push &amp; pop<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyMjMyNQ==">Day5 操作陣列的方法 Part.2-shift &amp; unshift<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyMzI0MA==">Day6 其他的陣列方法 slice &amp; splice<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyMzk4Nw==">Day7 搜尋陣列的方法-find,findIndex &amp; filter<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyNDgyOA==">Day8 字串陣列互相變化的方法 split &amp; join<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyNTYwNA==">Day9 函式與箭頭函式<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyNjYyNA==">Day10 物件(Object)<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyNzgyNg==">Day11 解構賦值(Destructuring assignment)<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyODk5MA==">Day12 其餘運算子 &amp; 展開運算子(Spread Operator &amp; Rest Operator)<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMyOTU3MA==">Day13 JavaScript 模組(Modules)<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMzMDI0OA==">Day14 同步&amp;非同步(Synchronous &amp; Asynchronous)<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMzMDY4Mw==">Day15 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.1<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMzMTIyMQ==">Day16 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.2-Promise<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9pdGhlbHAuaXRob21lLmNvbS50dy9hcnRpY2xlcy8xMDMzMTkzMQ==">Day17 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.3-Async Await<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="React-預計大綱"><a href="#React-預計大綱" class="headerlink" title="React 預計大綱"></a>React 預計大綱</h2><p>Day19 React 介紹<br>Day20 React 環境建置<br>Day21 React 元件的形式<br>Day22 React 的語法-JSX<br>Day23 React 中的 JavaScript<br>Day24 React 的橋樑-Prpos<br>Day25 React 的渲染-JSX 與三元運算子的關係<br>Day26 React 的多重渲染-列表與 Key<br>Day27 React 的純函數元件<br>Day28 React 的 Hello World-Hook-useState<br>Day29 React 的玄學<br>Day30 總結</p>
 <h2 id="中場休息之小小心得"><a href="#中場休息之小小心得" class="headerlink" title="中場休息之小小心得"></a>中場休息之小小心得</h2><p>其實我很驚訝我能走到這裡，身為一個前端小菜雞，縱使知道自己寫的沒有很理想，但還是不知羞恥的寫下去，希望能透過這次的鐵人賽，能對這段時間的學習有個交代。</p>
 <p>如果你是跟我一樣剛接觸 React 的新手或是讀到這裡的讀者可能對 React 產生一點興趣的人，期待我們能在各自的天空繼續走下去。</p>
@@ -603,10 +603,10 @@
 <p>簡單來說，MDN 很明確的定義 javascript 是一個同步性的語言，但可以處理或是說可以執行非同步的方法。下面的例子可以說明:</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;registering click handler&quot;</span>);</span><br><span class="line"></span><br><span class="line">button.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;get click&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;all done&quot;</span>);</span><br></pre></td></tr></table></figure>
 
-<p>PS:上述是簡化後的例子，真的需要執行的話如下網址:<br><a href="https://codepen.io/Hsienlu/pen/PoXevrJ">https://codepen.io/Hsienlu/pen/PoXevrJ</a></p>
+<p>PS:上述是簡化後的例子，真的需要執行的話如下網址:<br><span class="exturl" data-url="aHR0cHM6Ly9jb2RlcGVuLmlvL0hzaWVubHUvcGVuL1BvWGV2cko=">https://codepen.io/Hsienlu/pen/PoXevrJ<i class="fa fa-external-link-alt"></i></span></p>
 <p>可以發現實際在執行的時候，”all done”並不會等到”get click”被觸發時才會出現，而是會直接執行，所以才會說雖然 JavaScript 是同步性的語言，但可以處理需要非同步處理的事情。</p>
 <p>但是，非同步的事情常常會具有不確定性存在(不知道哪個會先發生哪個會後發生)，於是就有了一些處理同步和非同步的方法，這些方法明天會繼續介紹。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p>1.<a href="https://developer.mozilla.org/zh-TW/docs/Learn/JavaScript/Asynchronous/Introducing">非同步的 JavaScript 介紹</a></p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p>1.<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtVFcvZG9jcy9MZWFybi9KYXZhU2NyaXB0L0FzeW5jaHJvbm91cy9JbnRyb2R1Y2luZw==">非同步的 JavaScript 介紹<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <categories>
         <category>鐵人賽</category>
@@ -698,8 +698,8 @@
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">const</span> newArray = [...array];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArray);</span><br><span class="line"><span class="comment">//上述兩個會是名稱不一樣，但是內容一模一樣的陣列。</span></span><br></pre></td></tr></table></figure>
 
 <p>其實在使用上，我會認為不太需要去區分的太仔細，或是刻意去記憶，因為其實本身在使用的情境上去做區分，所以多去使用它自然而然的就可以對這兩類與法做出一些區別。</p>
-<h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><p>1.<a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters">MDN 其餘運算子</a></p>
-<p>2.<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax">MDN 展開運算子</a></p>
+<h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><p>1.<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtVFcvZG9jcy9XZWIvSmF2YVNjcmlwdC9SZWZlcmVuY2UvRnVuY3Rpb25zL3Jlc3RfcGFyYW1ldGVycw==">MDN 其餘運算子<i class="fa fa-external-link-alt"></i></span></p>
+<p>2.<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvSmF2YVNjcmlwdC9SZWZlcmVuY2UvT3BlcmF0b3JzL1NwcmVhZF9zeW50YXg=">MDN 展開運算子<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <categories>
         <category>鐵人賽</category>
@@ -729,7 +729,7 @@
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;John&quot;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">30</span>,</span><br><span class="line">  <span class="attr">isStudent</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">helloFunction</span> = (<span class="params">&#123;name&#125;</span>) =&gt; &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`hello, <span class="subst">$&#123;name&#125;</span>`</span>);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="title function_">helloFunction</span>(person);</span><br></pre></td></tr></table></figure>
 
 <p>當使用解構賦值（Destructuring Assignment）時，儘管它不是絕對必要的，但確實可以使您的程式碼更加簡潔、易讀，尤其在 React 中傳遞 props 時，這種做法很常見，而且也被廣為使用。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">MDN 解構賦值</a></p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtVFcvZG9jcy9XZWIvSmF2YVNjcmlwdC9SZWZlcmVuY2UvT3BlcmF0b3JzL0Rlc3RydWN0dXJpbmdfYXNzaWdubWVudA==">MDN 解構賦值<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <categories>
         <category>鐵人賽</category>
@@ -837,7 +837,7 @@
 <h3 id="箭頭函式的特性"><a href="#箭頭函式的特性" class="headerlink" title="箭頭函式的特性"></a>箭頭函式的特性</h3><p>1.this 通常指向全域或是說最近的非箭頭函式的 this 值 2.沒有建構函式 3.在 JSX 中可能會看到下面那這種()寫法這是因為已經只有一行的狀況下可以省略掉大括弧，那為什麼可以省略?因為在()為群組運算子 Grouping operator 視為同一行</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">callName</span> = (<span class="params">props</span>) =&gt; (</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Tom<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
-<h2 id="引用資料"><a href="#引用資料" class="headerlink" title="引用資料"></a>引用資料</h2><p>MDN <a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Functions/Default_parameters">預設參數( Default parameters )</a><br>MDN <a href="https://developer.mozilla.org/zh-TW/docs/Glossary/IIFE">IIFE</a></p>
+<h2 id="引用資料"><a href="#引用資料" class="headerlink" title="引用資料"></a>引用資料</h2><p>MDN <span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtVFcvZG9jcy9XZWIvSmF2YVNjcmlwdC9SZWZlcmVuY2UvRnVuY3Rpb25zL0RlZmF1bHRfcGFyYW1ldGVycw==">預設參數( Default parameters )<i class="fa fa-external-link-alt"></i></span><br>MDN <span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtVFcvZG9jcy9HbG9zc2FyeS9JSUZF">IIFE<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <categories>
         <category>鐵人賽</category>
@@ -870,7 +870,7 @@
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> string = array.<span class="title function_">join</span>(<span class="string">&quot;,&quot;</span>); <span class="comment">//決定要用什麼連接成字串，以陣列而言通常是&quot;,&quot;預設也是&quot;,&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(string);</span><br></pre></td></tr></table></figure>
 
 <p>以上是字串與陣列互換的方法~</p>
-<h2 id="引用資料"><a href="#引用資料" class="headerlink" title="引用資料"></a>引用資料</h2><p>MDN <a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/find">Array.prototype.join</a></p>
+<h2 id="引用資料"><a href="#引用資料" class="headerlink" title="引用資料"></a>引用資料</h2><p>MDN <span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtVFcvZG9jcy9XZWIvSmF2YVNjcmlwdC9SZWZlcmVuY2UvR2xvYmFsX09iamVjdHMvQXJyYXkvZmluZA==">Array.prototype.join<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <categories>
         <category>鐵人賽</category>
@@ -896,7 +896,7 @@
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> newArray = array.<span class="title function_">filter</span>(<span class="function">(<span class="params">v, i, arr</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> v &gt; <span class="number">3</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArray);</span><br></pre></td></tr></table></figure>
 
 <p>這三著其實都很常用到，並沒有誰好誰壞，端看用途而定。</p>
-<h2 id="引用資料"><a href="#引用資料" class="headerlink" title="引用資料"></a>引用資料</h2><p>MDN <a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/find">Array.prototype.find</a></p>
+<h2 id="引用資料"><a href="#引用資料" class="headerlink" title="引用資料"></a>引用資料</h2><p>MDN <span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtVFcvZG9jcy9XZWIvSmF2YVNjcmlwdC9SZWZlcmVuY2UvR2xvYmFsX09iamVjdHMvQXJyYXkvZmluZA==">Array.prototype.find<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <categories>
         <category>鐵人賽</category>
@@ -931,7 +931,7 @@
 <h3 id="splice"><a href="#splice" class="headerlink" title=".splice()"></a>.splice()</h3><p>雖然這個函式與 slice 只差一個字但功用卻不一樣，此函式最不一樣的功能是在陣列中插入新成員，但會&#x3D;&#x3D;改變原有的陣列&#x3D;&#x3D;。<br>其用法稍微複雜一點，裡面需要帶三個參數 1.開始的 index 2.往後刪除的個數(可以為 0) 3.要加入的東西<br><strong>.splice(開始的 index,刪除個數,新東西)</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let array=[1,2,3,4,5]</span><br><span class="line">array.splice(1,1,&quot;a&quot;)</span><br><span class="line">console.log(array)//輸出:[1,&quot;a&quot;,3,4,5]</span><br></pre></td></tr></table></figure>
 
-<h2 id="引用資料"><a href="#引用資料" class="headerlink" title="引用資料"></a>引用資料</h2><p>MDN <a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">Array.prototype.slice</a></p>
+<h2 id="引用資料"><a href="#引用資料" class="headerlink" title="引用資料"></a>引用資料</h2><p>MDN <span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtVFcvZG9jcy9XZWIvSmF2YVNjcmlwdC9SZWZlcmVuY2UvR2xvYmFsX09iamVjdHMvQXJyYXkvc2xpY2U=">Array.prototype.slice<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <categories>
         <category>鐵人賽</category>
@@ -1140,19 +1140,19 @@
 </li>
 </ol>
 <h3 id="二-常用套件"><a href="#二-常用套件" class="headerlink" title="(二) 常用套件"></a>(二) 常用套件</h3><ul>
-<li><p><a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag">Auto Close Tag</a><br>HTML 自動封閉的套件</p>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPWZvcm11bGFoZW5kcnkuYXV0by1jbG9zZS10YWc=">Auto Close Tag<i class="fa fa-external-link-alt"></i></span><br>HTML 自動封閉的套件</p>
 </li>
-<li><p><a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">Auto Rename Tag</a><br>HTML 可以一起更改頭尾標籤的套件</p>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPWZvcm11bGFoZW5kcnkuYXV0by1yZW5hbWUtdGFn">Auto Rename Tag<i class="fa fa-external-link-alt"></i></span><br>HTML 可以一起更改頭尾標籤的套件</p>
 </li>
-<li><p><a href="https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hant">Chinese (Traditional) Language</a><br>中文化套件</p>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPU1TLUNFSU5UTC52c2NvZGUtbGFuZ3VhZ2UtcGFjay16aC1oYW50">Chinese (Traditional) Language<i class="fa fa-external-link-alt"></i></span><br>中文化套件</p>
 </li>
-<li><p><a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker">Code Spell Checker</a><br>檢查拼字錯誤的套件，debug 的好幫手，效果有點像 Word 拼字檢查那樣<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897450/ith2023-article-pic/day2%20My%20VS%20Code%20Tour/10_j7veqo.png" alt="圖 6"></p>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPXN0cmVldHNpZGVzb2Z0d2FyZS5jb2RlLXNwZWxsLWNoZWNrZXI=">Code Spell Checker<i class="fa fa-external-link-alt"></i></span><br>檢查拼字錯誤的套件，debug 的好幫手，效果有點像 Word 拼字檢查那樣<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897450/ith2023-article-pic/day2%20My%20VS%20Code%20Tour/10_j7veqo.png" alt="圖 6"></p>
 </li>
-<li><p><a href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">Git Graph</a><br>對於 Git 有漂亮的 GUI 可以看，方便查閱分支以及版本紀錄<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897450/ith2023-article-pic/day2%20My%20VS%20Code%20Tour/11_le2a0b.png" alt="圖 7"></p>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPW1odXRjaGllLmdpdC1ncmFwaA==">Git Graph<i class="fa fa-external-link-alt"></i></span><br>對於 Git 有漂亮的 GUI 可以看，方便查閱分支以及版本紀錄<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897450/ith2023-article-pic/day2%20My%20VS%20Code%20Tour/11_le2a0b.png" alt="圖 7"></p>
 </li>
-<li><p><a href="https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow">Indent-rainbow</a><br>縮排好幫手，下圖彩虹就是它的效果<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897450/ith2023-article-pic/day2%20My%20VS%20Code%20Tour/12_hj6cta.png" alt="圖 5"></p>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPW9kZXJ3YXQuaW5kZW50LXJhaW5ib3c=">Indent-rainbow<i class="fa fa-external-link-alt"></i></span><br>縮排好幫手，下圖彩虹就是它的效果<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897450/ith2023-article-pic/day2%20My%20VS%20Code%20Tour/12_hj6cta.png" alt="圖 5"></p>
 </li>
-<li><p><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a><br>好用的網頁預覽套件，不過有時候要注意一下路徑位置，有時候會預覽不出來，這時候就要檢查一下路徑位置了</p>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPXJpdHdpY2tkZXkuTGl2ZVNlcnZlcg==">Live Server<i class="fa fa-external-link-alt"></i></span><br>好用的網頁預覽套件，不過有時候要注意一下路徑位置，有時候會預覽不出來，這時候就要檢查一下路徑位置了</p>
 </li>
 </ul>
 <h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>總結而言，VS Code 擁有強大的功能和豐富的套件生態系統，適合各種程式開發需求。透過介紹常用的基本設置，如自動換行、括弧顏色設置以及自動儲存格式化，我們可以提高程式碼的可讀性和整潔性。此外，常用的套件如 Auto Close Tag、Auto Rename Tag、Chinese (Traditional) Language、Code Spell Checker、Git Graph、Indent-rainbow 以及 Live Server 更進一步提升了開發效率，讓我們能更專注於寫程式，而不用花費太多時間處理繁瑣的細節。</p>
@@ -1178,10 +1178,10 @@
 <h3 id="第一部分-JS"><a href="#第一部分-JS" class="headerlink" title="第一部分 JS"></a>第一部分 JS</h3><p>Day 1. 參賽動機以及題目選擇和預計大綱<br>Day 2. My VS Code Tour<br>Day 3. 查詢陣列的方法-forEach &amp; map<br>Day 4. 操作陣列的方法 Part.1-push &amp; pop<br>Day 5. 操作陣列的方法 Part.2-shift &amp; unshift<br>Day 6. 其他的陣列方法 slice &amp; splice<br>Day 7. 搜尋陣列的方法-find,findIndex &amp; filter<br>Day 8. 字串陣列互相變化的方法 split &amp; join<br>Day 9. 函式與箭頭函式<br>Day 10.物件(Object)<br>Day 11.解構賦值(Destructuring assignment)<br>Day 12.其餘運算子 &amp; 展開運算子(Spread Operator &amp; Rest Operator)<br>Day 13.JavaScript 模組(Modules)<br>Day 14.處理同步非同步的方法(Asynchronous &amp; Synchronous)</p>
 <h3 id="第二部分-Rreact"><a href="#第二部分-Rreact" class="headerlink" title="第二部分 Rreact"></a>第二部分 Rreact</h3><p>這部分不會帶到太多太難的 hook，最多可能就寫到 useEffect，至於詳細的大綱，等 JS 結束之後會再公布。</p>
 <h4 id="最後熱血開賽-希望一切順利"><a href="#最後熱血開賽-希望一切順利" class="headerlink" title="最後熱血開賽~~希望一切順利"></a>最後熱血開賽~~希望一切順利</h4><h2 id="預計參考資料"><a href="#預計參考資料" class="headerlink" title="預計參考資料"></a>預計參考資料</h2><ol>
-<li><a href="https://react.dev/">React 官網</a></li>
-<li><a href="https://www.theodinproject.com/">Odin Project</a></li>
-<li><a href="https://www.freecodecamp.org/learn/front-end-development-libraries/">freeCodeCamp</a></li>
-<li><a href="https://developer.mozilla.org/zh-TW/">MDN</a></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9yZWFjdC5kZXYv">React 官網<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cudGhlb2RpbnByb2plY3QuY29tLw==">Odin Project<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuZnJlZWNvZGVjYW1wLm9yZy9sZWFybi9mcm9udC1lbmQtZGV2ZWxvcG1lbnQtbGlicmFyaWVzLw==">freeCodeCamp<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtVFcv">MDN<i class="fa fa-external-link-alt"></i></span></li>
 </ol>
 ]]></content>
       <categories>
