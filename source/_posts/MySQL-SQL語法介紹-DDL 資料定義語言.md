@@ -5,7 +5,7 @@ tags: [MySQL, SQL]
 categories: MySQL
 ---
 
-## DDL(Data Definition Language) 資料定義語言
+DDL(Data Definition Language) 資料定義語言
 
 <!-- more -->
 

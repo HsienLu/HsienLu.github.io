@@ -5,7 +5,7 @@ tags: [MySQL, SQL]
 categories: MySQL
 ---
 
-## DML(Data Manipulation Language) 資料操作語言
+DML(Data Manipulation Language) 資料操作語言
 
 <!-- more -->
 
@@ -24,3 +24,9 @@ UPDATE 資料表名 SET 欄位名1=值1, 欄位名2=值2, ... WHERE 條件;
 > WHERE 條件可以不寫，但是如果不寫，會將資料表所有資料都修改
 
 #### 刪除資料
+
+```sql
+DELETE FROM 資料表名 WHERE 條件;
+```
+
+> WHERE 條件可以不寫，但是如果不寫，會將資料表所有資料都刪除

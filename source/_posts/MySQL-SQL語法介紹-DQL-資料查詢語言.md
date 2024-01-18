@@ -5,7 +5,7 @@ tags: [MySQL, SQL]
 categories: MySQL
 ---
 
-## DQL(Data Query Language) 資料查詢語言
+DQL(Data Query Language) 資料查詢語言
 
 <!-- more -->
 
