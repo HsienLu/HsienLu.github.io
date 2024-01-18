@@ -22,21 +22,21 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="今天要來介紹的是現在比較常用處理非同步的方法分別是 promise，這裡會先大幅度的簡化 promise 的用法，來先理解整個 promise 的運作概念。">
+  <meta name="description" content="MySQL 約束條件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Day 16 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.2-Promise">
-<meta property="og:url" content="http://example.com/2023/09/30/Day%2016%20%E8%99%95%E7%90%86%E5%90%8C%E6%AD%A5(Synchronous)%E5%92%8C%E9%9D%9E%E5%90%8C%E6%AD%A5(Asynchronous)%E7%9A%84%E6%96%B9%E6%B3%95Part.2-Promise/index.html">
+<meta property="og:title" content="MySQL-約束條件">
+<meta property="og:url" content="http://example.com/2024/01/18/MySQL-%E7%B4%84%E6%9D%9F%E6%A2%9D%E4%BB%B6/index.html">
 <meta property="og:site_name" content="HsienLu&#39;s Blog">
-<meta property="og:description" content="今天要來介紹的是現在比較常用處理非同步的方法分別是 promise，這裡會先大幅度的簡化 promise 的用法，來先理解整個 promise 的運作概念。">
+<meta property="og:description" content="MySQL 約束條件">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-09-30T05:54:31.000Z">
-<meta property="article:modified_time" content="2024-01-18T02:23:57.750Z">
+<meta property="article:published_time" content="2024-01-18T02:21:17.000Z">
+<meta property="article:modified_time" content="2024-01-18T02:23:57.754Z">
 <meta property="article:author" content="HsienLu">
-<meta property="article:tag" content="React">
-<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="SQL">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2023/09/30/Day%2016%20%E8%99%95%E7%90%86%E5%90%8C%E6%AD%A5(Synchronous)%E5%92%8C%E9%9D%9E%E5%90%8C%E6%AD%A5(Asynchronous)%E7%9A%84%E6%96%B9%E6%B3%95Part.2-Promise/">
+<link rel="canonical" href="http://example.com/2024/01/18/MySQL-%E7%B4%84%E6%9D%9F%E6%A2%9D%E4%BB%B6/">
 
 
 <script id="page-configurations">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>Day 16 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.2-Promise | HsienLu's Blog</title>
+  <title>MySQL-約束條件 | HsienLu's Blog</title>
   
 
 
@@ -195,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/30/Day%2016%20%E8%99%95%E7%90%86%E5%90%8C%E6%AD%A5(Synchronous)%E5%92%8C%E9%9D%9E%E5%90%8C%E6%AD%A5(Asynchronous)%E7%9A%84%E6%96%B9%E6%B3%95Part.2-Promise/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/18/MySQL-%E7%B4%84%E6%9D%9F%E6%A2%9D%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/136676022.jpg">
@@ -208,7 +208,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Day 16 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.2-Promise
+          MySQL-約束條件
         </h1>
 
         <div class="post-meta">
@@ -218,23 +218,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2023-09-30 13:54:31" itemprop="dateCreated datePublished" datetime="2023-09-30T13:54:31+08:00">2023-09-30</time>
+              <time title="Created: 2024-01-18 10:21:17 / Modified: 10:23:57" itemprop="dateCreated datePublished" datetime="2024-01-18T10:21:17+08:00">2024-01-18</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-01-18 10:23:57" itemprop="dateModified" datetime="2024-01-18T10:23:57+08:00">2024-01-18</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/" itemprop="url" rel="index"><span itemprop="name">鐵人賽</span></a>
+                  <a href="/categories/MySQL/" itemprop="url" rel="index"><span itemprop="name">MySQL</span></a>
                 </span>
             </span>
 
@@ -244,8 +238,8 @@
       </header>
           
           <div class="post-tags">
-              <a href="/tags/React/" rel="tag"><i class="fa fa-tag"></i> React</a>
-              <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+              <a href="/tags/MySQL/" rel="tag"><i class="fa fa-tag"></i> MySQL</a>
+              <a href="/tags/SQL/" rel="tag"><i class="fa fa-tag"></i> SQL</a>
           </div>
     
     
@@ -253,17 +247,58 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>今天要來介紹的是現在比較常用處理非同步的方法分別是 promise，這裡會先大幅度的簡化 promise 的用法，來先理解整個 promise 的運作概念。</p>
+        <p>MySQL 約束條件</p>
 <span id="more"></span>
 
-<h2 id="promise"><a href="#promise" class="headerlink" title="promise"></a>promise</h2><p><strong>1.創建 promise:</strong> 為什麼需要創建 promise 因為它是一個建構函式，所以需要使用關鍵字 new 去創建 promise，裡面帶兩個參數分別為 resolve, reject。<br>resolve:代表執行成功地回傳值<br>reject:代表執行失敗的回傳值</p>
-<p><strong>2.then&amp;catch:</strong> .then()代表著 promise 執行成功後所需要執行的區塊，而且可以接 reslove 的回傳值;.catch()代表 promise 執行失敗後所需要執行的區塊，而且可以接 reject 的回傳值。</p>
-<p><strong>3.then 串接:</strong> .then 是可以串接的，甚至是可以在 then 裡面再多 new 一個 Promise 物件，來處理多個非同步的問題</p>
-<p>綜合上述提到的三點，範例如下:<br>我需要依序 console.log() 出 1,2,3,4，但是 2,3 有 setTimeout，所以需要利用 new promise 進行處理然後回傳處理成功。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span>);</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">2</span>);</span><br><span class="line">    <span class="title function_">resolve</span>(<span class="string">&quot;success1&quot;</span>);</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span>);</span><br><span class="line">        <span class="title function_">resolve</span>(<span class="string">&quot;success1&quot;</span>);</span><br><span class="line">      &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">4</span>);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="約束概念和分類"><a href="#約束概念和分類" class="headerlink" title="約束概念和分類"></a>約束概念和分類</h2><p>概念:約束條件是一種限制條件，用於限制變數的取值範圍，使得變數在取值時必須滿足某種條件。<br>約束分類表格</p>
+<table>
+<thead>
+<tr>
+<th align="center">約束分類</th>
+<th align="center">約束名稱</th>
+<th align="center">約束說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">NOT NULL</td>
+<td align="center">非空約束</td>
+<td align="center">限制變數不能為空值</td>
+</tr>
+<tr>
+<td align="center">UNIQUE</td>
+<td align="center">唯一約束</td>
+<td align="center">限制變數不能重複</td>
+</tr>
+<tr>
+<td align="center">PRIMARY KEY</td>
+<td align="center">主鍵約束</td>
+<td align="center">限制變數不能為空值且不能重複</td>
+</tr>
+<tr>
+<td align="center">CHECK</td>
+<td align="center">檢查約束</td>
+<td align="center">限制變數必須滿足某種條件</td>
+</tr>
+<tr>
+<td align="center">DEFAULT</td>
+<td align="center">默認約束</td>
+<td align="center">限制變數沒有給定值時，默認為某個值</td>
+</tr>
+<tr>
+<td align="center">FOREIGN KEY</td>
+<td align="center">外鍵約束</td>
+<td align="center">限制變數的值必須在另一個表中存在</td>
+</tr>
+</tbody></table>
+<h3 id="外鍵約束"><a href="#外鍵約束" class="headerlink" title="外鍵約束"></a>外鍵約束</h3><p>概念:外鍵約束是一種約束條件，用於限制變數的值必須在另一個表中存在。<br>外鍵約束的語法格式</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CONSTRAINT</span> 外鍵名稱 <span class="keyword">FOREIGN</span> KEY (外鍵欄位名稱) <span class="keyword">REFERENCES</span> 另一個表名稱(另一個表的欄位名稱)</span><br></pre></td></tr></table></figure>
 
-<p>今天就先簡單介紹現在處理非同步的方法，但是強調 promise 還有很多種用法，但如果以一個初學的角度來看還是先熟悉基礎用法，會在使用上比較不容易造成混淆</p>
-<p>事實上，ES6 之後還有一個語法 async await，它是 promise 的語法糖，在寫法上比 promise 更簡潔易懂，這部份就留做明天來介紹吧~</p>
+<p>外鍵約束的語法範例</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> dept(</span><br><span class="line">id <span class="type">int</span> <span class="keyword">primary</span> key auto_increment,</span><br><span class="line">dep_name <span class="type">varchar</span>(<span class="number">20</span>),</span><br><span class="line">addr <span class="type">varchar</span>(<span class="number">20</span>)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> emp(</span><br><span class="line">id <span class="type">int</span> <span class="keyword">primary</span> key auto_increment,</span><br><span class="line">name <span class="type">varchar</span>(<span class="number">20</span>),</span><br><span class="line">age <span class="type">int</span>,</span><br><span class="line">dep_id <span class="type">int</span> ,</span><br><span class="line"><span class="keyword">constraint</span> fk_emp_dept <span class="keyword">foreign</span> key(dep_id)</span><br><span class="line"><span class="keyword">references</span> dept(id)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> dept (dep_name,addr) <span class="keyword">values</span></span><br><span class="line">(&quot;RD&quot;,&quot;台北&quot;),</span><br><span class="line">(&quot;ME&quot;,&quot;台中&quot;);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> emp (NAMe,age,dep_id) <span class="keyword">values</span></span><br><span class="line">(&quot;AAA&quot;,<span class="number">20</span>,<span class="number">1</span>),</span><br><span class="line">(&quot;BBB&quot;,<span class="number">20</span>,<span class="number">1</span>),</span><br><span class="line">(&quot;CCC&quot;,<span class="number">20</span>,<span class="number">1</span>),</span><br><span class="line">(&quot;DDD&quot;,<span class="number">20</span>,<span class="number">2</span>),</span><br><span class="line">(&quot;EEE&quot;,<span class="number">20</span>,<span class="number">2</span>),</span><br><span class="line">(&quot;FFF&quot;,<span class="number">20</span>,<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>主表要先建立，外鍵表要後建立，否則會報錯</p>
+</blockquote>
 
     </div>
 
@@ -274,13 +309,13 @@
   <div class="popular-posts-header">Related Posts</div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/2024/01/09/Day 30 遲來的完賽/" rel="bookmark">Day 30 遲來的完賽</a></div>
+      <div class="popular-posts-title"><a href="/2024/01/18/MySQL-事務-Transaction/" rel="bookmark">MySQL-事務(Transaction)</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/2024/01/02/Day 29 React的本質-Library/" rel="bookmark">Day 29 React的本質-Library</a></div>
+      <div class="popular-posts-title"><a href="/2024/01/18/MySQL-關聯資料表查詢/" rel="bookmark">MySQL-關聯資料表查詢</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/2023/10/12/Day 28 React的Hello World-Hook-useState/" rel="bookmark">Day 28 React 的 Hello World-Hook-useState</a></div>
+      <div class="popular-posts-title"><a href="/2024/01/18/MySQL-SQL語法介紹-DQL-資料查詢語言/" rel="bookmark">MySQL-SQL語法介紹-DQL 資料查詢語言</a></div>
     </li>
   </ul>
 
@@ -294,12 +329,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/09/29/Day%2015%20%E8%99%95%E7%90%86%E5%90%8C%E6%AD%A5(Synchronous)%E5%92%8C%E9%9D%9E%E5%90%8C%E6%AD%A5(Asynchronous)%E7%9A%84%E6%96%B9%E6%B3%95Part.1/" rel="prev" title="Day 15 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.1">
-      <i class="fa fa-chevron-left"></i> Day 15 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.1
+    <a href="/2024/01/18/MySQL-%E9%97%9C%E8%81%AF%E8%B3%87%E6%96%99%E8%A1%A8%E6%9F%A5%E8%A9%A2/" rel="prev" title="MySQL-關聯資料表查詢">
+      <i class="fa fa-chevron-left"></i> MySQL-關聯資料表查詢
     </a></div>
       <div class="post-nav-item">
-    <a href="/2023/10/01/Day%2017%20%E8%99%95%E7%90%86%E5%90%8C%E6%AD%A5(Synchronous)%E5%92%8C%E9%9D%9E%E5%90%8C%E6%AD%A5(Asynchronous)%E7%9A%84%E6%96%B9%E6%B3%95Part.3-Async%20Await/" rel="next" title="Day17 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.3-Async Await">
-      Day17 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.3-Async Await <i class="fa fa-chevron-right"></i>
+    <a href="/2024/01/18/MySQL-%E4%BA%8B%E5%8B%99-Transaction/" rel="next" title="MySQL-事務(Transaction)">
+      MySQL-事務(Transaction) <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -359,7 +394,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#promise"><span class="nav-number">1.</span> <span class="nav-text">promise</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%84%E6%9D%9F%E6%A6%82%E5%BF%B5%E5%92%8C%E5%88%86%E9%A1%9E"><span class="nav-number">1.</span> <span class="nav-text">約束概念和分類</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E9%8D%B5%E7%B4%84%E6%9D%9F"><span class="nav-number">1.1.</span> <span class="nav-text">外鍵約束</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

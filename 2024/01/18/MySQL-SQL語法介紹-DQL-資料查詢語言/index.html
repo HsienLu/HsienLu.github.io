@@ -30,7 +30,7 @@
 <meta property="og:description" content="DQL(Data Query Language) 資料查詢語言">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-01-18T02:09:19.000Z">
-<meta property="article:modified_time" content="2024-01-18T02:11:25.323Z">
+<meta property="article:modified_time" content="2024-01-18T02:23:57.754Z">
 <meta property="article:author" content="HsienLu">
 <meta property="article:tag" content="MySQL">
 <meta property="article:tag" content="SQL">
@@ -220,7 +220,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2024-01-18 10:09:19 / Modified: 10:11:25" itemprop="dateCreated datePublished" datetime="2024-01-18T10:09:19+08:00">2024-01-18</time>
+              <time title="Created: 2024-01-18 10:09:19 / Modified: 10:23:57" itemprop="dateCreated datePublished" datetime="2024-01-18T10:09:19+08:00">2024-01-18</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -247,7 +247,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="DQL-Data-Query-Language-資料查詢語言"><a href="#DQL-Data-Query-Language-資料查詢語言" class="headerlink" title="DQL(Data Query Language) 資料查詢語言"></a>DQL(Data Query Language) 資料查詢語言</h2><span id="more"></span>
+        <p>DQL(Data Query Language) 資料查詢語言</p>
+<span id="more"></span>
 
 <h3 id="基礎查詢資料"><a href="#基礎查詢資料" class="headerlink" title="基礎查詢資料"></a>基礎查詢資料</h3><h4 id="查詢資料"><a href="#查詢資料" class="headerlink" title="查詢資料"></a>查詢資料</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 欄位名<span class="number">1</span>, 欄位名<span class="number">2</span>, ... <span class="keyword">FROM</span> 資料表名 <span class="keyword">WHERE</span> 條件;</span><br></pre></td></tr></table></figure>
 
@@ -401,10 +402,13 @@
   <div class="popular-posts-header">Related Posts</div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/2024/01/18/MySQL-SQL語法介紹-DML-資料操作語言/" rel="bookmark">MySQL-SQL語法介紹-DML 資料定義語言</a></div>
+      <div class="popular-posts-title"><a href="/2024/01/18/MySQL-事務-Transaction/" rel="bookmark">MySQL-事務(Transaction)</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/2024/01/18/MySQL-SQL語法介紹-DDL 資料定義語言/" rel="bookmark">MySQL-SQL語法介紹-DDL 資料定義語言</a></div>
+      <div class="popular-posts-title"><a href="/2024/01/18/MySQL-約束條件/" rel="bookmark">MySQL-約束條件</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/2024/01/18/MySQL-關聯資料表查詢/" rel="bookmark">MySQL-關聯資料表查詢</a></div>
     </li>
   </ul>
 
@@ -421,7 +425,10 @@
     <a href="/2024/01/18/MySQL-SQL%E8%AA%9E%E6%B3%95%E4%BB%8B%E7%B4%B9-DML-%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C%E8%AA%9E%E8%A8%80/" rel="prev" title="MySQL-SQL語法介紹-DML 資料定義語言">
       <i class="fa fa-chevron-left"></i> MySQL-SQL語法介紹-DML 資料定義語言
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2024/01/18/MySQL-%E9%97%9C%E8%81%AF%E8%B3%87%E6%96%99%E8%A1%A8%E6%9F%A5%E8%A9%A2/" rel="next" title="MySQL-關聯資料表查詢">
+      MySQL-關聯資料表查詢 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -480,7 +487,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DQL-Data-Query-Language-%E8%B3%87%E6%96%99%E6%9F%A5%E8%A9%A2%E8%AA%9E%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">DQL(Data Query Language) 資料查詢語言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A4%8E%E6%9F%A5%E8%A9%A2%E8%B3%87%E6%96%99"><span class="nav-number">1.1.</span> <span class="nav-text">基礎查詢資料</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E8%A9%A2%E8%B3%87%E6%96%99"><span class="nav-number">1.1.1.</span> <span class="nav-text">查詢資料</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%BB%E9%99%A4%E9%87%8D%E8%A4%87%E8%B3%87%E6%96%99"><span class="nav-number">1.1.2.</span> <span class="nav-text">去除重複資料</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%96%E5%88%A5%E5%90%8D"><span class="nav-number">1.1.3.</span> <span class="nav-text">取別名</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A2%9D%E4%BB%B6%E6%9F%A5%E8%A9%A2"><span class="nav-number">1.2.</span> <span class="nav-text">條件查詢</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%AA%9E%E6%B3%95"><span class="nav-number">1.2.1.</span> <span class="nav-text">基本語法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A2%9D%E4%BB%B6%E6%9F%A5%E8%A9%A2%E9%97%9C%E9%8D%B5%E5%AD%97%E8%A1%A8%E6%A0%BC"><span class="nav-number">1.2.2.</span> <span class="nav-text">條件查詢關鍵字表格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A2%9D%E4%BB%B6%E6%9F%A5%E8%A9%A2%E7%AF%84%E4%BE%8B"><span class="nav-number">1.2.3.</span> <span class="nav-text">條件查詢範例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#like-%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%A9%A2%E4%BB%8B%E7%B4%B9"><span class="nav-number">1.2.4.</span> <span class="nav-text">like 模糊查詢介紹</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F%E6%9F%A5%E8%A9%A2"><span class="nav-number">1.3.</span> <span class="nav-text">排序查詢</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F%E6%9F%A5%E8%A9%A2%E8%AA%9E%E6%B3%95"><span class="nav-number">1.3.1.</span> <span class="nav-text">排序查詢語法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B8%E8%AA%9E%E6%B3%95"><span class="nav-number">1.3.2.</span> <span class="nav-text">聚合函數語法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B8%E7%AF%84%E4%BE%8B"><span class="nav-number">1.3.3.</span> <span class="nav-text">聚合函數範例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E7%B5%84%E6%9F%A5%E8%A9%A2%E8%AA%9E%E6%B3%95"><span class="nav-number">1.3.4.</span> <span class="nav-text">分組查詢語法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E7%B5%84%E6%9F%A5%E8%A9%A2%E7%AF%84%E4%BE%8B-%E6%90%AD%E9%85%8D-where"><span class="nav-number">1.3.5.</span> <span class="nav-text">分組查詢範例(搭配 where)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E7%B5%84%E6%9F%A5%E8%A9%A2%E7%AF%84%E4%BE%8B-%E6%90%AD%E9%85%8D-having"><span class="nav-number">1.3.6.</span> <span class="nav-text">分組查詢範例(搭配 having)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E9%A0%81%E6%9F%A5%E8%A9%A2%E8%AA%9E%E6%B3%95"><span class="nav-number">1.3.7.</span> <span class="nav-text">分頁查詢語法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E9%A0%81%E6%9F%A5%E8%A9%A2%E7%AF%84%E4%BE%8B"><span class="nav-number">1.3.8.</span> <span class="nav-text">分頁查詢範例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DQL-%E5%B0%8F%E7%B5%90"><span class="nav-number">1.4.</span> <span class="nav-text">DQL 小結</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A4%8E%E6%9F%A5%E8%A9%A2%E8%B3%87%E6%96%99"><span class="nav-number">1.</span> <span class="nav-text">基礎查詢資料</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E8%A9%A2%E8%B3%87%E6%96%99"><span class="nav-number">1.1.</span> <span class="nav-text">查詢資料</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%BB%E9%99%A4%E9%87%8D%E8%A4%87%E8%B3%87%E6%96%99"><span class="nav-number">1.2.</span> <span class="nav-text">去除重複資料</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%96%E5%88%A5%E5%90%8D"><span class="nav-number">1.3.</span> <span class="nav-text">取別名</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A2%9D%E4%BB%B6%E6%9F%A5%E8%A9%A2"><span class="nav-number">2.</span> <span class="nav-text">條件查詢</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%AA%9E%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">基本語法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A2%9D%E4%BB%B6%E6%9F%A5%E8%A9%A2%E9%97%9C%E9%8D%B5%E5%AD%97%E8%A1%A8%E6%A0%BC"><span class="nav-number">2.2.</span> <span class="nav-text">條件查詢關鍵字表格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A2%9D%E4%BB%B6%E6%9F%A5%E8%A9%A2%E7%AF%84%E4%BE%8B"><span class="nav-number">2.3.</span> <span class="nav-text">條件查詢範例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#like-%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%A9%A2%E4%BB%8B%E7%B4%B9"><span class="nav-number">2.4.</span> <span class="nav-text">like 模糊查詢介紹</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F%E6%9F%A5%E8%A9%A2"><span class="nav-number">3.</span> <span class="nav-text">排序查詢</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F%E6%9F%A5%E8%A9%A2%E8%AA%9E%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">排序查詢語法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B8%E8%AA%9E%E6%B3%95"><span class="nav-number">3.2.</span> <span class="nav-text">聚合函數語法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B8%E7%AF%84%E4%BE%8B"><span class="nav-number">3.3.</span> <span class="nav-text">聚合函數範例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E7%B5%84%E6%9F%A5%E8%A9%A2%E8%AA%9E%E6%B3%95"><span class="nav-number">3.4.</span> <span class="nav-text">分組查詢語法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E7%B5%84%E6%9F%A5%E8%A9%A2%E7%AF%84%E4%BE%8B-%E6%90%AD%E9%85%8D-where"><span class="nav-number">3.5.</span> <span class="nav-text">分組查詢範例(搭配 where)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E7%B5%84%E6%9F%A5%E8%A9%A2%E7%AF%84%E4%BE%8B-%E6%90%AD%E9%85%8D-having"><span class="nav-number">3.6.</span> <span class="nav-text">分組查詢範例(搭配 having)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E9%A0%81%E6%9F%A5%E8%A9%A2%E8%AA%9E%E6%B3%95"><span class="nav-number">3.7.</span> <span class="nav-text">分頁查詢語法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E9%A0%81%E6%9F%A5%E8%A9%A2%E7%AF%84%E4%BE%8B"><span class="nav-number">3.8.</span> <span class="nav-text">分頁查詢範例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DQL-%E5%B0%8F%E7%B5%90"><span class="nav-number">4.</span> <span class="nav-text">DQL 小結</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -495,7 +502,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-count">40</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

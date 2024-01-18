@@ -22,21 +22,21 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="DML(Data Manipulation Language) 資料操作語言">
+  <meta name="description" content="inner join、outer join、子查詢">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL-SQL語法介紹-DML 資料定義語言">
-<meta property="og:url" content="http://example.com/2024/01/18/MySQL-SQL%E8%AA%9E%E6%B3%95%E4%BB%8B%E7%B4%B9-DML-%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C%E8%AA%9E%E8%A8%80/index.html">
+<meta property="og:title" content="MySQL-關聯資料表查詢">
+<meta property="og:url" content="http://example.com/2024/01/18/MySQL-%E9%97%9C%E8%81%AF%E8%B3%87%E6%96%99%E8%A1%A8%E6%9F%A5%E8%A9%A2/index.html">
 <meta property="og:site_name" content="HsienLu&#39;s Blog">
-<meta property="og:description" content="DML(Data Manipulation Language) 資料操作語言">
+<meta property="og:description" content="inner join、outer join、子查詢">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-01-18T02:06:26.000Z">
+<meta property="article:published_time" content="2024-01-18T02:17:59.000Z">
 <meta property="article:modified_time" content="2024-01-18T02:23:57.754Z">
 <meta property="article:author" content="HsienLu">
 <meta property="article:tag" content="MySQL">
 <meta property="article:tag" content="SQL">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2024/01/18/MySQL-SQL%E8%AA%9E%E6%B3%95%E4%BB%8B%E7%B4%B9-DML-%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C%E8%AA%9E%E8%A8%80/">
+<link rel="canonical" href="http://example.com/2024/01/18/MySQL-%E9%97%9C%E8%81%AF%E8%B3%87%E6%96%99%E8%A1%A8%E6%9F%A5%E8%A9%A2/">
 
 
 <script id="page-configurations">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>MySQL-SQL語法介紹-DML 資料定義語言 | HsienLu's Blog</title>
+  <title>MySQL-關聯資料表查詢 | HsienLu's Blog</title>
   
 
 
@@ -195,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/18/MySQL-SQL%E8%AA%9E%E6%B3%95%E4%BB%8B%E7%B4%B9-DML-%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C%E8%AA%9E%E8%A8%80/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/18/MySQL-%E9%97%9C%E8%81%AF%E8%B3%87%E6%96%99%E8%A1%A8%E6%9F%A5%E8%A9%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/136676022.jpg">
@@ -208,7 +208,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          MySQL-SQL語法介紹-DML 資料定義語言
+          MySQL-關聯資料表查詢
         </h1>
 
         <div class="post-meta">
@@ -220,7 +220,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2024-01-18 10:06:26 / Modified: 10:23:57" itemprop="dateCreated datePublished" datetime="2024-01-18T10:06:26+08:00">2024-01-18</time>
+              <time title="Created: 2024-01-18 10:17:59 / Modified: 10:23:57" itemprop="dateCreated datePublished" datetime="2024-01-18T10:17:59+08:00">2024-01-18</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -247,21 +247,38 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>DML(Data Manipulation Language) 資料操作語言</p>
+        <p>inner join、outer join、子查詢</p>
 <span id="more"></span>
 
-<h4 id="給指定欄位新增資料"><a href="#給指定欄位新增資料" class="headerlink" title="給指定欄位新增資料"></a>給指定欄位新增資料</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> 資料表名(欄位名<span class="number">1</span>, 欄位名<span class="number">2</span>, ...) <span class="keyword">VALUES</span>(值<span class="number">1</span>, 值<span class="number">2</span>, ...);</span><br></pre></td></tr></table></figure>
+<h2 id="inner-join"><a href="#inner-join" class="headerlink" title="inner join"></a>inner join</h2><p>解釋: 用來查詢兩個表格中有關聯的資料，分成兩種寫法</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> table1, table2 <span class="keyword">WHERE</span> table1.id <span class="operator">=</span> table2.id;</span><br></pre></td></tr></table></figure>
 
-<h4 id="修改資料"><a href="#修改資料" class="headerlink" title="修改資料"></a>修改資料</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> 資料表名 <span class="keyword">SET</span> 欄位名<span class="number">1</span><span class="operator">=</span>值<span class="number">1</span>, 欄位名<span class="number">2</span><span class="operator">=</span>值<span class="number">2</span>, ... <span class="keyword">WHERE</span> 條件;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>WHERE 條件可以不寫，但是如果不寫，會將資料表所有資料都修改</p>
-</blockquote>
-<h4 id="刪除資料"><a href="#刪除資料" class="headerlink" title="刪除資料"></a>刪除資料</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> 資料表名 <span class="keyword">WHERE</span> 條件;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> table1 <span class="keyword">INNER</span> <span class="keyword">JOIN</span> table2 <span class="keyword">ON</span> table1.id <span class="operator">=</span> table2.id;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>WHERE 條件可以不寫，但是如果不寫，會將資料表所有資料都刪除</p>
+<p>相當於取交集的意思</p>
 </blockquote>
+<h4 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 建立資料</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> dept(</span><br><span class="line">id <span class="type">int</span> <span class="keyword">primary</span> key auto_increment,</span><br><span class="line">dep_name <span class="type">varchar</span>(<span class="number">20</span>),</span><br><span class="line">addr <span class="type">varchar</span>(<span class="number">20</span>)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> emp(</span><br><span class="line">id <span class="type">int</span> <span class="keyword">primary</span> key auto_increment,</span><br><span class="line">name <span class="type">varchar</span>(<span class="number">20</span>),</span><br><span class="line">age <span class="type">int</span>,</span><br><span class="line">dep_id <span class="type">int</span> ,</span><br><span class="line"><span class="keyword">constraint</span> fk_emp_dept <span class="keyword">foreign</span> key(dep_id)</span><br><span class="line"><span class="keyword">references</span> dept(id)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> dept (dep_name,addr) <span class="keyword">values</span></span><br><span class="line">(&quot;RD&quot;,&quot;台北&quot;),</span><br><span class="line">(&quot;ME&quot;,&quot;台中&quot;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> emp (NAMe,age,dep_id) <span class="keyword">values</span></span><br><span class="line">(&quot;AAA&quot;,<span class="number">20</span>,<span class="number">1</span>),</span><br><span class="line">(&quot;BBB&quot;,<span class="number">20</span>,<span class="number">1</span>),</span><br><span class="line">(&quot;CCC&quot;,<span class="number">20</span>,<span class="number">1</span>),</span><br><span class="line">(&quot;DDD&quot;,<span class="number">20</span>,<span class="number">2</span>),</span><br><span class="line">(&quot;EEE&quot;,<span class="number">20</span>,<span class="number">2</span>),</span><br><span class="line">(&quot;FFF&quot;,<span class="number">20</span>,<span class="number">2</span>);</span><br><span class="line"><span class="comment">-- 連接語法開始</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp , dept <span class="keyword">where</span> emp.dep_id <span class="operator">=</span> dept.id;</span><br><span class="line"><span class="comment">-- 另外一種寫法</span></span><br><span class="line"><span class="comment">-- SELECT * FROM emp JOIN dept ON dept.id = emp.dep_id;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="outer-join"><a href="#outer-join" class="headerlink" title="outer join"></a>outer join</h2><p>解釋: 用來查詢兩個表格中有關聯的資料,並且會把沒有關聯的資料也查詢出來，又分成左外連結、右外連結、全外連結</p>
+<h3 id="left-join"><a href="#left-join" class="headerlink" title="left join"></a>left join</h3><p>解釋: 用來查詢兩個表格中有關聯的資料,並且會把沒有關聯的資料也查詢出來，但是以左邊的表格為主</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> table1 <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> table2 <span class="keyword">ON</span> table1.id <span class="operator">=</span> table2.id;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>取左邊表格的資料，並且把右邊表格的資料也查詢出來，如右邊沒有資料則顯示 null</p>
+</blockquote>
+<h4 id="範例-1"><a href="#範例-1" class="headerlink" title="範例"></a>範例</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> dept(</span><br><span class="line">id <span class="type">int</span> <span class="keyword">primary</span> key auto_increment,</span><br><span class="line">dep_name <span class="type">varchar</span>(<span class="number">20</span>),</span><br><span class="line">addr <span class="type">varchar</span>(<span class="number">20</span>)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> emp(</span><br><span class="line">id <span class="type">int</span> <span class="keyword">primary</span> key auto_increment,</span><br><span class="line">name <span class="type">varchar</span>(<span class="number">20</span>),</span><br><span class="line">age <span class="type">int</span>,</span><br><span class="line">dep_id <span class="type">int</span></span><br><span class="line">);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> dept (dep_name,addr) <span class="keyword">values</span></span><br><span class="line">(&quot;RD&quot;,&quot;台北&quot;),</span><br><span class="line">(&quot;ME&quot;,&quot;台中&quot;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> emp (NAMe,age,dep_id) <span class="keyword">values</span></span><br><span class="line">(&quot;AAA&quot;,<span class="number">20</span>,<span class="number">1</span>),</span><br><span class="line">(&quot;BBB&quot;,<span class="number">20</span>,<span class="number">1</span>),</span><br><span class="line">(&quot;CCC&quot;,<span class="number">20</span>,<span class="number">1</span>),</span><br><span class="line">(&quot;DDD&quot;,<span class="number">20</span>,<span class="number">2</span>),</span><br><span class="line">(&quot;EEE&quot;,<span class="number">20</span>,<span class="number">2</span>),</span><br><span class="line">(&quot;FFF&quot;,<span class="number">20</span>,<span class="number">2</span>),</span><br><span class="line">(&quot;GGG&quot;,<span class="number">23</span>,<span class="number">3</span>);</span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">left</span> <span class="keyword">join</span> dept <span class="keyword">on</span> emp.dep_id<span class="operator">=</span>dept.id;</span><br></pre></td></tr></table></figure>
+
+<h3 id="right-join"><a href="#right-join" class="headerlink" title="right join"></a>right join</h3><p>解釋: 用來查詢兩個表格中有關聯的資料,並且會把沒有關聯的資料也查詢出來，但是以右邊的表格為主</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> table1 <span class="keyword">RIGHT</span> <span class="keyword">JOIN</span> table2 <span class="keyword">ON</span> table1.id <span class="operator">=</span> table2.id;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>取右邊表格的資料，並且把左邊表格的資料也查詢出來，如左邊沒有資料則顯示 null</p>
+</blockquote>
+<h4 id="範例-2"><a href="#範例-2" class="headerlink" title="範例"></a>範例</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> dept(</span><br><span class="line">id <span class="type">int</span> <span class="keyword">primary</span> key auto_increment,</span><br><span class="line">dep_name <span class="type">varchar</span>(<span class="number">20</span>),</span><br><span class="line">addr <span class="type">varchar</span>(<span class="number">20</span>)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> emp(</span><br><span class="line">id <span class="type">int</span> <span class="keyword">primary</span> key auto_increment,</span><br><span class="line">name <span class="type">varchar</span>(<span class="number">20</span>),</span><br><span class="line">age <span class="type">int</span>,</span><br><span class="line">dep_id <span class="type">int</span></span><br><span class="line">);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> dept (dep_name,addr) <span class="keyword">values</span></span><br><span class="line">(&quot;RD&quot;,&quot;台北&quot;),</span><br><span class="line">(&quot;ME&quot;,&quot;台中&quot;),</span><br><span class="line">(&quot;QA&quot;,&quot;高雄&quot;),</span><br><span class="line">(&quot;EE&quot;,&quot;台南&quot;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> emp (NAMe,age,dep_id) <span class="keyword">values</span></span><br><span class="line">(&quot;AAA&quot;,<span class="number">20</span>,<span class="number">1</span>),</span><br><span class="line">(&quot;BBB&quot;,<span class="number">20</span>,<span class="number">1</span>),</span><br><span class="line">(&quot;CCC&quot;,<span class="number">20</span>,<span class="number">1</span>),</span><br><span class="line">(&quot;DDD&quot;,<span class="number">20</span>,<span class="number">2</span>),</span><br><span class="line">(&quot;EEE&quot;,<span class="number">20</span>,<span class="number">2</span>),</span><br><span class="line">(&quot;FFF&quot;,<span class="number">20</span>,<span class="number">2</span>),</span><br><span class="line">(&quot;GGG&quot;,<span class="number">23</span>,<span class="number">3</span>);</span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">right</span> <span class="keyword">join</span> dept <span class="keyword">on</span> emp.dep_id<span class="operator">=</span>dept.id;</span><br></pre></td></tr></table></figure>
+
+<h3 id="子查詢"><a href="#子查詢" class="headerlink" title="子查詢"></a>子查詢</h3><p>解釋:重點是利用( )去包住查詢結果，並進一步的在外面加上查詢語法<br>基本語法</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> table1 <span class="keyword">WHERE</span> table1.id <span class="keyword">IN</span> (<span class="keyword">SELECT</span> table2.id <span class="keyword">FROM</span> table2);</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -278,7 +295,7 @@
       <div class="popular-posts-title"><a href="/2024/01/18/MySQL-約束條件/" rel="bookmark">MySQL-約束條件</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/2024/01/18/MySQL-關聯資料表查詢/" rel="bookmark">MySQL-關聯資料表查詢</a></div>
+      <div class="popular-posts-title"><a href="/2024/01/18/MySQL-SQL語法介紹-DQL-資料查詢語言/" rel="bookmark">MySQL-SQL語法介紹-DQL 資料查詢語言</a></div>
     </li>
   </ul>
 
@@ -292,12 +309,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2024/01/18/MySQL-SQL%E8%AA%9E%E6%B3%95%E4%BB%8B%E7%B4%B9-DDL%20%E8%B3%87%E6%96%99%E5%AE%9A%E7%BE%A9%E8%AA%9E%E8%A8%80/" rel="prev" title="MySQL-SQL語法介紹-DDL 資料定義語言">
-      <i class="fa fa-chevron-left"></i> MySQL-SQL語法介紹-DDL 資料定義語言
+    <a href="/2024/01/18/MySQL-SQL%E8%AA%9E%E6%B3%95%E4%BB%8B%E7%B4%B9-DQL-%E8%B3%87%E6%96%99%E6%9F%A5%E8%A9%A2%E8%AA%9E%E8%A8%80/" rel="prev" title="MySQL-SQL語法介紹-DQL 資料查詢語言">
+      <i class="fa fa-chevron-left"></i> MySQL-SQL語法介紹-DQL 資料查詢語言
     </a></div>
       <div class="post-nav-item">
-    <a href="/2024/01/18/MySQL-SQL%E8%AA%9E%E6%B3%95%E4%BB%8B%E7%B4%B9-DQL-%E8%B3%87%E6%96%99%E6%9F%A5%E8%A9%A2%E8%AA%9E%E8%A8%80/" rel="next" title="MySQL-SQL語法介紹-DQL 資料查詢語言">
-      MySQL-SQL語法介紹-DQL 資料查詢語言 <i class="fa fa-chevron-right"></i>
+    <a href="/2024/01/18/MySQL-%E7%B4%84%E6%9D%9F%E6%A2%9D%E4%BB%B6/" rel="next" title="MySQL-約束條件">
+      MySQL-約束條件 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -357,7 +374,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B5%A6%E6%8C%87%E5%AE%9A%E6%AC%84%E4%BD%8D%E6%96%B0%E5%A2%9E%E8%B3%87%E6%96%99"><span class="nav-number">1.</span> <span class="nav-text">給指定欄位新增資料</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E8%B3%87%E6%96%99"><span class="nav-number">2.</span> <span class="nav-text">修改資料</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%AA%E9%99%A4%E8%B3%87%E6%96%99"><span class="nav-number">3.</span> <span class="nav-text">刪除資料</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#inner-join"><span class="nav-number">1.</span> <span class="nav-text">inner join</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-number">1.0.1.</span> <span class="nav-text">範例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#outer-join"><span class="nav-number">2.</span> <span class="nav-text">outer join</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#left-join"><span class="nav-number">2.1.</span> <span class="nav-text">left join</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B-1"><span class="nav-number">2.1.1.</span> <span class="nav-text">範例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#right-join"><span class="nav-number">2.2.</span> <span class="nav-text">right join</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B-2"><span class="nav-number">2.2.1.</span> <span class="nav-text">範例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%90%E6%9F%A5%E8%A9%A2"><span class="nav-number">2.3.</span> <span class="nav-text">子查詢</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
