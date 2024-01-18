@@ -1,7 +1,7 @@
 ---
 title: React Hook-useMemo
 date: 2024-01-11 16:32:37
-tags: [React, Hooka]
+tags: [React, Hook]
 categories: React
 ---
 
