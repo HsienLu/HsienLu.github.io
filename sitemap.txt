@@ -1,3 +1,4 @@
+http://example.com/tags/index.html
 http://example.com/2023/12/29/20231228-first/
 http://example.com/2024/01/19/TypeScript-%E4%BB%8B%E9%9D%A2-interface-vs-%E5%9E%8B%E5%88%A5%E5%88%A5%E5%90%8D-Aliases/
 http://example.com/2024/01/18/MySQL-%E4%BA%8B%E5%8B%99-Transaction/
@@ -44,7 +45,6 @@ http://example.com/404.html
 http://example.com/Introduction/index.html
 http://example.com/about/index.html
 http://example.com/categories/index.html
-http://example.com/tags/index.html
 http://example.com/
 http://example.com/tags/React/
 http://example.com/tags/JavaScript/
