@@ -7,6 +7,150 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Java-遞迴</title>
+    <url>/2024/01/25/Java-%E9%81%9E%E8%BF%B4/</url>
+    <content><![CDATA[<p>遞迴是一種函式<code>呼叫自己的技巧</code>，遞迴的函式必須要有一個<code>終止條件</code>，否則會無限迴圈下去，直到記憶體爆掉為止。</p>
+<span id="more"></span>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Recursion</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">result</span> <span class="operator">=</span> sum(<span class="number">10</span>);</span><br><span class="line">        System.out.println(result);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">sum</span><span class="params">(<span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (k &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> k + sum(k - <span class="number">1</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java-訪問權限</title>
+    <url>/2024/01/25/Java-%E8%A8%AA%E5%95%8F%E6%AC%8A%E9%99%90/</url>
+    <content><![CDATA[<p>所謂的訪問權限，其實就是訪問屬性、方法的權利和限制</p>
+<span id="more"></span>
+
+<h4 id="public"><a href="#public" class="headerlink" title="public"></a>public</h4><ol>
+<li>public: 公共的,任意使用,訪問權限修飾符</li>
+<li>Java 中的<code>public class</code>只能有一個,且必須與檔名相同</li>
+<li>main 方法必須是 public static void,不加不能使用，因為 main 方法是由 JVM 調用的，JVM 應該可以任意調用，不該受到限制。</li>
+<li>static: 靜態的,靜態方法,靜態變數,靜態代碼塊,main 方法不加 staitic,一樣不能使用</li>
+</ol>
+<h4 id="private"><a href="#private" class="headerlink" title="private"></a>private</h4><ol>
+<li>private: 私有的,訪問權限修飾符</li>
+<li>private 修飾的變數,只能在所屬類中使用</li>
+</ol>
+<h4 id="default"><a href="#default" class="headerlink" title="default"></a>default</h4><ol>
+<li>(default): 默認的,當沒有設定訪問權限修飾符時,JVM 會默認提供一個訪問權限，就是 package(路徑)訪問權限，子 package 不能使用</li>
+<li>default 修飾的變數,只能在同一包中使用</li>
+</ol>
+<h4 id="protected"><a href="#protected" class="headerlink" title="protected"></a>protected</h4><ol>
+<li>protected: 受保護的,訪問權限修飾符</li>
+<li>protected 修飾的變數,只能在同一包中使用,同 package 或是不同 package 子類都可以使用</li>
+</ol>
+<h3 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h3><p>訪問權限由小到大排列<br>1.private: 只能在本類中使用<br>2.(default): 只能在同一包中使用,不同的包路徑就不能使用<br>3.protected: 只能在同一包中使用,同包或是不同包子類都可以使用<br>4.public: 任意使用,JVM 預設給的構造方法</p>
+<h2 id="類的訪問權限"><a href="#類的訪問權限" class="headerlink" title="類的訪問權限"></a>類的訪問權限</h2><h4 id="外部類"><a href="#外部類" class="headerlink" title="外部類"></a>外部類</h4><p>就是直接在程式碼中定義的類 1.外部類只能是 public 或是 (default) 修飾</p>
+<h4 id="內部類"><a href="#內部類" class="headerlink" title="內部類"></a>內部類</h4><p>就是在類中定義的類 1.內部類可以是 public、protected、(default)、private 修飾 2.內部類就當成外部類的屬性或是方法來使用</p>
+<h5 id="內部類如何創建"><a href="#內部類如何創建" class="headerlink" title="內部類如何創建"></a>內部類如何創建</h5><p>因為內部類是外部類的屬性或是方法，所以必須先創建外部類，才能創建內部類</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> basic;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">helloworld</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="comment">//內部類要先創建外部類</span></span><br><span class="line">        <span class="type">Outer</span> <span class="variable">outer</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Outer</span>();</span><br><span class="line">        Outer.<span class="type">Inner</span> <span class="variable">inner</span> <span class="operator">=</span> outer.<span class="keyword">new</span> <span class="title class_">Inner</span>();</span><br><span class="line">        inner.show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Outer</span>&#123;</span><br><span class="line">    <span class="keyword">public</span>  <span class="keyword">class</span> <span class="title class_">Inner</span>&#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">show</span><span class="params">()</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;Hi&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Final"><a href="#Final" class="headerlink" title="Final"></a>Final</h2><p>Java 中提供一種語法，可以讓初始化的變數或是方法或是類不被改變，這種語法就是 final</p>
+<ol>
+<li>final 修飾的變數,只能被賦值一次,不能再次賦值</li>
+<li>final 不能被 JVM 默認賦值,必須手動賦值</li>
+<li>final 修飾的方法不能被覆寫</li>
+<li>final 修飾的類不能被繼承，也就是不能有子類</li>
+<li>final 不能修飾建構方法</li>
+<li>final 可以修改方法的參數，一旦修飾就不能被修改</li>
+</ol>
+<p>常用的方法搭配構造方法使用</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> basic;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">helloworld</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;John&quot;</span>;</span><br><span class="line">      <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">User</span>(name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">User</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> String name;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">User</span><span class="params">(String name)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="單例模式"><a href="#單例模式" class="headerlink" title="單例模式"></a>單例模式</h2><h4 id="使用情境"><a href="#使用情境" class="headerlink" title="使用情境:"></a>使用情境:</h4><ol>
+<li>當需要創建一個類的實例，但是又不希望每次創建新的實例時都創建一個新的時候</li>
+</ol>
+<h4 id="實作概念"><a href="#實作概念" class="headerlink" title="實作概念:"></a>實作概念:</h4><ol>
+<li>單例模式是一種常用的設計模式</li>
+<li>在單例模式中，類的構造方法是私有的</li>
+<li>在單例模式中，類必須自行創建一個實例</li>
+<li>在單例模式中，類必須自行向整個系統提供這個實例</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> basic;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">helloworld</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">SingleMode</span> <span class="variable">singleMode1</span> <span class="operator">=</span> SingleMode.getInstance();</span><br><span class="line">        <span class="type">SingleMode</span> <span class="variable">singleMode2</span> <span class="operator">=</span> SingleMode.getInstance();</span><br><span class="line">        System.out.println(singleMode1 == singleMode2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SingleMode</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">SingleMode</span> <span class="variable">singleMode</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="title function_">SingleMode</span><span class="params">()</span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> SingleMode <span class="title function_">getInstance</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(singleMode == <span class="literal">null</span>)&#123;</span><br><span class="line">            singleMode = <span class="keyword">new</span> <span class="title class_">SingleMode</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>  singleMode;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java-靜態方法</title>
+    <url>/2024/01/25/Java-%E9%9D%9C%E6%85%8B%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<ul>
+<li>靜態方法是一種特殊的方法，它可以在不創建類的情況下使用。</li>
+<li>關鍵字 static 表示靜態方法，它屬於類，而不是屬於類的實例。</li>
+<li>靜態方法可以直接使用類名.方法名調用</li>
+<li>靜態方法不能訪問成員屬性和成員方法<span id="more"></span></li>
+</ul>
+<h4 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> basic;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">helloworld</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">TestStatic</span> <span class="variable">test</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TestStatic</span>();</span><br><span class="line">        test.test1();</span><br><span class="line">        TestStatic.test2();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TestStatic</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">test1</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;non-static Hello world!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">test2</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Static Hello world!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="靜態代碼塊"><a href="#靜態代碼塊" class="headerlink" title="靜態代碼塊"></a>靜態代碼塊</h3><p>類的程式載入完成後會自動執行的程式碼，只會執行一次。可以完成靜態屬性的初始化。</p>
+<h4 id="範例-1"><a href="#範例-1" class="headerlink" title="範例"></a>範例</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">helloworld</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    TestStatic t= <span class="keyword">new</span> <span class="title class_">TestStatic</span>();</span><br><span class="line">    TestStatic.test();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TestStatic</span>&#123;</span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;static block&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">test</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;test&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>創建實例時也會執行代碼塊，但不是靜態代碼塊，而是代碼塊。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java-特殊類別(介面、抽象、枚舉、匿名類)</title>
+    <url>/2024/01/25/Java-%E7%89%B9%E6%AE%8A%E9%A1%9E%E5%88%A5-%E4%BB%8B%E9%9D%A2%E3%80%81%E6%8A%BD%E8%B1%A1%E3%80%81%E6%9E%9A%E8%88%89%E3%80%81%E5%8C%BF%E5%90%8D%E9%A1%9E/</url>
+    <content><![CDATA[<p>Java 有許多不同的特殊類別，例如：介面、抽象類別、枚舉類別、匿名類別，這些類別都有各自的特性，也有各自的使用場景，這篇文章會介紹這些特殊類別的特性與使用場景。</p>
+<span id="more"></span>
+
+<h2 id="介面-Interface"><a href="#介面-Interface" class="headerlink" title="介面(Interface)"></a>介面(Interface)</h2><p>可以簡單的理解為一個規則</p>
+<h3 id="介面的特性"><a href="#介面的特性" class="headerlink" title="介面的特性"></a>介面的特性</h3><ol>
+<li>介面都是抽象的</li>
+<li>規則的屬性為固定值,且不能修改</li>
+<li>屬性和行為的訪問權限必須為公共的</li>
+<li>屬性是靜態的</li>
+<li>行為是抽象的</li>
+<li>介面和類是不一樣的東西</li>
+<li>介面可以繼承多個介面</li>
+<li>類的物件需要遵循介面，在 Java 中這個動作叫做實現(implements)，類需要實現介面，而且可以實現多個介面</li>
+</ol>
+<h3 id="介面的語法"><a href="#介面的語法" class="headerlink" title="介面的語法"></a>介面的語法</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> basic;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">helloworld</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    Computer c=<span class="keyword">new</span> <span class="title class_">Computer</span>();</span><br><span class="line">    Light l1=<span class="keyword">new</span> <span class="title class_">Light</span>();</span><br><span class="line">    Light l2=<span class="keyword">new</span> <span class="title class_">Light</span>();</span><br><span class="line">    c.usb1=l1;</span><br><span class="line">    c.usb2=l2;</span><br><span class="line">    c.powerSupply();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">USBInterface</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">USBSupply</span> <span class="keyword">extends</span> <span class="title class_">USBInterface</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">powerSupply</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">USBReceive</span> <span class="keyword">extends</span> <span class="title class_">USBInterface</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">powerReceive</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Computer</span> <span class="keyword">implements</span> <span class="title class_">USBSupply</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> USBReceive usb1;</span><br><span class="line">    <span class="keyword">public</span> USBReceive usb2;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">powerSupply</span><span class="params">()</span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Computer is supplying power&quot;</span>);</span><br><span class="line">    usb1.powerReceive();</span><br><span class="line">    usb2.powerReceive();</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Light</span> <span class="keyword">implements</span> <span class="title class_">USBReceive</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">powerReceive</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Light is receiving power&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="抽象-Abstract"><a href="#抽象-Abstract" class="headerlink" title="抽象(Abstract)"></a>抽象(Abstract)</h2><p>只有宣告沒有實作的方法</p>
+<h3 id="抽象方法-Abstract-Method"><a href="#抽象方法-Abstract-Method" class="headerlink" title="抽象方法(Abstract Method)"></a>抽象方法(Abstract Method)</h3><h4 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h4><blockquote>
+<p>abstract 返回值類型 方法名稱(參數列表);</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">Animal</span>&#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">eat</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="抽象類別-Abstract-Class"><a href="#抽象類別-Abstract-Class" class="headerlink" title="抽象類別(Abstract Class)"></a>抽象類別(Abstract Class)</h3><p>1.因為類不完整，所以不能被實體化，只能被繼承 2.如果一個類有抽象方法，那麼該類必須定義為抽象類 3.抽象類可以有抽象方法，也可以有非抽象方法 4.抽象類無法直接實體化，必須由子類繼承實現間接的實體化 5.如果抽象類有抽象方法，那麼子類必須重寫抽象方法</p>
+<h4 id="語法-1"><a href="#語法-1" class="headerlink" title="語法"></a>語法</h4><blockquote>
+<p>abstract class 類別名稱{…}</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">Animal</span>&#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">eat</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span> <span class="keyword">extends</span> <span class="title class_">Animal</span>&#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">eat</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;dog eat&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="枚舉-Enum"><a href="#枚舉-Enum" class="headerlink" title="枚舉(Enum)"></a>枚舉(Enum)</h2><p>1.枚舉是一個特殊的類別，其中包含一組特定對象，這些對象不會發生改變 2.關鍵字 enum 用來宣告一個枚舉 3.枚舉會將對象放置在最前面,後面用分號隔開 4.枚舉不能創建對象，它是在內部創建的</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> basic;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JavaEnum</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">    System.out.println(City.TAIPEI.name);</span><br><span class="line">    System.out.println(City.TAICHUNG.name);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">City</span>&#123;</span><br><span class="line">    TAIPEI(<span class="string">&quot;台北&quot;</span>),TAICHUNG(<span class="string">&quot;台中&quot;</span>),TAINAN(<span class="string">&quot;台南&quot;</span>);</span><br><span class="line">    City(String name)&#123;</span><br><span class="line">        <span class="built_in">this</span>.name=name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> String name;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="匿名類-Anonymous"><a href="#匿名類-Anonymous" class="headerlink" title="匿名類(Anonymous)"></a>匿名類(Anonymous)</h2><p>在某些場合，類的名子不重要，指向使用類中的方法或功能<br>如下範例，直接在方法中建立一個類，並且實作方法，並且在方法中使用</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> basic;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JavaAnonymousClass</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">    <span class="type">Me</span> <span class="variable">me</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Me</span>();</span><br><span class="line">    me.sayHello(<span class="keyword">new</span> <span class="title class_">Person</span>()&#123;</span><br><span class="line">        <span class="keyword">public</span> String <span class="title function_">name</span><span class="params">()</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;John&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">Person</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> String <span class="title function_">name</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Me</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sayHello</span><span class="params">(Person person)</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello &quot;</span> + person.name());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java 物件導向的特性</title>
     <url>/2024/01/24/Java-%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91%E7%9A%84%E7%89%B9%E6%80%A7/</url>
     <content><![CDATA[<p>Java 身為標準的物件導向程式設計語言，物件導向程式設計的特性有繼承、多型、多載、重寫，這些特性都是為了讓程式碼更加的模組化，讓程式碼更加的容易維護與擴充。</p>

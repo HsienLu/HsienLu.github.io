@@ -22,20 +22,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="這是一個不存在的頁面很抱歉，你目前存取的頁面並不存在。 預計將在約 5 秒後返回首頁。 如果你很急著想看文章，你可以 點這裡 返回首頁。  let countTime &#x3D; 5;  function count() {      document.getElementById(&#39;timeout&#39;).textContent &#x3D; countTime;   countTime -&#x3D; 1;   if(c">
-<meta property="og:type" content="website">
-<meta property="og:title" content="404 - 真巧，竟然在這裡遇到你！">
-<meta property="og:url" content="http://example.com/404.html">
+  <meta name="description" content="靜態方法是一種特殊的方法，它可以在不創建類的情況下使用。 關鍵字 static 表示靜態方法，它屬於類，而不是屬於類的實例。 靜態方法可以直接使用類名.方法名調用 靜態方法不能訪問成員屬性和成員方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java-靜態方法">
+<meta property="og:url" content="http://example.com/2024/01/25/Java-%E9%9D%9C%E6%85%8B%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="HsienLu&#39;s Blog">
-<meta property="og:description" content="這是一個不存在的頁面很抱歉，你目前存取的頁面並不存在。 預計將在約 5 秒後返回首頁。 如果你很急著想看文章，你可以 點這裡 返回首頁。  let countTime &#x3D; 5;  function count() {      document.getElementById(&#39;timeout&#39;).textContent &#x3D; countTime;   countTime -&#x3D; 1;   if(c">
+<meta property="og:description" content="靜態方法是一種特殊的方法，它可以在不創建類的情況下使用。 關鍵字 static 表示靜態方法，它屬於類，而不是屬於類的實例。 靜態方法可以直接使用類名.方法名調用 靜態方法不能訪問成員屬性和成員方法">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-09-12T15:01:35.000Z">
-<meta property="article:modified_time" content="2024-01-25T10:18:51.535Z">
+<meta property="article:published_time" content="2024-01-25T10:12:39.000Z">
+<meta property="article:modified_time" content="2024-01-25T10:18:51.539Z">
 <meta property="article:author" content="HsienLu">
-<meta property="article:tag" content="前端,後端,全端,網頁,技術,心得,筆記">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/404">
+<link rel="canonical" href="http://example.com/2024/01/25/Java-%E9%9D%9C%E6%85%8B%E6%96%B9%E6%B3%95/">
 
 
 <script id="page-configurations">
@@ -43,13 +43,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>404 - 真巧，竟然在這裡遇到你！ | HsienLu's Blog
-</title>
+  <title>Java-靜態方法 | HsienLu's Blog</title>
   
 
 
@@ -187,65 +186,124 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="en">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/25/Java-%E9%9D%9C%E6%85%8B%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/136676022.jpg">
+      <meta itemprop="name" content="HsienLu">
+      <meta itemprop="description" content="純放一些個人筆記分享">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HsienLu's Blog">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java-靜態方法
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">404 - 真巧，竟然在這裡遇到你！
-</h1>
+        <div class="post-meta">
 
-<div class="post-meta">
-  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
 
-</div>
+              <time title="Created: 2024-01-25 18:12:39 / Modified: 18:18:51" itemprop="dateCreated datePublished" datetime="2024-01-25T18:12:39+08:00">2024-01-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+                </span>
+            </span>
 
-</header>
+          
+
+        </div>
+      </header>
+          
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          </div>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-      
-      
-      <div class="post-body">
-          <!-- markdownlint-disable MD039 MD033 -->
+        <ul>
+<li>靜態方法是一種特殊的方法，它可以在不創建類的情況下使用。</li>
+<li>關鍵字 static 表示靜態方法，它屬於類，而不是屬於類的實例。</li>
+<li>靜態方法可以直接使用類名.方法名調用</li>
+<li>靜態方法不能訪問成員屬性和成員方法<span id="more"></span></li>
+</ul>
+<h4 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> basic;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">helloworld</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">TestStatic</span> <span class="variable">test</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TestStatic</span>();</span><br><span class="line">        test.test1();</span><br><span class="line">        TestStatic.test2();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TestStatic</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">test1</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;non-static Hello world!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">test2</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Static Hello world!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="這是一個不存在的頁面"><a href="#這是一個不存在的頁面" class="headerlink" title="這是一個不存在的頁面"></a>這是一個不存在的頁面</h2><p>很抱歉，你目前存取的頁面並不存在。</p>
-<p>預計將在約 <span id="timeout">5</span> 秒後返回首頁。</p>
-<p>如果你很急著想看文章，你可以 <strong><span class="exturl" data-url="aHR0cHM6Ly9oc2llbmx1LmdpdGh1Yi5pby8=">點這裡<i class="fa fa-external-link-alt"></i></span></strong> 返回首頁。</p>
-<script>
-let countTime = 5;
+<h3 id="靜態代碼塊"><a href="#靜態代碼塊" class="headerlink" title="靜態代碼塊"></a>靜態代碼塊</h3><p>類的程式載入完成後會自動執行的程式碼，只會執行一次。可以完成靜態屬性的初始化。</p>
+<h4 id="範例-1"><a href="#範例-1" class="headerlink" title="範例"></a>範例</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">helloworld</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    TestStatic t= <span class="keyword">new</span> <span class="title class_">TestStatic</span>();</span><br><span class="line">    TestStatic.test();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TestStatic</span>&#123;</span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;static block&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">test</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;test&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-function count() {
-  
-  document.getElementById('timeout').textContent = countTime;
-  countTime -= 1;
-  if(countTime === 0){
-    location.href = 'https://hsienlu.github.io/'; // 記得改成自己網址 Url
-  }
-  setTimeout(() => {
-    count();
-  }, 1000);
-}
+<blockquote>
+<p>創建實例時也會執行代碼塊，但不是靜態代碼塊，而是代碼塊。</p>
+</blockquote>
 
-count();
-</script>
-
-      </div>
-      
-      
-      
     </div>
-    
 
     
     
     
+      
+  <div class="popular-posts-header">Related Posts</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/2024/01/25/Java-遞迴/" rel="bookmark">Java-遞迴</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/2024/01/25/Java-訪問權限/" rel="bookmark">Java-訪問權限</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/2024/01/25/Java-特殊類別-介面、抽象、枚舉、匿名類/" rel="bookmark">Java-特殊類別(介面、抽象、枚舉、匿名類)</a></div>
+    </li>
+  </ul>
+
+
+      <footer class="post-footer">
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/01/25/Java-%E7%89%B9%E6%AE%8A%E9%A1%9E%E5%88%A5-%E4%BB%8B%E9%9D%A2%E3%80%81%E6%8A%BD%E8%B1%A1%E3%80%81%E6%9E%9A%E8%88%89%E3%80%81%E5%8C%BF%E5%90%8D%E9%A1%9E/" rel="prev" title="Java-特殊類別(介面、抽象、枚舉、匿名類)">
+      <i class="fa fa-chevron-left"></i> Java-特殊類別(介面、抽象、枚舉、匿名類)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/01/25/Java-%E8%A8%AA%E5%95%8F%E6%AC%8A%E9%99%90/" rel="next" title="Java-訪問權限">
+      Java-訪問權限 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
 
 
           </div>
@@ -296,7 +354,7 @@ count();
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%99%E6%98%AF%E4%B8%80%E5%80%8B%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E9%A0%81%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">這是一個不存在的頁面</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-number">1.</span> <span class="nav-text">範例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9C%E6%85%8B%E4%BB%A3%E7%A2%BC%E5%A1%8A"><span class="nav-number"></span> <span class="nav-text">靜態代碼塊</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B-1"><span class="nav-number">1.</span> <span class="nav-text">範例</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
