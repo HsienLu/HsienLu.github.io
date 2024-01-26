@@ -19,24 +19,24 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"hsienlu.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="要說 React 有什麼特別的地方我覺得應該就是 HooK 了吧!Hook 是在 React 16.8 版中加入的，hook 有很多種，每一種的功能都不太一樣，甚至還可以自定義，簡單來說它就是函式，然後可以重複一直使用。但其實這是一個有點抽象的概念，所以就直接從實際的例子來了解吧!">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Day 28 React 的 Hello World-Hook-useState">
-<meta property="og:url" content="http://example.com/2023/10/12/Day%2028%20React%E7%9A%84Hello%20World-Hook-useState/index.html">
+<meta property="og:url" content="https://hsienlu.github.io/2023/10/12/Day%2028%20React%E7%9A%84Hello%20World-Hook-useState/index.html">
 <meta property="og:site_name" content="HsienLu&#39;s Blog">
 <meta property="og:description" content="要說 React 有什麼特別的地方我覺得應該就是 HooK 了吧!Hook 是在 React 16.8 版中加入的，hook 有很多種，每一種的功能都不太一樣，甚至還可以自定義，簡單來說它就是函式，然後可以重複一直使用。但其實這是一個有點抽象的概念，所以就直接從實際的例子來了解吧!">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-10-12T05:54:31.000Z">
-<meta property="article:modified_time" content="2024-01-26T02:36:39.523Z">
+<meta property="article:modified_time" content="2024-01-26T03:52:08.959Z">
 <meta property="article:author" content="HsienLu">
 <meta property="article:tag" content="React">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2023/10/12/Day%2028%20React%E7%9A%84Hello%20World-Hook-useState/">
+<link rel="canonical" href="https://hsienlu.github.io/2023/10/12/Day%2028%20React%E7%9A%84Hello%20World-Hook-useState/">
 
 
 <script id="page-configurations">
@@ -195,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/12/Day%2028%20React%E7%9A%84Hello%20World-Hook-useState/">
+    <link itemprop="mainEntityOfPage" href="https://hsienlu.github.io/2023/10/12/Day%2028%20React%E7%9A%84Hello%20World-Hook-useState/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/136676022.jpg">
@@ -226,7 +226,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-01-26 10:36:39" itemprop="dateModified" datetime="2024-01-26T10:36:39+08:00">2024-01-26</time>
+                <time title="Modified: 2024-01-26 11:52:08" itemprop="dateModified" datetime="2024-01-26T11:52:08+08:00">2024-01-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
