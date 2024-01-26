@@ -105,3 +105,6 @@ deploy:
   repo: git@github.com:HsienLu/Hsienlu.github.io.git
   branch: gh-pages
   message: ${{ github.event.head_commit.message }}
+# Sitemap
+sitemap:
+  path: sitemap.xml
