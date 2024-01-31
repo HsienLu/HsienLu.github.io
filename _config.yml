@@ -104,7 +104,8 @@ deploy:
   type: git
   repo: git@github.com:HsienLu/Hsienlu.github.io.git
   branch: gh-pages
-  message: ${{ github.event.head_commit.message }}
+  message: Site updated:{{ now('YYYY-MM-DD HH:mm:ss') }}
+  ignore_hidden: false
 # Sitemap
 sitemap:
   path: sitemap.xml
