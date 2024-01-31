@@ -7,6 +7,35 @@
 ]]></content>
   </entry>
   <entry>
+    <title>TypeScript-常用功能-Readonly</title>
+    <url>/2024/01/31/TypeScript-%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD-Readonly/</url>
+    <content><![CDATA[<p>Readonly 其實從字面上很好理解，就是指能讀取的意思。<br>根據官方文件的說方就是不能被創造一個 Type 的型別物件，其設置的屬性不能被重新賦值。</p>
+<blockquote>
+<p>Constructs a type with all properties of Type set to readonly, meaning the properties of the constructed type cannot be reassigned.</p>
+</blockquote>
+<span id="more"></span>
+
+<h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><ol>
+<li>整個型別都不能被重新賦值</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Todo</span> &#123;</span><br><span class="line">  <span class="attr">title</span>: <span class="built_in">string</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="attr">todo</span>: <span class="title class_">Readonly</span>&lt;<span class="title class_">Todo</span>&gt; = &#123;</span><br><span class="line">  <span class="attr">title</span>: <span class="string">&quot;Delete inactive users&quot;</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">todo.<span class="property">title</span> = <span class="string">&quot;Hello&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>可以個別設置屬性為 readonly</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> <span class="title class_">Foo</span> = &#123;</span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">bar</span>: <span class="built_in">number</span>;</span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">bas</span>: <span class="built_in">number</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 初始化</span></span><br><span class="line"><span class="keyword">const</span> <span class="attr">foo</span>: <span class="title class_">Foo</span> = &#123;<span class="attr">bar</span>: <span class="number">123</span>, <span class="attr">bas</span>: <span class="number">456</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 不能被重新賦值</span></span><br><span class="line">foo.<span class="property">bar</span> = <span class="number">456</span>; <span class="comment">//</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="實際使用場景"><a href="#實際使用場景" class="headerlink" title="實際使用場景"></a>實際使用場景</h4><p>React 中的 props 就是一個很好的使用場景，因為 React 為單向資料流，子組件不能修改父組件傳遞過來的 props，所以可以使用 Readonly 來設置 props 的型別，預防突然犯傻直接修改了 props。</p>
+<figure class="highlight tsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">MyComponentProps</span> &#123;</span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">name</span>: <span class="built_in">string</span>;</span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">age</span>: <span class="built_in">number</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">MyComponent</span>(<span class="params">props: MyComponentProps</span>) &#123;</span><br><span class="line">  <span class="comment">// 使用 props.name，但不能修改它</span></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;props.name&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>TypeScript</category>
+      </categories>
+      <tags>
+        <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>TypeScript 的 LeetCode-TypeHero</title>
     <url>/2024/01/26/TypeScript-%E7%9A%84-LeetCode-TypeHero/</url>
     <content><![CDATA[<p>近幾年很火的 TypeScript 加強了 JavaScript 的型別部分，但 TypeScipt 的型別系統其實相當的複雜，於是有人開源了類似 LeetCode 的網站，讓我們可以練習 TypeScript 的型別系統，這個網站就是 TypeHero，今天就來介紹一下這個網站吧!</p>
