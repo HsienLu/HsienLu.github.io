@@ -7,6 +7,43 @@
 ]]></content>
   </entry>
   <entry>
+    <title>TypeScript-Exclude</title>
+    <url>/2024/02/01/TypeScript-Exclude/</url>
+    <content><![CDATA[<h3 id="Exclude"><a href="#Exclude" class="headerlink" title="Exclude&lt;UnionType, ExcludedMembers&gt;"></a>Exclude&lt;UnionType, ExcludedMembers&gt;</h3><p>顧名思義，就是排除某些類型的意思。<br>引用官方的說法：從 UnionType 中排除所有可分配給 ExcludedMembers 的聯合成員，以構建一個新的類型。</p>
+<blockquote>
+<p>Constructs a type by excluding from UnionType all union members that are assignable to ExcludedMembers</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><p>1.排除某個型別</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> <span class="variable constant_">T0</span> = <span class="title class_">Exclude</span>&lt;<span class="string">&quot;a&quot;</span> | <span class="string">&quot;b&quot;</span> | <span class="string">&quot;c&quot;</span>, <span class="string">&quot;a&quot;</span>&gt;; <span class="comment">// &quot;b&quot; | &quot;c&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>2.排除多個型別</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> text = <span class="string">&quot;A&quot;</span> | <span class="string">&quot;B&quot;</span> | <span class="string">&quot;C&quot;</span> | <span class="string">&quot;D&quot;</span> | <span class="string">&quot;E&quot;</span>;</span><br><span class="line"><span class="keyword">type</span> <span class="variable constant_">T1</span> = <span class="title class_">Exclude</span>&lt;text, <span class="string">&quot;A&quot;</span> | <span class="string">&quot;B&quot;</span> | <span class="string">&quot;C&quot;</span>&gt;; <span class="comment">// &quot;D&quot; | &quot;E&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>3.排除某個類型</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> <span class="variable constant_">T2</span> = <span class="title class_">Exclude</span>&lt;<span class="built_in">number</span> | <span class="string">&quot;b&quot;</span> | <span class="string">&quot;c&quot;</span>, <span class="built_in">string</span>&gt;; <span class="comment">// number</span></span><br></pre></td></tr></table></figure>
+
+<p>4.排除物件類型</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> animal = &#123;<span class="attr">name</span>: <span class="string">&quot;dog&quot;</span>&#125; | &#123;<span class="attr">name</span>: <span class="string">&quot;cat&quot;</span>&#125; | &#123;<span class="attr">name</span>: <span class="string">&quot;pig&quot;</span>&#125;;</span><br><span class="line"><span class="keyword">type</span> <span class="variable constant_">T3</span> = <span class="title class_">Exclude</span>&lt;animal, &#123;<span class="attr">name</span>: <span class="string">&quot;dog&quot;</span>&#125;&gt;; <span class="comment">// &#123;name:&quot;cat&quot;&#125; | &#123;name:&quot;pig&quot;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>5.藉由形狀排除型別</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> animal = &#123;<span class="attr">name</span>: <span class="string">&quot;dog&quot;</span>; <span class="attr">age</span>: <span class="built_in">number</span>&#125; | &#123;<span class="attr">name</span>: <span class="string">&quot;cat&quot;</span>&#125; | &#123;<span class="attr">name</span>: <span class="string">&quot;pig&quot;</span>&#125;;</span><br><span class="line"><span class="keyword">type</span> <span class="variable constant_">T4</span> = <span class="title class_">Exclude</span>&lt;animal, &#123;<span class="attr">age</span>: <span class="built_in">number</span>&#125;&gt;; <span class="comment">// &#123;name:&quot;cat&quot;&#125; | &#123;name:&quot;pig&quot;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>6.藉由樣板文字排除型別</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> animal = <span class="string">&quot;Adog&quot;</span> | <span class="string">&quot;Bcat&quot;</span> | <span class="string">&quot;Cdog&quot;</span> | <span class="string">&quot;Dpig&quot;</span>;</span><br><span class="line"><span class="keyword">type</span> <span class="variable constant_">T5</span> = <span class="title class_">Exclude</span>&lt;animal, <span class="string">`<span class="subst">$&#123;<span class="built_in">string</span>&#125;</span><span class="subst">$&#123;<span class="string">&quot;dog&quot;</span> | <span class="string">&quot;cat&quot;</span>&#125;</span>`</span>&gt;; <span class="comment">//&quot;Dpig&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h3><p>Exclude 用來排除某些型別，可以用來排除單一型別、多個型別、某個類型、物件類型、形狀、樣板文字等等。</p>
+<h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><p><span class="exturl" data-url="aHR0cHM6Ly93d3cudHlwZXNjcmlwdGxhbmcub3JnL2RvY3MvaGFuZGJvb2svdXRpbGl0eS10eXBlcy5odG1sI2V4Y2x1ZGV0eXBlLWV4Y2x1ZGVkdW5pb24=">Exclude<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly93d3cudG90YWx0eXBlc2NyaXB0LmNvbS91c2VzLWZvci1leGNsdWRlLXR5cGUtaGVscGVy">9 Ways to Use Exclude in TypeScript-Matt Pocock<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
+      <categories>
+        <category>TypeScript</category>
+      </categories>
+      <tags>
+        <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>TypeScript-常用功能-Readonly</title>
     <url>/2024/01/31/TypeScript-%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD-Readonly/</url>
     <content><![CDATA[<p>Readonly 其實從字面上很好理解，就是指能讀取的意思。<br>根據官方文件的說方就是不能被創造一個 Type 的型別物件，其設置的屬性不能被重新賦值。</p>
