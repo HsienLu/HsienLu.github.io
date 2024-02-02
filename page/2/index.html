@@ -127,12 +127,12 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">10</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">11</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">7</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">8</span></a>
 
   </li>
         <li class="menu-item menu-item-sitemap">
@@ -196,6 +196,96 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hsienlu.github.io/2024/01/19/TypeScript-%E4%BB%8B%E9%9D%A2-interface-vs-%E5%9E%8B%E5%88%A5%E5%88%A5%E5%90%8D-Aliases/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/136676022.jpg">
+      <meta itemprop="name" content="HsienLu">
+      <meta itemprop="description" content="純放一些個人筆記分享">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HsienLu's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/01/19/TypeScript-%E4%BB%8B%E9%9D%A2-interface-vs-%E5%9E%8B%E5%88%A5%E5%88%A5%E5%90%8D-Aliases/" class="post-title-link" itemprop="url">TypeScript-介面(interface) vs 型別別名(Aliases)</a>
+        </h2>
+
+        <div class="post-meta">
+
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-01-19 09:17:52" itemprop="dateCreated datePublished" datetime="2024-01-19T09:17:52+08:00">2024-01-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-02-02 17:24:17" itemprop="dateModified" datetime="2024-02-02T17:24:17+08:00">2024-02-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/TypeScript/" itemprop="url" rel="index"><span itemprop="name">TypeScript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+          
+          <div class="post-tags">
+              <a href="/tags/TypeScript/" rel="tag"><i class="fa fa-tag"></i> TypeScript</a>
+          </div>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>開頭先引用一下官方文件的說明</p>
+<blockquote>
+<p>Type aliases and interfaces are very similar, and in many cases you can choose between them freely. Almost all features of an interface are available in type, the key distinction is that a type cannot be re-opened to add new properties vs an interface which is always extendable.</p>
+</blockquote>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/01/19/TypeScript-%E4%BB%8B%E9%9D%A2-interface-vs-%E5%9E%8B%E5%88%A5%E5%88%A5%E5%90%8D-Aliases/" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://hsienlu.github.io/2024/01/18/MySQL-%E4%BA%8B%E5%8B%99-Transaction/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -228,7 +318,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-02-01 09:58:14" itemprop="dateModified" datetime="2024-02-01T09:58:14+08:00">2024-02-01</time>
+                <time title="Modified: 2024-02-02 17:24:17" itemprop="dateModified" datetime="2024-02-02T17:24:17+08:00">2024-02-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -316,7 +406,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-02-01 09:58:14" itemprop="dateModified" datetime="2024-02-01T09:58:14+08:00">2024-02-01</time>
+                <time title="Modified: 2024-02-02 17:24:17" itemprop="dateModified" datetime="2024-02-02T17:24:17+08:00">2024-02-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -404,7 +494,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-02-01 09:58:14" itemprop="dateModified" datetime="2024-02-01T09:58:14+08:00">2024-02-01</time>
+                <time title="Modified: 2024-02-02 17:24:17" itemprop="dateModified" datetime="2024-02-02T17:24:17+08:00">2024-02-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -492,7 +582,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-02-01 09:58:14" itemprop="dateModified" datetime="2024-02-01T09:58:14+08:00">2024-02-01</time>
+                <time title="Modified: 2024-02-02 17:24:17" itemprop="dateModified" datetime="2024-02-02T17:24:17+08:00">2024-02-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -580,7 +670,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-02-01 09:58:14" itemprop="dateModified" datetime="2024-02-01T09:58:14+08:00">2024-02-01</time>
+                <time title="Modified: 2024-02-02 17:24:17" itemprop="dateModified" datetime="2024-02-02T17:24:17+08:00">2024-02-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -668,7 +758,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-02-01 09:58:14" itemprop="dateModified" datetime="2024-02-01T09:58:14+08:00">2024-02-01</time>
+                <time title="Modified: 2024-02-02 17:24:17" itemprop="dateModified" datetime="2024-02-02T17:24:17+08:00">2024-02-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -756,7 +846,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-02-01 09:58:14" itemprop="dateModified" datetime="2024-02-01T09:58:14+08:00">2024-02-01</time>
+                <time title="Modified: 2024-02-02 17:24:17" itemprop="dateModified" datetime="2024-02-02T17:24:17+08:00">2024-02-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -844,7 +934,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-02-01 09:58:14" itemprop="dateModified" datetime="2024-02-01T09:58:14+08:00">2024-02-01</time>
+                <time title="Modified: 2024-02-02 17:24:17" itemprop="dateModified" datetime="2024-02-02T17:24:17+08:00">2024-02-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -932,7 +1022,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-02-01 09:58:14" itemprop="dateModified" datetime="2024-02-01T09:58:14+08:00">2024-02-01</time>
+                <time title="Modified: 2024-02-02 17:24:17" itemprop="dateModified" datetime="2024-02-02T17:24:17+08:00">2024-02-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -963,93 +1053,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/01/02/Day%2029%20React%E7%9A%84%E6%9C%AC%E8%B3%AA-Library/" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://hsienlu.github.io/2023/12/29/window-body/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/136676022.jpg">
-      <meta itemprop="name" content="HsienLu">
-      <meta itemprop="description" content="純放一些個人筆記分享">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="HsienLu's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/12/29/window-body/" class="post-title-link" itemprop="url">window&body</a>
-        </h2>
-
-        <div class="post-meta">
-
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2023-12-29 14:15:32" itemprop="dateCreated datePublished" datetime="2023-12-29T14:15:32+08:00">2023-12-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-02-01 09:58:14" itemprop="dateModified" datetime="2024-02-01T09:58:14+08:00">2024-02-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-          
-          <div class="post-tags">
-              <a href="/tags/html/" rel="tag"><i class="fa fa-tag"></i> html</a>
-          </div>
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="文字版"><a href="#文字版" class="headerlink" title="文字版"></a>文字版</h2><p>在 JavaScript 中，window 和 document.body 是兩個重要的全局物件，它們代表瀏覽器視窗和網頁文件的主體部分。讓我們來看一下它們之間的差異：</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/12/29/window-body/" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -1141,20 +1144,20 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-count">50</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
