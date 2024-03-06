@@ -7,6 +7,27 @@
 ]]></content>
   </entry>
   <entry>
+    <title>React-Hook-useContext</title>
+    <url>/2024/03/06/React-Hook-useContext/</url>
+    <content><![CDATA[<p>useContext 是一個 React Hook，因為React為單向資料流的特性，所以當我們需要在不同的 component 之間共享資料時，我們通常會透過 props 來傳遞資料，但是當 component 的層級越來越深時，這樣的寫法會變得非常麻煩，這時候 useContext 就可以派上用場，作為一個傳送門useContext可以像下圖中自由的傳遞props。</p>
+<p><img src="https://react.dev/_next/image?url=/images/docs/diagrams/passing_data_context_far.dark.png&w=640&q=75" alt="useContext Illustration"><br>Ref:dev.react.com</p>
+<span id="more"></span>
+<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p>1.建立一個 空的context並且導出<br>常見作法是在建立一個新的檔案中建立一個空的context並且導出，檔名可以隨意取名。</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createContext &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title class_">MyContext</span> = <span class="title function_">createContext</span>(<span class="literal">null</span>);</span><br></pre></td></tr></table></figure>
+<p>2.在最上層的component中使用Provider，並包裹住想要傳遞的元件，傳遞想要傳入的porps</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">MyContext</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;./useContext.jsx&#x27;</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable constant_">AAA</span>=<span class="string">&quot;132&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">&lt;<span class="title class_">MyContext</span>.<span class="property">Provider</span> value=&#123;&#123;<span class="variable constant_">AAA</span>&#125;&#125;&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">App</span> /&gt;</span></span></span><br><span class="line">&lt;/<span class="title class_">MyContext</span>.<span class="property">Provider</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>3.可以在porvider包裹住的情況下，使用useContext來取得資料</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">MyContext</span> &#125; <span class="keyword">from</span> <span class="string">&quot;./useContext.jsx&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> &#123;<span class="variable constant_">AAA</span>&#125;=<span class="title function_">useContext</span>(<span class="title class_">MyContext</span>)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+        <tag>Hook</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>XML-介紹</title>
     <url>/2024/02/02/XML-%E4%BB%8B%E7%B4%B9/</url>
     <content><![CDATA[<h3 id="什麼是-XML"><a href="#什麼是-XML" class="headerlink" title="什麼是 XML"></a>什麼是 XML</h3><p>xml 是可擴展標記性的語言，</p>
