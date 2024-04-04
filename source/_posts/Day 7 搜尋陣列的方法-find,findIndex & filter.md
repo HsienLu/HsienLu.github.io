@@ -1,5 +1,5 @@
 ---
-title: Day 1 參賽動機以及題目選擇和預計大綱
+title: Day 7 搜尋陣列的方法-find,findIndex & filter
 date: 2023-09-21 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
