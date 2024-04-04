@@ -1659,7 +1659,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Day 1 參賽動機以及題目選擇和預計大綱</title>
+    <title>Day 7 搜尋陣列的方法-find,findIndex &amp; filter</title>
     <url>/2023/09/21/Day%207%20%E6%90%9C%E5%B0%8B%E9%99%A3%E5%88%97%E7%9A%84%E6%96%B9%E6%B3%95-find,findIndex%20&amp;%20filter/</url>
     <content><![CDATA[<h1 id="Day-7-搜尋陣列的方法-find-findIndex-filter"><a href="#Day-7-搜尋陣列的方法-find-findIndex-filter" class="headerlink" title="Day 7 搜尋陣列的方法-find,findIndex &amp; filter"></a>Day 7 搜尋陣列的方法-find,findIndex &amp; filter</h1><p>今天介紹的三個語法是針對陣列的搜尋功能，有 find(),findIndex(),filter()</p>
 <span id="more"></span>
