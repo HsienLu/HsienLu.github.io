@@ -1243,7 +1243,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #d750ad;
+  background: #fffffa;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1617,20 +1617,6 @@ pre .javascript .function {
 .post-button {
   margin-top: 40px;
   text-align: center;
-}
-.use-motion .post-block,
-.use-motion .pagination,
-.use-motion .comments {
-  opacity: 0;
-}
-.use-motion .post-header {
-  opacity: 0;
-}
-.use-motion .post-body {
-  opacity: 0;
-}
-.use-motion .collection-header {
-  opacity: 0;
 }
 .posts-collapse {
   margin-left: 35px;
@@ -2543,7 +2529,6 @@ ul.breadcrumb li + li:last-child {
   box-sizing: border-box;
   color: var(--text-color);
   width: 240px;
-  opacity: 0;
 }
 .sidebar-inner.affix {
   position: fixed;
