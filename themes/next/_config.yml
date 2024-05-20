@@ -807,7 +807,7 @@ mermaid:
 # Use velocity to animate everything.
 # For more information: http://velocityjs.org
 motion:
-  enable: true
+  enable: false
   async: false
   transition:
     # Transition variants:
@@ -817,10 +817,10 @@ motion:
     # slideUpIn | slideDownIn | slideLeftIn | slideRightIn
     # slideUpBigIn | slideDownBigIn | slideLeftBigIn | slideRightBigIn
     # perspectiveUpIn | perspectiveDownIn | perspectiveLeftIn | perspectiveRightIn
-    post_block: fadeIn
-    post_header: slideDownIn
-    post_body: slideDownIn
-    coll_header: slideLeftIn
+    post_block: false
+    post_header: false
+    post_body: false
+    coll_header: false
     # Only for Pisces | Gemini.
     sidebar: slideUpIn
 
