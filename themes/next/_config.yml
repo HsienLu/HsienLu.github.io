@@ -817,12 +817,12 @@ motion:
     # slideUpIn | slideDownIn | slideLeftIn | slideRightIn
     # slideUpBigIn | slideDownBigIn | slideLeftBigIn | slideRightBigIn
     # perspectiveUpIn | perspectiveDownIn | perspectiveLeftIn | perspectiveRightIn
-    post_block: fadeIn
-    post_header: slideDownIn
-    post_body: slideDownIn
-    coll_header: slideLeftIn
+    #post_block: fadeIn
+    #post_header: slideDownIn
+    #post_body: slideDownIn
+    #coll_header: slideLeftIn
     # Only for Pisces | Gemini.
-    sidebar: slideUpIn
+    #sidebar: slideUpIn
 
 # Progress bar in the top during page loading.
 # Dependencies: https://github.com/theme-next/theme-next-pace
