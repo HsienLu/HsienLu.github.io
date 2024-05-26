@@ -1,0 +1,23 @@
+# Header
+menu:
+  首頁: /
+  作品集: /collection
+  服務項目: /service
+  部落格: /blog
+  聯絡我: /contact
+
+# Blog
+blog_title: 部落格
+blog_subtitle: 不定期分享技術文章
+
+# Blog pagination
+# path: Root path for your blogs index page. (default = '/blog')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+blog_generator:
+  per_page: 6
+  path: /blog
+  order_by: -date
+
+# Miscellaneous
+favicon: /images/logo.svg
