@@ -7,6 +7,14 @@
 ]]></content>
   </entry>
   <entry>
+    <title>2024 六角軟體工程師體驗營</title>
+    <url>/2024/05/30/2024-%E5%85%AD%E8%A7%92%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E5%B8%AB%E9%AB%94%E9%A9%97%E7%87%9F/</url>
+    <content><![CDATA[<p>這次來參加軟體工程師體驗營，除了香香的設計稿和模板外，主要是想看看這一年來進步了多少。</p>
+<span id="more"></span>
+<p>有一點雪恥的一位在裡面，記得去年我是沒有完成的，而且是在全職的狀況下。但是今年很順利地完成了，而且是在課餘的時間。<br>我喜歡這次有活動糾團的部分，有機會可以聊聊大家在做什麼，各式各樣的人，有各式各地狀況和問題，但是大家都走在同一條道路上。<br>這次活動提醒我，不只我，很多人也都在這條路上持續努力，這讓我想起當初踏入這條路的初衷，也讓我更堅定了自己的方向。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>React-Hook-useContext</title>
     <url>/2024/03/06/React-Hook-useContext/</url>
     <content><![CDATA[<p>useContext 是一個 React Hook，因為React為單向資料流的特性，所以當我們需要在不同的 component 之間共享資料時，我們通常會透過 props 來傳遞資料，但是當 component 的層級越來越深時，這樣的寫法會變得非常麻煩，這時候 useContext 就可以派上用場，作為一個傳送門useContext可以像下圖中自由的傳遞props。</p>
