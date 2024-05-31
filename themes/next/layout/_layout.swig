@@ -8,7 +8,15 @@
   {{ partial('_third-party/analytics/index.swig', {}, {cache: theme.cache.enable}) }}
   {{ partial('_scripts/noscript.swig', {}, {cache: theme.cache.enable}) }}
 </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KZDR1NP5H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'G-0KZDR1NP5H');
+  </script>
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container{%- if theme.motion.enable %} use-motion{%- endif %}">
     <div class="headband"></div>
