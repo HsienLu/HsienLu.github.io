@@ -3,6 +3,7 @@ title: Day17 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.3
 date: 2023-10-01 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 ## Async Await

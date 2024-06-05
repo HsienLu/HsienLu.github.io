@@ -3,6 +3,7 @@ title: Day 1 參賽動機以及題目選擇和預計大綱
 date: 2023-09-15 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 ## 參賽動機

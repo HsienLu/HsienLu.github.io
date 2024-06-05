@@ -3,6 +3,7 @@ title: Day 5 操作陣列的方法 Part.2-shift & unshift
 date: 2023-09-19 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 接著昨天的陣列操作方法，今天會針對 shift,unshift 做介紹

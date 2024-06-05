@@ -3,6 +3,7 @@ title: Day14 同步&非同步(Synchronous & Asynchronous)
 date: 2023-09-28 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 就中文來看這兩種的意思其實相當容易被搞混的，我自己常常在閱讀文章時也很常莫名的被這兩個名詞搞昏頭。所以我會直接用例子來幫助記憶接說明如下:

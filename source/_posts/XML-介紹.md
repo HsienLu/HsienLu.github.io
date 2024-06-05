@@ -3,6 +3,7 @@ title: XML-介紹
 date: 2024-02-02 17:22:48
 tags: XML
 categories: XML
+cover: /images/default-cover.png
 ---
 
 ### 什麼是 XML

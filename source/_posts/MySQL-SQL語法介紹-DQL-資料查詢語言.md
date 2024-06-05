@@ -3,6 +3,7 @@ title: MySQL-SQL語法介紹-DQL 資料查詢語言
 date: 2024-01-18 10:09:19
 tags: [MySQL, SQL]
 categories: MySQL
+cover: /images/default-cover.png
 ---
 
 DQL(Data Query Language) 資料查詢語言

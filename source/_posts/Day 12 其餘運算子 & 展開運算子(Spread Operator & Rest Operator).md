@@ -3,6 +3,7 @@ title: Day12 其餘運算子 & 展開運算子(Spread Operator & Rest Operator)
 date: 2023-09-26 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 接著就是傳說中的...了，正式名稱為其餘運算子和展開運算子，這個點點點同時具有兩種功能，也是在 React 中被廣泛使用的，接下來依序介紹

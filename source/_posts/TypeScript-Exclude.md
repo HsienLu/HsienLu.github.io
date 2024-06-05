@@ -3,6 +3,7 @@ title: TypeScript-Exclude
 date: 2024-02-01 09:33:12
 tags: [TypeScript]
 categories: TypeScript
+cover: /images/default-cover.png
 ---
 
 ### Exclude<UnionType, ExcludedMembers>

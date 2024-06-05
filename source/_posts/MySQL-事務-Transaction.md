@@ -3,6 +3,7 @@ title: MySQL-事務(Transaction)
 date: 2024-01-18 10:22:42
 tags: [MySQL, SQL]
 categories: MySQL
+cover: /images/default-cover.png
 ---
 
 簡介: 事務(Transaction)是一個邏輯上的工作單位，它可以包含一個或多個 SQL 語句

@@ -3,6 +3,7 @@ title: Day 2 My VS Code Tour
 date: 2023-09-16 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 ## 簡介

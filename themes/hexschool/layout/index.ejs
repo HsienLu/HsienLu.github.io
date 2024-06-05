@@ -3,19 +3,19 @@
     <div class="row flex-md-row-reverse mb-7 mb-md-9">
       <div class="col-12 col-md-7 px-0 overflow-hidden">
         <picture>
-          <source media="(min-width: 768px)" srcset="/images/hero-lg.png">
+          <source media="(min-width: 768px)" srcset="/images/heroSection.svg">
           <img class="w-100" src="/images/hero-sm.png" alt="hero banner">
         </picture>
       </div>
       <div class="col-10 col-md-4 mx-auto mx-md-0">
         <div class="d-flex flex-column justify-content-center align-items-center align-items-md-start h-100">
-          <h1 class="mb-4 text-primary-700 fw-semibold">Hi！我是 Noel</h1>
-          <p class="text-center text-md-start text-primary-600 fs-5 mb-0">具有 10 年經驗的<mark class="mark text-primary-600">資深 UI 設計師</mark>兼<mark class="mark text-primary-600">前端工程師</mark></p>
-          <p class="text-center text-md-start text-primary-600 fs-5">技術雙修並行，熱衷於優化使用者的網頁體驗</p>
-          <p class="text-center text-md-start text-primary-400 mb-9">WEB DEVELOPMENT / BRANDING / UI / UX / APP DESIGN</p>
+          <h1 class="mb-4 text-primary-700 fw-semibold">Hi！我是 咸儒</h1>
+          <p class="text-center text-md-start text-primary-600 fs-5 mb-0">現任的<mark class="mark text-primary-600">網頁工程師</mark></p>
+          <p class="text-center text-md-start text-primary-600 fs-5">熱衷於研究新的前端技術，帶給使用者最好的網頁體驗</p>
+          <p class="text-center text-md-start text-primary-400 mb-9">WEB DEVELOPMENT / FRONTEND</p>
           <div class="d-flex gap-3">
-            <a class="icon-link link-primary-600 px-2 fs-1" href="#">
-              <i class="bi bi-instagram"></i>
+            <a class="icon-link link-primary-600 px-2 fs-1" href="https://github.com/HsienLu">
+              <i class="bi bi-github"></i>
             </a>
             <a class="icon-link link-primary-600 px-2 fs-1" href="#">
               <i class="bi bi-facebook"></i>
@@ -28,7 +28,54 @@
       </div>
     </div>
   </div>
-  
+  <section class="container pb-7 pb-md-9">
+    <h2 class="title-deco py-7 py-md-9 mt-7 mt-md-9 text-center text-primary-700 tracking-wide fw-semibold">精選文章</h2>
+
+      <div class="row row-gap-5 mb-7">
+        <div class="swiper">
+          <div class="swiper-wrapper mb-9">
+          <% const limit = 5 %>
+          <% page.posts.slice(0, limit).each((post) => { %>
+            <div class="swiper-slide col-12 col-md-6 col-lg-4">
+              <div class="card border-0">
+                <img src="<%= post.cover %>" class="card-img-top rounded-3" alt="article-1">
+                <div class="card-body">
+                  <h5 class="card-title mb-3 text-primary-700"><%= post.title %></h5>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <%- list_tags(post.tags, {
+                      show_count: false,
+                      amount: 2,
+                      style: 'list',
+                      separator: '',
+                      class: {
+                        ul: 'd-flex gap-2 mb-0 overflow-x-hidden list-unstyled',
+                        a: 'badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4 text-decoration-none '
+                      }
+                    }) %>
+                    
+                    <p class="card-text fs-6 text-primary-600"><small class="text-body-secondary"><%= date(post.date, 'YYYY/MM/DD') %></small></p>
+                  </div>
+                  <a class="stretched-link" href="<%= post.path %>"></a>
+                </div>
+              </div>
+            </div>
+          <% }) %>
+
+          </div>
+          <div class="swiper-pagination d-none d-md-block"></div>
+        </div>
+      </div>
+
+    <div class="d-flex d-md-none justify-content-center mb-7">
+      <a
+        class="btn btn-lg fs-6 fw-bold text-primary-50 bg-primary-900"
+        href="/blog"
+      >
+        更多文章
+        <span class="material-symbols-outlined align-text-bottom">arrow_forward</span>
+      </a>
+    </div>
+  </section>
   <section>
     <h2 class="title-deco py-7 py-md-9 text-center text-primary-700 tracking-wide fw-semibold">作品介紹</h2>
     <div
@@ -254,52 +301,5 @@
     </div>
   </section>
 
-  <section class="container pb-7 pb-md-9">
-    <h2 class="title-deco py-7 py-md-9 mt-7 mt-md-9 text-center text-primary-700 tracking-wide fw-semibold">精選文章</h2>
 
-      <div class="row row-gap-5 mb-7">
-        <div class="swiper">
-          <div class="swiper-wrapper mb-9">
-          <% const limit = 5 %>
-          <% page.posts.slice(0, limit).each((post) => { %>
-            <div class="swiper-slide col-12 col-md-6 col-lg-4">
-              <div class="card border-0">
-                <img src="<%= post.cover %>" class="card-img-top rounded-3" alt="article-1">
-                <div class="card-body">
-                  <h5 class="card-title mb-3 text-primary-700"><%= post.title %></h5>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <%- list_tags(post.tags, {
-                      show_count: false,
-                      amount: 2,
-                      style: 'list',
-                      separator: '',
-                      class: {
-                        ul: 'd-flex gap-2 mb-0 overflow-x-hidden list-unstyled',
-                        a: 'badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4 text-decoration-none '
-                      }
-                    }) %>
-                    
-                    <p class="card-text fs-6 text-primary-600"><small class="text-body-secondary"><%= date(post.date, 'YYYY/MM/DD') %></small></p>
-                  </div>
-                  <a class="stretched-link" href="<%= post.path %>"></a>
-                </div>
-              </div>
-            </div>
-          <% }) %>
-
-          </div>
-          <div class="swiper-pagination d-none d-md-block"></div>
-        </div>
-      </div>
-
-    <div class="d-flex d-md-none justify-content-center mb-7">
-      <a
-        class="btn btn-lg fs-6 fw-bold text-primary-50 bg-primary-900"
-        href="/blog"
-      >
-        更多文章
-        <span class="material-symbols-outlined align-text-bottom">arrow_forward</span>
-      </a>
-    </div>
-  </section>
 </main>

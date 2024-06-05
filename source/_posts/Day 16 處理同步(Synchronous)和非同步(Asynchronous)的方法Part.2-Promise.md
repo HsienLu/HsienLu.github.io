@@ -3,6 +3,7 @@ title: Day 16 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.
 date: 2023-09-30 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 今天要來介紹的是現在比較常用處理非同步的方法分別是 promise，這裡會先大幅度的簡化 promise 的用法，來先理解整個 promise 的運作概念。

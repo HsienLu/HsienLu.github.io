@@ -3,6 +3,7 @@ title: Day 18 正式進入 React 前的 Javascript 小總結
 date: 2023-10-02 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 不知不覺鐵人賽已經寫超過一半了，用 JavaScript 水內容也水的差不多了 XD，但是我真心認為前面的內容都是我恨不得在學 React 之前能夠所學好的內容，至少在操做 React 的時候不會因為 JavaScript 而卡東卡西的，而且 React 本身已經夠難懂了。

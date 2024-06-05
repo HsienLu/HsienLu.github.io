@@ -3,6 +3,7 @@ title: Day 19 React 介紹
 date: 2023-10-03 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 ## 歷史發展

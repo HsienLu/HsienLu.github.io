@@ -3,6 +3,7 @@ title: Day 9 函式與箭頭函式
 date: 2023-09-23 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 ## 函式 function

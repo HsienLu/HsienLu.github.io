@@ -3,6 +3,7 @@ title: 在 html 使用 ejs 的方法
 date: 2023-12-29 14:10:43
 tags: ejs
 categories: javascript
+cover: /images/default-cover.png
 ---
 
 ### ejs 常用簡單語法介紹

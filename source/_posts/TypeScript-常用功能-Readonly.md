@@ -3,6 +3,7 @@ title: TypeScript-常用功能-Readonly
 date: 2024-01-31 09:19:07
 tags: TypeScript
 categories: TypeScript
+cover: /images/default-cover.png
 ---
 
 Readonly 其實從字面上很好理解，就是指能讀取的意思。

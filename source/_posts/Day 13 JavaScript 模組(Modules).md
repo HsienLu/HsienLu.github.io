@@ -3,6 +3,7 @@ title: Day13 JavaScript 模組(Modules)
 date: 2023-09-27 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 模組系統的概念大致上分兩種寫法，CommonJS 和 ESM 其引入方式的差異分別是 require 和 import，今天會著重在 ESM 的寫法。

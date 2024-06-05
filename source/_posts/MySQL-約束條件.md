@@ -3,6 +3,7 @@ title: MySQL-約束條件
 date: 2024-01-18 10:21:17
 tags: [MySQL, SQL]
 categories: MySQL
+cover: /images/default-cover.png
 ---
 
 MySQL 約束條件

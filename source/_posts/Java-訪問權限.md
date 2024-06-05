@@ -3,6 +3,7 @@ title: Java-訪問權限
 date: 2024-01-25 18:14:20
 tags: Java
 categories: Java
+cover: /images/default-cover.png
 ---
 
 所謂的訪問權限，其實就是訪問屬性、方法的權利和限制

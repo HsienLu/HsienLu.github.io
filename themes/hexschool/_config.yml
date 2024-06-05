@@ -20,4 +20,4 @@ blog_generator:
   order_by: -date
 
 # Miscellaneous
-favicon: /images/logo.svg
+favicon: /images/fav.png

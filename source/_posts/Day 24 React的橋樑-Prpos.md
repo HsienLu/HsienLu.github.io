@@ -3,6 +3,7 @@ title: Day 24 React 的橋樑-Prpos
 date: 2023-10-07 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 # Day24 React 的橋樑-Prpos

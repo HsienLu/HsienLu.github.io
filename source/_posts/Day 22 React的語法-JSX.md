@@ -3,6 +3,7 @@ title: Day 22 React 的語法-JSX
 date: 2023-10-06 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 JSX 為 React 的語法，簡單的來說就是可以使用 JavaScript 來撰寫 HTML 標籤，然而官方文件也有提到，不用 JSX 也是可以，但多數的 React 開發者鑑於 JSX 便利性還是會選擇 JSX 語法，事實上也是如此 JSX 帶給我們許多方便的體驗，但相對的需要遵守一些規則。

@@ -3,6 +3,7 @@ title: MySQL-SQL語法介紹-DDL 資料定義語言
 date: 2024-01-18 09:57:17
 tags: [MySQL, SQL]
 categories: MySQL
+cover: /images/default-cover.png
 ---
 
 DDL(Data Definition Language) 資料定義語言

@@ -3,6 +3,7 @@ title: Java 物件導向的特性
 date: 2024-01-24 18:11:25
 tags: Java
 categories: Java
+cover: /images/default-cover.png
 ---
 
 Java 身為標準的物件導向程式設計語言，物件導向程式設計的特性有繼承、多型、多載、重寫，這些特性都是為了讓程式碼更加的模組化，讓程式碼更加的容易維護與擴充。

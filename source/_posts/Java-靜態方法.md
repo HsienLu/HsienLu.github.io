@@ -3,6 +3,7 @@ title: Java-靜態方法
 date: 2024-01-25 18:12:39
 tags: Java
 categories: Java
+cover: /images/default-cover.png
 ---
 
 - 靜態方法是一種特殊的方法，它可以在不創建類的情況下使用。

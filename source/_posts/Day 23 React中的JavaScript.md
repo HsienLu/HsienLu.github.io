@@ -3,6 +3,7 @@ title: Day 23 React 中的 JavaScript
 date: 2023-10-07 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 今天要介紹的是 JSX 重要的部分，就是如何在 JSX 中寫 JavaScript，其實很理所當然的 JSX 來就是 JavaScript，所以能寫 JavaScript 是一件蠻合理的一件事情，但依然有些規則需要遵守。接下來就依序來介紹吧!

@@ -3,6 +3,7 @@ title: MySQL-SQL語法介紹-DML 資料定義語言
 date: 2024-01-18 10:06:26
 tags: [MySQL, SQL]
 categories: MySQL
+cover: /images/default-cover.png
 ---
 
 DML(Data Manipulation Language) 資料操作語言

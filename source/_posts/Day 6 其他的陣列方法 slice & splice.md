@@ -3,6 +3,7 @@ title: Day 6 其他的陣列方法 slice & splice
 date: 2023-09-20 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 # Day 6 其他的陣列方法 slice & splice

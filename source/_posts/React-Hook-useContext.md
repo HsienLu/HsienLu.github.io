@@ -2,7 +2,9 @@
 title: React-Hook-useContext
 date: 2024-03-06 11:52:35
 tags: [React, Hook]
+cover: /images/default-cover.png
 categories: React
+
 ---
 useContext 是一個 React Hook，因為React為單向資料流的特性，所以當我們需要在不同的 component 之間共享資料時，我們通常會透過 props 來傳遞資料，但是當 component 的層級越來越深時，這樣的寫法會變得非常麻煩，這時候 useContext 就可以派上用場，作為一個傳送門useContext可以像下圖中自由的傳遞props。
 

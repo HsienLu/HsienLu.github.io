@@ -3,6 +3,7 @@ title: Day 15 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.
 date: 2023-09-29 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 ### 非同步所造成的問題

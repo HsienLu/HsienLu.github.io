@@ -3,6 +3,7 @@ title: Day 10 物件(Object)
 date: 2023-09-24 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 在前端這個花花綠綠的世界，物件是一個傳遞資料很重要的形式，大家熟悉的 json 檔，裡面大部分都是由各種陣列和物件所構成的，所以身為一個前端框架，怎麼樣處理物件也是需備知道的。

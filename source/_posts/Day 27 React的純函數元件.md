@@ -3,6 +3,7 @@ title: Day 27 React 的純函數元件
 date: 2023-10-11 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 今天要解釋的東西會比較無聊乏味一點，但在 React 元件化導向的框架裡卻是一個很重要的概念，因為元件具有可以重複使用的特性，所以如果不是純函示會有一些 Bug 存在。

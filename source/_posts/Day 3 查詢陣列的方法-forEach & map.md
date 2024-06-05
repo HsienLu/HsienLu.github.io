@@ -3,6 +3,7 @@ title: Day 3 查詢陣列的方法-forEach & map
 date: 2023-09-17 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 在學習 React 之前，會需要瞭解一些 javascript 的基礎概念，常言道"javascript 學得好，react 沒煩惱"，其中陣列的方法倒是蠻常用到的，尤其.map()在資料的呈現處理上是蠻常用到的技巧，因為 map 的用法與 forEach 實在太相似了，所以從 forEach 來了解 map 我認為是一個不錯的方法，那就接著往下看~

@@ -3,6 +3,7 @@ title: Day 20 React 環境建置-Vite
 date: 2023-10-04 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 在接下來的範例中，比較沒辦法像之前的範例一樣直接丟到瀏覽器，檢查的開發者工具直接執行，需要建置基本的環境，我有想過幾種方式進行建置，甚至是在 codesandbox 直接線上進行，但比起線上的環境還是比較喜歡在本地端用 VS Code 進行開發，在追求方便簡單的前提下，選擇了 Vite 進行部屬。

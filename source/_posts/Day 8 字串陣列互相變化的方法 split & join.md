@@ -3,6 +3,7 @@ title: Day 8 字串陣列互相變化的方法 split & join
 date: 2023-09-22 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 今天要來介紹的是字串怎麼變成陣列還有陣列怎麼變成字串，在陣列的方法中已經存在著與字串互相轉換的方法，只是分別是不同的語法，首先是字串轉陣列的方法

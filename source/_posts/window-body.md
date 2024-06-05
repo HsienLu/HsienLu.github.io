@@ -3,6 +3,7 @@ title: window&body
 date: 2023-12-29 14:15:32
 tags: html
 categories: HTML
+cover: /images/default-cover.png
 ---
 
 ## 文字版

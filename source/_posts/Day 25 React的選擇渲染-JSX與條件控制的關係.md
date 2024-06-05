@@ -3,6 +3,7 @@ title: Day 25 React 的選擇渲染-JSX 與條件控制的關係
 date: 2023-10-08 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 說到 JavaScript 的流程控制大家很容易聯想到 if...else...或是三元運算子，在 JSX 裡面可以利用這些流程控制來選選擇性的呈現想要渲染的畫面。

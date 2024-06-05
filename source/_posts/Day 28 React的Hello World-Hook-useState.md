@@ -3,6 +3,7 @@ title: Day 28 React 的 Hello World-Hook-useState
 date: 2023-10-12 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 要說 React 有什麼特別的地方我覺得應該就是 HooK 了吧!Hook 是在 React 16.8 版中加入的，hook 有很多種，每一種的功能都不太一樣，甚至還可以自定義，簡單來說它就是函式，然後可以重複一直使用。但其實這是一個有點抽象的概念，所以就直接從實際的例子來了解吧!

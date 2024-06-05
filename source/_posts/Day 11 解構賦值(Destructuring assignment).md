@@ -3,6 +3,7 @@ title: Day11 解構賦值(Destructuring assignment)
 date: 2023-09-25 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 解構賦值是 ES6 新增的語法，根據 MDN 的說法**解構賦值 (Destructuring assignment) 語法是一種 JavaScript 運算式，可以把陣列或物件中的資料解開擷取成為獨立變數。**

@@ -3,6 +3,7 @@ title: MySQL-關聯資料表查詢
 date: 2024-01-18 10:17:59
 tags: [MySQL, SQL]
 categories: MySQL
+cover: /images/default-cover.png
 ---
 
 inner join、outer join、子查詢

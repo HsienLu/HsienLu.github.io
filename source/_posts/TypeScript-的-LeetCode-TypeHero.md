@@ -3,6 +3,7 @@ title: TypeScript 的 LeetCode-TypeHero
 date: 2024-01-26 09:59:09
 tags: [TypeScript, TypeHero]
 categories: TypeScript
+cover: /images/default-cover.png
 ---
 
 近幾年很火的 TypeScript 加強了 JavaScript 的型別部分，但 TypeScipt 的型別系統其實相當的複雜，於是有人開源了類似 LeetCode 的網站，讓我們可以練習 TypeScript 的型別系統，這個網站就是 TypeHero，今天就來介紹一下這個網站吧!

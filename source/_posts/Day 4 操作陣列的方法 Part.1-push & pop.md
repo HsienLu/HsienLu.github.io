@@ -3,6 +3,7 @@ title: Day 4 操作陣列的方法 Part.1-push & pop
 date: 2023-09-18 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 相信大家都有看過類似下面這種圖，今天會針對 push,pop 做介紹

@@ -3,6 +3,7 @@ title: Java-特殊類別(介面、抽象、枚舉、匿名類)
 date: 2024-01-25 18:09:25
 tags: Java
 categories: Java
+cover: /images/default-cover.png
 ---
 
 Java 有許多不同的特殊類別，例如：介面、抽象類別、枚舉類別、匿名類別，這些類別都有各自的特性，也有各自的使用場景，這篇文章會介紹這些特殊類別的特性與使用場景。

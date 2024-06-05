@@ -3,6 +3,7 @@ title: Day 26 React 的多重渲染-列表與 Key
 date: 2023-10-10 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 在 react 使用遍歷陣列的方法來呈現畫面是挺常見的，我們今天想要呈現一個陣列裡面的資料如下:

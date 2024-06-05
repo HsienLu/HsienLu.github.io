@@ -3,6 +3,7 @@ title: Day 7 搜尋陣列的方法-find,findIndex & filter
 date: 2023-09-21 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 # Day 7 搜尋陣列的方法-find,findIndex & filter

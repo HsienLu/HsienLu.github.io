@@ -3,6 +3,7 @@ title: Day 29 React的本質-Library
 date: 2024-01-02 10:43:26
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 雖然 React 現在被稱作 3 大框架其中之一，但是如果現在打開 React 的官網，會發現它的定位是一個 Library，而不是一個 Framework，事實上 React 確實保持著高度靈活性，讓開發者可以自由的選擇其他的 Library 來搭配使用，這也是為什麼 React 能夠在短短幾年內就成為主流的原因之一。甚至在搭配的套件上也有許多不同的選擇，像是 Redux、React-Router、React-Bootstrap 等等，這些套件都是為了滿足不同的需求而生的，而且都是由社群開發的，這也意味著 React 的生態系非常的豐富，而且也有許多的資源可以參考，這也是 React 能夠快速成長的原因之一。今天就來試著用一個簡單的例子來說明 React 的本質吧!

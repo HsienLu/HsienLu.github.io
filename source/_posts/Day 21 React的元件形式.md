@@ -3,6 +3,7 @@ title: Day 21 React 的元件形式
 date: 2023-10-05 13:54:31
 tags: [React, JavaScript]
 categories: 鐵人賽
+cover: /images/default-cover.png
 ---
 
 元件(component)是 React 主要關鍵組成之一，它是一個可以被反覆利用的 UI 元素，不過說穿了 React 的文件中一直提到的元件，其實就是 function 每一個元件都是由一個 function 當然裡面內層可以有很多個但是最外層就是只有一個，所以元件就是 function，如此一來元件可以重複使用就合理許多了吧!因為 function 也可以一直重複使用。

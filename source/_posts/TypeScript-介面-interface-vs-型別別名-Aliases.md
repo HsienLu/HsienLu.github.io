@@ -3,6 +3,7 @@ title: TypeScript-介面(interface) vs 型別別名(Aliases)
 date: 2024-01-19 09:17:52
 tags: TypeScript
 categories: TypeScript
+cover: /images/default-cover.png
 ---
 
 開頭先引用一下官方文件的說明
