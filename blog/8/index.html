@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>部落格 | HsienLu&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="存放一些個人筆記分享">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HsienLu&#39;s Blog">
+<meta property="og:url" content="https://hsienlu.github.io/blog/8/index.html">
+<meta property="og:site_name" content="HsienLu&#39;s Blog">
+<meta property="og:description" content="存放一些個人筆記分享">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="HsienLu">
+<meta property="article:tag" content="前端,後端,全端,網頁,技術,心得,筆記">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="shortcut icon" href="/images/fav.png">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Tourney&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  
+<link rel="stylesheet" href="/css/all.min.css">
+
+<meta name="generator" content="Hexo 7.2.0"><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body>
+  <header
+    class="py-md-4 border-bottom border-primary-200"
+    style="margin-bottom: 1px;"
+  >
+  <nav class="navbar navbar-expand-md py-md-1">
+    <div class="container">
+      <a class="navbar-brand py-0" href="/">
+        <img width="100px" src="/images/logo.png" alt="logo">
+      </a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="material-symbols-outlined fs-1 text-primary-900">menu</span>
+      </button>
+      <div class="collapse navbar-collapse offset-md-2 offset-lg-3" id="navbarToggler">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0 text-center">
+          
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link "
+                href="/"
+              >
+                <span class="position-relative px-2 py-1">首頁</span>
+              </a>
+            </li>
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link "
+                href="/collection"
+              >
+                <span class="position-relative px-2 py-1">作品集</span>
+              </a>
+            </li>
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link "
+                href="/service"
+              >
+                <span class="position-relative px-2 py-1">服務項目</span>
+              </a>
+            </li>
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link active"
+                href="/blog"
+              >
+                <span class="position-relative px-2 py-1">部落格</span>
+              </a>
+            </li>
+          
+            <li class="nav-item ">
+              <a
+                class="nav-link "
+                href="/contact"
+              >
+                <span class="position-relative px-2 py-1">聯絡我</span>
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+  <main>
+  <section class="container pb-7 pb-md-9">
+    <div class="py-7 py-lg-9 mt-lg-9">
+      <h2 class="title-deco mb-3 mb-lg-4 text-center text-primary-700 tracking-wide fw-semibold">部落格</h2>
+      <p class="mb-0 text-center text-primary-500">不定期分享技術文章</p>
+    </div>
+    <div class="row flex-row-reverse mb-lg-9">
+      <div class="col-12 col-lg-3">
+        <aside class="blog__menu px-3 py-4 p-lg-7 bg-primary-100">
+  <ul class="d-flex flex-lg-column justify-content-md-center justify-content-lg-start gap-7 mb-0 p-xxl-7 list-unstyled">
+    <li class="flex-shrink-0">
+      
+      <a href="/blog" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none" type="button">全部文章</a>
+    </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/React/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          React
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/JavaScript/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          JavaScript
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/Java/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Java
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/MySQL/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          MySQL
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/SQL/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          SQL
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/Hook/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Hook
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/TypeScript/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          TypeScript
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          TypeHero
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/XML/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          XML
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/html/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          html
+        </a>
+      </li>
+    
+  </ul>
+</aside>
+      </div>
+
+      <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 10 物件(Object)"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 10 物件(Object)"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/24
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 10 物件(Object)
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>在前端這個花花綠綠的世界，物件是一個傳遞資料很重要的形式，大家熟悉的 json 檔，裡面大部分都是由各種陣列和物件所構成的，所以身為一個前端框架，怎麼樣處理物件也是需備知道的。</p>
+<span id="more"></span>
+
+<h3 id="物件的特性"><a href="#物件的特性" class="headerlink" title="物件的特性"></a>物件的特性</h3><p>1.被大括弧包起來 2.裡面是由屬性組成而屬性是由屬性名稱和屬性值組成，如果有學過 PHP 的關聯式陣列的話，感覺有點像是鍵和鍵值。 3.屬性值可以是數字、字串、陣列、甚至其他物件或函數這裡會稱其為方法，<br>實際物件的樣子如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;John&quot;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">30</span>,</span><br><span class="line">  <span class="attr">isStudent</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="讀取物件的方法"><a href="#讀取物件的方法" class="headerlink" title="讀取物件的方法"></a>讀取物件的方法</h3><p>陣列取值的方法有兩種:</p>
+<p><strong>1.點記法(Dot notation)</strong><br>顧名思義就是用.來取值，直接看範例</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;John&quot;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">30</span>,</span><br><span class="line">  <span class="attr">isStudent</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(person.<span class="property">name</span>); <span class="comment">//輸出:John</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>2.物件陣列取值(Bracket notation)</strong><br>在 MDN 又稱括弧記法，只是我覺得陣列取值這個名稱比較生動，其最大的優點是可以利用變數或是運算方法取值，範例如下:<br>(1).普通的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;John&quot;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">30</span>,</span><br><span class="line">  <span class="attr">isStudent</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(person[<span class="string">&quot;name&quot;</span>]); <span class="comment">//輸出:John</span></span><br></pre></td></tr></table></figure>
+
+<p>(2).變數</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> props = <span class="string">&quot;name&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;John&quot;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">30</span>,</span><br><span class="line">  <span class="attr">isStudent</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(person[props]); <span class="comment">//輸出:John</span></span><br></pre></td></tr></table></figure>
+
+<p>(3).運算方法:雖然這個範例有點硬要，但我希望還是能盡量簡化範例</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> props1 = <span class="string">&quot;na&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> props2 = <span class="string">&quot;me&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;John&quot;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">30</span>,</span><br><span class="line">  <span class="attr">isStudent</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(person[props1 + props2]); <span class="comment">//輸出:John</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="建立物件的方法"><a href="#建立物件的方法" class="headerlink" title="建立物件的方法"></a>建立物件的方法</h3><p>建立物件的方法有許多種，比較常見的就是直接宣告又稱 Object Literal，還有 new 搭配建構函式，當然 ES6 也有新增的語法糖類別(class)跟 constructor 可以運用</p>
+<p><strong>1. 直接宣告(Object Literal)</strong><br>顧名思義就是直接宣告一個物件，範例如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//建立物件</span></span><br><span class="line"><span class="keyword">let</span> people = &#123;&#125;;</span><br><span class="line"><span class="comment">//新增內容至物件</span></span><br><span class="line">people.<span class="property">name</span> = <span class="string">&quot;amy&quot;</span>;</span><br><span class="line">people.<span class="property">age</span> = <span class="number">18</span>;</span><br><span class="line"><span class="comment">//輸出結果</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(people);</span><br></pre></td></tr></table></figure>
+
+<p><strong>2. new 搭配建構函式</strong><br>先建立一個增加物件的函式，然後呼叫函示建立物件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//增加物件的函式</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">people</span>(<span class="params">name, age</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">age</span> = age;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//函示建立物件</span></span><br><span class="line"><span class="keyword">let</span> newPerson = <span class="keyword">new</span> <span class="title function_">people</span>(<span class="string">&quot;tom&quot;</span>, <span class="number">18</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newPerson);</span><br></pre></td></tr></table></figure>
+
+<p><strong>3. class 語法糖</strong><br>class 加上 constructor 也可以建立一個物件，範例如下:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//增加物件的函式</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">People</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">name, age</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">age</span> = age;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//函示建立物件</span></span><br><span class="line"><span class="keyword">let</span> newPerson = <span class="keyword">new</span> <span class="title class_">People</span>(<span class="string">&quot;tom&quot;</span>, <span class="number">18</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newPerson);</span><br></pre></td></tr></table></figure>
+
+<p>上述是基本的物件的一些特性以及基本的使用方法，至少要先知道是怎麼來的以及怎麼使用，會對之後在 React 上進行資料處理的時候順暢一點。</p>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/24/Day%2010%20%E7%89%A9%E4%BB%B6(Object)/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 9 函式與箭頭函式"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 9 函式與箭頭函式"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/23
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 9 函式與箭頭函式
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <h2 id="函式-function"><a href="#函式-function" class="headerlink" title="函式 function"></a>函式 function</h2><p>在 React 中，會經常使用函數來建立和管理 React 中的各項元件，而 React 架構的網頁實際上又是由個元件組成的，所以在進入 React 之前了解一些 function 的觀念有其必要性存在。</p>
+<span id="more"></span>
+
+<h3 id="function-的宣告方法"><a href="#function-的宣告方法" class="headerlink" title="function 的宣告方法"></a>function 的宣告方法</h3><p>大致上比較常用的有下列三種</p>
+<p>第一種:最為常見使用有名稱的函式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">callName</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Tom&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">callName</span>();</span><br></pre></td></tr></table></figure>
+
+<p>第二種:用變數宣告匿名函式,可以防止 function hoisting 的問題</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> callName = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Tom&quot;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="title function_">callName</span>();</span><br></pre></td></tr></table></figure>
+
+<p>第三種:用物件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = &#123;</span><br><span class="line">  <span class="attr">callName</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Tom&quot;</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">name.<span class="title function_">callName</span>();</span><br></pre></td></tr></table></figure>
+
+<h3 id="function-與-return-的特性"><a href="#function-與-return-的特性" class="headerlink" title="function 與 return 的特性"></a>function 與 return 的特性</h3><ol>
+<li>函式必定有回傳值，如果沒有回傳值，值就是 undefined</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">callName</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Tom&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">callName</span>();</span><br><span class="line"><span class="comment">//會出現Tom與undefined</span></span><br></pre></td></tr></table></figure>
+
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">callName</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;Tom&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">callName</span>();</span><br><span class="line"><span class="comment">//不會出現undefined</span></span><br></pre></td></tr></table></figure>
+
+<p></p>
+<ol start="2">
+<li>return 具有中斷函式的特性</li>
+<li>return 後方可以加入表達式</li>
+</ol>
+<h3 id="函式預設參數值-function-Default-parameters"><a href="#函式預設參數值-function-Default-parameters" class="headerlink" title="函式預設參數值 function Default parameters"></a>函式預設參數值 function Default parameters</h3><p>根據 MDN 的說法”函式預設參數 允許沒有值傳入或是傳入值為 undefined 的情況下，參數能以指定的預設值初始化。”，不過簡單來說就是給一個函式預設的值，範例如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">callName</span>(<span class="params">name = <span class="string">&quot;Tom&quot;</span></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`<span class="subst">$&#123;name&#125;</span>`</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">callName</span>();</span><br></pre></td></tr></table></figure>
+
+<h3 id="IIFE-立即執行函數"><a href="#IIFE-立即執行函數" class="headerlink" title="IIFE 立即執行函數"></a>IIFE 立即執行函數</h3><p>顧名思義就是立即執行函數，雖然有點像廢話，不過就是讓函式在定義的時候馬上執行一次。</p>
+<p>引用 MDN 的說明</p>
+<blockquote>
+<p>他又稱為 Self-Executing Anonymous Function，是一種常見的設計模式，包含兩個主要部分：<br>第一個部分是使用 Grouping Operator () 包起來的 anonymous function。這樣的寫法可以避免裡面的變數污染到 global scope。<br>第二個部分是馬上執行 function 的 expression ()，JavaScript 引擎看到它就會立刻轉譯該 function。</p>
+</blockquote>
+<p>其寫法有兩種，<br>第一種:第二個小括弧在外面</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">function</span> <span class="title function_">callName</span>(<span class="params">name = <span class="string">&quot;Tom&quot;</span></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`<span class="subst">$&#123;name&#125;</span>`</span>);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<p>第二種:第二個小括弧在裡面</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">function</span> <span class="title function_">callName</span>(<span class="params">name = <span class="string">&quot;Tom&quot;</span></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`<span class="subst">$&#123;name&#125;</span>`</span>);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<p>無論是哪一種就不用還需要額外呼叫函示囉<br></p>
+<h2 id="箭頭函式-arrow-function"><a href="#箭頭函式-arrow-function" class="headerlink" title="箭頭函式 arrow function"></a>箭頭函式 arrow function</h2><p>是一種函式的簡寫法，當然與原本 function 的形式還是有些許的不同</p>
+<h3 id="箭頭函式的寫法"><a href="#箭頭函式的寫法" class="headerlink" title="箭頭函式的寫法"></a>箭頭函式的寫法</h3><p>以上面的例子而言寫成箭頭函式的形式如下:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">callName</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Tom&quot;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="箭頭函式簡易的寫法"><a href="#箭頭函式簡易的寫法" class="headerlink" title="箭頭函式簡易的寫法"></a>箭頭函式簡易的寫法</h3><p>1.只有一個參數的時候可以不用加箭頭前面的小括號</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">multi</span> = (<span class="params">a</span>) =&gt; &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(a * <span class="number">2</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>2.如果只有一行表達式或是只有回傳一個值可以把大括弧拿掉，但是有這樣寫就意味者自帶 return，所以實際上是省略了{}還有 return</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">multi</span> = (<span class="params">a</span>) =&gt; a * <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="箭頭函式的特性"><a href="#箭頭函式的特性" class="headerlink" title="箭頭函式的特性"></a>箭頭函式的特性</h3><p>1.this 通常指向全域或是說最近的非箭頭函式的 this 值 2.沒有建構函式 3.在 JSX 中可能會看到下面那這種()寫法這是因為已經只有一行的狀況下可以省略掉大括弧，那為什麼可以省略?因為在()為群組運算子 Grouping operator 視為同一行</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">callName</span> = (<span class="params">props</span>) =&gt; (</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Tom<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h2 id="引用資料"><a href="#引用資料" class="headerlink" title="引用資料"></a>引用資料</h2><p>MDN <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Functions/Default_parameters">預設參數( Default parameters )</a><br>MDN <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Glossary/IIFE">IIFE</a></p>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/23/Day%209%20%E5%87%BD%E5%BC%8F%E8%88%87%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 8 字串陣列互相變化的方法 split &amp; join"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 8 字串陣列互相變化的方法 split &amp; join"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/22
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 8 字串陣列互相變化的方法 split & join
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>今天要來介紹的是字串怎麼變成陣列還有陣列怎麼變成字串，在陣列的方法中已經存在著與字串互相轉換的方法，只是分別是不同的語法，首先是字串轉陣列的方法</p>
+<span id="more"></span>
+
+<h3 id="split"><a href="#split" class="headerlink" title=".split()"></a>.split()</h3><p>顧名思義，split 有分開的意思，在這裡就是把字串分開成陣列那要怎麼分開?可以在小括弧裡面指定需要分開的字符，有三種狀況範例如下:</p>
+<p>狀況一:裡面不帶值，會把一串字串包在同一個陣列的 index 裡，也就是長度為 1 的陣列</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">&quot;12345&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> newArray = string.<span class="title function_">split</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArray);</span><br></pre></td></tr></table></figure>
+
+<p></p>
+<p>狀況二:裡面有帶參數但其值為空,會把一個字一個字的拆開來變成陣列，換句話說每個字就是一個 index</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">&quot;12345&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> newArray = string.<span class="title function_">split</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArray);</span><br></pre></td></tr></table></figure>
+
+<p></p>
+<p>狀況三:裡面有帶參數其值為空白鍵字符</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">&quot;1 2 3 4 5&quot;</span>; <span class="comment">//用空白鍵字符分開</span></span><br><span class="line"><span class="keyword">let</span> newArray = string.<span class="title function_">split</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArray);</span><br></pre></td></tr></table></figure>
+
+<p></p>
+<h3 id="join"><a href="#join" class="headerlink" title=".join()"></a>.join()</h3><p>使用方法其實與 split 極為相似只是整個倒過來了，小括弧裡決定要用什麼連接成字串，以陣列而言通常是”,”預設也是”,”</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> string = array.<span class="title function_">join</span>(<span class="string">&quot;,&quot;</span>); <span class="comment">//決定要用什麼連接成字串，以陣列而言通常是&quot;,&quot;預設也是&quot;,&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(string);</span><br></pre></td></tr></table></figure>
+
+<p>以上是字串與陣列互換的方法~</p>
+<h2 id="引用資料"><a href="#引用資料" class="headerlink" title="引用資料"></a>引用資料</h2><p>MDN <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/find">Array.prototype.join</a></p>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/22/Day%208%20%E5%AD%97%E4%B8%B2%E9%99%A3%E5%88%97%E4%BA%92%E7%9B%B8%E8%AE%8A%E5%8C%96%E7%9A%84%E6%96%B9%E6%B3%95%20split%20&%20join/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 7 搜尋陣列的方法-find,findIndex &amp; filter"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 7 搜尋陣列的方法-find,findIndex &amp; filter"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/21
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 7 搜尋陣列的方法-find,findIndex & filter
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <h1 id="Day-7-搜尋陣列的方法-find-findIndex-filter"><a href="#Day-7-搜尋陣列的方法-find-findIndex-filter" class="headerlink" title="Day 7 搜尋陣列的方法-find,findIndex &amp; filter"></a>Day 7 搜尋陣列的方法-find,findIndex &amp; filter</h1><p>今天介紹的三個語法是針對陣列的搜尋功能，有 find(),findIndex(),filter()</p>
+<span id="more"></span>
+
+<h3 id="find"><a href="#find" class="headerlink" title=".find()"></a>.find()</h3><p>引用 MDN 的描述”find() 方法會回傳第一個滿足所提供之測試函式的元素值。否則回傳 undefined”<br>簡而言之，就是在陣列裡尋找需要的值並進行回傳需要 return，但是只會回傳一次，也竟是滿足條件的第一個值。<br>用法是裡面帶一個 callback，有三個參數: 1.被處理的元素 2.被處理元素的 index 3.被處理的陣列本身</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> value = array.<span class="title function_">find</span>(<span class="function">(<span class="params">v, i, arr</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> v &gt; <span class="number">3</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(value);</span><br></pre></td></tr></table></figure>
+
+<h3 id="findIndex"><a href="#findIndex" class="headerlink" title=".findIndex()"></a>.findIndex()</h3><p>用法語 find 一模一樣，只是 find 是回傳值，findIndex 是回傳 index，如果沒有符合條件的值會回傳-1<br>裡面一樣帶一個 callback，有三個參數: 1.被處理的元素 2.被處理元素的 index 3.被處理的陣列本身</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> index = array.<span class="title function_">findIndex</span>(<span class="function">(<span class="params">v, i, arr</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> v &gt; <span class="number">3</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(index);</span><br></pre></td></tr></table></figure>
+
+<h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><p>這是昨日介紹 find 的加強功能版，它可以把在陣列符合指定條件的值儲存成一個&#x3D;&#x3D;新陣列&#x3D;&#x3D;意味著不會修改到遠本的陣列，其用法也是大同小異帶一個 callback 包含如下三個參數，然後寫出需要的判斷式 1.被處理的元素 2.被處理元素的 index 3.被處理的陣列本身</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> newArray = array.<span class="title function_">filter</span>(<span class="function">(<span class="params">v, i, arr</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> v &gt; <span class="number">3</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArray);</span><br></pre></td></tr></table></figure>
+
+<p>這三著其實都很常用到，並沒有誰好誰壞，端看用途而定。</p>
+<h2 id="引用資料"><a href="#引用資料" class="headerlink" title="引用資料"></a>引用資料</h2><p>MDN <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/find">Array.prototype.find</a></p>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/21/Day%207%20%E6%90%9C%E5%B0%8B%E9%99%A3%E5%88%97%E7%9A%84%E6%96%B9%E6%B3%95-find,findIndex%20&%20filter/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 6 其他的陣列方法 slice &amp; splice"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 6 其他的陣列方法 slice &amp; splice"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/20
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 6 其他的陣列方法 slice & splice
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <h1 id="Day-6-其他的陣列方法-slice-splice"><a href="#Day-6-其他的陣列方法-slice-splice" class="headerlink" title="Day 6 其他的陣列方法 slice &amp; splice"></a>Day 6 其他的陣列方法 slice &amp; splice</h1><p>前兩天介紹的 4 個方法:shift,unshift,pop,push 都有一個共通點是，都會修改原本的陣列。<br>接下來要介紹的 slice 與上述的不同，&#x3D;&#x3D;不會改變原本的陣列&#x3D;&#x3D;，會傳回一個新陣列值</p>
+<span id="more"></span>
+
+<h3 id="slice"><a href="#slice" class="headerlink" title=".slice()"></a>.slice()</h3><p>引用 MDN 的敘述</p>
+<blockquote>
+<p>方法會回傳一個新陣列物件，為原陣列選擇之 begin 至 end（不含 end）部分的淺拷貝（shallow copy）。而原本的陣列將不會被修改。</p>
+</blockquote>
+<p>講的白話一點就是，帶入兩個參數分別是開始的 index 和結束的 index，然後把這之間 &#x3D;&#x3D;(不包含結束的)&#x3D;&#x3D; 的陣列複製到新的陣列上，舉例如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let array=[1,2,3,4,5]</span><br><span class="line">let newArray=array.slice(0,2)</span><br><span class="line">console.log(newArray)//輸出:[1,2]</span><br></pre></td></tr></table></figure>
+
+<h4 id="有三點要注意"><a href="#有三點要注意" class="headerlink" title="有三點要注意"></a>有三點要注意</h4><p>1.帶入的 index 參數為負值意思就是從尾部算，僅指定位置而已功能依舊不變還是把這之間(不包含結束的)的陣列複製到新的陣列上</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let array=[1,2,3,4,5]</span><br><span class="line">let newArray=array.slice(-0,-2)</span><br><span class="line">console.log(newArray)//輸出:[1,2]</span><br></pre></td></tr></table></figure>
+
+<p>2.可以不帶參數，亦即完整的淺拷貝，也就是完全複製一個新陣列</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let array=[1,2,3,4,5]</span><br><span class="line">let newArray=array.slice()</span><br><span class="line">console.log(newArray)//輸出:[1,2,3,4,5]</span><br></pre></td></tr></table></figure>
+
+<p>3.可以指輸入一個值，意思是從哪個 index 開始複製</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let array=[1,2,3,4,5]</span><br><span class="line">let newArray=array.slice(2)</span><br><span class="line">console.log(newArray)//輸出:[3,4,5]</span><br></pre></td></tr></table></figure>
+
+<h3 id="splice"><a href="#splice" class="headerlink" title=".splice()"></a>.splice()</h3><p>雖然這個函式與 slice 只差一個字但功用卻不一樣，此函式最不一樣的功能是在陣列中插入新成員，但會&#x3D;&#x3D;改變原有的陣列&#x3D;&#x3D;。<br>其用法稍微複雜一點，裡面需要帶三個參數 1.開始的 index 2.往後刪除的個數(可以為 0) 3.要加入的東西<br><strong>.splice(開始的 index,刪除個數,新東西)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let array=[1,2,3,4,5]</span><br><span class="line">array.splice(1,1,&quot;a&quot;)</span><br><span class="line">console.log(array)//輸出:[1,&quot;a&quot;,3,4,5]</span><br></pre></td></tr></table></figure>
+
+<h2 id="引用資料"><a href="#引用資料" class="headerlink" title="引用資料"></a>引用資料</h2><p>MDN <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">Array.prototype.slice</a></p>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/20/Day%206%20%E5%85%B6%E4%BB%96%E7%9A%84%E9%99%A3%E5%88%97%E6%96%B9%E6%B3%95%20slice%20&%20splice/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 5 操作陣列的方法 Part.2-shift &amp; unshift"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 5 操作陣列的方法 Part.2-shift &amp; unshift"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/19
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 5 操作陣列的方法 Part.2-shift & unshift
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>接著昨天的陣列操作方法，今天會針對 shift,unshift 做介紹</p>
+<p></p>
+<span id="more"></span>
+
+<h3 id="shift"><a href="#shift" class="headerlink" title=".shift()"></a>.shift()</h3><p>shift 有移除的意思，這這裡也確實是移除陣列的值，但只有移除首位，裡面不帶參數，但對空陣列使用會回傳 undefined。範例如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">array.<span class="title function_">shift</span>(); <span class="comment">//第一次移除，會移除1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br><span class="line">array.<span class="title function_">shift</span>(); <span class="comment">//第二次移除，因為1被移除了，會移除2</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br></pre></td></tr></table></figure>
+
+<p>對空陣列使用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [];</span><br><span class="line">array.<span class="title function_">shift</span>(); <span class="comment">//會回傳undefined</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br></pre></td></tr></table></figure>
+
+<p>結果如下:<br></p>
+<h3 id="unshift"><a href="#unshift" class="headerlink" title=".unshift()"></a>.unshift()</h3><p>在英文裡有 un 就有相反的意思，所以與上面的語法相反就是增加，它可以在陣列首位增加一個會多個值也可以是陣列，用法是在小括弧裡面塞進要添加的東西，範例如下:</p>
+<p>可以加入單一值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">array.<span class="title function_">unshift</span>(<span class="string">&quot;a&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br></pre></td></tr></table></figure>
+
+<p></p>
+<p>也可以加入多個值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array.<span class="title function_">unshift</span>(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br></pre></td></tr></table></figure>
+
+<p></p>
+<p>還可以加入一個陣列，不過裡面會真的變成一個陣列</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array.<span class="title function_">unshift</span>([<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>]));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br></pre></td></tr></table></figure>
+
+<p></p>
+<p>其實這組用法和 pop,push 用法幾乎一樣只是分別用在頭尾而已，接著還有其他的陣列用法，明天繼續~</p>
+<h3 id="另外補充-會回傳新陣列的語法-concat"><a href="#另外補充-會回傳新陣列的語法-concat" class="headerlink" title="另外補充-會回傳新陣列的語法 .concat()"></a>另外補充-會回傳新陣列的語法 .concat()</h3><p>介紹了很多陣列語法，他們都有共同的特點就是不會回傳新陣列，那會回傳新陣列的語法又是怎麼回事呢?<br>這裡以.concat()為例，這個語法的的作用在於合併兩個陣列，並回傳一個新陣列，用法如下:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]; <span class="comment">//要合併的陣列a</span></span><br><span class="line"><span class="keyword">let</span> b = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]; <span class="comment">//要合併的陣列b</span></span><br><span class="line"><span class="keyword">let</span> c = a.<span class="title function_">concat</span>(b); <span class="comment">//合併完後的結果陣列c</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">//跟原本一樣</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(b); <span class="comment">//跟原本一樣</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(c); <span class="comment">//合併完後的結果</span></span><br></pre></td></tr></table></figure>
+
+<p>藉由上述的例子，我們可以看到，即使 a,b 陣列使用了 concat 的這個語法，但由 console.log(a)、console.log( c )得知原本的狀態都沒有改變，這就是 shift、和 shift 差別。下面請了 chatGPT 幫忙整理了會改變原始陣列的方法與不會改變原始陣列的方法，就當作是一個速查表吧~</p>
+<table>
+<thead>
+<tr>
+<th>會修改原始陣列</th>
+<th>不會修改原始陣列</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>push()</td>
+<td>concat()</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td>slice()</td>
+</tr>
+<tr>
+<td>shift()</td>
+<td>join()</td>
+</tr>
+<tr>
+<td>unshift()</td>
+<td>map()</td>
+</tr>
+<tr>
+<td>splice()</td>
+<td>filter()</td>
+</tr>
+<tr>
+<td>sort()</td>
+<td>reduce()</td>
+</tr>
+<tr>
+<td>reverse()</td>
+<td>every()</td>
+</tr>
+<tr>
+<td>fill()</td>
+<td>some()</td>
+</tr>
+<tr>
+<td>copyWithin()</td>
+<td>find()</td>
+</tr>
+<tr>
+<td></td>
+<td>findIndex()</td>
+</tr>
+</tbody></table>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/19/Day%205%20%E6%93%8D%E4%BD%9C%E9%99%A3%E5%88%97%E7%9A%84%E6%96%B9%E6%B3%95%20Part.2-shift%20&%20unshift/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+      </ul>
+    </div>
+
+    <nav class="mb-7 mb-md-9" aria-label="Page navigation">
+      <ul class="pagination justify-content-center gap-3">
+        
+          <li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/">1</a></li><span class="space">&hellip;</span><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/6/">6</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/7/">7</a></li><li class="page-item"><span class="page-link text-primary-700 rounded-1 border-0 active">8</span></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/9/">9</a></li>
+        
+      </ul>
+    </nav>
+  </section>
+    
+</main>
+
+
+  <footer
+    class="py-7"
+    style="background-image: url('/images/footer-bg-lg.png');
+      background-repeat: no-repeat;
+      background-size: cover;"
+  >
+  <div class="container">
+    <div class="row row-gap-7 justify-content-between align-items-center my-md-7">
+      <div class="col-12 col-md-4 col-lg-3">
+        <img
+          class="mb-4"
+          style="width: 120px;"
+          src="/images/logo.svg" alt="logo"
+        >
+        <p class="mb-4 fs-5 text-primary-700">歡迎填寫表單，或直接與我聯絡！</p>
+        <a
+          class="link-primary-500 fs-5 text-decoration-none" href="mailto:service@hexschool.com">service@hexschool.com</a>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+        <a class="btn btn-lg icon-link link-primary-500 w-100 px-4 mb-4 lh-base text-start fw-bold text-primary-50 bg-primary-900" href="#">
+          <svg class="bi display-4" width="56" height="56" viewBox="0 0 56 56" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 13H39V43H16L16 13ZM13 13C13 11.3431 14.3431 10 16 10H39C40.6569 10 42 11.3431 42 13V43C42 44.6569 40.6569 46 39 46H16C14.3431 46 13 44.6569 13 43V13ZM22 20C22 20.8284 21.3284 21.5 20.5 21.5C19.6716 21.5 19 20.8284 19 20C19 19.1716 19.6716 18.5 20.5 18.5C21.3284 18.5 22 19.1716 22 20ZM22 27C22 27.8284 21.3284 28.5 20.5 28.5C19.6716 28.5 19 27.8284 19 27C19 26.1716 19.6716 25.5 20.5 25.5C21.3284 25.5 22 26.1716 22 27ZM20.5 35.5C21.3284 35.5 22 34.8284 22 34C22 33.1716 21.3284 32.5 20.5 32.5C19.6716 32.5 19 33.1716 19 34C19 34.8284 19.6716 35.5 20.5 35.5ZM24 20C24 19.1716 24.6716 18.5 25.5 18.5H33.5C34.3284 18.5 35 19.1716 35 20C35 20.8284 34.3284 21.5 33.5 21.5H25.5C24.6716 21.5 24 20.8284 24 20ZM25.5 25.5C24.6716 25.5 24 26.1716 24 27C24 27.8284 24.6716 28.5 25.5 28.5H33.5C34.3284 28.5 35 27.8284 35 27C35 26.1716 34.3284 25.5 33.5 25.5H25.5ZM24 34C24 33.1716 24.6716 32.5 25.5 32.5H33.5C34.3284 32.5 35 33.1716 35 34C35 34.8284 34.3284 35.5 33.5 35.5H25.5C24.6716 35.5 24 34.8284 24 34Z" fill="currentcolor"/>
+          </svg>
+          填寫表單
+        </a>
+        <a class="btn btn-lg w-100 px-4 mb-4 lh-base text-start link-primary-500 text-primary-700 bg-primary-50" href="#">
+          <i class="bi bi-instagram align-middle px-2 fs-1"></i>
+          hexschool_demo
+        </a>
+        <a class="btn btn-lg w-100 px-4 lh-base text-start link-primary-500 text-primary-700 bg-primary-50" href="#">
+          <i class="bi bi-facebook align-middle px-2 fs-1"></i>
+          hexschoolTW
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+<script src="/js/swiper.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>部落格 | HsienLu&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="存放一些個人筆記分享">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HsienLu&#39;s Blog">
+<meta property="og:url" content="https://hsienlu.github.io/blog/7/index.html">
+<meta property="og:site_name" content="HsienLu&#39;s Blog">
+<meta property="og:description" content="存放一些個人筆記分享">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="HsienLu">
+<meta property="article:tag" content="前端,後端,全端,網頁,技術,心得,筆記">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="shortcut icon" href="/images/fav.png">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Tourney&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  
+<link rel="stylesheet" href="/css/all.min.css">
+
+<meta name="generator" content="Hexo 7.2.0"><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body>
+  <header
+    class="py-md-4 border-bottom border-primary-200"
+    style="margin-bottom: 1px;"
+  >
+  <nav class="navbar navbar-expand-md py-md-1">
+    <div class="container">
+      <a class="navbar-brand py-0" href="/">
+        <img width="100px" src="/images/logo.png" alt="logo">
+      </a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="material-symbols-outlined fs-1 text-primary-900">menu</span>
+      </button>
+      <div class="collapse navbar-collapse offset-md-2 offset-lg-3" id="navbarToggler">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0 text-center">
+          
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link "
+                href="/"
+              >
+                <span class="position-relative px-2 py-1">首頁</span>
+              </a>
+            </li>
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link "
+                href="/collection"
+              >
+                <span class="position-relative px-2 py-1">作品集</span>
+              </a>
+            </li>
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link "
+                href="/service"
+              >
+                <span class="position-relative px-2 py-1">服務項目</span>
+              </a>
+            </li>
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link active"
+                href="/blog"
+              >
+                <span class="position-relative px-2 py-1">部落格</span>
+              </a>
+            </li>
+          
+            <li class="nav-item ">
+              <a
+                class="nav-link "
+                href="/contact"
+              >
+                <span class="position-relative px-2 py-1">聯絡我</span>
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+  <main>
+  <section class="container pb-7 pb-md-9">
+    <div class="py-7 py-lg-9 mt-lg-9">
+      <h2 class="title-deco mb-3 mb-lg-4 text-center text-primary-700 tracking-wide fw-semibold">部落格</h2>
+      <p class="mb-0 text-center text-primary-500">不定期分享技術文章</p>
+    </div>
+    <div class="row flex-row-reverse mb-lg-9">
+      <div class="col-12 col-lg-3">
+        <aside class="blog__menu px-3 py-4 p-lg-7 bg-primary-100">
+  <ul class="d-flex flex-lg-column justify-content-md-center justify-content-lg-start gap-7 mb-0 p-xxl-7 list-unstyled">
+    <li class="flex-shrink-0">
+      
+      <a href="/blog" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none" type="button">全部文章</a>
+    </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/React/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          React
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/JavaScript/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          JavaScript
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/Java/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Java
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/MySQL/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          MySQL
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/SQL/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          SQL
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/Hook/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Hook
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/TypeScript/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          TypeScript
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          TypeHero
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/XML/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          XML
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/html/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          html
+        </a>
+      </li>
+    
+  </ul>
+</aside>
+      </div>
+
+      <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 16 處理同步(Synchronous)和非同步(Asynchronous)的方法Part.2-Promise"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 16 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.2-Promise"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/30
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 16 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.2-Promise
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>今天要來介紹的是現在比較常用處理非同步的方法分別是 promise，這裡會先大幅度的簡化 promise 的用法，來先理解整個 promise 的運作概念。</p>
+<span id="more"></span>
+
+<h2 id="promise"><a href="#promise" class="headerlink" title="promise"></a>promise</h2><p><strong>1.創建 promise:</strong> 為什麼需要創建 promise 因為它是一個建構函式，所以需要使用關鍵字 new 去創建 promise，裡面帶兩個參數分別為 resolve, reject。<br>resolve:代表執行成功地回傳值<br>reject:代表執行失敗的回傳值</p>
+<p><strong>2.then&amp;catch:</strong> .then()代表著 promise 執行成功後所需要執行的區塊，而且可以接 reslove 的回傳值;.catch()代表 promise 執行失敗後所需要執行的區塊，而且可以接 reject 的回傳值。</p>
+<p><strong>3.then 串接:</strong> .then 是可以串接的，甚至是可以在 then 裡面再多 new 一個 Promise 物件，來處理多個非同步的問題</p>
+<p>綜合上述提到的三點，範例如下:<br>我需要依序 console.log() 出 1,2,3,4，但是 2,3 有 setTimeout，所以需要利用 new promise 進行處理然後回傳處理成功。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span>);</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">2</span>);</span><br><span class="line">    <span class="title function_">resolve</span>(<span class="string">&quot;success1&quot;</span>);</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span>);</span><br><span class="line">        <span class="title function_">resolve</span>(<span class="string">&quot;success1&quot;</span>);</span><br><span class="line">      &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">4</span>);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>今天就先簡單介紹現在處理非同步的方法，但是強調 promise 還有很多種用法，但如果以一個初學的角度來看還是先熟悉基礎用法，會在使用上比較不容易造成混淆</p>
+<p>事實上，ES6 之後還有一個語法 async await，它是 promise 的語法糖，在寫法上比 promise 更簡潔易懂，這部份就留做明天來介紹吧~</p>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/30/Day%2016%20%E8%99%95%E7%90%86%E5%90%8C%E6%AD%A5(Synchronous)%E5%92%8C%E9%9D%9E%E5%90%8C%E6%AD%A5(Asynchronous)%E7%9A%84%E6%96%B9%E6%B3%95Part.2-Promise/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 15 處理同步(Synchronous)和非同步(Asynchronous)的方法Part.1"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 15 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.1"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/29
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 15 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.1
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <h3 id="非同步所造成的問題"><a href="#非同步所造成的問題" class="headerlink" title="非同步所造成的問題"></a>非同步所造成的問題</h3><p>昨天介紹過了什麼是同步和非同步，今天要來介紹的是處理的方法，也就是說要來處理非同步所產的不確定性帶來的問題，比較具體的例子如下:</p>
+<p>這是一個經典的例子，我期望的是 console.log()的順序為 1,2,3，但其實執行的結果為 1,3,2。<br>這是因為 setTimeout 產生了非同步行為，在 JavaScript 當中程式並不會等 setTimeout 執行而是會先把它丟到旁邊往下走等到時間到才會回來執行 setTimeout。</p>
+<p>但是這樣就達不到我的需求，於是就產生了相對應的處理方法</p>
+<span id="more"></span>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span>);</span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">2</span>);</span><br><span class="line">&#125;, <span class="number">1000</span>); <span class="comment">//setTimeout的意思是等多久才會執行，參數為1個回調函式+毫秒數這裡為1000</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="處理非同步的方法"><a href="#處理非同步的方法" class="headerlink" title="處理非同步的方法"></a>處理非同步的方法</h3><ol>
+<li>回調函數（Callback Functions）： 回調函數是處理非同步非常古老的一種方法，有名的 callback Hell 就是因此誕生了，現在這個方法很少被使用，但還是介紹一下，其原理就是利用函式需要被呼叫的特性來達成想要程式執行的先後順序。利用上述的例子說明:</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">call1</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">call2</span>(<span class="params">callback</span>) &#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">2</span>);</span><br><span class="line">    <span class="title function_">callback</span>();</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">call3</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">callNumber</span>(<span class="params">call1</span>) &#123;</span><br><span class="line">  <span class="title function_">call1</span>(<span class="title function_">call2</span>(call3));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">callNumber</span>(call1);</span><br></pre></td></tr></table></figure>
+
+<p>就會長出上面這種奇形怪狀不易閱讀的程式碼，所以 ES6 就發明出更簡潔的 Promises 語法還有 async await 提拱使用，這些就留到明日在做介紹。</p>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/29/Day%2015%20%E8%99%95%E7%90%86%E5%90%8C%E6%AD%A5(Synchronous)%E5%92%8C%E9%9D%9E%E5%90%8C%E6%AD%A5(Asynchronous)%E7%9A%84%E6%96%B9%E6%B3%95Part.1/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 14 同步&amp;非同步(Synchronous &amp; Asynchronous)"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day14 同步&amp;非同步(Synchronous &amp; Asynchronous)"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/28
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day14 同步&非同步(Synchronous & Asynchronous)
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>就中文來看這兩種的意思其實相當容易被搞混的，我自己常常在閱讀文章時也很常莫名的被這兩個名詞搞昏頭。所以我會直接用例子來幫助記憶接說明如下:</p>
+<span id="more"></span>
+
+<ol>
+<li><p>同步(Synchronous):就是 A 處理完再處理再處理 C</p>
+<p>A -&gt; B -&gt; C-&gt;</p>
+</li>
+<li><p>非同步(Asynchronous):就是可以同時處理 ABC</p>
+<p>–&gt;A<br>|<br>–&gt;B<br>|<br>–&gt;C</p>
+</li>
+</ol>
+<p>那話又說回來 JavaScript 是屬哪一種呢?</p>
+<p>引用 MDN 的定義</p>
+<blockquote>
+<p>Javascript 基本上是一個同步性的、阻塞的，且是跑在單一執行緒的程式語言，也就是在同一時間只能執行一個操作。但是瀏覽器所定義的函式和 API 允許我們註冊一個不該被同步執行的函式，且這個函式應該在某些事件發生時需要非同步的被呼叫（到達指定的時間、使用者透過滑鼠互動，或者取得透過從網路所取到的資料）。這代表你可以讓你的程式碼在同時間做一些事情而不需暫停或阻塞你的主執行緒。</p>
+</blockquote>
+<p>簡單來說，MDN 很明確的定義 javascript 是一個同步性的語言，但可以處理或是說可以執行非同步的方法。下面的例子可以說明:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;registering click handler&quot;</span>);</span><br><span class="line"></span><br><span class="line">button.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;get click&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;all done&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>PS:上述是簡化後的例子，真的需要執行的話如下網址:<br><a target="_blank" rel="noopener" href="https://codepen.io/Hsienlu/pen/PoXevrJ">https://codepen.io/Hsienlu/pen/PoXevrJ</a></p>
+<p>可以發現實際在執行的時候，”all done”並不會等到”get click”被觸發時才會出現，而是會直接執行，所以才會說雖然 JavaScript 是同步性的語言，但可以處理需要非同步處理的事情。</p>
+<p>但是，非同步的事情常常會具有不確定性存在(不知道哪個會先發生哪個會後發生)，於是就有了一些處理同步和非同步的方法，這些方法明天會繼續介紹。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p>1.<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Learn/JavaScript/Asynchronous/Introducing">非同步的 JavaScript 介紹</a></p>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/28/Day%2014%20%E5%90%8C%E6%AD%A5&%E9%9D%9E%E5%90%8C%E6%AD%A5(Synchronous%20&%20Asynchronous)/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 13 JavaScript 模組(Modules)"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day13 JavaScript 模組(Modules)"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/27
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day13 JavaScript 模組(Modules)
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>模組系統的概念大致上分兩種寫法，CommonJS 和 ESM 其引入方式的差異分別是 require 和 import，今天會著重在 ESM 的寫法。</p>
+<p>模組的概念其實在 React 框架已經不知不覺地被頻繁的使用了，像是最常見的 hook–useState 就是在引入模組的時候才做使用的，又或是元件的寫法也是由模組系統做延伸。</p>
+<p>模組基本上可以分為兩種匯出方式命名匯出(Named Exports)和預設匯出(Default Exports)，其對應的匯入方式也有所差別</p>
+<span id="more"></span>
+
+<h3 id="命名匯出-Named-Exports"><a href="#命名匯出-Named-Exports" class="headerlink" title="命名匯出(Named Exports)"></a>命名匯出(Named Exports)</h3><p>命名匯出使用關鍵詞 &#x3D;&#x3D;export&#x3D;&#x3D;+&#x3D;&#x3D;要輸出東西的名稱&#x3D;&#x3D;，好處是在於同一個檔案能使用很多個匯出</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">a, b</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">subtract</span>(<span class="params">a, b</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> a - b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其對應的匯入方式如下，import 模組，然後從哪裡 from</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;add, subtract&#125; <span class="keyword">from</span> <span class="string">&quot;./math&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">add</span>(<span class="number">5</span>, <span class="number">3</span>)); <span class="comment">// 輸出: 8</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">subtract</span>(<span class="number">10</span>, <span class="number">4</span>)); <span class="comment">// 輸出: 6</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="預設匯出-Default-Exports"><a href="#預設匯出-Default-Exports" class="headerlink" title="預設匯出(Default Exports)"></a>預設匯出(Default Exports)</h3><p>1.預設匯出使用關鍵詞 &#x3D;&#x3D;export default&#x3D;&#x3D;，特別注意同一個檔案只能有一個預設匯出</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">a, b</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其對應的匯入方式如下，與上述雷同差別在於針對單一輸出的模組所以可以不用大括弧{}</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> add <span class="keyword">from</span> <span class="string">&quot;./math&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">add</span>(<span class="number">5</span>, <span class="number">3</span>)); <span class="comment">// 輸出: 8</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>以下簡單整理一個表格，我自己會認為不太需要花時間去記憶，因為用久自然就熟了，而且現在套件的幫助下其實也比較不太會在這方面出差錯。</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>命名匯出出 (Named Exports)</th>
+<th>預設匯出 (Default Export)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>匯出方式</td>
+<td>可以匯出多個具名功能</td>
+<td>只能匯出一個默認功能</td>
+</tr>
+<tr>
+<td>匯入的語法</td>
+<td>使用 <code>&#123;&#125;</code> 語法進行匯入</td>
+<td>直接使用模組名稱進行匯入</td>
+</tr>
+</tbody></table>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/27/Day%2013%20JavaScript%20%E6%A8%A1%E7%B5%84(Modules)/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 12 其餘運算子 &amp; 展開運算子(Spread Operator &amp; Rest Operator)"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day12 其餘運算子 &amp; 展開運算子(Spread Operator &amp; Rest Operator)"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/26
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day12 其餘運算子 & 展開運算子(Spread Operator & Rest Operator)
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>接著就是傳說中的…了，正式名稱為其餘運算子和展開運算子，這個點點點同時具有兩種功能，也是在 React 中被廣泛使用的，接下來依序介紹</p>
+<span id="more"></span>
+
+<h3 id="1-其餘運算子"><a href="#1-其餘運算子" class="headerlink" title="1.其餘運算子"></a><strong>1.其餘運算子</strong></h3><p>其實在昨天的文章中以已經有先使用這個與法了，這個功能的作用顧名思義就是可以接剩下來的值<br>引用 MDN 的說法:</p>
+<blockquote>
+<p>“這個語法可以讓我們表示&#x3D;&#x3D;不確定數量的參數&#x3D;&#x3D;，並將其視為一個&#x3D;&#x3D;陣列&#x3D;&#x3D;。”</p>
+</blockquote>
+<p>在實際用途會在兩個地方，一個是在解構賦值，其實昨天的文章已經有偷偷用到了；另一個是在傳入不確定量參數的時候。</p>
+<p><strong>(1) 解構賦值</strong><br>…rest 的作用就是用來接解構賦值命名完變數剩下來的值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> a, b, rest;</span><br><span class="line">[a, b, ...rest] = array;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">//輸出:1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(b); <span class="comment">//輸出:2</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(rest); <span class="comment">//輸出:3,4,5</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>(2) 傳入不確定量的參數</strong><br>這裡直接舉一個情境，我想要傳入一列數字但&#x3D;&#x3D;不確定&#x3D;&#x3D;有多少數字，並設計一個函示找出最小值，範例如下:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">findMin</span>(<span class="params">...<span class="built_in">Array</span></span>) &#123;</span><br><span class="line">  <span class="comment">//^^^^^^^^傳入不確定參數的量</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Array</span>);</span><br><span class="line">  <span class="keyword">let</span> minValue = <span class="title class_">Math</span>.<span class="title function_">min</span>(...<span class="title class_">Array</span>);</span><br><span class="line">  <span class="comment">//^^^那這個點點點又是什麼呢?</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(minValue);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">findMin</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+
+<p>相信大家都有注意到 Mata.min 的…又是什麼呢?這其實跟昨天文章提到的解構有關。</p>
+<p><strong>(3) 解構其餘參數</strong><br>當初在學這個時候，還沒有想到這個點點點有這樣神奇的功能，直接引用 MDN 的定義</p>
+<blockquote>
+<p>其餘參數可以被解構，換句話說，可以把這個<strong>陣列</strong>解開，並將各個元素取出成為個別的變數。請參考解構賦值。</p>
+<p>其實這個功能我認為跟下面準備要提的展開運算子其實蠻相似的，只是 MDN 有另外再把它定義出來。<br>重點就是，其餘參數追根究柢就是一個&#x3D;&#x3D;陣列&#x3D;&#x3D;需要把陣列展開來，所以其實如果上述範例改成下面這個例子是會跑出 NaN 的，因為 Math.min()沒辦發接受傳入純陣列</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">findMin</span>(<span class="params">...<span class="built_in">Array</span></span>) &#123;</span><br><span class="line">  <span class="comment">//^^^^^^^^傳入不確定參數的量</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Array</span>);</span><br><span class="line">  <span class="keyword">let</span> minValue = <span class="title class_">Math</span>.<span class="title function_">min</span>(<span class="title class_">Array</span>); <span class="comment">//輸出:NaN</span></span><br><span class="line">  <span class="comment">//^^^那這個點點點又是什麼呢?</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(minValue);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">findMin</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-展開運算子"><a href="#2-展開運算子" class="headerlink" title="2.展開運算子"></a><strong>2.展開運算子</strong></h3><p>MDN 定義</p>
+<blockquote>
+<p>展開運算子, 可以在函數調用&#x2F;陣列構造時，將陣列表達式或者 string 在語法層面展開<br>其實講的簡單一點就是把一個陣列的中刮弧拿掉的意思，後還有一個特殊功能就是可以對類陣列進行展開。</p>
+</blockquote>
+<p><strong>(1)陣列展開</strong><br>有名的淺拷貝就是一個經典的例子，如下:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">const</span> newArray = [...array];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArray);</span><br><span class="line"><span class="comment">//上述兩個會是名稱不一樣，但是內容一模一樣的陣列。</span></span><br></pre></td></tr></table></figure>
+
+<p>其實在使用上，我會認為不太需要去區分的太仔細，或是刻意去記憶，因為其實本身在使用的情境上去做區分，所以多去使用它自然而然的就可以對這兩類與法做出一些區別。</p>
+<h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><p>1.<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters">MDN 其餘運算子</a></p>
+<p>2.<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax">MDN 展開運算子</a></p>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/26/Day%2012%20%E5%85%B6%E9%A4%98%E9%81%8B%E7%AE%97%E5%AD%90%20&%20%E5%B1%95%E9%96%8B%E9%81%8B%E7%AE%97%E5%AD%90(Spread%20Operator%20&%20Rest%20Operator)/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 11 解構賦值(Destructuring assignment)"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day11 解構賦值(Destructuring assignment)"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/25
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day11 解構賦值(Destructuring assignment)
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>解構賦值是 ES6 新增的語法，根據 MDN 的說法<strong>解構賦值 (Destructuring assignment) 語法是一種 JavaScript 運算式，可以把陣列或物件中的資料解開擷取成為獨立變數。</strong><br>簡單來說就是解構賦值是一種專門針對陣列或是物件的運算式，作用是把裡面的資料存成獨立變數。</p>
+<span id="more"></span>
+
+<p><strong>1.陣列的解構賦值</strong><br>基本寫法範例如下，&#x3D;就像是一面鏡子&#x3D;&#x3D;依序&#x3D;&#x3D;對照著兩邊，下面範例示範了 2 個點<br>(1)用 a 和 b 對照著 array 中的 1 和 2<br>(2)用…rest 對照著剩下的值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> a, b, rest;</span><br><span class="line">[a, b, ...rest] = array;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">//輸出:1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(b); <span class="comment">//輸出:2</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(rest); <span class="comment">//輸出:3,4,5</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>2.物件的解構賦值</strong></p>
+<p>在 React 中物件的解構賦值很常用在 props 的參數傳遞，最單純直接的用法就是{屬性名稱}，有點像陣列的物件取值那樣，也可以賦予新的變數名稱，範例如下<br><strong>(1) 取值</strong>:把屬性名稱解構成新的變數並帶入原本的屬性值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;John&quot;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">30</span>,</span><br><span class="line">  <span class="attr">isStudent</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> &#123;name, age&#125; = person;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(age);</span><br></pre></td></tr></table></figure>
+
+<p><strong>(2) 賦予變數名稱</strong>:利用鏡射的方式讓物件中的屬性值有了新的變數名稱</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;John&quot;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">30</span>,</span><br><span class="line">  <span class="attr">isStudent</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="variable constant_">AAA</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="variable constant_">BBB</span>,</span><br><span class="line">  <span class="attr">isStudent</span>: <span class="variable constant_">CCC</span>,</span><br><span class="line">&#125; = &#123;<span class="attr">name</span>: <span class="string">&quot;John&quot;</span>, <span class="attr">age</span>: <span class="number">30</span>, <span class="attr">isStudent</span>: <span class="literal">false</span>&#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable constant_">AAA</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable constant_">BBB</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable constant_">CCC</span>);</span><br></pre></td></tr></table></figure>
+
+<p>**(3) 搭配函式傳入引數，再傳入引數為物件時(常見在 React props 中)，可以利用解構賦值，讓語法更為簡潔</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;John&quot;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">30</span>,</span><br><span class="line">  <span class="attr">isStudent</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">helloFunction</span> = (<span class="params">&#123;name&#125;</span>) =&gt; &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`hello, <span class="subst">$&#123;name&#125;</span>`</span>);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="title function_">helloFunction</span>(person);</span><br></pre></td></tr></table></figure>
+
+<p>當使用解構賦值（Destructuring Assignment）時，儘管它不是絕對必要的，但確實可以使您的程式碼更加簡潔、易讀，尤其在 React 中傳遞 props 時，這種做法很常見，而且也被廣為使用。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">MDN 解構賦值</a></p>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/25/Day%2011%20%E8%A7%A3%E6%A7%8B%E8%B3%A6%E5%80%BC(Destructuring%20assignment)/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+      </ul>
+    </div>
+
+    <nav class="mb-7 mb-md-9" aria-label="Page navigation">
+      <ul class="pagination justify-content-center gap-3">
+        
+          <li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/">1</a></li><span class="space">&hellip;</span><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/5/">5</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/6/">6</a></li><li class="page-item"><span class="page-link text-primary-700 rounded-1 border-0 active">7</span></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/8/">8</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/9/">9</a></li>
+        
+      </ul>
+    </nav>
+  </section>
+    
+</main>
+
+
+  <footer
+    class="py-7"
+    style="background-image: url('/images/footer-bg-lg.png');
+      background-repeat: no-repeat;
+      background-size: cover;"
+  >
+  <div class="container">
+    <div class="row row-gap-7 justify-content-between align-items-center my-md-7">
+      <div class="col-12 col-md-4 col-lg-3">
+        <img
+          class="mb-4"
+          style="width: 120px;"
+          src="/images/logo.svg" alt="logo"
+        >
+        <p class="mb-4 fs-5 text-primary-700">歡迎填寫表單，或直接與我聯絡！</p>
+        <a
+          class="link-primary-500 fs-5 text-decoration-none" href="mailto:service@hexschool.com">service@hexschool.com</a>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+        <a class="btn btn-lg icon-link link-primary-500 w-100 px-4 mb-4 lh-base text-start fw-bold text-primary-50 bg-primary-900" href="#">
+          <svg class="bi display-4" width="56" height="56" viewBox="0 0 56 56" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 13H39V43H16L16 13ZM13 13C13 11.3431 14.3431 10 16 10H39C40.6569 10 42 11.3431 42 13V43C42 44.6569 40.6569 46 39 46H16C14.3431 46 13 44.6569 13 43V13ZM22 20C22 20.8284 21.3284 21.5 20.5 21.5C19.6716 21.5 19 20.8284 19 20C19 19.1716 19.6716 18.5 20.5 18.5C21.3284 18.5 22 19.1716 22 20ZM22 27C22 27.8284 21.3284 28.5 20.5 28.5C19.6716 28.5 19 27.8284 19 27C19 26.1716 19.6716 25.5 20.5 25.5C21.3284 25.5 22 26.1716 22 27ZM20.5 35.5C21.3284 35.5 22 34.8284 22 34C22 33.1716 21.3284 32.5 20.5 32.5C19.6716 32.5 19 33.1716 19 34C19 34.8284 19.6716 35.5 20.5 35.5ZM24 20C24 19.1716 24.6716 18.5 25.5 18.5H33.5C34.3284 18.5 35 19.1716 35 20C35 20.8284 34.3284 21.5 33.5 21.5H25.5C24.6716 21.5 24 20.8284 24 20ZM25.5 25.5C24.6716 25.5 24 26.1716 24 27C24 27.8284 24.6716 28.5 25.5 28.5H33.5C34.3284 28.5 35 27.8284 35 27C35 26.1716 34.3284 25.5 33.5 25.5H25.5ZM24 34C24 33.1716 24.6716 32.5 25.5 32.5H33.5C34.3284 32.5 35 33.1716 35 34C35 34.8284 34.3284 35.5 33.5 35.5H25.5C24.6716 35.5 24 34.8284 24 34Z" fill="currentcolor"/>
+          </svg>
+          填寫表單
+        </a>
+        <a class="btn btn-lg w-100 px-4 mb-4 lh-base text-start link-primary-500 text-primary-700 bg-primary-50" href="#">
+          <i class="bi bi-instagram align-middle px-2 fs-1"></i>
+          hexschool_demo
+        </a>
+        <a class="btn btn-lg w-100 px-4 lh-base text-start link-primary-500 text-primary-700 bg-primary-50" href="#">
+          <i class="bi bi-facebook align-middle px-2 fs-1"></i>
+          hexschoolTW
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+<script src="/js/swiper.js"></script>
+
+</body>
+</html>

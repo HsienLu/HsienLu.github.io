@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>部落格 | HsienLu&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="存放一些個人筆記分享">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HsienLu&#39;s Blog">
+<meta property="og:url" content="https://hsienlu.github.io/blog/6/index.html">
+<meta property="og:site_name" content="HsienLu&#39;s Blog">
+<meta property="og:description" content="存放一些個人筆記分享">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="HsienLu">
+<meta property="article:tag" content="前端,後端,全端,網頁,技術,心得,筆記">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="shortcut icon" href="/images/fav.png">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Tourney&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  
+<link rel="stylesheet" href="/css/all.min.css">
+
+<meta name="generator" content="Hexo 7.2.0"><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body>
+  <header
+    class="py-md-4 border-bottom border-primary-200"
+    style="margin-bottom: 1px;"
+  >
+  <nav class="navbar navbar-expand-md py-md-1">
+    <div class="container">
+      <a class="navbar-brand py-0" href="/">
+        <img width="100px" src="/images/logo.png" alt="logo">
+      </a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="material-symbols-outlined fs-1 text-primary-900">menu</span>
+      </button>
+      <div class="collapse navbar-collapse offset-md-2 offset-lg-3" id="navbarToggler">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0 text-center">
+          
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link "
+                href="/"
+              >
+                <span class="position-relative px-2 py-1">首頁</span>
+              </a>
+            </li>
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link "
+                href="/collection"
+              >
+                <span class="position-relative px-2 py-1">作品集</span>
+              </a>
+            </li>
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link "
+                href="/service"
+              >
+                <span class="position-relative px-2 py-1">服務項目</span>
+              </a>
+            </li>
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link active"
+                href="/blog"
+              >
+                <span class="position-relative px-2 py-1">部落格</span>
+              </a>
+            </li>
+          
+            <li class="nav-item ">
+              <a
+                class="nav-link "
+                href="/contact"
+              >
+                <span class="position-relative px-2 py-1">聯絡我</span>
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+  <main>
+  <section class="container pb-7 pb-md-9">
+    <div class="py-7 py-lg-9 mt-lg-9">
+      <h2 class="title-deco mb-3 mb-lg-4 text-center text-primary-700 tracking-wide fw-semibold">部落格</h2>
+      <p class="mb-0 text-center text-primary-500">不定期分享技術文章</p>
+    </div>
+    <div class="row flex-row-reverse mb-lg-9">
+      <div class="col-12 col-lg-3">
+        <aside class="blog__menu px-3 py-4 p-lg-7 bg-primary-100">
+  <ul class="d-flex flex-lg-column justify-content-md-center justify-content-lg-start gap-7 mb-0 p-xxl-7 list-unstyled">
+    <li class="flex-shrink-0">
+      
+      <a href="/blog" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none" type="button">全部文章</a>
+    </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/React/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          React
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/JavaScript/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          JavaScript
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/Java/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Java
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/MySQL/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          MySQL
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/SQL/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          SQL
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/Hook/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Hook
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/TypeScript/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          TypeScript
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          TypeHero
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/XML/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          XML
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/html/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          html
+        </a>
+      </li>
+    
+  </ul>
+</aside>
+      </div>
+
+      <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 22 React的語法-JSX"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 22 React 的語法-JSX"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/10/6
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 22 React 的語法-JSX
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>JSX 為 React 的語法，簡單的來說就是可以使用 JavaScript 來撰寫 HTML 標籤，然而官方文件也有提到，不用 JSX 也是可以，但多數的 React 開發者鑑於 JSX 便利性還是會選擇 JSX 語法，事實上也是如此 JSX 帶給我們許多方便的體驗，但相對的需要遵守一些規則。</p>
+<span id="more"></span>
+
+<h2 id="JSX-的規則"><a href="#JSX-的規則" class="headerlink" title="JSX 的規則"></a>JSX 的規則</h2><h3 id="1-JSX-的語法最外層只能有一個根元素"><a href="#1-JSX-的語法最外層只能有一個根元素" class="headerlink" title="1. JSX 的語法最外層只能有一個根元素"></a>1. JSX 的語法最外層只能有一個根元素</h3><p>這部份昨天也有稍微提到了，原因是因為到底 JSX 還是 JavaScript，而一個函式只能傳回一個東西而已。就像下面的例子，在怎麼樣複雜最外面一層等只會有一個根元素，通常是 div 標籤或是&lt;&gt;&lt;&#x2F;&gt;(Fragment)</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>132<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>132<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>123<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>123<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>123<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>132<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">&lt;/&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-標籤需要自閉合"><a href="#2-標籤需要自閉合" class="headerlink" title="2.標籤需要自閉合"></a>2.標籤需要自閉合</h3><p>說穿了就是在只有單一標籤的後方加上&#x2F;這樣舉例如下:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;img/&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">input</span>/&gt;</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-使用小駝峰式命名給標籤的屬性名稱，舉例如下的-className"><a href="#3-使用小駝峰式命名給標籤的屬性名稱，舉例如下的-className" class="headerlink" title="3.使用小駝峰式命名給標籤的屬性名稱，舉例如下的 className"></a>3.使用小駝峰式命名給標籤的屬性名稱，舉例如下的 className</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&#123;reactLogo&#125; className=<span class="string">&quot;logo react&quot;</span> alt=<span class="string">&quot;React logo&quot;</span> /&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h4><p>因為 class 為保留字，所以在 JSX 中 class 就寫成<strong>className</strong>;同理 for 寫成<strong>htmlFor</strong></p>
+<h3 id="4-布林值-null-undefined-不會被渲染"><a href="#4-布林值-null-undefined-不會被渲染" class="headerlink" title="4.布林值,null,undefined 不會被渲染"></a>4.布林值,null,undefined 不會被渲染</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;&gt;</span><br><span class="line">  不會被渲染</span><br><span class="line">  &lt;div&gt;&lt;/div&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;false&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;null&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;undefined&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-元件事件處理函式需要小駝峰"><a href="#5-元件事件處理函式需要小駝峰" class="headerlink" title="5.元件事件處理函式需要小駝峰"></a>5.元件事件處理函式需要小駝峰</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onClick=&#123;&#125;&gt;&lt;button&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="懶人包"><a href="#懶人包" class="headerlink" title="懶人包"></a>懶人包</h2><p>1.元件裡的最外層要長這樣子&lt;&gt;&lt;&#x2F;&gt;</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;&gt;</span>加小括弧是避免有自動加;出現<span class="tag">&lt;/&gt;</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>2.單標籤自閉合 3.小駝峰命名</p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>JSX 看似很囉唆但是裡面的每個規則都有相對的道理在，如果能去理解其實這些規則就相對應的記起來了。</p>
+<p>預告一下，明日就是介紹如何在 JSX 寫 JavaScript 囉~</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a target="_blank" rel="noopener" href="https://react.dev/">React 官方網站</a></p>
+
+        </p>
+        <a class="stretched-link" href="/2023/10/06/Day%2022%20React%E7%9A%84%E8%AA%9E%E6%B3%95-JSX/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 21 React的元件形式"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 21 React 的元件形式"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/10/5
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 21 React 的元件形式
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>元件(component)是 React 主要關鍵組成之一，它是一個可以被反覆利用的 UI 元素，不過說穿了 React 的文件中一直提到的元件，其實就是 function 每一個元件都是由一個 function 當然裡面內層可以有很多個但是最外層就是只有一個，所以元件就是 function，如此一來元件可以重複使用就合理許多了吧!因為 function 也可以一直重複使用。</p>
+<span id="more"></span>
+
+<h2 id="如何定義元件-component"><a href="#如何定義元件-component" class="headerlink" title="如何定義元件(component)"></a>如何定義元件(component)</h2><p>這與其多說，不如來看範例吧!下列就是一個元件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">Comp</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">h1</span>&gt;</span>我是一個元件<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>是不是跟 function 一模一樣，只是在 React 規定中元件開頭一定要<strong>大寫</strong>，然後要<strong>return</strong>出來是因為需要給其他地方使用，所以也需要匯出模組(<a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10329570">ESM</a>)給其他檔案使用。其實還有一點，不過是 JSX 的語法問題，最上層需要有個這樣的&lt;&gt;&lt;&#x2F;&gt;根元素包住，換句話說 JSX 只能返回一個跟元素。</p>
+<p>整理上述所說的 React 元件基本架構有那些呢?</p>
+<h3 id="React-元件的基本架構"><a href="#React-元件的基本架構" class="headerlink" title="React 元件的基本架構"></a>React 元件的基本架構</h3><p>1.元件開頭命名一定要大寫 2.裡面需要 return 返回 3.最外層要有唯一一個標籤包住通常是&lt;&gt;&lt;&#x2F;&gt;，當然也可以是其它標籤 4.如果要給其它檔案使用一定要匯出</p>
+<h4 id="補充-進入點"><a href="#補充-進入點" class="headerlink" title="補充:進入點"></a>補充:進入點</h4><p>說的直白點所謂的進入點，就是專案架構的最上層，但以剛入門 React 的人來說通常不會先理會這層，以 vite 而言所謂的進入點就是 main.js，初始設定長下面這樣。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">ReactDOM</span> <span class="keyword">from</span> <span class="string">&quot;react-dom/client&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">&quot;./App.jsx&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;./index.css&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">ReactDOM</span>.<span class="title function_">createRoot</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;root&quot;</span>)).<span class="title function_">render</span>(</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">React.StrictMode</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">App</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">React.StrictMode</span>&gt;</span></span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>所以，通常在 React 匯出是一個必須的動作，因為以一個專案來說，再怎麼樣都會需要給進入點來使用，</p>
+<h2 id="元件的引用"><a href="#元件的引用" class="headerlink" title="元件的引用"></a>元件的引用</h2><p>通常都是一個檔案一個元件，所以在引用元件的時候會做一個匯入的動作，而 React 在 render 元件的形式上也很特別，是以標籤的形式呈現，範例如下:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Comp</span> <span class="keyword">from</span> <span class="string">&quot;./Comp&quot;</span>; <span class="comment">//引用元件從其他檔案</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;/* 可以重複使用 */&#125;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Comp</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Comp</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Comp</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="ps-在-vite-寫元件副檔名需要用-jsx"><a href="#ps-在-vite-寫元件副檔名需要用-jsx" class="headerlink" title="ps:在 vite 寫元件副檔名需要用 jsx"></a>ps:在 vite 寫元件副檔名需要用 jsx</h6><p>當然如果想偷懶一個檔案寫一堆元件也是可以，但是就不用做引入的動作了，範例如下:<br>只是不建議這麼而已</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;/* 可以重複利用 */&#125;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Comp</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Comp</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Comp</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//React 的元件形式</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Comp</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">h1</span>&gt;</span>我是一個元件<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>元件是 React 中基本的形式，整個架構幾乎都是由元件構成的，當然還有其中很重要的構成是 JSX 雖然一直提到，但還沒做詳細介紹，這部分明日會做比較詳細的介紹。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a target="_blank" rel="noopener" href="https://react.dev/">React 官方網站</a></p>
+
+        </p>
+        <a class="stretched-link" href="/2023/10/05/Day%2021%20React%E7%9A%84%E5%85%83%E4%BB%B6%E5%BD%A2%E5%BC%8F/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 20 React 環境建置-Vite"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 20 React 環境建置-Vite"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/10/4
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 20 React 環境建置-Vite
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>在接下來的範例中，比較沒辦法像之前的範例一樣直接丟到瀏覽器，檢查的開發者工具直接執行，需要建置基本的環境，我有想過幾種方式進行建置，甚至是在 codesandbox 直接線上進行，但比起線上的環境還是比較喜歡在本地端用 VS Code 進行開發，在追求方便簡單的前提下，選擇了 Vite 進行部屬。</p>
+<span id="more"></span>
+
+<h2 id="環境建置前的準備-NPM-Node-Package-Manager"><a href="#環境建置前的準備-NPM-Node-Package-Manager" class="headerlink" title="環境建置前的準備-NPM(Node Package Manager)"></a>環境建置前的準備-NPM(Node Package Manager)</h2><p>在使用 Vite 部屬前需要安裝 node 套件管理器(npm)來方便進行 Vite 部屬，而 NPM 是 Node 的安裝管理套件，簡單來說就是綁定 Node，所以安裝 node 就可以使用囉!</p>
+<h3 id="Node-下載與安裝"><a href="#Node-下載與安裝" class="headerlink" title="Node 下載與安裝"></a>Node 下載與安裝</h3><p>Node.js:<a target="_blank" rel="noopener" href="https://nodejs.org/en">https://nodejs.org/en</a><br>推薦 LTS 版本，因為是長期維護的版本使用起來也會比最新版本還穩定，而安裝方式跟其他應用程式一樣簡單，只要一直按下一步就可以安裝完成了。</p>
+<h2 id="使用-Vite-進行環境建置"><a href="#使用-Vite-進行環境建置" class="headerlink" title="使用 Vite 進行環境建置"></a>使用 Vite 進行環境建置</h2><p><strong>1.找到 VS Code 的終端機</strong><br></p>
+<p><strong>2.輸入指令</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm create vite@latest <span class="comment">//創建最新版本的專案</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>3.然後 vite 會詢問一系列的設定</strong></p>
+<p>(1)確定是否要執行程序&#x3D;&gt;按 y<br></p>
+<p>(2)取專案名子&#x3D;&gt;可以隨便取或是用預設<br></p>
+<p>(3)選擇哪一個框架&#x3D;&gt;選擇 React<br></p>
+<p>(4)選擇使用哪一個語言&#x3D;&gt;選擇 JavaScript<br></p>
+<p>(5)基本上就大致完成了，接下來是進行測試有無建置成功的部份，也很單純就照著 vite 提供的指令一行一行打就好了</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd vite-project <span class="comment">//切換到專案目錄的資料夾</span></span><br><span class="line">npm install <span class="comment">//安裝模組</span></span><br><span class="line">npm run dev <span class="comment">//開啟測試環境</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>4.如此一來就完成了，理論上應該是可以在下列網址(<a target="_blank" rel="noopener" href="http://localhost:5173/)%E4%B8%AD%E7%9C%8B%E5%88%B0%E4%B8%8B%E9%9D%A2%E7%9A%84%E7%95%AB%E9%9D%A2">http://localhost:5173/)中看到下面的畫面</a></strong><br>(1)終端機回饋的網址<br><br>(2)出現的測試畫面<br></p>
+<p><strong>5.操作的檔案位置(src&#x3D;&gt;App.js)</strong><br>位在 src 資料夾的 App.js，未來的操作範例都可以在這個檔案進行。<br></p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>雖然步驟還是有點多或是有點麻煩，但如果要在本地端開發，這已經是相對簡單快速的方法了，明天就會正式進入 React 囉~</p>
+
+        </p>
+        <a class="stretched-link" href="/2023/10/04/Day%2020%20React%20%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE-Vite/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 19 React 介紹"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 19 React 介紹"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/10/3
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 19 React 介紹
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <h2 id="歷史發展"><a href="#歷史發展" class="headerlink" title="歷史發展"></a>歷史發展</h2><p>React 正式出現在眾人眼中是在 JSConf 上，來自原 Facebook 團隊 Jordan Walke 把一直以來在內部使用的 React 開源了，不過在當時的回響並不是很好，甚至受到了一些批評。</p>
+<p>在開源團隊努力的推廣下，某些人開始慢慢發現 React 的好，隨之開源社群也慢慢建立了起來，到了 2016 年左右變成了一種主流框架，在那時 React 在前端圈子的地位被確立。</p>
+<p>2019 年 Hook 被正式引入到 React 當中，同時也降低了學習成本，到現今 Hook 應該也是蠻多人會選擇開發的方式，也讓 React 使用人數持續成長，現在 React 應該還是使用人數最多的框架之一。</p>
+<span id="more"></span>
+
+<h2 id="什麼是-React"><a href="#什麼是-React" class="headerlink" title="什麼是 React?"></a>什麼是 React?</h2><p>在主流的認知裡，大家常常提到的三大框架 Angular、React、Vue，式的沒錯大家是把 React 當作框架來看，但弔詭的是 React 的官方網站，卻開宗明義地強調”The <strong>library</strong> for web and native user interfaces”，React 是一個函式庫，就跟經典的 jQuery 一樣是一個函式庫，以此來強調 React 的輕量化及靈活性。</p>
+<h2 id="React-特色"><a href="#React-特色" class="headerlink" title="React 特色"></a>React 特色</h2><p>1.元件化的特性，讓相似的區塊做成元件能重複使用</p>
+<p>2.使用 JSX 語法，讓 HTML 標籤上可以使用 JavaScript 進行操作，大幅降低程式的複雜度，提升寫程式的效率</p>
+<p>3.如果單獨元件有更新資料，可以只對單獨的元件進行重新渲染，不用刷新整個頁面</p>
+<p>4.專注在畫面的呈現處理</p>
+<h2 id="為什麼選擇-React"><a href="#為什麼選擇-React" class="headerlink" title="為什麼選擇 React"></a>為什麼選擇 React</h2><p>綜合上述特色，加上龐大的使用者社群，在學習上的資源也相對多，雖然入門的門檻高了點，但跨過了，就可以感受到 React 的方便性了。</p>
+<p>##參考資料<br><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=8pDqJVdNa44&t=4s">Origin Story: How A Small Team of Developers Created React.js at Facebook</a></p>
+<p><a target="_blank" rel="noopener" href="https://react.dev/">React 官方網站</a></p>
+
+        </p>
+        <a class="stretched-link" href="/2023/10/03/Day%2019%20React%20%E4%BB%8B%E7%B4%B9/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 18 正式進入React前的Javascript小總結"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 18 正式進入 React 前的 Javascript 小總結"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/10/2
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 18 正式進入 React 前的 Javascript 小總結
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>不知不覺鐵人賽已經寫超過一半了，用 JavaScript 水內容也水的差不多了 XD，但是我真心認為前面的內容都是我恨不得在學 React 之前能夠所學好的內容，至少在操做 React 的時候不會因為 JavaScript 而卡東卡西的，而且 React 本身已經夠難懂了。</p>
+<p>在今天這個算是中場休息的時間，來稍微整理前面的內容，和提出接下來要進行的架構。依然是遵從本系列的定位，盡可能地減少在學習 React 之前的落差，所以並不會提到太多太難的內容，因為比較難的內容我相信版上已經有很多大神寫文章了，我能做到的是盡量地做銜接。</p>
+<span id="more"></span>
+
+<h2 id="JavaScript-複習篇"><a href="#JavaScript-複習篇" class="headerlink" title="JavaScript 複習篇"></a>JavaScript 複習篇</h2><p><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10314432">Day1 參賽動機以及題目選擇和預計大綱</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10318692">Day2 My VS Code Tour</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10319059">Day3 查詢陣列的方法-forEach &amp; map</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10320980">Day4 操作陣列的方法 Part.1-push &amp; pop</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10322325">Day5 操作陣列的方法 Part.2-shift &amp; unshift</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10323240">Day6 其他的陣列方法 slice &amp; splice</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10323987">Day7 搜尋陣列的方法-find,findIndex &amp; filter</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10324828">Day8 字串陣列互相變化的方法 split &amp; join</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10325604">Day9 函式與箭頭函式</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10326624">Day10 物件(Object)</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10327826">Day11 解構賦值(Destructuring assignment)</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10328990">Day12 其餘運算子 &amp; 展開運算子(Spread Operator &amp; Rest Operator)</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10329570">Day13 JavaScript 模組(Modules)</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10330248">Day14 同步&amp;非同步(Synchronous &amp; Asynchronous)</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10330683">Day15 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.1</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10331221">Day16 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.2-Promise</a><br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10331931">Day17 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.3-Async Await</a></p>
+<h2 id="React-預計大綱"><a href="#React-預計大綱" class="headerlink" title="React 預計大綱"></a>React 預計大綱</h2><p>Day19 React 介紹<br>Day20 React 環境建置<br>Day21 React 元件的形式<br>Day22 React 的語法-JSX<br>Day23 React 中的 JavaScript<br>Day24 React 的橋樑-Prpos<br>Day25 React 的渲染-JSX 與三元運算子的關係<br>Day26 React 的多重渲染-列表與 Key<br>Day27 React 的純函數元件<br>Day28 React 的 Hello World-Hook-useState<br>Day29 React 的玄學<br>Day30 總結</p>
+<h2 id="中場休息之小小心得"><a href="#中場休息之小小心得" class="headerlink" title="中場休息之小小心得"></a>中場休息之小小心得</h2><p>其實我很驚訝我能走到這裡，身為一個前端小菜雞，縱使知道自己寫的沒有很理想，但還是不知羞恥的寫下去，希望能透過這次的鐵人賽，能對這段時間的學習有個交代。</p>
+<p>如果你是跟我一樣剛接觸 React 的新手或是讀到這裡的讀者可能對 React 產生一點興趣的人，期待我們能在各自的天空繼續走下去。</p>
+<p>附帶一提，給想入門 React 的人一句”歡迎來到 React 地獄~”</p>
+
+        </p>
+        <a class="stretched-link" href="/2023/10/02/Day%2018%20%E6%AD%A3%E5%BC%8F%E9%80%B2%E5%85%A5React%E5%89%8D%E7%9A%84Javascript%E5%B0%8F%E7%B8%BD%E7%B5%90/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 17 處理同步(Synchronous)和非同步(Asynchronous)的方法Part.3-Async Await"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day17 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.3-Async Await"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/10/1
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day17 處理同步(Synchronous)和非同步(Asynchronous)的方法 Part.3-Async Await
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <h2 id="Async-Await"><a href="#Async-Await" class="headerlink" title="Async Await"></a>Async Await</h2><p>是 promise 的語法糖，這是一組雙生一對在正常的情況下無法分離的東西，那它是如何進行簡化的呢?<br>引用 MDN 解釋</p>
+<span id="more"></span>
+
+<blockquote>
+<p>當 async 函式被呼叫時，它會回傳一個 Promise。如果該 async 函式回傳了一個值，Promise 的狀態將為一個帶有該回傳值的 resolved。如果 async 函式拋出例外或某個值，Promise 的狀態將為一個帶有被拋出值的 rejected。</p>
+<p>async 函式內部可以使用 await 表達式，它會暫停此 async 函式的執行，並且等待傳遞至表達式的 Promise 的解析，解析完之後會回傳解析值，並繼續此 async 函式的執行。</p>
+</blockquote>
+<p>沒錯還是一如既往地讓人很難以理解，那就直接來看範例吧!會比較清楚一點，讓我們先回顧昨日的範例。</p>
+<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><h3 id="Promise-昨日範例"><a href="#Promise-昨日範例" class="headerlink" title="Promise-昨日範例"></a>Promise-昨日範例</h3><p>依序 console.log() 出 1,2,3,4，但是 2,3 有 setTimeout，所以需要利用 new promise 進行處理然後回傳處理成功。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span>);</span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">2</span>);</span><br><span class="line">    <span class="title function_">resolve</span>(<span class="string">&quot;success1&quot;</span>);</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span>);</span><br><span class="line">        <span class="title function_">resolve</span>(<span class="string">&quot;success1&quot;</span>);</span><br><span class="line">      &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">4</span>);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Async-Await-語法"><a href="#Async-Await-語法" class="headerlink" title="Async Await 語法"></a>Async Await 語法</h3><p>上述是單純用 promise 寫的那加入 async await 的改寫就變成下方的型式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">callName</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">await</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">      <span class="title function_">resolve</span>(<span class="string">&quot;success1&quot;</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">await</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span>);</span><br><span class="line">      <span class="title function_">resolve</span>(<span class="string">&quot;success2&quot;</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">4</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>比較一下之後我們可以發現幾個特性: 1.把需要排列執行順序的非同步函式用 async function 全部裝在一起 2.把需要被處理或是等待執行的非同步掛上 await，這時 await 的作用就是讓程式執行完成後才會繼續 3.注意 awiat 裡面需要一個 promise 作為回傳</p>
+<p>所以整理一下 Async Await 基本語法如下:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> 函式名稱() &#123;</span><br><span class="line">  <span class="keyword">await</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    放入需要被處理的非同步<span class="number">1</span>;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">await</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    放入需要被處理的非同步<span class="number">2</span>;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如此一來簡單的 Async Await 語法架構就完成囉!</p>
+<h3 id="Async-Await-錯誤檢查"><a href="#Async-Await-錯誤檢查" class="headerlink" title="Async Await 錯誤檢查"></a>Async Await 錯誤檢查</h3><p>但是，眼尖的朋友應該會發現少了什麼東西，那就是 resolve 或是 reject 的結果要麼處理呢?有一種方法就是直接還給它，因為 await 的語法會 return 一個 promise 物件，所以其實 ++promise 的.then()或是.catch()還是能用的++。</p>
+<p>又或是出動我們的老朋友<strong>try catch</strong>協助我們確認程式有沒有被正確執行也是一種選擇。</p>
+<p>下面的範例是採用第一種用.then 的方式去檢查</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">callName</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">await</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">      <span class="title function_">resolve</span>(<span class="string">&quot;success1&quot;</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">  &#125;).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">await</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span>);</span><br><span class="line">      <span class="title function_">resolve</span>(<span class="string">&quot;success2&quot;</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">  &#125;).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">4</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>其實說穿了 Async Await 就是一個語法糖，所以只要了解了 promise 然後記住 Async Await 的架構，對於非同步的處理方法來說學習上並不會有太多的阻礙，而且反而能使用更簡單易讀的方法來處理非同步問題。</p>
+
+        </p>
+        <a class="stretched-link" href="/2023/10/01/Day%2017%20%E8%99%95%E7%90%86%E5%90%8C%E6%AD%A5(Synchronous)%E5%92%8C%E9%9D%9E%E5%90%8C%E6%AD%A5(Asynchronous)%E7%9A%84%E6%96%B9%E6%B3%95Part.3-Async%20Await/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+      </ul>
+    </div>
+
+    <nav class="mb-7 mb-md-9" aria-label="Page navigation">
+      <ul class="pagination justify-content-center gap-3">
+        
+          <li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/">1</a></li><span class="space">&hellip;</span><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/4/">4</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/5/">5</a></li><li class="page-item"><span class="page-link text-primary-700 rounded-1 border-0 active">6</span></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/7/">7</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/8/">8</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/9/">9</a></li>
+        
+      </ul>
+    </nav>
+  </section>
+    
+</main>
+
+
+  <footer
+    class="py-7"
+    style="background-image: url('/images/footer-bg-lg.png');
+      background-repeat: no-repeat;
+      background-size: cover;"
+  >
+  <div class="container">
+    <div class="row row-gap-7 justify-content-between align-items-center my-md-7">
+      <div class="col-12 col-md-4 col-lg-3">
+        <img
+          class="mb-4"
+          style="width: 120px;"
+          src="/images/logo.svg" alt="logo"
+        >
+        <p class="mb-4 fs-5 text-primary-700">歡迎填寫表單，或直接與我聯絡！</p>
+        <a
+          class="link-primary-500 fs-5 text-decoration-none" href="mailto:service@hexschool.com">service@hexschool.com</a>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+        <a class="btn btn-lg icon-link link-primary-500 w-100 px-4 mb-4 lh-base text-start fw-bold text-primary-50 bg-primary-900" href="#">
+          <svg class="bi display-4" width="56" height="56" viewBox="0 0 56 56" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 13H39V43H16L16 13ZM13 13C13 11.3431 14.3431 10 16 10H39C40.6569 10 42 11.3431 42 13V43C42 44.6569 40.6569 46 39 46H16C14.3431 46 13 44.6569 13 43V13ZM22 20C22 20.8284 21.3284 21.5 20.5 21.5C19.6716 21.5 19 20.8284 19 20C19 19.1716 19.6716 18.5 20.5 18.5C21.3284 18.5 22 19.1716 22 20ZM22 27C22 27.8284 21.3284 28.5 20.5 28.5C19.6716 28.5 19 27.8284 19 27C19 26.1716 19.6716 25.5 20.5 25.5C21.3284 25.5 22 26.1716 22 27ZM20.5 35.5C21.3284 35.5 22 34.8284 22 34C22 33.1716 21.3284 32.5 20.5 32.5C19.6716 32.5 19 33.1716 19 34C19 34.8284 19.6716 35.5 20.5 35.5ZM24 20C24 19.1716 24.6716 18.5 25.5 18.5H33.5C34.3284 18.5 35 19.1716 35 20C35 20.8284 34.3284 21.5 33.5 21.5H25.5C24.6716 21.5 24 20.8284 24 20ZM25.5 25.5C24.6716 25.5 24 26.1716 24 27C24 27.8284 24.6716 28.5 25.5 28.5H33.5C34.3284 28.5 35 27.8284 35 27C35 26.1716 34.3284 25.5 33.5 25.5H25.5ZM24 34C24 33.1716 24.6716 32.5 25.5 32.5H33.5C34.3284 32.5 35 33.1716 35 34C35 34.8284 34.3284 35.5 33.5 35.5H25.5C24.6716 35.5 24 34.8284 24 34Z" fill="currentcolor"/>
+          </svg>
+          填寫表單
+        </a>
+        <a class="btn btn-lg w-100 px-4 mb-4 lh-base text-start link-primary-500 text-primary-700 bg-primary-50" href="#">
+          <i class="bi bi-instagram align-middle px-2 fs-1"></i>
+          hexschool_demo
+        </a>
+        <a class="btn btn-lg w-100 px-4 lh-base text-start link-primary-500 text-primary-700 bg-primary-50" href="#">
+          <i class="bi bi-facebook align-middle px-2 fs-1"></i>
+          hexschoolTW
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+<script src="/js/swiper.js"></script>
+
+</body>
+</html>

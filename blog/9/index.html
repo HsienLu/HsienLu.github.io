@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>部落格 | HsienLu&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="存放一些個人筆記分享">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HsienLu&#39;s Blog">
+<meta property="og:url" content="https://hsienlu.github.io/blog/9/index.html">
+<meta property="og:site_name" content="HsienLu&#39;s Blog">
+<meta property="og:description" content="存放一些個人筆記分享">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="HsienLu">
+<meta property="article:tag" content="前端,後端,全端,網頁,技術,心得,筆記">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="shortcut icon" href="/images/fav.png">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Tourney&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  
+<link rel="stylesheet" href="/css/all.min.css">
+
+<meta name="generator" content="Hexo 7.2.0"><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body>
+  <header
+    class="py-md-4 border-bottom border-primary-200"
+    style="margin-bottom: 1px;"
+  >
+  <nav class="navbar navbar-expand-md py-md-1">
+    <div class="container">
+      <a class="navbar-brand py-0" href="/">
+        <img width="100px" src="/images/logo.png" alt="logo">
+      </a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="material-symbols-outlined fs-1 text-primary-900">menu</span>
+      </button>
+      <div class="collapse navbar-collapse offset-md-2 offset-lg-3" id="navbarToggler">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0 text-center">
+          
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link "
+                href="/"
+              >
+                <span class="position-relative px-2 py-1">首頁</span>
+              </a>
+            </li>
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link "
+                href="/collection"
+              >
+                <span class="position-relative px-2 py-1">作品集</span>
+              </a>
+            </li>
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link "
+                href="/service"
+              >
+                <span class="position-relative px-2 py-1">服務項目</span>
+              </a>
+            </li>
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link active"
+                href="/blog"
+              >
+                <span class="position-relative px-2 py-1">部落格</span>
+              </a>
+            </li>
+          
+            <li class="nav-item ">
+              <a
+                class="nav-link "
+                href="/contact"
+              >
+                <span class="position-relative px-2 py-1">聯絡我</span>
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+  <main>
+  <section class="container pb-7 pb-md-9">
+    <div class="py-7 py-lg-9 mt-lg-9">
+      <h2 class="title-deco mb-3 mb-lg-4 text-center text-primary-700 tracking-wide fw-semibold">部落格</h2>
+      <p class="mb-0 text-center text-primary-500">不定期分享技術文章</p>
+    </div>
+    <div class="row flex-row-reverse mb-lg-9">
+      <div class="col-12 col-lg-3">
+        <aside class="blog__menu px-3 py-4 p-lg-7 bg-primary-100">
+  <ul class="d-flex flex-lg-column justify-content-md-center justify-content-lg-start gap-7 mb-0 p-xxl-7 list-unstyled">
+    <li class="flex-shrink-0">
+      
+      <a href="/blog" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none" type="button">全部文章</a>
+    </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/React/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          React
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/JavaScript/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          JavaScript
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/Java/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Java
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/MySQL/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          MySQL
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/SQL/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          SQL
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/Hook/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Hook
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/TypeScript/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          TypeScript
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          TypeHero
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/XML/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          XML
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/html/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          html
+        </a>
+      </li>
+    
+  </ul>
+</aside>
+      </div>
+
+      <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 4 操作陣列的方法 Part.1-push &amp; pop"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 4 操作陣列的方法 Part.1-push &amp; pop"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/18
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 4 操作陣列的方法 Part.1-push & pop
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>相信大家都有看過類似下面這種圖，今天會針對 push,pop 做介紹</p>
+<p></p>
+<span id="more"></span>
+
+<h3 id="push"><a href="#push" class="headerlink" title=".push()"></a>.push()</h3><p>push 顧名思義就是推東西的意思，在這裡就把它當成是推某個東西都陣列的尾巴，此方法會將一個值或多個值也可以說是陣列加進陣列的尾端，回傳值為新陣列的長度。用法是在小括弧內塞進要加入的東西<br>範例如下:</p>
+<p>可以加入單一值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">array.<span class="title function_">push</span>(<span class="string">&quot;a&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br></pre></td></tr></table></figure>
+
+<p>也可以加入多個值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array.<span class="title function_">push</span>(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br></pre></td></tr></table></figure>
+
+<p>還可以加入一個陣列，不過裡面會真的變成一個陣列</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array.<span class="title function_">push</span>([<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>]));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br></pre></td></tr></table></figure>
+
+<p></p>
+<p>如果需要完整合併需要用展開運算子</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array.<span class="title function_">push</span>(...[<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>]));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br></pre></td></tr></table></figure>
+
+<p></p>
+<h3 id="pop"><a href="#pop" class="headerlink" title=".pop()"></a>.pop()</h3><p>pop 當作動詞在劍橋字典裡翻成-使什麼彈出的意思，在這裡它的作用是使陣列的末端彈出一個值，說直白一點就是刪除陣列末端的值。裡面不需要帶任何參數，但是如果對空陣列使用會回傳 undefined。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array.<span class="title function_">pop</span>());</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array);</span><br></pre></td></tr></table></figure>
+
+<p>附帶一提，pop 可以回傳被刪除的值，範例如下:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> popTest = array.<span class="title function_">pop</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(popTest); <span class="comment">//回傳刪除的值</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array); <span class="comment">//刪除後的原陣列</span></span><br></pre></td></tr></table></figure>
+
+<p>以上兩個語法為對陣列末端進增加以及刪除的方法，當然同時也有針對陣列開頭的增加刪除方法，留作明天介紹</p>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/18/Day%204%20%E6%93%8D%E4%BD%9C%E9%99%A3%E5%88%97%E7%9A%84%E6%96%B9%E6%B3%95%20Part.1-push%20&%20pop/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 3 查詢陣列的方法-forEach &amp; map"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 3 查詢陣列的方法-forEach &amp; map"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/17
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 3 查詢陣列的方法-forEach & map
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>在學習 React 之前，會需要瞭解一些 javascript 的基礎概念，常言道”javascript 學得好，react 沒煩惱”，其中陣列的方法倒是蠻常用到的，尤其.map()在資料的呈現處理上是蠻常用到的技巧，因為 map 的用法與 forEach 實在太相似了，所以從 forEach 來了解 map 我認為是一個不錯的方法，那就接著往下看~</p>
+<span id="more"></span>
+
+<h3 id="forEach"><a href="#forEach" class="headerlink" title=".forEach()"></a>.forEach()</h3><p>是一個遍歷陣列的方法，說的直接一點就是查詢陣列裡面的內容並對其做一些操作。裡面需要帶一個 callback function，裡面包含三個參數如下: 1.陣列裡面的值 2.陣列的 index 3.陣列本身</p>
+<p>其方法是不能被&#x3D;&#x3D;中斷的&#x3D;&#x3D;，換句話說就是不能 return，也就是說不會回傳值。<br>範例如下:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"></span><br><span class="line">array.<span class="title function_">forEach</span>(<span class="function">(<span class="params">value, index, array2</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;value:&quot;</span> + value);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;index:&quot;</span> + index);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(array2); <span class="comment">//陣列本身</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>輸出結果:<br></p>
+<h3 id="map"><a href="#map" class="headerlink" title=".map()"></a>.map()</h3><p>同樣是可以遍歷陣列的一個方法，用法也跟 forEach 相似，也是需要帶一個 callback 裡面也是帶三個參數: 1.陣列裡面的值 2.陣列的 index 3.陣列本身</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"></span><br><span class="line">array.<span class="title function_">map</span>(<span class="function">(<span class="params">value, index, array2</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;value:&quot;</span> + value);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;index:&quot;</span> + index);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(array2); <span class="comment">//陣列本身</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p></p>
+<p>但此方法&#x3D;&#x3D;會回傳&#x3D;&#x3D;一個新陣列，範例如下:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> newArray = array.<span class="title function_">map</span>(<span class="function">(<span class="params">value, index, array2</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> value * <span class="number">2</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArray); <span class="comment">//輸出結果:[2,4,6,8,10]</span></span><br></pre></td></tr></table></figure>
+
+<p>輸出結果:<br></p>
+<p>總之，forEach 主要用於執行操作而不生成新陣列，而 map 用於生成一個新陣列，其中包含經過處理後的值。</p>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/17/Day%203%20%E6%9F%A5%E8%A9%A2%E9%99%A3%E5%88%97%E7%9A%84%E6%96%B9%E6%B3%95-forEach%20&%20map/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 2 My VS Code Tour"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 2 My VS Code Tour"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/16
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 2 My VS Code Tour
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>首先第一邊當然是介紹我們的生財工具 VS Code 啦~相信大家都有自己習慣的環境和模式，今天來分享我的 VS Code 相關的開發設定。</p>
+<span id="more"></span>
+
+<h2 id="VS-Code-概述"><a href="#VS-Code-概述" class="headerlink" title="VS Code 概述"></a>VS Code 概述</h2><p>VS Code 是一個功能豐富的程式碼編輯器，支援多種程式語言，例如 JavaScript、HTML&#x2F;CSS 等等。對於軟體開發者來說，它是一個非常靈活且易於使用的工具。</p>
+<p>除了強大的基本功能外，VS Code 還可以透過安裝套件來擴展其功能。這些套件提供了各種方便的功能，幫助我們更有效率地開發。</p>
+<h2 id="背景知識"><a href="#背景知識" class="headerlink" title="背景知識"></a>背景知識</h2><ul>
+<li>VS Code</li>
+</ul>
+<h2 id="內容"><a href="#內容" class="headerlink" title="內容"></a>內容</h2><h3 id="一-VS-Code-常用基本設置"><a href="#一-VS-Code-常用基本設置" class="headerlink" title="(一) VS Code 常用基本設置"></a>(一) VS Code 常用基本設置</h3><ol>
+<li><p>自動換行</p>
+<ul>
+<li>設置方法:<ul>
+<li>點擊左下角小齒輪進入設定選單<br></li>
+<li>搜尋欄搜尋 “Wrap”</li>
+<li>在 “Word Wrap” 設置中設定成 “On”<br></li>
+</ul>
+</li>
+<li>效果:<br>Before<br><br>After<br></li>
+</ul>
+</li>
+<li><p>括弧顏色:可以協助整理巢狀結構</p>
+<ul>
+<li>設置方法:<ul>
+<li>在設定中找到 “Colorized Bracket Pairs”，進入 setting.json，貼上下列程式碼<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;editor.bracketPairColorization.enabled&quot;</span>: <span class="literal">true</span>, <span class="comment">//Bracket Pair Colorizer 協助大中小括號（&#123;&#125;、[]、()）一的獨立補上不同色彩(不用可以刪掉)</span></span><br><span class="line"><span class="string">&quot;editor.guides.bracketPairs&quot;</span>: <span class="string">&quot;active&quot;</span>, <span class="comment">//Bracket Pair Colorizer 協助大中小括號（&#123;&#125;、[]、()）一一(不用可以刪掉)</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>效果:<br></li>
+</ul>
+</li>
+<li><p>自動儲存格式化(自動排版):可以幫忙整理排的散亂的程式碼</p>
+<ul>
+<li>設置方法:<ul>
+<li>找到下列選項設置 “Format On Save” 打勾，就完成了。<br></li>
+</ul>
+</li>
+<li>效果:<br>Before<br><br>After<br></li>
+</ul>
+</li>
+</ol>
+<h3 id="二-常用套件"><a href="#二-常用套件" class="headerlink" title="(二) 常用套件"></a>(二) 常用套件</h3><ul>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag">Auto Close Tag</a><br>HTML 自動封閉的套件</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">Auto Rename Tag</a><br>HTML 可以一起更改頭尾標籤的套件</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hant">Chinese (Traditional) Language</a><br>中文化套件</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker">Code Spell Checker</a><br>檢查拼字錯誤的套件，debug 的好幫手，效果有點像 Word 拼字檢查那樣<br></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">Git Graph</a><br>對於 Git 有漂亮的 GUI 可以看，方便查閱分支以及版本紀錄<br></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow">Indent-rainbow</a><br>縮排好幫手，下圖彩虹就是它的效果<br></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a><br>好用的網頁預覽套件，不過有時候要注意一下路徑位置，有時候會預覽不出來，這時候就要檢查一下路徑位置了</p>
+</li>
+</ul>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>總結而言，VS Code 擁有強大的功能和豐富的套件生態系統，適合各種程式開發需求。透過介紹常用的基本設置，如自動換行、括弧顏色設置以及自動儲存格式化，我們可以提高程式碼的可讀性和整潔性。此外，常用的套件如 Auto Close Tag、Auto Rename Tag、Chinese (Traditional) Language、Code Spell Checker、Git Graph、Indent-rainbow 以及 Live Server 更進一步提升了開發效率，讓我們能更專注於寫程式，而不用花費太多時間處理繁瑣的細節。</p>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/16/Day%202%20My%20VS%20Code%20Tour/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 1 參賽動機以及題目選擇和預計大綱"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 1 參賽動機以及題目選擇和預計大綱"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/15
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 1 參賽動機以及題目選擇和預計大綱
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <h2 id="參賽動機"><a href="#參賽動機" class="headerlink" title="參賽動機"></a>參賽動機</h2><p>一開始想對於學習前端時間有一些得自己留下些什麼，所以題目本來是要分享一些些網頁鐵三角的一些心得，但後來發現我要在一邊學框架的時間一邊寫鐵人賽，可能會有超出我的一些負荷，所以與其蠟燭兩頭燒，那不如就合在一起寫吧!</p>
+<h2 id="為什麼選擇-React-作為主題"><a href="#為什麼選擇-React-作為主題" class="headerlink" title="為什麼選擇 React 作為主題"></a>為什麼選擇 React 作為主題</h2><p>最近開始學習框架，想以初學者的心態，分享自己由新手的觀點來理解 React 的想法，一方面記錄學習的過程，另一方面變成是自己學習框架的推力，至於這個題目”那些年我轉生成前端貓咪踏入 React 地獄的那些事”，是剛好我在看 React 的時候一隻貓咪跳上來壓到我的鍵盤，不知道按到什麼畫面跳轉到某部轉生動畫，所以這個題目就出來了。</p>
+<span id="more"></span>
+
+<h2 id="文章內容定位"><a href="#文章內容定位" class="headerlink" title="文章內容定位"></a>文章內容定位</h2><p>其實版上有關 React 的教學文蠻多了，而且 React 官方文件其實寫的蠻清楚的，但其實我覺得最難的是從 js 到 React 這段過程中，我以為的 js 跟實際上的 js 差距其實蠻大的，所以這段的系列文章會著墨在踏入 React 之前的這段過程，或許也許能在學 React 的時候少了一點痛苦。</p>
+<p></p>
+<h2 id="大綱"><a href="#大綱" class="headerlink" title="大綱"></a>大綱</h2><p>大致上會分為兩部分介紹，第一部分會介紹 React 會用到的 JavaScript 的語法或觀念，第二部分，才會是 React</p>
+<h3 id="第一部分-JS"><a href="#第一部分-JS" class="headerlink" title="第一部分 JS"></a>第一部分 JS</h3><p>Day 1. 參賽動機以及題目選擇和預計大綱<br>Day 2. My VS Code Tour<br>Day 3. 查詢陣列的方法-forEach &amp; map<br>Day 4. 操作陣列的方法 Part.1-push &amp; pop<br>Day 5. 操作陣列的方法 Part.2-shift &amp; unshift<br>Day 6. 其他的陣列方法 slice &amp; splice<br>Day 7. 搜尋陣列的方法-find,findIndex &amp; filter<br>Day 8. 字串陣列互相變化的方法 split &amp; join<br>Day 9. 函式與箭頭函式<br>Day 10.物件(Object)<br>Day 11.解構賦值(Destructuring assignment)<br>Day 12.其餘運算子 &amp; 展開運算子(Spread Operator &amp; Rest Operator)<br>Day 13.JavaScript 模組(Modules)<br>Day 14.處理同步非同步的方法(Asynchronous &amp; Synchronous)</p>
+<h3 id="第二部分-Rreact"><a href="#第二部分-Rreact" class="headerlink" title="第二部分 Rreact"></a>第二部分 Rreact</h3><p>這部分不會帶到太多太難的 hook，最多可能就寫到 useEffect，至於詳細的大綱，等 JS 結束之後會再公布。</p>
+<h4 id="最後熱血開賽-希望一切順利"><a href="#最後熱血開賽-希望一切順利" class="headerlink" title="最後熱血開賽~~希望一切順利"></a>最後熱血開賽~~希望一切順利</h4><h2 id="預計參考資料"><a href="#預計參考資料" class="headerlink" title="預計參考資料"></a>預計參考資料</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://react.dev/">React 官網</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.theodinproject.com/">Odin Project</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.freecodecamp.org/learn/front-end-development-libraries/">freeCodeCamp</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/">MDN</a></li>
+</ol>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/15/Day%201%20%E5%8F%83%E8%B3%BD%E5%8B%95%E6%A9%9F%E4%BB%A5%E5%8F%8A%E9%A1%8C%E7%9B%AE%E9%81%B8%E6%93%87%E5%92%8C%E9%A0%90%E8%A8%88%E5%A4%A7%E7%B6%B1/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+      </ul>
+    </div>
+
+    <nav class="mb-7 mb-md-9" aria-label="Page navigation">
+      <ul class="pagination justify-content-center gap-3">
+        
+          <li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/">1</a></li><span class="space">&hellip;</span><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/7/">7</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/8/">8</a></li><li class="page-item"><span class="page-link text-primary-700 rounded-1 border-0 active">9</span></li>
+        
+      </ul>
+    </nav>
+  </section>
+    
+</main>
+
+
+  <footer
+    class="py-7"
+    style="background-image: url('/images/footer-bg-lg.png');
+      background-repeat: no-repeat;
+      background-size: cover;"
+  >
+  <div class="container">
+    <div class="row row-gap-7 justify-content-between align-items-center my-md-7">
+      <div class="col-12 col-md-4 col-lg-3">
+        <img
+          class="mb-4"
+          style="width: 120px;"
+          src="/images/logo.svg" alt="logo"
+        >
+        <p class="mb-4 fs-5 text-primary-700">歡迎填寫表單，或直接與我聯絡！</p>
+        <a
+          class="link-primary-500 fs-5 text-decoration-none" href="mailto:service@hexschool.com">service@hexschool.com</a>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+        <a class="btn btn-lg icon-link link-primary-500 w-100 px-4 mb-4 lh-base text-start fw-bold text-primary-50 bg-primary-900" href="#">
+          <svg class="bi display-4" width="56" height="56" viewBox="0 0 56 56" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 13H39V43H16L16 13ZM13 13C13 11.3431 14.3431 10 16 10H39C40.6569 10 42 11.3431 42 13V43C42 44.6569 40.6569 46 39 46H16C14.3431 46 13 44.6569 13 43V13ZM22 20C22 20.8284 21.3284 21.5 20.5 21.5C19.6716 21.5 19 20.8284 19 20C19 19.1716 19.6716 18.5 20.5 18.5C21.3284 18.5 22 19.1716 22 20ZM22 27C22 27.8284 21.3284 28.5 20.5 28.5C19.6716 28.5 19 27.8284 19 27C19 26.1716 19.6716 25.5 20.5 25.5C21.3284 25.5 22 26.1716 22 27ZM20.5 35.5C21.3284 35.5 22 34.8284 22 34C22 33.1716 21.3284 32.5 20.5 32.5C19.6716 32.5 19 33.1716 19 34C19 34.8284 19.6716 35.5 20.5 35.5ZM24 20C24 19.1716 24.6716 18.5 25.5 18.5H33.5C34.3284 18.5 35 19.1716 35 20C35 20.8284 34.3284 21.5 33.5 21.5H25.5C24.6716 21.5 24 20.8284 24 20ZM25.5 25.5C24.6716 25.5 24 26.1716 24 27C24 27.8284 24.6716 28.5 25.5 28.5H33.5C34.3284 28.5 35 27.8284 35 27C35 26.1716 34.3284 25.5 33.5 25.5H25.5ZM24 34C24 33.1716 24.6716 32.5 25.5 32.5H33.5C34.3284 32.5 35 33.1716 35 34C35 34.8284 34.3284 35.5 33.5 35.5H25.5C24.6716 35.5 24 34.8284 24 34Z" fill="currentcolor"/>
+          </svg>
+          填寫表單
+        </a>
+        <a class="btn btn-lg w-100 px-4 mb-4 lh-base text-start link-primary-500 text-primary-700 bg-primary-50" href="#">
+          <i class="bi bi-instagram align-middle px-2 fs-1"></i>
+          hexschool_demo
+        </a>
+        <a class="btn btn-lg w-100 px-4 lh-base text-start link-primary-500 text-primary-700 bg-primary-50" href="#">
+          <i class="bi bi-facebook align-middle px-2 fs-1"></i>
+          hexschoolTW
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+<script src="/js/swiper.js"></script>
+
+</body>
+</html>

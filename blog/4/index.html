@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>部落格 | HsienLu&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="存放一些個人筆記分享">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HsienLu&#39;s Blog">
+<meta property="og:url" content="https://hsienlu.github.io/blog/4/index.html">
+<meta property="og:site_name" content="HsienLu&#39;s Blog">
+<meta property="og:description" content="存放一些個人筆記分享">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="HsienLu">
+<meta property="article:tag" content="前端,後端,全端,網頁,技術,心得,筆記">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="shortcut icon" href="/images/fav.png">
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Tourney&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  
+<link rel="stylesheet" href="/css/all.min.css">
+
+<meta name="generator" content="Hexo 7.2.0"><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body>
+  <header
+    class="py-md-4 border-bottom border-primary-200"
+    style="margin-bottom: 1px;"
+  >
+  <nav class="navbar navbar-expand-md py-md-1">
+    <div class="container">
+      <a class="navbar-brand py-0" href="/">
+        <img width="100px" src="/images/logo.png" alt="logo">
+      </a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="material-symbols-outlined fs-1 text-primary-900">menu</span>
+      </button>
+      <div class="collapse navbar-collapse offset-md-2 offset-lg-3" id="navbarToggler">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0 text-center">
+          
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link "
+                href="/"
+              >
+                <span class="position-relative px-2 py-1">首頁</span>
+              </a>
+            </li>
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link "
+                href="/collection"
+              >
+                <span class="position-relative px-2 py-1">作品集</span>
+              </a>
+            </li>
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link "
+                href="/service"
+              >
+                <span class="position-relative px-2 py-1">服務項目</span>
+              </a>
+            </li>
+          
+            <li class="nav-item mb-4 mb-md-0 me-md-3 me-lg-7">
+              <a
+                class="nav-link active"
+                href="/blog"
+              >
+                <span class="position-relative px-2 py-1">部落格</span>
+              </a>
+            </li>
+          
+            <li class="nav-item ">
+              <a
+                class="nav-link "
+                href="/contact"
+              >
+                <span class="position-relative px-2 py-1">聯絡我</span>
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+  <main>
+  <section class="container pb-7 pb-md-9">
+    <div class="py-7 py-lg-9 mt-lg-9">
+      <h2 class="title-deco mb-3 mb-lg-4 text-center text-primary-700 tracking-wide fw-semibold">部落格</h2>
+      <p class="mb-0 text-center text-primary-500">不定期分享技術文章</p>
+    </div>
+    <div class="row flex-row-reverse mb-lg-9">
+      <div class="col-12 col-lg-3">
+        <aside class="blog__menu px-3 py-4 p-lg-7 bg-primary-100">
+  <ul class="d-flex flex-lg-column justify-content-md-center justify-content-lg-start gap-7 mb-0 p-xxl-7 list-unstyled">
+    <li class="flex-shrink-0">
+      
+      <a href="/blog" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none" type="button">全部文章</a>
+    </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/React/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          React
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/JavaScript/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          JavaScript
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/Java/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Java
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/MySQL/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          MySQL
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/SQL/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          SQL
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/Hook/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Hook
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/TypeScript/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          TypeScript
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          TypeHero
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/XML/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          XML
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/html/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          html
+        </a>
+      </li>
+    
+  </ul>
+</aside>
+      </div>
+
+      <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-React-Hook-useMemo"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-React Hook-useMemo"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2024/1/11
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              Hook
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          React Hook-useMemo
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>根據 React 官方文件中的說明，useMemo 會在渲染期間記住傳入的函式，並且在渲染期間避免重複執行該函式。</p>
+<span id="more"></span>
+
+<h3 id="什麼時候使用-useMemo"><a href="#什麼時候使用-useMemo" class="headerlink" title="什麼時候使用 useMemo"></a>什麼時候使用 useMemo</h3><p>官方文件也強調你應該僅僅把 useMemo 作為性能優化的手段。如果沒有它，你的程式碼就不能正常運作，那麼請先找到潛在的問題並修復它。然後再添加 useMemo 以提高性能。</p>
+<h3 id="useMemo-的使用方式"><a href="#useMemo-的使用方式" class="headerlink" title="useMemo 的使用方式"></a>useMemo 的使用方式</h3><p>useMemo(calculateValue, dependencies)<br>calculateValue:裡頭帶一個 callback 並寫入需要處理的函式<br>dependencies:依賴的值，當這個值改變時，useMemo 才會重新執行</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> result = <span class="title function_">useMemo</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="title function_">add</span>(countA);</span><br><span class="line">&#125;, [countA]);</span><br></pre></td></tr></table></figure>
+
+<h3 id="useMemo-的使用場景"><a href="#useMemo-的使用場景" class="headerlink" title="useMemo 的使用場景"></a>useMemo 的使用場景</h3><p>如下方的例子，如果沒有使用 useMemo，當我們點擊 countB 按鈕時，同樣會執行 add 函式，但是我們只想要 countA 改變時才執行 add 函式，因為我們只在乎 result 的結果而在下方範例中 result 又只有跟 countA 有關係，這時候就可以使用 useMemo 來避免重複執行 add 函式。</p>
+<p>但是附帶一提，其實沒有使用 useMemo 也不會有什麼問題，因為 就頂多是重複執行 add 函式而已，但是如果 add 函式是一個很耗時的函式，那麼就會造成效能上的問題，這時候就可以使用 useMemo 來避免重複執行 add 函式。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">n</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;我被執行了&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> n * n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [countA, setCountA] = <span class="title function_">useState</span>(<span class="number">0</span>);</span><br><span class="line">  <span class="keyword">const</span> [countB, setCountB] = <span class="title function_">useState</span>(<span class="number">0</span>);</span><br><span class="line">  <span class="keyword">const</span> result = <span class="title function_">useMemo</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="title function_">add</span>(countA);</span><br><span class="line">  &#125;, [countA]);</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-xml">          setCountA((countA) =&gt; countA + 1);</span></span><br><span class="line"><span class="language-xml">        &#125;&#125;</span></span><br><span class="line"><span class="language-xml">      &gt;</span></span><br><span class="line"><span class="language-xml">        count is &#123;countA&#125;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">button</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">        <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="language-xml">          setCountB((countB) =&gt; countB + 1);</span></span><br><span class="line"><span class="language-xml">        &#125;&#125;</span></span><br><span class="line"><span class="language-xml">      &gt;</span></span><br><span class="line"><span class="language-xml">        count is &#123;countB&#125;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;result&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </p>
+        <a class="stretched-link" href="/2024/01/11/React-Hook-useMemo/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 30 遲來的完賽"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 30 遲來的完賽"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2024/1/9
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 30 遲來的完賽
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>該給這系列一個交代，去年還在資策會進行培訓，正好在學習 React，看到鐵人賽的活動，就想說來試試看，但是沒想到有點高估自己的能力，到了最後專題的時刻忙得不可開交，在時間分配上沒做好拿捏而停賽了，雖然如此但一職還是想把這個系列補完，但一連串忙下來，回過神來就已經開始在職場上工作了，所以就一直拖到現在，現在終於有時間可以把這個系列補完了，去年的目標也算是達成了吧~</p>
+<span id="more"></span>
+
+        </p>
+        <a class="stretched-link" href="/2024/01/09/Day%2030%20%E9%81%B2%E4%BE%86%E7%9A%84%E5%AE%8C%E8%B3%BD/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 29 React的本質-Library"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 29 React的本質-Library"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2024/1/2
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 29 React的本質-Library
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>雖然 React 現在被稱作 3 大框架其中之一，但是如果現在打開 React 的官網，會發現它的定位是一個 Library，而不是一個 Framework，事實上 React 確實保持著高度靈活性，讓開發者可以自由的選擇其他的 Library 來搭配使用，這也是為什麼 React 能夠在短短幾年內就成為主流的原因之一。甚至在搭配的套件上也有許多不同的選擇，像是 Redux、React-Router、React-Bootstrap 等等，這些套件都是為了滿足不同的需求而生的，而且都是由社群開發的，這也意味著 React 的生態系非常的豐富，而且也有許多的資源可以參考，這也是 React 能夠快速成長的原因之一。今天就來試著用一個簡單的例子來說明 React 的本質吧!</p>
+<span id="more"></span>
+
+<h3 id="使用-CDN-引用-React"><a href="#使用-CDN-引用-React" class="headerlink" title="使用 CDN 引用 React"></a>使用 CDN 引用 React</h3><p>跟許多其他的 Library 一樣，React 也可以透過 CDN 的方式來引用，這樣就不需要透過 npm 或是 yarn 來安裝，，只需要在 HTML 中引用 React 的 CDN 就可以使用了，以下是範例，可以直接複製貼上到 HTML 中，然後用套件 liveserver 打開就可以看到 console 結果了。可以看到 React 跟 ReactDOM 可以是使用的方法，而且還有 babel，這是因為 React 的語法是 JSX，所以需要 babel 來轉換成 JavaScript 才能執行。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;rrot&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span></span></span><br><span class="line"><span class="tag">      <span class="attr">crossorigin</span></span></span><br><span class="line"><span class="tag">      <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/react@18/umd/react.development.js&quot;</span></span></span><br><span class="line"><span class="tag">    &gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span></span></span><br><span class="line"><span class="tag">      <span class="attr">crossorigin</span></span></span><br><span class="line"><span class="tag">      <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/react-dom@18/umd/react-dom.development.js&quot;</span></span></span><br><span class="line"><span class="tag">    &gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/babel&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">React</span>, <span class="title class_">ReactDOM</span>);</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="React-CDN-使用範例"><a href="#React-CDN-使用範例" class="headerlink" title="React CDN 使用範例"></a>React CDN 使用範例</h3><p>接續上一個例子，這次就來試著使用 React 的元件吧!首先要先創造一個元件，然後再把它渲染到 root 根元素上，以下是範例:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;root&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span></span></span><br><span class="line"><span class="tag">      <span class="attr">crossorigin</span></span></span><br><span class="line"><span class="tag">      <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/react@18/umd/react.development.js&quot;</span></span></span><br><span class="line"><span class="tag">    &gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span></span></span><br><span class="line"><span class="tag">      <span class="attr">crossorigin</span></span></span><br><span class="line"><span class="tag">      <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/react-dom@18/umd/react-dom.development.js&quot;</span></span></span><br><span class="line"><span class="tag">    &gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/babel&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 創造元件</span></span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">const</span> <span class="title function_">App</span> = (<span class="params"></span>) =&gt; &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">return</span> (</span></span><br><span class="line"><span class="language-javascript">          <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="language-xml"><span class="language-javascript">            <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span></span><br><span class="line"><span class="language-xml"><span class="language-javascript">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="language-javascript">        );</span></span><br><span class="line"><span class="language-javascript">      &#125;;</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// 把App元件渲染至root根元素</span></span></span><br><span class="line"><span class="language-javascript">      <span class="title class_">ReactDOM</span>.<span class="title function_">render</span>(<span class="language-xml"><span class="tag">&lt;<span class="name">App</span> /&gt;</span></span>, <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;root&quot;</span>));</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h3><p>大家可以發現，我這裡只是單純的使用 HTML 而已，並沒有使用太複雜的環境建置工具，雖然實務上不會這樣使用，但是我這裡只是想要表達 React 並不是那麼的難以接近，在官方定義成 library 的前提下，至少在一開始的學習上心態上可以抱持輕鬆一點的態度，不用太過於緊張。</p>
+
+        </p>
+        <a class="stretched-link" href="/2024/01/02/Day%2029%20React%E7%9A%84%E6%9C%AC%E8%B3%AA-Library/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-window-body"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-window&amp;body"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/12/29
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              html
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          window&body
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <h2 id="文字版"><a href="#文字版" class="headerlink" title="文字版"></a>文字版</h2><p>在 JavaScript 中，window 和 document.body 是兩個重要的全局物件，它們代表瀏覽器視窗和網頁文件的主體部分。讓我們來看一下它們之間的差異：</p>
+<span id="more"></span>
+
+<ol>
+<li>window：</li>
+</ol>
+<ul>
+<li>window 是瀏覽器中的全局物件，代表整個瀏覽器視窗。</li>
+<li>它是所有全局變數和函式的最高級別的容器，可以透過它來訪問和操作全局範圍的變數和函式。</li>
+<li>它提供了許多瀏覽器相關的屬性和方法，比如 window.location 可以用來獲取當前網址，window.alert() 可以用來顯示警告對話框，等等。</li>
+</ul>
+<ol start="2">
+<li>document.body：</li>
+</ol>
+<ul>
+<li>document.body 是 document 物件的一部分，代表 HTML 文件的主體部分。</li>
+<li>它表示網頁中的 <body> 元素，即網頁中的主要內容區域。 *透過 document.body 可以訪問和操作網頁主體中的元素，例如透過 document.body.appendChild(element) 可以將元素添加到主體中。</li>
+</ul>
+<p>總結來說，window 是瀏覽器視窗的全局物件，而 document.body 是 HTML 文件的主體部分。它們都提供了許多功能來處理瀏覽器和網頁的相關操作。在網頁開發中，你會經常使用這兩個物件來操作網頁和處理事件。</p>
+<h2 id="表格整理版"><a href="#表格整理版" class="headerlink" title="表格整理版"></a>表格整理版</h2><p>當前瀏覽器視窗和網頁文件主體的差異如下：</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th><code>window</code></th>
+<th><code>document.body</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>定義位置</td>
+<td>全局範圍（在所有地方可訪問）</td>
+<td><code>document</code> 物件的一部分（HTML 文件內）</td>
+</tr>
+<tr>
+<td>代表的物件</td>
+<td>瀏覽器視窗</td>
+<td>HTML 文件的主體部分（<code>&lt;body&gt;</code> 元素）</td>
+</tr>
+<tr>
+<td>功能</td>
+<td>提供瀏覽器相關的屬性和方法</td>
+<td>提供操作網頁主體內容的屬性和方法</td>
+</tr>
+<tr>
+<td>例子</td>
+<td><code>window.location</code></td>
+<td><code>document.body.appendChild(element)</code></td>
+</tr>
+<tr>
+<td>使用場景</td>
+<td>瀏覽器操作、全局變數和函式</td>
+<td>操作網頁內容、處理網頁事件</td>
+</tr>
+</tbody></table>
+<p><code>window</code> 物件是瀏覽器中的全局物件，它提供了許多瀏覽器相關的屬性和方法，可以在任何地方訪問。而 <code>document.body</code> 則是 <code>document</code> 物件的一部分，代表 HTML 文件的主體部分，主要用於操作網頁主體內容，例如添加元素或處理事件。在網頁開發中，你會經常使用這兩個物件來處理瀏覽器和網頁的相關操作。</p>
+
+        </p>
+        <a class="stretched-link" href="/2023/12/29/window-body/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-use-ejs-in-html"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-在 html 使用 ejs 的方法"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/12/29
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              ejs
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          在 html 使用 ejs 的方法
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <h3 id="ejs-常用簡單語法介紹"><a href="#ejs-常用簡單語法介紹" class="headerlink" title="ejs 常用簡單語法介紹"></a>ejs 常用簡單語法介紹</h3><p>1.撰寫程式邏輯</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="string">&quot;這裡寫程式邏輯&quot;</span> %&gt;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<p>2.傳遞參數</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%= <span class="string">&quot;傳遞參數&quot;</span> %&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3.傳遞 HTML 語法</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- <span class="string">&quot;傳遞HTML語法&quot;</span> %&gt;</span><br></pre></td></tr></table></figure>
+
+<p>&lt;%&#x3D; %&gt; 和 &lt;%- %&gt;差別<br>“&#x3D;”:會完整傳遞<br>“-“:它看得懂 HTML 語法</p>
+<p>4.匯入 ejs:有兩個參數<br>第一個參數是路徑<br>第二個參數是要傳進去的變數要用物件包起來，有點像 React 的 Props</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- <span class="title function_">include</span>(<span class="string">&quot;./layout/test&quot;</span>,&#123;element,id&#125;) %&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><p>1.ejs 模板</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//檔名:test.ejs</span></span><br><span class="line">&lt;h1&gt;hello world &lt;%= element %&gt;&lt;%= id %&gt;&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2.要寫的 html，只列 body</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">let</span> name=[<span class="string">&quot;Robin&quot;</span>,<span class="string">&quot;Amy&quot;</span>,<span class="string">&quot;Ann&quot;</span>] %&gt;<span class="comment">//這裡是定義變數，未來可能會打API存在這</span></span><br><span class="line">&lt;% name.<span class="title function_">map</span>(<span class="function">(<span class="params">element,id</span>)=&gt;</span> &#123; %&gt;<span class="comment">//因為中間要塞這個可以轉譯HTML的語法，所以拆開來寫</span></span><br><span class="line">&lt;%- <span class="title function_">include</span>(<span class="string">&quot;./layout/test&quot;</span>,&#123;element,id&#125;) %&gt;<span class="comment">//匯入剛剛的ejs模板並帶入變數</span></span><br><span class="line">&lt;% &#125;); %&gt;<span class="comment">//因為中間要塞這個可以轉譯HTML的語法，所以拆開來寫</span></span><br></pre></td></tr></table></figure>
+
+<p>3.完成結果如下<br></p>
+
+        </p>
+        <a class="stretched-link" href="/2023/12/29/use-ejs-in-html/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-20231228-first"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-部落格介紹"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/12/29
+            </small>
+          </p>
+
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          部落格介紹
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <h2 id="關於我"><a href="#關於我" class="headerlink" title="關於我"></a>關於我</h2><p>剛踏入前端職場的小菜雞，平常喜歡看看技術文章，順便做做筆記，有時候也會寫一些奇怪的東西，歡迎來到我的部落格。</p>
+
+        </p>
+        <a class="stretched-link" href="/2023/12/29/20231228-first/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
+        
+      </ul>
+    </div>
+
+    <nav class="mb-7 mb-md-9" aria-label="Page navigation">
+      <ul class="pagination justify-content-center gap-3">
+        
+          <li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/">1</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/2/">2</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/3/">3</a></li><li class="page-item"><span class="page-link text-primary-700 rounded-1 border-0 active">4</span></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/5/">5</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/6/">6</a></li><span class="space">&hellip;</span><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/9/">9</a></li>
+        
+      </ul>
+    </nav>
+  </section>
+    
+</main>
+
+
+  <footer
+    class="py-7"
+    style="background-image: url('/images/footer-bg-lg.png');
+      background-repeat: no-repeat;
+      background-size: cover;"
+  >
+  <div class="container">
+    <div class="row row-gap-7 justify-content-between align-items-center my-md-7">
+      <div class="col-12 col-md-4 col-lg-3">
+        <img
+          class="mb-4"
+          style="width: 120px;"
+          src="/images/logo.svg" alt="logo"
+        >
+        <p class="mb-4 fs-5 text-primary-700">歡迎填寫表單，或直接與我聯絡！</p>
+        <a
+          class="link-primary-500 fs-5 text-decoration-none" href="mailto:service@hexschool.com">service@hexschool.com</a>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+        <a class="btn btn-lg icon-link link-primary-500 w-100 px-4 mb-4 lh-base text-start fw-bold text-primary-50 bg-primary-900" href="#">
+          <svg class="bi display-4" width="56" height="56" viewBox="0 0 56 56" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 13H39V43H16L16 13ZM13 13C13 11.3431 14.3431 10 16 10H39C40.6569 10 42 11.3431 42 13V43C42 44.6569 40.6569 46 39 46H16C14.3431 46 13 44.6569 13 43V13ZM22 20C22 20.8284 21.3284 21.5 20.5 21.5C19.6716 21.5 19 20.8284 19 20C19 19.1716 19.6716 18.5 20.5 18.5C21.3284 18.5 22 19.1716 22 20ZM22 27C22 27.8284 21.3284 28.5 20.5 28.5C19.6716 28.5 19 27.8284 19 27C19 26.1716 19.6716 25.5 20.5 25.5C21.3284 25.5 22 26.1716 22 27ZM20.5 35.5C21.3284 35.5 22 34.8284 22 34C22 33.1716 21.3284 32.5 20.5 32.5C19.6716 32.5 19 33.1716 19 34C19 34.8284 19.6716 35.5 20.5 35.5ZM24 20C24 19.1716 24.6716 18.5 25.5 18.5H33.5C34.3284 18.5 35 19.1716 35 20C35 20.8284 34.3284 21.5 33.5 21.5H25.5C24.6716 21.5 24 20.8284 24 20ZM25.5 25.5C24.6716 25.5 24 26.1716 24 27C24 27.8284 24.6716 28.5 25.5 28.5H33.5C34.3284 28.5 35 27.8284 35 27C35 26.1716 34.3284 25.5 33.5 25.5H25.5ZM24 34C24 33.1716 24.6716 32.5 25.5 32.5H33.5C34.3284 32.5 35 33.1716 35 34C35 34.8284 34.3284 35.5 33.5 35.5H25.5C24.6716 35.5 24 34.8284 24 34Z" fill="currentcolor"/>
+          </svg>
+          填寫表單
+        </a>
+        <a class="btn btn-lg w-100 px-4 mb-4 lh-base text-start link-primary-500 text-primary-700 bg-primary-50" href="#">
+          <i class="bi bi-instagram align-middle px-2 fs-1"></i>
+          hexschool_demo
+        </a>
+        <a class="btn btn-lg w-100 px-4 lh-base text-start link-primary-500 text-primary-700 bg-primary-50" href="#">
+          <i class="bi bi-facebook align-middle px-2 fs-1"></i>
+          hexschoolTW
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+<script src="/js/swiper.js"></script>
+
+</body>
+</html>
