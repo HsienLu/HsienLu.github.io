@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day20-7_sihsxw.png">
 <meta property="og:image" content="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day20-8_s5uoza.png">
 <meta property="article:published_time" content="2023-10-04T05:54:31.000Z">
-<meta property="article:modified_time" content="2024-06-05T07:35:34.473Z">
+<meta property="article:modified_time" content="2024-06-05T09:47:27.607Z">
 <meta property="article:author" content="HsienLu">
 <meta property="article:tag" content="React">
 <meta property="article:tag" content="JavaScript">
@@ -45,7 +45,8 @@
   
 <link rel="stylesheet" href="/css/all.min.css">
 
-<meta name="generator" content="Hexo 7.2.0"><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+<meta name="generator" content="Hexo 7.2.0"><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style><link rel="stylesheet" href="/css/prism-vs.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 <body>
   <header
@@ -178,13 +179,6 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          TypeHero
-        </a>
-      </li>
-    
-      
-      <li class="flex-shrink-0">
         <a href="/tags/XML/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           XML
         </a>
@@ -194,6 +188,13 @@
       <li class="flex-shrink-0">
         <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           ejs
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          TypeHero
         </a>
       </li>
     
@@ -228,16 +229,18 @@
 <h3 id="Node-下載與安裝"><a href="#Node-下載與安裝" class="headerlink" title="Node 下載與安裝"></a>Node 下載與安裝</h3><p>Node.js:<a target="_blank" rel="noopener" href="https://nodejs.org/en">https://nodejs.org/en</a><br>推薦 LTS 版本，因為是長期維護的版本使用起來也會比最新版本還穩定，而安裝方式跟其他應用程式一樣簡單，只要一直按下一步就可以安裝完成了。</p>
 <h2 id="使用-Vite-進行環境建置"><a href="#使用-Vite-進行環境建置" class="headerlink" title="使用 Vite 進行環境建置"></a>使用 Vite 進行環境建置</h2><p><strong>1.找到 VS Code 的終端機</strong><br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897452/ith2023-article-pic/day20-1_txslex.png"></p>
 <p><strong>2.輸入指令</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm create vite@latest <span class="comment">//創建最新版本的專案</span></span><br></pre></td></tr></table></figure>
-
+<pre class="line-numbers language-javascript"><code class="language-javascript">npm create vite@latest <span class="token comment" spellcheck="true">//創建最新版本的專案</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><strong>3.然後 vite 會詢問一系列的設定</strong></p>
 <p>(1)確定是否要執行程序&#x3D;&gt;按 y<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897452/ith2023-article-pic/day20-2_iadmfb.png"></p>
 <p>(2)取專案名子&#x3D;&gt;可以隨便取或是用預設<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897452/ith2023-article-pic/day20-3_jh78me.png"></p>
 <p>(3)選擇哪一個框架&#x3D;&gt;選擇 React<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897452/ith2023-article-pic/day20-4_kqvokg.png"></p>
 <p>(4)選擇使用哪一個語言&#x3D;&gt;選擇 JavaScript<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day20-5_l0n73d.png"></p>
 <p>(5)基本上就大致完成了，接下來是進行測試有無建置成功的部份，也很單純就照著 vite 提供的指令一行一行打就好了</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd vite-project <span class="comment">//切換到專案目錄的資料夾</span></span><br><span class="line">npm install <span class="comment">//安裝模組</span></span><br><span class="line">npm run dev <span class="comment">//開啟測試環境</span></span><br></pre></td></tr></table></figure>
-
+<pre class="line-numbers language-javascript"><code class="language-javascript">  cd vite<span class="token operator">-</span>project <span class="token comment" spellcheck="true">//切換到專案目錄的資料夾</span>
+  npm install <span class="token comment" spellcheck="true">//安裝模組</span>
+  npm run dev <span class="token comment" spellcheck="true">//開啟測試環境</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p><strong>4.如此一來就完成了，理論上應該是可以在下列網址(<a target="_blank" rel="noopener" href="http://localhost:5173/)%E4%B8%AD%E7%9C%8B%E5%88%B0%E4%B8%8B%E9%9D%A2%E7%9A%84%E7%95%AB%E9%9D%A2">http://localhost:5173/)中看到下面的畫面</a></strong><br>(1)終端機回饋的網址<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day20-6_j7gjkt.png"><br>(2)出現的測試畫面<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day20-7_sihsxw.png"></p>
 <p><strong>5.操作的檔案位置(src&#x3D;&gt;App.js)</strong><br>位在 src 資料夾的 App.js，未來的操作範例都可以在這個檔案進行。<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897453/ith2023-article-pic/day20-8_s5uoza.png"></p>
 <h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>雖然步驟還是有點多或是有點麻煩，但如果要在本地端開發，這已經是相對簡單快速的方法了，明天就會正式進入 React 囉~</p>

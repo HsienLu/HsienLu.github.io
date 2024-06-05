@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897450/ith2023-article-pic/day2%20My%20VS%20Code%20Tour/11_le2a0b.png">
 <meta property="og:image" content="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897450/ith2023-article-pic/day2%20My%20VS%20Code%20Tour/12_hj6cta.png">
 <meta property="article:published_time" content="2023-09-16T05:54:31.000Z">
-<meta property="article:modified_time" content="2024-06-05T07:35:34.473Z">
+<meta property="article:modified_time" content="2024-06-05T09:47:27.607Z">
 <meta property="article:author" content="HsienLu">
 <meta property="article:tag" content="React">
 <meta property="article:tag" content="JavaScript">
@@ -49,7 +49,8 @@
   
 <link rel="stylesheet" href="/css/all.min.css">
 
-<meta name="generator" content="Hexo 7.2.0"><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+<meta name="generator" content="Hexo 7.2.0"><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style><link rel="stylesheet" href="/css/prism-vs.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 <body>
   <header
@@ -182,13 +183,6 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          TypeHero
-        </a>
-      </li>
-    
-      
-      <li class="flex-shrink-0">
         <a href="/tags/XML/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           XML
         </a>
@@ -198,6 +192,13 @@
       <li class="flex-shrink-0">
         <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           ejs
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          TypeHero
         </a>
       </li>
     
@@ -248,7 +249,10 @@
 <li><p>括弧顏色:可以協助整理巢狀結構</p>
 <ul>
 <li>設置方法:<ul>
-<li>在設定中找到 “Colorized Bracket Pairs”，進入 setting.json，貼上下列程式碼<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897451/ith2023-article-pic/day2%20My%20VS%20Code%20Tour/5_efvzja.png" alt="圖 4"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;editor.bracketPairColorization.enabled&quot;</span>: <span class="literal">true</span>, <span class="comment">//Bracket Pair Colorizer 協助大中小括號（&#123;&#125;、[]、()）一的獨立補上不同色彩(不用可以刪掉)</span></span><br><span class="line"><span class="string">&quot;editor.guides.bracketPairs&quot;</span>: <span class="string">&quot;active&quot;</span>, <span class="comment">//Bracket Pair Colorizer 協助大中小括號（&#123;&#125;、[]、()）一一(不用可以刪掉)</span></span><br></pre></td></tr></table></figure></li>
+<li>在設定中找到 “Colorized Bracket Pairs”，進入 setting.json，貼上下列程式碼<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897451/ith2023-article-pic/day2%20My%20VS%20Code%20Tour/5_efvzja.png" alt="圖 4"><pre class="line-numbers language-javaScript"><code class="language-javaScript">"editor.bracketPairColorization.enabled": true, //Bracket Pair Colorizer 協助大中小括號（&#123;&#125;、[]、()）一的獨立補上不同色彩(不用可以刪掉)
+"editor.guides.bracketPairs": "active", //Bracket Pair Colorizer 協助大中小括號（&#123;&#125;、[]、()）一一(不用可以刪掉)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
 </ul>
 </li>
 <li>效果:<br><img src="https://res.cloudinary.com/dvxnfdkhf/image/upload/v1703897451/ith2023-article-pic/day2%20My%20VS%20Code%20Tour/6_acjyt8.png" alt="圖 5"></li>
