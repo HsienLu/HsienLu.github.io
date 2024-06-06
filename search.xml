@@ -7,6 +7,42 @@
 ]]></content>
   </entry>
   <entry>
+    <title>VS Code 常用快捷鍵</title>
+    <url>/2024/06/06/VS-Code-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%8D%B5/</url>
+    <content><![CDATA[<p>這些是我常用的快捷鍵做一下紀錄：</p>
+<span id="more"></span>
+
+<h2 id="導航"><a href="#導航" class="headerlink" title="導航"></a>導航</h2><ul>
+<li><strong>Cmd + B</strong>：切換檔案總管</li>
+<li><strong>Cmd + P</strong>：按名稱搜尋檔案</li>
+<li><strong>Cmd + Shift + P</strong>：快速進入任何設置</li>
+<li>**Ctrl + &#96;**：切換終端機開關</li>
+</ul>
+<h2 id="編輯"><a href="#編輯" class="headerlink" title="編輯"></a>編輯</h2><ul>
+<li>**Cmd +&#x2F;-**：放大&#x2F;縮小</li>
+<li><strong>Cmd + Shift + F</strong>：在整個專案中搜尋單詞或短語</li>
+<li><strong>Cmd + W</strong>：關閉當前檔案</li>
+<li><strong>Cmd + Shift + T</strong>：重新打開最近關閉的檔案</li>
+<li><strong>Cmd + D</strong>：選擇當前單詞的下一個出現位置以進行多重編輯</li>
+<li><strong>Option + 上&#x2F;下</strong>：移動當前行</li>
+<li><strong>Option + Shift + 上&#x2F;下</strong>：複製當前行</li>
+<li><strong>Cmd + X</strong>：剪切當前行</li>
+<li><strong>Cmd + 左&#x2F;右</strong>：移動到行的開始&#x2F;結束</li>
+<li><strong>Option + 左&#x2F;右</strong>：向左&#x2F;右移動一個單詞</li>
+</ul>
+<h2 id="Finder-Explorer-整合"><a href="#Finder-Explorer-整合" class="headerlink" title="Finder&#x2F;Explorer 整合"></a>Finder&#x2F;Explorer 整合</h2><ul>
+<li><strong>右鍵點擊文件夾</strong>：選擇“在文件夾中查找”以僅在特定目錄中搜尋</li>
+<li><strong>右鍵點擊檔案</strong>：選擇“在 Finder 中顯示”（或其作業系統等效選項）以打開檔案位置</li>
+</ul>
+]]></content>
+      <categories>
+        <category>tools</category>
+      </categories>
+      <tags>
+        <tag>VS Code</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2024 六角軟體工程師體驗營</title>
     <url>/2024/05/30/2024-%E5%85%AD%E8%A7%92%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E5%B8%AB%E9%AB%94%E9%A9%97%E7%87%9F/</url>
     <content><![CDATA[<p>這次來參加軟體工程師體驗營，除了香香的設計稿和模板外，主要是想看看這一年來進步了多少。</p>

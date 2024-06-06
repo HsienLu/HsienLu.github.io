@@ -171,6 +171,20 @@
     
       
       <li class="flex-shrink-0">
+        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          TypeHero
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/VS-Code/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          VS Code
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
         <a href="/tags/XML/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           XML
         </a>
@@ -180,13 +194,6 @@
       <li class="flex-shrink-0">
         <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           ejs
-        </a>
-      </li>
-    
-      
-      <li class="flex-shrink-0">
-        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          TypeHero
         </a>
       </li>
     
@@ -202,6 +209,103 @@
       </div>
 
       <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-MySQL-SQL語法介紹-DDL 資料定義語言"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-MySQL-SQL語法介紹-DDL 資料定義語言"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2024/1/18
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              MySQL
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              SQL
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          MySQL-SQL語法介紹-DDL 資料定義語言
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>DDL(Data Definition Language) 資料定義語言</p>
+<span id="more"></span>
+
+<h3 id="操作資料庫"><a href="#操作資料庫" class="headerlink" title="操作資料庫"></a>操作資料庫</h3><p>####查詢資料庫</p>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SHOW</span> <span class="token keyword">DATABASES</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>####新增資料庫</p>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">DATABASE</span> 資料庫名<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>####刪除資料庫</p>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">DROP</span> <span class="token keyword">DATABASE</span> 資料庫名<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>####使用資料庫</p>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">USE</span> 資料庫名<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>####查看目前使用的數據庫</p>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token keyword">DATABASE</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="操作資料表"><a href="#操作資料表" class="headerlink" title="操作資料表"></a>操作資料表</h3><h4 id="查詢所有資料表"><a href="#查詢所有資料表" class="headerlink" title="查詢所有資料表"></a>查詢所有資料表</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SHOW</span> <span class="token keyword">TABLES</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="查詢資料表結構"><a href="#查詢資料表結構" class="headerlink" title="查詢資料表結構"></a>查詢資料表結構</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">DESC</span> 資料表名<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="新增資料表"><a href="#新增資料表" class="headerlink" title="新增資料表"></a>新增資料表</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> 資料表名<span class="token punctuation">(</span>
+    欄位名<span class="token number">1</span> 資料型態<span class="token number">1</span><span class="token punctuation">,</span>
+    欄位名<span class="token number">2</span> 資料型態<span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="刪除資料表"><a href="#刪除資料表" class="headerlink" title="刪除資料表"></a>刪除資料表</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span> 資料表名<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="修改資料表"><a href="#修改資料表" class="headerlink" title="修改資料表"></a>修改資料表</h4><p>####修改資料表名稱</p>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> 資料表名 <span class="token keyword">RENAME</span> 新資料表名<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>####新增欄位</p>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> 資料表名 <span class="token keyword">ADD</span> 欄位名 資料型態<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>####修改資料類型</p>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> 資料表名 <span class="token keyword">MODIFY</span> 欄位名 新資料型態<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>####修改資料表欄位名稱和資料類型</p>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> 資料表名 CHANGE 欄位名 新欄位名 新資料型態<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>####刪除欄位</p>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> 資料表名 <span class="token keyword">DROP</span> 欄位名<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+        </p>
+        <a class="stretched-link" href="/2024/01/18/MySQL-SQL%E8%AA%9E%E6%B3%95%E4%BB%8B%E7%B4%B9-DDL%20%E8%B3%87%E6%96%99%E5%AE%9A%E7%BE%A9%E8%AA%9E%E8%A8%80/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
         
           
    <!-- prevent image appear -->
@@ -637,51 +741,6 @@
 
         </p>
         <a class="stretched-link" href="/2023/12/29/use-ejs-in-html/"></a>
-      </div>
-    </div>
-  </article>
-</li>
-
-        
-          
-   <!-- prevent image appear -->
-
-
-<li
-  id="post-20231228-first"
-  class="card border-0"
-  itemprop="blogPost"
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
->
-  <article class="row g-0">
-    <div class="col-12 col-lg-4">
-      <img
-        src="/images/default-cover.png"
-        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
-        alt="article-部落格介紹"
-      >
-    </div>
-    <div class="col-12 col-lg-8">
-      <div class="card-body pt-lg-0 pe-lg-0">
-        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
-          <p class="card-text mb-0 fs-6 text-primary-600">
-            <small class="text-body-secondary">
-              2023/12/29
-            </small>
-          </p>
-
-          
-
-        </div>
-        <h5 class="card-title mb-3 text-primary-700">
-          部落格介紹
-        </h5>
-        <div class="cutoff-text mb-0 text-primary-700">
-          <h2 id="關於我"><a href="#關於我" class="headerlink" title="關於我"></a>關於我</h2><p>剛踏入前端職場的小菜雞，平常喜歡看看技術文章，順便做做筆記，有時候也會寫一些奇怪的東西，歡迎來到我的部落格。</p>
-
-        </p>
-        <a class="stretched-link" href="/2023/12/29/20231228-first/"></a>
       </div>
     </div>
   </article>
