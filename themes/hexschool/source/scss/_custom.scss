@@ -90,7 +90,7 @@
 
 /* Background */
 .bg-white-overlay {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
 }
 
@@ -232,4 +232,10 @@ tr:hover {
 pre{
   margin-bottom: 1rem !important;
   border-radius: 0.5rem;
+}
+
+@media (min-width:768px){
+  .w-md-100{
+    width: 100% !important;
+  }
 }
