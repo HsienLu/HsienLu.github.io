@@ -6,10 +6,10 @@ categories: 鐵人賽
 cover: /images/default-cover.png
 ---
 
-在 react 使用遍歷陣列的方法來呈現畫面是挺常見的，我們今天想要呈現一個陣列裡面的資料如下:
+
 
 <!-- more -->
-
+在 react 使用遍歷陣列的方法來呈現畫面是挺常見的，我們今天想要呈現一個陣列裡面的資料如下:
 ```
   const tasks = [
     { id: 1, text: "看完 React的文件 " },
