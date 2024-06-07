@@ -8,6 +8,8 @@ permalink: /404.html
 <!-- markdownlint-disable MD039 MD033 -->
 
 ## 這是一個不存在的頁面
+<!-- 圖片 -->
+![404](./NotFound.png)
 
 很抱歉，你目前存取的頁面並不存在。
 
