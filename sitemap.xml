@@ -362,6 +362,15 @@
   </url>
   
   <url>
+    <loc>https://hsienlu.github.io/2023/09/25/Day%2011%20%E8%A7%A3%E6%A7%8B%E8%B3%A6%E5%80%BC(Destructuring%20assignment)/</loc>
+    
+    <lastmod>2024-06-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hsienlu.github.io/2023/09/23/Day%209%20%E5%87%BD%E5%BC%8F%E8%88%87%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F/</loc>
     
     <lastmod>2024-06-07</lastmod>
@@ -443,15 +452,6 @@
   </url>
   
   <url>
-    <loc>https://hsienlu.github.io/categories/index.html</loc>
-    
-    <lastmod>2024-06-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://hsienlu.github.io/about/index.html</loc>
     
     <lastmod>2024-06-07</lastmod>
@@ -462,6 +462,15 @@
   
   <url>
     <loc>https://hsienlu.github.io/tags/index.html</loc>
+    
+    <lastmod>2024-06-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hsienlu.github.io/categories/index.html</loc>
     
     <lastmod>2024-06-07</lastmod>
     
@@ -488,15 +497,6 @@
   </url>
   
   <url>
-    <loc>https://hsienlu.github.io/2023/09/25/Day%2011%20%E8%A7%A3%E6%A7%8B%E8%B3%A6%E5%80%BC(Destructuring%20assignment)/</loc>
-    
-    <lastmod>2024-06-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://hsienlu.github.io/2023/09/24/Day%2010%20%E7%89%A9%E4%BB%B6(Object)/</loc>
     
     <lastmod>2024-06-07</lastmod>
@@ -515,7 +515,7 @@
   </url>
   
   <url>
-    <loc>https://hsienlu.github.io/Introduction/index.html</loc>
+    <loc>https://hsienlu.github.io/404.html</loc>
     
     <lastmod>2024-06-07</lastmod>
     
@@ -524,7 +524,7 @@
   </url>
   
   <url>
-    <loc>https://hsienlu.github.io/404.html</loc>
+    <loc>https://hsienlu.github.io/Introduction/index.html</loc>
     
     <lastmod>2024-06-07</lastmod>
     
@@ -612,14 +612,14 @@
   </url>
   
   <url>
-    <loc>https://hsienlu.github.io/tags/ejs/</loc>
+    <loc>https://hsienlu.github.io/tags/html/</loc>
     <lastmod>2024-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://hsienlu.github.io/tags/html/</loc>
+    <loc>https://hsienlu.github.io/tags/ejs/</loc>
     <lastmod>2024-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -677,14 +677,14 @@
   </url>
   
   <url>
-    <loc>https://hsienlu.github.io/categories/javascript/</loc>
+    <loc>https://hsienlu.github.io/categories/HTML/</loc>
     <lastmod>2024-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://hsienlu.github.io/categories/HTML/</loc>
+    <loc>https://hsienlu.github.io/categories/javascript/</loc>
     <lastmod>2024-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
