@@ -167,8 +167,22 @@
     
       
       <li class="flex-shrink-0">
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
         <a href="/tags/XML/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           XML
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Hooks
         </a>
       </li>
     
@@ -179,18 +193,103 @@
         </a>
       </li>
     
-      
-      <li class="flex-shrink-0">
-        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          ejs
-        </a>
-      </li>
-    
   </ul>
 </aside>
       </div>
 
       <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-TypeScript-常用功能-Readonly"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-TypeScript-常用功能-Readonly"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2024/1/31
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              TypeScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          TypeScript-常用功能-Readonly
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>Readonly 其實從字面上很好理解，就是指能讀取的意思。<br>根據官方文件的說方就是不能被創造一個 Type 的型別物件，其設置的屬性不能被重新賦值。</p>
+<blockquote>
+<p>Constructs a type with all properties of Type set to readonly, meaning the properties of the constructed type cannot be reassigned.</p>
+</blockquote>
+<span id="more"></span>
+
+<h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><ol>
+<li>整個型別都不能被重新賦值</li>
+</ol>
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">interface</span> <span class="token class-name">Todo</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  title<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> todo<span class="token punctuation">:</span> Readonly<span class="token operator">&lt;</span>Todo<span class="token operator">></span> <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  title<span class="token punctuation">:</span> <span class="token string">"Delete inactive users"</span><span class="token punctuation">,</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+
+todo<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">"Hello"</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ol start="2">
+<li>可以個別設置屬性為 readonly</li>
+</ol>
+<pre class="line-numbers language-typescript"><code class="language-typescript">type Foo <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  readonly bar<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">;</span>
+  readonly bas<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 初始化</span>
+<span class="token keyword">const</span> foo<span class="token punctuation">:</span> Foo <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>bar<span class="token punctuation">:</span> <span class="token number">123</span><span class="token punctuation">,</span> bas<span class="token punctuation">:</span> <span class="token number">456</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 不能被重新賦值</span>
+foo<span class="token punctuation">.</span>bar <span class="token operator">=</span> <span class="token number">456</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="實際使用場景"><a href="#實際使用場景" class="headerlink" title="實際使用場景"></a>實際使用場景</h4><p>React 中的 props 就是一個很好的使用場景，因為 React 為單向資料流，子組件不能修改父組件傳遞過來的 props，所以可以使用 Readonly 來設置 props 的型別，預防突然犯傻直接修改了 props。</p>
+<pre class="line-numbers language-tsx"><code class="language-tsx">interface MyComponentProps &#123;
+  readonly name: string;
+  readonly age: number;
+&#125;
+
+function MyComponent(props: MyComponentProps) &#123;
+  // 使用 props.name，但不能修改它
+  return <div>&#123;props.name&#125;</div>;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+        </p>
+        <a class="stretched-link" href="/2024/01/31/TypeScript-%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD-Readonly/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
         
           
    <!-- prevent image appear -->
@@ -768,169 +867,6 @@
 
         </p>
         <a class="stretched-link" href="/2024/01/25/Java-%E7%89%B9%E6%AE%8A%E9%A1%9E%E5%88%A5-%E4%BB%8B%E9%9D%A2%E3%80%81%E6%8A%BD%E8%B1%A1%E3%80%81%E6%9E%9A%E8%88%89%E3%80%81%E5%8C%BF%E5%90%8D%E9%A1%9E/"></a>
-      </div>
-    </div>
-  </article>
-</li>
-
-        
-          
-   <!-- prevent image appear -->
-
-
-<li
-  id="post-Java-物件導向的特性"
-  class="card border-0"
-  itemprop="blogPost"
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
->
-  <article class="row g-0">
-    <div class="col-12 col-lg-4">
-      <img
-        src="/images/default-cover.png"
-        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
-        alt="article-Java 物件導向的特性"
-      >
-    </div>
-    <div class="col-12 col-lg-8">
-      <div class="card-body pt-lg-0 pe-lg-0">
-        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
-          <p class="card-text mb-0 fs-6 text-primary-600">
-            <small class="text-body-secondary">
-              2024/1/24
-            </small>
-          </p>
-
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              Java
-            </span>
-          
-
-        </div>
-        <h5 class="card-title mb-3 text-primary-700">
-          Java 物件導向的特性
-        </h5>
-        <div class="cutoff-text mb-0 text-primary-700">
-          <p>Java 身為標準的物件導向程式設計語言，物件導向程式設計的特性有繼承、多型、多載、重寫，這些特性都是為了讓程式碼更加的模組化，讓程式碼更加的容易維護與擴充。</p>
-<span id="more"></span>
-
-<h3 id="物件導向程式設計的特性"><a href="#物件導向程式設計的特性" class="headerlink" title="物件導向程式設計的特性"></a>物件導向程式設計的特性</h3><h4 id="繼承-Extends"><a href="#繼承-Extends" class="headerlink" title="繼承(Extends)"></a>繼承(Extends)</h4><p>1.父類別是在子類別建構出來前就就建構出來的，子類別會繼承父類別的屬性與方法，完成父類別的建構後。 2.以物件的概念，每一個子類對應到的父類都是各自獨立的，而子類繼承父類的屬性與方法，就是子類繼承父類的物件。<br>3.super()可以呼叫父類的建構方法，super.可以呼叫父類的屬性與方法。this()可以呼叫自己的建構方法，this.可以呼叫自己的屬性與方法。 4.如果父類提供建構方法，那麼 JVM 不會自動提供預設建構方法，所以子類必須要有對應的建構方法，否則會出現錯誤。</p>
-<p>以 JAVA 為例，繼承的語法如下：</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">class</span> 父類別 <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// 父類別的屬性與方法</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token keyword">class</span> 子類別 <span class="token keyword">extends</span> 父類別 <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// 子類別的屬性與方法</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="多型-Polymorphism"><a href="#多型-Polymorphism" class="headerlink" title="多型(Polymorphism)"></a>多型(Polymorphism)</h4><p>所謂的多型，就是同一個物件在不同場景下，會有不同的表現形式。 1.多型其實會在對物件的使用場景下進行限制，例如：父類別的物件只能使用父類別的屬性與方法。</p>
-<pre class="line-numbers language-java"><code class="language-java">
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">helloworld</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    Person p1<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    p1<span class="token punctuation">.</span><span class="token function">sayPerson</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    Person p2<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Boy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    p2<span class="token punctuation">.</span><span class="token function">sayPerson</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    p2<span class="token punctuation">.</span><span class="token function">sayBoy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//這裡會出現錯誤，只能使用Person的屬性與方法，不能使用Boy的屬性與方法。</span>
-    <span class="token comment" spellcheck="true">//改成如下</span>
-    Boy b2<span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Boy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    b2<span class="token punctuation">.</span><span class="token function">sayBoy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    Person p3<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Girl</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    p3<span class="token punctuation">.</span><span class="token function">sayPerson</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    p3<span class="token punctuation">.</span><span class="token function">sayGirl</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//這裡會出現錯誤，只能使用Person的屬性與方法，不能使用Girl的屬性與方法。</span>
-    <span class="token comment" spellcheck="true">////改成如下</span>
-    Girl g3<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Girl</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    g3<span class="token punctuation">.</span><span class="token function">sayGirl</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-       <span class="token keyword">void</span> <span class="token function">sayPerson</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-              System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"I am a person"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-       <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">class</span> <span class="token class-name">Boy</span> <span class="token keyword">extends</span> <span class="token class-name">Person</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token keyword">void</span> <span class="token function">sayBoy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"I am a boy"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="多載-Overload"><a href="#多載-Overload" class="headerlink" title="多載(Overload)"></a>多載(Overload)</h4><p>1.一個類別中，不能重複宣告相同名稱的方法，這裡的相同是指方法名稱與參數列表都相同，與返回值無關，但是可以宣告相同名稱的方法，只要參數列表不同(個數、順序、類型)即可，這就是所謂的方法多載。</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> basic<span class="token punctuation">;</span>
-
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">helloworld</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        LoginApp loginApp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LoginApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        loginApp<span class="token punctuation">.</span><span class="token function">Login</span><span class="token punctuation">(</span><span class="token string">"123456789"</span><span class="token punctuation">,</span><span class="token string">"123456"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        loginApp<span class="token punctuation">.</span><span class="token function">Login</span><span class="token punctuation">(</span><span class="token number">123456789</span><span class="token punctuation">,</span><span class="token string">"123456"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        loginApp<span class="token punctuation">.</span><span class="token function">Login</span><span class="token punctuation">(</span><span class="token string">"11@11"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">LoginApp</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token keyword">void</span> <span class="token function">Login</span><span class="token punctuation">(</span>String account<span class="token punctuation">,</span>String password<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"帳號密碼登入"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token keyword">void</span> <span class="token function">Login</span><span class="token punctuation">(</span>Number phone<span class="token punctuation">,</span>String password<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"手機號碼密碼登入"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token keyword">void</span> <span class="token function">Login</span><span class="token punctuation">(</span>String email<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"email登入"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>2.構造方法也有多載</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> basic<span class="token punctuation">;</span>
-
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">helloworld</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
- LoginApp loginApp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LoginApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    loginApp<span class="token punctuation">.</span><span class="token function">LoginApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    loginApp<span class="token punctuation">.</span><span class="token function">LoginApp</span><span class="token punctuation">(</span><span class="token string">"AAA"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">LoginApp</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-     <span class="token keyword">void</span> <span class="token function">LoginApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"原生"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-     <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-     <span class="token keyword">void</span> <span class="token function">LoginApp</span><span class="token punctuation">(</span>String name<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span> name<span class="token operator">+</span><span class="token string">"重载"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-     <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="重寫-Override"><a href="#重寫-Override" class="headerlink" title="重寫(Override)"></a>重寫(Override)</h4><p>子類別可以重寫父類別的方法，但是要注意的是，子類別重寫父類別的方法時，方法名稱、參數列表、返回值都要相同。 1.一個類能使用什麼方法取決於引用的變數類型 2.一個類能使用什麼屬性取決於引用的變數類型 3.一個類的方法如何實現取決於實際的物件類型 4.一個類的屬性具體的使用不需要考慮實際的物件，屬性在哪裡宣告在哪裡使用</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> basic<span class="token punctuation">;</span>
-
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">helloworld</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        Child c <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Child</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        c<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Parent</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        String name <span class="token operator">=</span> <span class="token string">"Parent"</span><span class="token punctuation">;</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"I'm a parent"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Child</span> <span class="token keyword">extends</span> <span class="token class-name">Parent</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        String name <span class="token operator">=</span> <span class="token string">"Child"</span><span class="token punctuation">;</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"I'm a child"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-        </p>
-        <a class="stretched-link" href="/2024/01/24/Java-%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91%E7%9A%84%E7%89%B9%E6%80%A7/"></a>
       </div>
     </div>
   </article>

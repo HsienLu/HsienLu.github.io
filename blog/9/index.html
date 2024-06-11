@@ -167,8 +167,22 @@
     
       
       <li class="flex-shrink-0">
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
         <a href="/tags/XML/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           XML
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Hooks
         </a>
       </li>
     
@@ -179,18 +193,96 @@
         </a>
       </li>
     
-      
-      <li class="flex-shrink-0">
-        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          ejs
-        </a>
-      </li>
-    
   </ul>
 </aside>
       </div>
 
       <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 6 其他的陣列方法 slice &amp; splice"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 6 其他的陣列方法 slice &amp; splice"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/20
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 6 其他的陣列方法 slice & splice
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <h1 id="Day-6-其他的陣列方法-slice-splice"><a href="#Day-6-其他的陣列方法-slice-splice" class="headerlink" title="Day 6 其他的陣列方法 slice &amp; splice"></a>Day 6 其他的陣列方法 slice &amp; splice</h1><p>前兩天介紹的 4 個方法:shift,unshift,pop,push 都有一個共通點是，都會修改原本的陣列。<br>接下來要介紹的 slice 與上述的不同，&#x3D;&#x3D;不會改變原本的陣列&#x3D;&#x3D;，會傳回一個新陣列值</p>
+<span id="more"></span>
+
+<h3 id="slice"><a href="#slice" class="headerlink" title=".slice()"></a>.slice()</h3><p>引用 MDN 的敘述</p>
+<blockquote>
+<p>方法會回傳一個新陣列物件，為原陣列選擇之 begin 至 end（不含 end）部分的淺拷貝（shallow copy）。而原本的陣列將不會被修改。</p>
+</blockquote>
+<p>講的白話一點就是，帶入兩個參數分別是開始的 index 和結束的 index，然後把這之間 &#x3D;&#x3D;(不包含結束的)&#x3D;&#x3D; 的陣列複製到新的陣列上，舉例如下:</p>
+<pre class="line-numbers language-=javascript"><code class="language-=javascript">let array=[1,2,3,4,5]
+let newArray=array.slice(0,2)
+console.log(newArray)//輸出:[1,2]
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h4 id="有三點要注意"><a href="#有三點要注意" class="headerlink" title="有三點要注意"></a>有三點要注意</h4><p>1.帶入的 index 參數為負值意思就是從尾部算，僅指定位置而已功能依舊不變還是把這之間(不包含結束的)的陣列複製到新的陣列上</p>
+<pre class="line-numbers language-=javascript"><code class="language-=javascript">let array=[1,2,3,4,5]
+let newArray=array.slice(-0,-2)
+console.log(newArray)//輸出:[1,2]
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>2.可以不帶參數，亦即完整的淺拷貝，也就是完全複製一個新陣列</p>
+<pre class="line-numbers language-=javascript"><code class="language-=javascript">let array=[1,2,3,4,5]
+let newArray=array.slice()
+console.log(newArray)//輸出:[1,2,3,4,5]
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>3.可以指輸入一個值，意思是從哪個 index 開始複製</p>
+<pre class="line-numbers language-=javascript"><code class="language-=javascript">let array=[1,2,3,4,5]
+let newArray=array.slice(2)
+console.log(newArray)//輸出:[3,4,5]
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="splice"><a href="#splice" class="headerlink" title=".splice()"></a>.splice()</h3><p>雖然這個函式與 slice 只差一個字但功用卻不一樣，此函式最不一樣的功能是在陣列中插入新成員，但會&#x3D;&#x3D;改變原有的陣列&#x3D;&#x3D;。<br>其用法稍微複雜一點，裡面需要帶三個參數 1.開始的 index 2.往後刪除的個數(可以為 0) 3.要加入的東西<br><strong>.splice(開始的 index,刪除個數,新東西)</strong></p>
+<pre class="line-numbers language-=javascript"><code class="language-=javascript">let array=[1,2,3,4,5]
+array.splice(1,1,"a")
+console.log(array)//輸出:[1,"a",3,4,5]
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="引用資料"><a href="#引用資料" class="headerlink" title="引用資料"></a>引用資料</h2><p>MDN <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">Array.prototype.slice</a></p>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/20/Day%206%20%E5%85%B6%E4%BB%96%E7%9A%84%E9%99%A3%E5%88%97%E6%96%B9%E6%B3%95%20slice%20&%20splice/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
         
           
    <!-- prevent image appear -->

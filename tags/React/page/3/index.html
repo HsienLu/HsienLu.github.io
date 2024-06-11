@@ -167,8 +167,22 @@
     
       
       <li class="flex-shrink-0">
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
         <a href="/tags/XML/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           XML
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Hooks
         </a>
       </li>
     
@@ -179,18 +193,113 @@
         </a>
       </li>
     
-      
-      <li class="flex-shrink-0">
-        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          ejs
-        </a>
-      </li>
-    
   </ul>
 </aside>
       </div>
 
       <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 13 JavaScript 模組(Modules)"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day13 JavaScript 模組(Modules)"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/27
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day13 JavaScript 模組(Modules)
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>模組系統的概念大致上分兩種寫法，CommonJS 和 ESM 其引入方式的差異分別是 require 和 import，今天會著重在 ESM 的寫法。</p>
+<p>模組的概念其實在 React 框架已經不知不覺地被頻繁的使用了，像是最常見的 hook–useState 就是在引入模組的時候才做使用的，又或是元件的寫法也是由模組系統做延伸。</p>
+<p>模組基本上可以分為兩種匯出方式命名匯出(Named Exports)和預設匯出(Default Exports)，其對應的匯入方式也有所差別</p>
+<span id="more"></span>
+
+<h3 id="命名匯出-Named-Exports"><a href="#命名匯出-Named-Exports" class="headerlink" title="命名匯出(Named Exports)"></a>命名匯出(Named Exports)</h3><p>命名匯出使用關鍵詞 &#x3D;&#x3D;export&#x3D;&#x3D;+&#x3D;&#x3D;要輸出東西的名稱&#x3D;&#x3D;，好處是在於同一個檔案能使用很多個匯出</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">subtract</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> a <span class="token operator">-</span> b<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>其對應的匯入方式如下，import 模組，然後從哪裡 from</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>add<span class="token punctuation">,</span> subtract<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">"./math"</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 輸出: 8</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">subtract</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 輸出: 6</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="預設匯出-Default-Exports"><a href="#預設匯出-Default-Exports" class="headerlink" title="預設匯出(Default Exports)"></a>預設匯出(Default Exports)</h3><p>1.預設匯出使用關鍵詞 &#x3D;&#x3D;export default&#x3D;&#x3D;，特別注意同一個檔案只能有一個預設匯出</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>其對應的匯入方式如下，與上述雷同差別在於針對單一輸出的模組所以可以不用大括弧{}</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">import</span> add <span class="token keyword">from</span> <span class="token string">"./math"</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 輸出: 8</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>以下簡單整理一個表格，我自己會認為不太需要花時間去記憶，因為用久自然就熟了，而且現在套件的幫助下其實也比較不太會在這方面出差錯。</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>命名匯出出 (Named Exports)</th>
+<th>預設匯出 (Default Export)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>匯出方式</td>
+<td>可以匯出多個具名功能</td>
+<td>只能匯出一個默認功能</td>
+</tr>
+<tr>
+<td>匯入的語法</td>
+<td>使用 <code>&#123;&#125;</code> 語法進行匯入</td>
+<td>直接使用模組名稱進行匯入</td>
+</tr>
+</tbody></table>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/27/Day%2013%20JavaScript%20%E6%A8%A1%E7%B5%84(Modules)/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
         
           
    <!-- prevent image appear -->
@@ -1151,92 +1260,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
         </p>
         <a class="stretched-link" href="/2023/09/18/Day%204%20%E6%93%8D%E4%BD%9C%E9%99%A3%E5%88%97%E7%9A%84%E6%96%B9%E6%B3%95%20Part.1-push%20&%20pop/"></a>
-      </div>
-    </div>
-  </article>
-</li>
-
-        
-          
-   <!-- prevent image appear -->
-
-
-<li
-  id="post-Day 3 查詢陣列的方法-forEach &amp; map"
-  class="card border-0"
-  itemprop="blogPost"
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
->
-  <article class="row g-0">
-    <div class="col-12 col-lg-4">
-      <img
-        src="/images/default-cover.png"
-        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
-        alt="article-Day 3 查詢陣列的方法-forEach &amp; map"
-      >
-    </div>
-    <div class="col-12 col-lg-8">
-      <div class="card-body pt-lg-0 pe-lg-0">
-        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
-          <p class="card-text mb-0 fs-6 text-primary-600">
-            <small class="text-body-secondary">
-              2023/9/17
-            </small>
-          </p>
-
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              React
-            </span>
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              JavaScript
-            </span>
-          
-
-        </div>
-        <h5 class="card-title mb-3 text-primary-700">
-          Day 3 查詢陣列的方法-forEach & map
-        </h5>
-        <div class="cutoff-text mb-0 text-primary-700">
-          <p>在學習 React 之前，會需要瞭解一些 javascript 的基礎概念，常言道”javascript 學得好，react 沒煩惱”，其中陣列的方法倒是蠻常用到的，尤其.map()在資料的呈現處理上是蠻常用到的技巧，因為 map 的用法與 forEach 實在太相似了，所以從 forEach 來了解 map 我認為是一個不錯的方法，那就接著往下看~</p>
-<span id="more"></span>
-
-<h3 id="forEach"><a href="#forEach" class="headerlink" title=".forEach()"></a>.forEach()</h3><p>是一個遍歷陣列的方法，說的直接一點就是查詢陣列裡面的內容並對其做一些操作。裡面需要帶一個 callback function，裡面包含三個參數如下: 1.陣列裡面的值 2.陣列的 index 3.陣列本身</p>
-<p>其方法是不能被&#x3D;&#x3D;中斷的&#x3D;&#x3D;，換句話說就是不能 return，也就是說不會回傳值。<br>範例如下:</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-array<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> index<span class="token punctuation">,</span> array2<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"value:"</span> <span class="token operator">+</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"index:"</span> <span class="token operator">+</span> index<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>array2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//陣列本身</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>輸出結果:<br></p>
-<h3 id="map"><a href="#map" class="headerlink" title=".map()"></a>.map()</h3><p>同樣是可以遍歷陣列的一個方法，用法也跟 forEach 相似，也是需要帶一個 callback 裡面也是帶三個參數: 1.陣列裡面的值 2.陣列的 index 3.陣列本身</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-array<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> index<span class="token punctuation">,</span> array2<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"value:"</span> <span class="token operator">+</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"index:"</span> <span class="token operator">+</span> index<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>array2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//陣列本身</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p></p>
-<p>但此方法&#x3D;&#x3D;會回傳&#x3D;&#x3D;一個新陣列，範例如下:</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-<span class="token keyword">var</span> newArray <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> index<span class="token punctuation">,</span> array2<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> value <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newArray<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//輸出結果:[2,4,6,8,10]</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>輸出結果:<br></p>
-<p>總之，forEach 主要用於執行操作而不生成新陣列，而 map 用於生成一個新陣列，其中包含經過處理後的值。</p>
-
-        </p>
-        <a class="stretched-link" href="/2023/09/17/Day%203%20%E6%9F%A5%E8%A9%A2%E9%99%A3%E5%88%97%E7%9A%84%E6%96%B9%E6%B3%95-forEach%20&%20map/"></a>
       </div>
     </div>
   </article>

@@ -167,8 +167,22 @@
     
       
       <li class="flex-shrink-0">
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
         <a href="/tags/XML/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           XML
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Hooks
         </a>
       </li>
     
@@ -179,18 +193,78 @@
         </a>
       </li>
     
-      
-      <li class="flex-shrink-0">
-        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          ejs
-        </a>
-      </li>
-    
   </ul>
 </aside>
       </div>
 
       <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-MySQL-SQL語法介紹-DML-資料操作語言"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-MySQL-SQL語法介紹-DML 資料定義語言"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2024/1/18
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              MySQL
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              SQL
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          MySQL-SQL語法介紹-DML 資料定義語言
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>DML(Data Manipulation Language) 資料操作語言</p>
+<span id="more"></span>
+
+<h4 id="給指定欄位新增資料"><a href="#給指定欄位新增資料" class="headerlink" title="給指定欄位新增資料"></a>給指定欄位新增資料</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> 資料表名<span class="token punctuation">(</span>欄位名<span class="token number">1</span><span class="token punctuation">,</span> 欄位名<span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span> <span class="token keyword">VALUES</span><span class="token punctuation">(</span>值<span class="token number">1</span><span class="token punctuation">,</span> 值<span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="修改資料"><a href="#修改資料" class="headerlink" title="修改資料"></a>修改資料</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">UPDATE</span> 資料表名 <span class="token keyword">SET</span> 欄位名<span class="token number">1</span><span class="token operator">=</span>值<span class="token number">1</span><span class="token punctuation">,</span> 欄位名<span class="token number">2</span><span class="token operator">=</span>值<span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">WHERE</span> 條件<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<blockquote>
+<p>WHERE 條件可以不寫，但是如果不寫，會將資料表所有資料都修改</p>
+</blockquote>
+<h4 id="刪除資料"><a href="#刪除資料" class="headerlink" title="刪除資料"></a>刪除資料</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">DELETE</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">WHERE</span> 條件<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<blockquote>
+<p>WHERE 條件可以不寫，但是如果不寫，會將資料表所有資料都刪除</p>
+</blockquote>
+
+        </p>
+        <a class="stretched-link" href="/2024/01/18/MySQL-SQL%E8%AA%9E%E6%B3%95%E4%BB%8B%E7%B4%B9-DML-%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C%E8%AA%9E%E8%A8%80/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
         
           
    <!-- prevent image appear -->
@@ -649,80 +723,6 @@
 
         </p>
         <a class="stretched-link" href="/2023/12/29/window-body/"></a>
-      </div>
-    </div>
-  </article>
-</li>
-
-        
-          
-   <!-- prevent image appear -->
-
-
-<li
-  id="post-use-ejs-in-html"
-  class="card border-0"
-  itemprop="blogPost"
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
->
-  <article class="row g-0">
-    <div class="col-12 col-lg-4">
-      <img
-        src="/images/default-cover.png"
-        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
-        alt="article-在 html 使用 ejs 的方法"
-      >
-    </div>
-    <div class="col-12 col-lg-8">
-      <div class="card-body pt-lg-0 pe-lg-0">
-        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
-          <p class="card-text mb-0 fs-6 text-primary-600">
-            <small class="text-body-secondary">
-              2023/12/29
-            </small>
-          </p>
-
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              ejs
-            </span>
-          
-
-        </div>
-        <h5 class="card-title mb-3 text-primary-700">
-          在 html 使用 ejs 的方法
-        </h5>
-        <div class="cutoff-text mb-0 text-primary-700">
-          <h3 id="ejs-常用簡單語法介紹"><a href="#ejs-常用簡單語法介紹" class="headerlink" title="ejs 常用簡單語法介紹"></a>ejs 常用簡單語法介紹</h3><p>1.撰寫程式邏輯</p>
-<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token string">"這裡寫程式邏輯"</span> <span class="token operator">%</span><span class="token operator">></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<span id="more"></span>
-
-<p>2.傳遞參數</p>
-<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> <span class="token string">"傳遞參數"</span> <span class="token operator">%</span><span class="token operator">></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>3.傳遞 HTML 語法</p>
-<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token string">"傳遞HTML語法"</span> <span class="token operator">%</span><span class="token operator">></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>&lt;%&#x3D; %&gt; 和 &lt;%- %&gt;差別<br>“&#x3D;”:會完整傳遞<br>“-“:它看得懂 HTML 語法</p>
-<p>4.匯入 ejs:有兩個參數<br>第一個參數是路徑<br>第二個參數是要傳進去的變數要用物件包起來，有點像 React 的 Props</p>
-<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">include</span><span class="token punctuation">(</span><span class="token string">"./layout/test"</span><span class="token punctuation">,</span><span class="token entity" title="&#123;">&amp;#123;</span>element<span class="token punctuation">,</span>id<span class="token entity" title="&#125;">&amp;#125;</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><p>1.ejs 模板</p>
-<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">//檔名:test.ejs</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>hello world <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> element <span class="token operator">%</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> id <span class="token operator">%</span><span class="token operator">></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>2.要寫的 html，只列 body</p>
-<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">let</span> name<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"Robin"</span><span class="token punctuation">,</span><span class="token string">"Amy"</span><span class="token punctuation">,</span><span class="token string">"Ann"</span><span class="token punctuation">]</span> <span class="token operator">%</span><span class="token operator">></span><span class="token comment" spellcheck="true">//這裡是定義變數，未來可能會打API存在這</span>
-<span class="token operator">&lt;</span><span class="token operator">%</span> name<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>element<span class="token punctuation">,</span>id<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span> <span class="token entity" title="&#123;">&amp;#123;</span> <span class="token operator">%</span><span class="token operator">></span><span class="token comment" spellcheck="true">//因為中間要塞這個可以轉譯HTML的語法，所以拆開來寫</span>
-<span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">include</span><span class="token punctuation">(</span><span class="token string">"./layout/test"</span><span class="token punctuation">,</span><span class="token entity" title="&#123;">&amp;#123;</span>element<span class="token punctuation">,</span>id<span class="token entity" title="&#125;">&amp;#125;</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span><span class="token comment" spellcheck="true">//匯入剛剛的ejs模板並帶入變數</span>
-<span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token entity" title="&#125;">&amp;#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">%</span><span class="token operator">></span><span class="token comment" spellcheck="true">//因為中間要塞這個可以轉譯HTML的語法，所以拆開來寫</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>3.完成結果如下<br></p>
-
-        </p>
-        <a class="stretched-link" href="/2023/12/29/use-ejs-in-html/"></a>
       </div>
     </div>
   </article>
