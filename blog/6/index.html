@@ -153,22 +153,8 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          TypeHero
-        </a>
-      </li>
-    
-      
-      <li class="flex-shrink-0">
         <a href="/tags/VS-Code/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           VS Code
-        </a>
-      </li>
-    
-      
-      <li class="flex-shrink-0">
-        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          ejs
         </a>
       </li>
     
@@ -181,8 +167,22 @@
     
       
       <li class="flex-shrink-0">
+        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          TypeHero
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
         <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           Hooks
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
         </a>
       </li>
     
@@ -193,11 +193,134 @@
         </a>
       </li>
     
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          axios
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/javascript/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          javascript
+        </a>
+      </li>
+    
   </ul>
 </aside>
       </div>
 
       <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 25 React的選擇渲染-JSX與條件控制的關係"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 25 React 的選擇渲染-JSX 與條件控制的關係"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/10/8
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 25 React 的選擇渲染-JSX 與條件控制的關係
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>說到 JavaScript 的流程控制大家很容易聯想到 if…else…或是三元運算子，在 JSX 裡面可以利用這些流程控制來選選擇性的呈現想要渲染的畫面。</p>
+<p>官網分別介紹三種:<br>1.if..else 2.三元運算子(條件式 ? True 的結果 :False 的結果) 3.邏輯運算子(&amp;&amp;)</p>
+<span id="more"></span>
+
+<h2 id="用-if…else-控制元件出現"><a href="#用-if…else-控制元件出現" class="headerlink" title="用 if…else..控制元件出現"></a>用 if…else..控制元件出現</h2><p>這我相信能看到這裡的，大家都對這個語法很熟，但在 React 寫法就變成下面這樣，如果 number&#x3D;”A”就會 return 並渲染 “AAA”，除此之外會 return 並渲染 “BBB”。</p>
+<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token entity" title="&#123;">&amp;#123;</span>
+  <span class="token keyword">let</span> number <span class="token operator">=</span> <span class="token string">"123"</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>number <span class="token operator">===</span> <span class="token string">"A"</span><span class="token punctuation">)</span> <span class="token entity" title="&#123;">&amp;#123;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span><span class="token operator">></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>AAA<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token entity" title="&#125;">&amp;#125;</span> <span class="token keyword">else</span> <span class="token entity" title="&#123;">&amp;#123;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span><span class="token operator">></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>BBB<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token entity" title="&#125;">&amp;#125;</span>
+<span class="token entity" title="&#125;">&amp;#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="條件運算子"><a href="#條件運算子" class="headerlink" title="條件運算子"></a>條件運算子</h2><p>ES6 的語法，簡單來說就是 if else 的簡化版，但是略有些差異以及特性，這裡就不先多提，因為在這裡兩者幾乎是等效的。<br>它由一個?和:組成基本架構如下:</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">條件式 <span class="token operator">?</span> 條件式為真要輸出的結果 <span class="token punctuation">:</span> 條件式為假的時候要輸出的結果<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>如果更改上述的範例為三元運算子的寫法如下:</p>
+<pre><code>export default function App() &#123;
+  let number = &quot;A&quot;;
+  return number === &quot;A&quot; ? &lt;h1&gt;AAA&lt;/h1&gt; : &lt;h1&gt;BBB&lt;/h1&gt;;
+&#125;
+</code></pre>
+<p>或是這樣</p>
+<pre><code>export default function App() &#123;
+  let number = &quot;A&quot;;
+  return (
+  &lt;&gt;
+  &#123;number === &quot;A&quot; ? &lt;h1&gt;AAA&lt;/h1&gt; : &lt;h1&gt;BBB&lt;/h1&gt;&#125;
+  &lt;/&gt;
+  )
+</code></pre>
+<p>看起來更為簡單一點，可是在對於剛接觸的人比較不容易閱讀，要注意的一點</p>
+<blockquote>
+<p>三元運算子是運算子它不是陳述式所以可以寫在 jsx 的{}裡，但是 if…else 則不行</p>
+</blockquote>
+<h2 id="邏輯運算子"><a href="#邏輯運算子" class="headerlink" title="邏輯運算子(&amp;&amp;)"></a>邏輯運算子(&amp;&amp;)</h2><p>這部分的寫法就更為簡單一點，但是適用的情況也不太一樣，比較適用決定是否要呈現元件，而不是選擇性呈現，寫法如下</p>
+<pre><code>export default function App() &#123;
+  return &lt;&gt;&#123;true &amp;&amp; &lt;h1&gt;AAA&lt;/h1&gt;&#125; &lt;/&gt;;
+&#125;
+</code></pre>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>雖然這三種寫法都是在做元件的選擇性渲染，但其實每一種方法適用的情境略有不同，需要依照適合的狀況，選擇適合的寫法:</p>
+<ul>
+<li>使用 if…else 時，可以處理較複雜的條件邏輯。</li>
+<li>三元運算子 提供了簡潔的寫法，適用於簡單的條件選擇。</li>
+<li>邏輯運算子 (&amp;&amp;) 適合單一條件，不需要額外 else 或 return null。</li>
+</ul>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a target="_blank" rel="noopener" href="https://react.dev/">React 官方網站</a></p>
+
+        </p>
+        <a class="stretched-link" href="/2023/10/08/Day%2025%20React%E7%9A%84%E9%81%B8%E6%93%87%E6%B8%B2%E6%9F%93-JSX%E8%88%87%E6%A2%9D%E4%BB%B6%E6%8E%A7%E5%88%B6%E7%9A%84%E9%97%9C%E4%BF%82/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
         
           
    <!-- prevent image appear -->
@@ -713,78 +836,13 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">cre
 </li>
 
         
-          
-   <!-- prevent image appear -->
-
-
-<li
-  id="post-Day 19 React 介紹"
-  class="card border-0"
-  itemprop="blogPost"
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
->
-  <article class="row g-0">
-    <div class="col-12 col-lg-4">
-      <img
-        src="/images/default-cover.png"
-        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
-        alt="article-Day 19 React 介紹"
-      >
-    </div>
-    <div class="col-12 col-lg-8">
-      <div class="card-body pt-lg-0 pe-lg-0">
-        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
-          <p class="card-text mb-0 fs-6 text-primary-600">
-            <small class="text-body-secondary">
-              2023/10/3
-            </small>
-          </p>
-
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              React
-            </span>
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              JavaScript
-            </span>
-          
-
-        </div>
-        <h5 class="card-title mb-3 text-primary-700">
-          Day 19 React 介紹
-        </h5>
-        <div class="cutoff-text mb-0 text-primary-700">
-          <h2 id="歷史發展"><a href="#歷史發展" class="headerlink" title="歷史發展"></a>歷史發展</h2><p>React 正式出現在眾人眼中是在 JSConf 上，來自原 Facebook 團隊 Jordan Walke 把一直以來在內部使用的 React 開源了，不過在當時的回響並不是很好，甚至受到了一些批評。</p>
-<p>在開源團隊努力的推廣下，某些人開始慢慢發現 React 的好，隨之開源社群也慢慢建立了起來，到了 2016 年左右變成了一種主流框架，在那時 React 在前端圈子的地位被確立。</p>
-<p>2019 年 Hook 被正式引入到 React 當中，同時也降低了學習成本，到現今 Hook 應該也是蠻多人會選擇開發的方式，也讓 React 使用人數持續成長，現在 React 應該還是使用人數最多的框架之一。</p>
-<span id="more"></span>
-
-<h2 id="什麼是-React"><a href="#什麼是-React" class="headerlink" title="什麼是 React?"></a>什麼是 React?</h2><p>在主流的認知裡，大家常常提到的三大框架 Angular、React、Vue，式的沒錯大家是把 React 當作框架來看，但弔詭的是 React 的官方網站，卻開宗明義地強調”The <strong>library</strong> for web and native user interfaces”，React 是一個函式庫，就跟經典的 jQuery 一樣是一個函式庫，以此來強調 React 的輕量化及靈活性。</p>
-<h2 id="React-特色"><a href="#React-特色" class="headerlink" title="React 特色"></a>React 特色</h2><p>1.元件化的特性，讓相似的區塊做成元件能重複使用</p>
-<p>2.使用 JSX 語法，讓 HTML 標籤上可以使用 JavaScript 進行操作，大幅降低程式的複雜度，提升寫程式的效率</p>
-<p>3.如果單獨元件有更新資料，可以只對單獨的元件進行重新渲染，不用刷新整個頁面</p>
-<p>4.專注在畫面的呈現處理</p>
-<h2 id="為什麼選擇-React"><a href="#為什麼選擇-React" class="headerlink" title="為什麼選擇 React"></a>為什麼選擇 React</h2><p>綜合上述特色，加上龐大的使用者社群，在學習上的資源也相對多，雖然入門的門檻高了點，但跨過了，就可以感受到 React 的方便性了。</p>
-<p>##參考資料<br><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=8pDqJVdNa44&t=4s">Origin Story: How A Small Team of Developers Created React.js at Facebook</a></p>
-<p><a target="_blank" rel="noopener" href="https://react.dev/">React 官方網站</a></p>
-
-        </p>
-        <a class="stretched-link" href="/2023/10/03/Day%2019%20React%20%E4%BB%8B%E7%B4%B9/"></a>
-      </div>
-    </div>
-  </article>
-</li>
-
-        
       </ul>
     </div>
 
     <nav class="mb-7 mb-md-9" aria-label="Page navigation">
       <ul class="pagination justify-content-center gap-3">
         
-          <li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/">1</a></li><span class="space">&hellip;</span><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/4/">4</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/5/">5</a></li><li class="page-item"><span class="page-link text-primary-700 rounded-1 border-0 active">6</span></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/7/">7</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/8/">8</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/9/">9</a></li>
+          <li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/">1</a></li><span class="space">&hellip;</span><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/4/">4</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/5/">5</a></li><li class="page-item"><span class="page-link text-primary-700 rounded-1 border-0 active">6</span></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/7/">7</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/8/">8</a></li><span class="space">&hellip;</span><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/10/">10</a></li>
         
       </ul>
     </nav>

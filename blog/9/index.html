@@ -153,22 +153,8 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          TypeHero
-        </a>
-      </li>
-    
-      
-      <li class="flex-shrink-0">
         <a href="/tags/VS-Code/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           VS Code
-        </a>
-      </li>
-    
-      
-      <li class="flex-shrink-0">
-        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          ejs
         </a>
       </li>
     
@@ -181,8 +167,22 @@
     
       
       <li class="flex-shrink-0">
+        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          TypeHero
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
         <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           Hooks
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
         </a>
       </li>
     
@@ -193,11 +193,103 @@
         </a>
       </li>
     
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          axios
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/javascript/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          javascript
+        </a>
+      </li>
+    
   </ul>
 </aside>
       </div>
 
       <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 7 搜尋陣列的方法-find,findIndex &amp; filter"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 7 搜尋陣列的方法-find,findIndex &amp; filter"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/21
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 7 搜尋陣列的方法-find,findIndex & filter
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <h1 id="Day-7-搜尋陣列的方法-find-findIndex-filter"><a href="#Day-7-搜尋陣列的方法-find-findIndex-filter" class="headerlink" title="Day 7 搜尋陣列的方法-find,findIndex &amp; filter"></a>Day 7 搜尋陣列的方法-find,findIndex &amp; filter</h1><p>今天介紹的三個語法是針對陣列的搜尋功能，有 find(),findIndex(),filter()</p>
+<span id="more"></span>
+
+<h3 id="find"><a href="#find" class="headerlink" title=".find()"></a>.find()</h3><p>引用 MDN 的描述”find() 方法會回傳第一個滿足所提供之測試函式的元素值。否則回傳 undefined”<br>簡而言之，就是在陣列裡尋找需要的值並進行回傳需要 return，但是只會回傳一次，也竟是滿足條件的第一個值。<br>用法是裡面帶一個 callback，有三個參數: 1.被處理的元素 2.被處理元素的 index 3.被處理的陣列本身</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">let</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> value <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> i<span class="token punctuation">,</span> arr<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> v <span class="token operator">></span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="findIndex"><a href="#findIndex" class="headerlink" title=".findIndex()"></a>.findIndex()</h3><p>用法語 find 一模一樣，只是 find 是回傳值，findIndex 是回傳 index，如果沒有符合條件的值會回傳-1<br>裡面一樣帶一個 callback，有三個參數: 1.被處理的元素 2.被處理元素的 index 3.被處理的陣列本身</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">let</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> index <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">findIndex</span><span class="token punctuation">(</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> i<span class="token punctuation">,</span> arr<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> v <span class="token operator">></span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><p>這是昨日介紹 find 的加強功能版，它可以把在陣列符合指定條件的值儲存成一個&#x3D;&#x3D;新陣列&#x3D;&#x3D;意味著不會修改到遠本的陣列，其用法也是大同小異帶一個 callback 包含如下三個參數，然後寫出需要的判斷式 1.被處理的元素 2.被處理元素的 index 3.被處理的陣列本身</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">let</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> newArray <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> i<span class="token punctuation">,</span> arr<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> v <span class="token operator">></span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>這三著其實都很常用到，並沒有誰好誰壞，端看用途而定。</p>
+<h2 id="引用資料"><a href="#引用資料" class="headerlink" title="引用資料"></a>引用資料</h2><p>MDN <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/find">Array.prototype.find</a></p>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/21/Day%207%20%E6%90%9C%E5%B0%8B%E9%99%A3%E5%88%97%E7%9A%84%E6%96%B9%E6%B3%95-find,findIndex%20&%20filter/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
         
           
    <!-- prevent image appear -->
@@ -718,80 +810,13 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </li>
 
         
-          
-   <!-- prevent image appear -->
-
-
-<li
-  id="post-Day 1 參賽動機以及題目選擇和預計大綱"
-  class="card border-0"
-  itemprop="blogPost"
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
->
-  <article class="row g-0">
-    <div class="col-12 col-lg-4">
-      <img
-        src="/images/default-cover.png"
-        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
-        alt="article-Day 1 參賽動機以及題目選擇和預計大綱"
-      >
-    </div>
-    <div class="col-12 col-lg-8">
-      <div class="card-body pt-lg-0 pe-lg-0">
-        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
-          <p class="card-text mb-0 fs-6 text-primary-600">
-            <small class="text-body-secondary">
-              2023/9/15
-            </small>
-          </p>
-
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              React
-            </span>
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              JavaScript
-            </span>
-          
-
-        </div>
-        <h5 class="card-title mb-3 text-primary-700">
-          Day 1 參賽動機以及題目選擇和預計大綱
-        </h5>
-        <div class="cutoff-text mb-0 text-primary-700">
-          <h2 id="參賽動機"><a href="#參賽動機" class="headerlink" title="參賽動機"></a>參賽動機</h2><p>一開始想對於學習前端時間有一些得自己留下些什麼，所以題目本來是要分享一些些網頁鐵三角的一些心得，但後來發現我要在一邊學框架的時間一邊寫鐵人賽，可能會有超出我的一些負荷，所以與其蠟燭兩頭燒，那不如就合在一起寫吧!</p>
-<h2 id="為什麼選擇-React-作為主題"><a href="#為什麼選擇-React-作為主題" class="headerlink" title="為什麼選擇 React 作為主題"></a>為什麼選擇 React 作為主題</h2><p>最近開始學習框架，想以初學者的心態，分享自己由新手的觀點來理解 React 的想法，一方面記錄學習的過程，另一方面變成是自己學習框架的推力，至於這個題目”那些年我轉生成前端貓咪踏入 React 地獄的那些事”，是剛好我在看 React 的時候一隻貓咪跳上來壓到我的鍵盤，不知道按到什麼畫面跳轉到某部轉生動畫，所以這個題目就出來了。</p>
-<span id="more"></span>
-
-<h2 id="文章內容定位"><a href="#文章內容定位" class="headerlink" title="文章內容定位"></a>文章內容定位</h2><p>其實版上有關 React 的教學文蠻多了，而且 React 官方文件其實寫的蠻清楚的，但其實我覺得最難的是從 js 到 React 這段過程中，我以為的 js 跟實際上的 js 差距其實蠻大的，所以這段的系列文章會著墨在踏入 React 之前的這段過程，或許也許能在學 React 的時候少了一點痛苦。</p>
-<p></p>
-<h2 id="大綱"><a href="#大綱" class="headerlink" title="大綱"></a>大綱</h2><p>大致上會分為兩部分介紹，第一部分會介紹 React 會用到的 JavaScript 的語法或觀念，第二部分，才會是 React</p>
-<h3 id="第一部分-JS"><a href="#第一部分-JS" class="headerlink" title="第一部分 JS"></a>第一部分 JS</h3><p>Day 1. 參賽動機以及題目選擇和預計大綱<br>Day 2. My VS Code Tour<br>Day 3. 查詢陣列的方法-forEach &amp; map<br>Day 4. 操作陣列的方法 Part.1-push &amp; pop<br>Day 5. 操作陣列的方法 Part.2-shift &amp; unshift<br>Day 6. 其他的陣列方法 slice &amp; splice<br>Day 7. 搜尋陣列的方法-find,findIndex &amp; filter<br>Day 8. 字串陣列互相變化的方法 split &amp; join<br>Day 9. 函式與箭頭函式<br>Day 10.物件(Object)<br>Day 11.解構賦值(Destructuring assignment)<br>Day 12.其餘運算子 &amp; 展開運算子(Spread Operator &amp; Rest Operator)<br>Day 13.JavaScript 模組(Modules)<br>Day 14.處理同步非同步的方法(Asynchronous &amp; Synchronous)</p>
-<h3 id="第二部分-Rreact"><a href="#第二部分-Rreact" class="headerlink" title="第二部分 Rreact"></a>第二部分 Rreact</h3><p>這部分不會帶到太多太難的 hook，最多可能就寫到 useEffect，至於詳細的大綱，等 JS 結束之後會再公布。</p>
-<h4 id="最後熱血開賽-希望一切順利"><a href="#最後熱血開賽-希望一切順利" class="headerlink" title="最後熱血開賽~~希望一切順利"></a>最後熱血開賽~~希望一切順利</h4><h2 id="預計參考資料"><a href="#預計參考資料" class="headerlink" title="預計參考資料"></a>預計參考資料</h2><ol>
-<li><a target="_blank" rel="noopener" href="https://react.dev/">React 官網</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.theodinproject.com/">Odin Project</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.freecodecamp.org/learn/front-end-development-libraries/">freeCodeCamp</a></li>
-<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/">MDN</a></li>
-</ol>
-
-        </p>
-        <a class="stretched-link" href="/2023/09/15/Day%201%20%E5%8F%83%E8%B3%BD%E5%8B%95%E6%A9%9F%E4%BB%A5%E5%8F%8A%E9%A1%8C%E7%9B%AE%E9%81%B8%E6%93%87%E5%92%8C%E9%A0%90%E8%A8%88%E5%A4%A7%E7%B6%B1/"></a>
-      </div>
-    </div>
-  </article>
-</li>
-
-        
       </ul>
     </div>
 
     <nav class="mb-7 mb-md-9" aria-label="Page navigation">
       <ul class="pagination justify-content-center gap-3">
         
-          <li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/">1</a></li><span class="space">&hellip;</span><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/7/">7</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/8/">8</a></li><li class="page-item"><span class="page-link text-primary-700 rounded-1 border-0 active">9</span></li>
+          <li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/">1</a></li><span class="space">&hellip;</span><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/7/">7</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/8/">8</a></li><li class="page-item"><span class="page-link text-primary-700 rounded-1 border-0 active">9</span></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/10/">10</a></li>
         
       </ul>
     </nav>

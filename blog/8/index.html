@@ -153,22 +153,8 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          TypeHero
-        </a>
-      </li>
-    
-      
-      <li class="flex-shrink-0">
         <a href="/tags/VS-Code/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           VS Code
-        </a>
-      </li>
-    
-      
-      <li class="flex-shrink-0">
-        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          ejs
         </a>
       </li>
     
@@ -181,8 +167,22 @@
     
       
       <li class="flex-shrink-0">
+        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          TypeHero
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
         <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           Hooks
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
         </a>
       </li>
     
@@ -193,11 +193,127 @@
         </a>
       </li>
     
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          axios
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/javascript/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          javascript
+        </a>
+      </li>
+    
   </ul>
 </aside>
       </div>
 
       <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 13 JavaScript 模組(Modules)"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day13 JavaScript 模組(Modules)"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/27
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day13 JavaScript 模組(Modules)
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>模組系統的概念大致上分兩種寫法，CommonJS 和 ESM 其引入方式的差異分別是 require 和 import，今天會著重在 ESM 的寫法。</p>
+<p>模組的概念其實在 React 框架已經不知不覺地被頻繁的使用了，像是最常見的 hook–useState 就是在引入模組的時候才做使用的，又或是元件的寫法也是由模組系統做延伸。</p>
+<p>模組基本上可以分為兩種匯出方式命名匯出(Named Exports)和預設匯出(Default Exports)，其對應的匯入方式也有所差別</p>
+<span id="more"></span>
+
+<h3 id="命名匯出-Named-Exports"><a href="#命名匯出-Named-Exports" class="headerlink" title="命名匯出(Named Exports)"></a>命名匯出(Named Exports)</h3><p>命名匯出使用關鍵詞 &#x3D;&#x3D;export&#x3D;&#x3D;+&#x3D;&#x3D;要輸出東西的名稱&#x3D;&#x3D;，好處是在於同一個檔案能使用很多個匯出</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">subtract</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> a <span class="token operator">-</span> b<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>其對應的匯入方式如下，import 模組，然後從哪裡 from</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>add<span class="token punctuation">,</span> subtract<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">from</span> <span class="token string">"./math"</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 輸出: 8</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">subtract</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 輸出: 6</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="預設匯出-Default-Exports"><a href="#預設匯出-Default-Exports" class="headerlink" title="預設匯出(Default Exports)"></a>預設匯出(Default Exports)</h3><p>1.預設匯出使用關鍵詞 &#x3D;&#x3D;export default&#x3D;&#x3D;，特別注意同一個檔案只能有一個預設匯出</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>其對應的匯入方式如下，與上述雷同差別在於針對單一輸出的模組所以可以不用大括弧{}</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">import</span> add <span class="token keyword">from</span> <span class="token string">"./math"</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 輸出: 8</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>以下簡單整理一個表格，我自己會認為不太需要花時間去記憶，因為用久自然就熟了，而且現在套件的幫助下其實也比較不太會在這方面出差錯。</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>命名匯出出 (Named Exports)</th>
+<th>預設匯出 (Default Export)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>匯出方式</td>
+<td>可以匯出多個具名功能</td>
+<td>只能匯出一個默認功能</td>
+</tr>
+<tr>
+<td>匯入的語法</td>
+<td>使用 <code>&#123;&#125;</code> 語法進行匯入</td>
+<td>直接使用模組名稱進行匯入</td>
+</tr>
+</tbody></table>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/27/Day%2013%20JavaScript%20%E6%A8%A1%E7%B5%84(Modules)/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
         
           
    <!-- prevent image appear -->
@@ -764,91 +880,13 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </li>
 
         
-          
-   <!-- prevent image appear -->
-
-
-<li
-  id="post-Day 7 搜尋陣列的方法-find,findIndex &amp; filter"
-  class="card border-0"
-  itemprop="blogPost"
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
->
-  <article class="row g-0">
-    <div class="col-12 col-lg-4">
-      <img
-        src="/images/default-cover.png"
-        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
-        alt="article-Day 7 搜尋陣列的方法-find,findIndex &amp; filter"
-      >
-    </div>
-    <div class="col-12 col-lg-8">
-      <div class="card-body pt-lg-0 pe-lg-0">
-        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
-          <p class="card-text mb-0 fs-6 text-primary-600">
-            <small class="text-body-secondary">
-              2023/9/21
-            </small>
-          </p>
-
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              React
-            </span>
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              JavaScript
-            </span>
-          
-
-        </div>
-        <h5 class="card-title mb-3 text-primary-700">
-          Day 7 搜尋陣列的方法-find,findIndex & filter
-        </h5>
-        <div class="cutoff-text mb-0 text-primary-700">
-          <h1 id="Day-7-搜尋陣列的方法-find-findIndex-filter"><a href="#Day-7-搜尋陣列的方法-find-findIndex-filter" class="headerlink" title="Day 7 搜尋陣列的方法-find,findIndex &amp; filter"></a>Day 7 搜尋陣列的方法-find,findIndex &amp; filter</h1><p>今天介紹的三個語法是針對陣列的搜尋功能，有 find(),findIndex(),filter()</p>
-<span id="more"></span>
-
-<h3 id="find"><a href="#find" class="headerlink" title=".find()"></a>.find()</h3><p>引用 MDN 的描述”find() 方法會回傳第一個滿足所提供之測試函式的元素值。否則回傳 undefined”<br>簡而言之，就是在陣列裡尋找需要的值並進行回傳需要 return，但是只會回傳一次，也竟是滿足條件的第一個值。<br>用法是裡面帶一個 callback，有三個參數: 1.被處理的元素 2.被處理元素的 index 3.被處理的陣列本身</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">let</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> value <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> i<span class="token punctuation">,</span> arr<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> v <span class="token operator">></span> <span class="token number">3</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="findIndex"><a href="#findIndex" class="headerlink" title=".findIndex()"></a>.findIndex()</h3><p>用法語 find 一模一樣，只是 find 是回傳值，findIndex 是回傳 index，如果沒有符合條件的值會回傳-1<br>裡面一樣帶一個 callback，有三個參數: 1.被處理的元素 2.被處理元素的 index 3.被處理的陣列本身</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">let</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> index <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">findIndex</span><span class="token punctuation">(</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> i<span class="token punctuation">,</span> arr<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> v <span class="token operator">></span> <span class="token number">3</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><p>這是昨日介紹 find 的加強功能版，它可以把在陣列符合指定條件的值儲存成一個&#x3D;&#x3D;新陣列&#x3D;&#x3D;意味著不會修改到遠本的陣列，其用法也是大同小異帶一個 callback 包含如下三個參數，然後寫出需要的判斷式 1.被處理的元素 2.被處理元素的 index 3.被處理的陣列本身</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">let</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> newArray <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> i<span class="token punctuation">,</span> arr<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> v <span class="token operator">></span> <span class="token number">3</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>這三著其實都很常用到，並沒有誰好誰壞，端看用途而定。</p>
-<h2 id="引用資料"><a href="#引用資料" class="headerlink" title="引用資料"></a>引用資料</h2><p>MDN <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/find">Array.prototype.find</a></p>
-
-        </p>
-        <a class="stretched-link" href="/2023/09/21/Day%207%20%E6%90%9C%E5%B0%8B%E9%99%A3%E5%88%97%E7%9A%84%E6%96%B9%E6%B3%95-find,findIndex%20&%20filter/"></a>
-      </div>
-    </div>
-  </article>
-</li>
-
-        
       </ul>
     </div>
 
     <nav class="mb-7 mb-md-9" aria-label="Page navigation">
       <ul class="pagination justify-content-center gap-3">
         
-          <li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/">1</a></li><span class="space">&hellip;</span><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/6/">6</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/7/">7</a></li><li class="page-item"><span class="page-link text-primary-700 rounded-1 border-0 active">8</span></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/9/">9</a></li>
+          <li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/">1</a></li><span class="space">&hellip;</span><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/6/">6</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/7/">7</a></li><li class="page-item"><span class="page-link text-primary-700 rounded-1 border-0 active">8</span></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/9/">9</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/10/">10</a></li>
         
       </ul>
     </nav>

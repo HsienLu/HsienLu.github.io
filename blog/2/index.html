@@ -153,22 +153,8 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          TypeHero
-        </a>
-      </li>
-    
-      
-      <li class="flex-shrink-0">
         <a href="/tags/VS-Code/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           VS Code
-        </a>
-      </li>
-    
-      
-      <li class="flex-shrink-0">
-        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          ejs
         </a>
       </li>
     
@@ -181,8 +167,22 @@
     
       
       <li class="flex-shrink-0">
+        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          TypeHero
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
         <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           Hooks
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
         </a>
       </li>
     
@@ -193,11 +193,103 @@
         </a>
       </li>
     
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          axios
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/javascript/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          javascript
+        </a>
+      </li>
+    
   </ul>
 </aside>
       </div>
 
       <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-TypeScript-Exclude"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-TypeScript-Exclude"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2024/2/1
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              TypeScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          TypeScript-Exclude
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <h3 id="Exclude"><a href="#Exclude" class="headerlink" title="Exclude&lt;UnionType, ExcludedMembers&gt;"></a>Exclude&lt;UnionType, ExcludedMembers&gt;</h3><p>顧名思義，就是排除某些類型的意思。<br>引用官方的說法：從 UnionType 中排除所有可分配給 ExcludedMembers 的聯合成員，以構建一個新的類型。</p>
+<blockquote>
+<p>Constructs a type by excluding from UnionType all union members that are assignable to ExcludedMembers</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><p>1.排除某個型別</p>
+<pre class="line-numbers language-typescript"><code class="language-typescript">type T0 <span class="token operator">=</span> Exclude<span class="token operator">&lt;</span><span class="token string">"a"</span> <span class="token operator">|</span> <span class="token string">"b"</span> <span class="token operator">|</span> <span class="token string">"c"</span><span class="token punctuation">,</span> <span class="token string">"a"</span><span class="token operator">></span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// "b" | "c"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>2.排除多個型別</p>
+<pre class="line-numbers language-typescript"><code class="language-typescript">type text <span class="token operator">=</span> <span class="token string">"A"</span> <span class="token operator">|</span> <span class="token string">"B"</span> <span class="token operator">|</span> <span class="token string">"C"</span> <span class="token operator">|</span> <span class="token string">"D"</span> <span class="token operator">|</span> <span class="token string">"E"</span><span class="token punctuation">;</span>
+type T1 <span class="token operator">=</span> Exclude<span class="token operator">&lt;</span>text<span class="token punctuation">,</span> <span class="token string">"A"</span> <span class="token operator">|</span> <span class="token string">"B"</span> <span class="token operator">|</span> <span class="token string">"C"</span><span class="token operator">></span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// "D" | "E"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>3.排除某個類型</p>
+<pre class="line-numbers language-typescript"><code class="language-typescript">type T2 <span class="token operator">=</span> Exclude<span class="token operator">&lt;</span><span class="token keyword">number</span> <span class="token operator">|</span> <span class="token string">"b"</span> <span class="token operator">|</span> <span class="token string">"c"</span><span class="token punctuation">,</span> <span class="token keyword">string</span><span class="token operator">></span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// number</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>4.排除物件類型</p>
+<pre class="line-numbers language-typescript"><code class="language-typescript">type animal <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span> <span class="token string">"dog"</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">|</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span> <span class="token string">"cat"</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">|</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span> <span class="token string">"pig"</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+type T3 <span class="token operator">=</span> Exclude<span class="token operator">&lt;</span>animal<span class="token punctuation">,</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span> <span class="token string">"dog"</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">></span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// &amp;#123;name:"cat"&amp;#125; | &amp;#123;name:"pig"&amp;#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>5.藉由形狀排除型別</p>
+<pre class="line-numbers language-typescript"><code class="language-typescript">type animal <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span> <span class="token string">"dog"</span><span class="token punctuation">;</span> age<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">|</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span> <span class="token string">"cat"</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">|</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span> <span class="token string">"pig"</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+type T4 <span class="token operator">=</span> Exclude<span class="token operator">&lt;</span>animal<span class="token punctuation">,</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>age<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">></span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// &amp;#123;name:"cat"&amp;#125; | &amp;#123;name:"pig"&amp;#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>6.藉由樣板文字排除型別</p>
+<pre class="line-numbers language-typescript"><code class="language-typescript">type animal <span class="token operator">=</span> <span class="token string">"Adog"</span> <span class="token operator">|</span> <span class="token string">"Bcat"</span> <span class="token operator">|</span> <span class="token string">"Cdog"</span> <span class="token operator">|</span> <span class="token string">"Dpig"</span><span class="token punctuation">;</span>
+type T5 <span class="token operator">=</span> Exclude<span class="token operator">&lt;</span>animal<span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`$&amp;#123;string&amp;#125;$&amp;#123;"dog" | "cat"&amp;#125;`</span></span><span class="token operator">></span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//"Dpig"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h3><p>Exclude 用來排除某些型別，可以用來排除單一型別、多個型別、某個類型、物件類型、形狀、樣板文字等等。</p>
+<h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><p><a target="_blank" rel="noopener" href="https://www.typescriptlang.org/docs/handbook/utility-types.html#excludetype-excludedunion">Exclude</a><br><a target="_blank" rel="noopener" href="https://www.totaltypescript.com/uses-for-exclude-type-helper">9 Ways to Use Exclude in TypeScript-Matt Pocock</a></p>
+
+        </p>
+        <a class="stretched-link" href="/2024/02/01/TypeScript-Exclude/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
         
           
    <!-- prevent image appear -->
@@ -714,172 +806,13 @@ function MyComponent(props: MyComponentProps) &#123;
 </li>
 
         
-          
-   <!-- prevent image appear -->
-
-
-<li
-  id="post-Java-特殊類別-介面、抽象、枚舉、匿名類"
-  class="card border-0"
-  itemprop="blogPost"
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
->
-  <article class="row g-0">
-    <div class="col-12 col-lg-4">
-      <img
-        src="/images/default-cover.png"
-        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
-        alt="article-Java-特殊類別(介面、抽象、枚舉、匿名類)"
-      >
-    </div>
-    <div class="col-12 col-lg-8">
-      <div class="card-body pt-lg-0 pe-lg-0">
-        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
-          <p class="card-text mb-0 fs-6 text-primary-600">
-            <small class="text-body-secondary">
-              2024/1/25
-            </small>
-          </p>
-
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              Java
-            </span>
-          
-
-        </div>
-        <h5 class="card-title mb-3 text-primary-700">
-          Java-特殊類別(介面、抽象、枚舉、匿名類)
-        </h5>
-        <div class="cutoff-text mb-0 text-primary-700">
-          <p>Java 有許多不同的特殊類別，例如：介面、抽象類別、枚舉類別、匿名類別，這些類別都有各自的特性，也有各自的使用場景，這篇文章會介紹這些特殊類別的特性與使用場景。</p>
-<span id="more"></span>
-
-<h2 id="介面-Interface"><a href="#介面-Interface" class="headerlink" title="介面(Interface)"></a>介面(Interface)</h2><p>可以簡單的理解為一個規則</p>
-<h3 id="介面的特性"><a href="#介面的特性" class="headerlink" title="介面的特性"></a>介面的特性</h3><ol>
-<li>介面都是抽象的</li>
-<li>規則的屬性為固定值,且不能修改</li>
-<li>屬性和行為的訪問權限必須為公共的</li>
-<li>屬性是靜態的</li>
-<li>行為是抽象的</li>
-<li>介面和類是不一樣的東西</li>
-<li>介面可以繼承多個介面</li>
-<li>類的物件需要遵循介面，在 Java 中這個動作叫做實現(implements)，類需要實現介面，而且可以實現多個介面</li>
-</ol>
-<h3 id="介面的語法"><a href="#介面的語法" class="headerlink" title="介面的語法"></a>介面的語法</h3><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> basic<span class="token punctuation">;</span>
-
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">helloworld</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    Computer c<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Computer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    Light l1<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Light</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    Light l2<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Light</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    c<span class="token punctuation">.</span>usb1<span class="token operator">=</span>l1<span class="token punctuation">;</span>
-    c<span class="token punctuation">.</span>usb2<span class="token operator">=</span>l2<span class="token punctuation">;</span>
-    c<span class="token punctuation">.</span><span class="token function">powerSupply</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token keyword">interface</span> <span class="token class-name">USBInterface</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token keyword">interface</span> <span class="token class-name">USBSupply</span> <span class="token keyword">extends</span> <span class="token class-name">USBInterface</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">powerSupply</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token keyword">interface</span> <span class="token class-name">USBReceive</span> <span class="token keyword">extends</span> <span class="token class-name">USBInterface</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">powerReceive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token keyword">class</span> <span class="token class-name">Computer</span> <span class="token keyword">implements</span> <span class="token class-name">USBSupply</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> USBReceive usb1<span class="token punctuation">;</span>
-    <span class="token keyword">public</span> USBReceive usb2<span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">powerSupply</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Computer is supplying power"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    usb1<span class="token punctuation">.</span><span class="token function">powerReceive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    usb2<span class="token punctuation">.</span><span class="token function">powerReceive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token keyword">class</span> <span class="token class-name">Light</span> <span class="token keyword">implements</span> <span class="token class-name">USBReceive</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">powerReceive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Light is receiving power"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="抽象-Abstract"><a href="#抽象-Abstract" class="headerlink" title="抽象(Abstract)"></a>抽象(Abstract)</h2><p>只有宣告沒有實作的方法</p>
-<h3 id="抽象方法-Abstract-Method"><a href="#抽象方法-Abstract-Method" class="headerlink" title="抽象方法(Abstract Method)"></a>抽象方法(Abstract Method)</h3><h4 id="語法"><a href="#語法" class="headerlink" title="語法"></a>語法</h4><blockquote>
-<p>abstract 返回值類型 方法名稱(參數列表);</p>
-</blockquote>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Animal</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h3 id="抽象類別-Abstract-Class"><a href="#抽象類別-Abstract-Class" class="headerlink" title="抽象類別(Abstract Class)"></a>抽象類別(Abstract Class)</h3><p>1.因為類不完整，所以不能被實體化，只能被繼承 2.如果一個類有抽象方法，那麼該類必須定義為抽象類 3.抽象類可以有抽象方法，也可以有非抽象方法 4.抽象類無法直接實體化，必須由子類繼承實現間接的實體化 5.如果抽象類有抽象方法，那麼子類必須重寫抽象方法</p>
-<h4 id="語法-1"><a href="#語法-1" class="headerlink" title="語法"></a>語法</h4><blockquote>
-<p>abstract class 類別名稱{…}</p>
-</blockquote>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Animal</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">extends</span> <span class="token class-name">Animal</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">void</span> <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"dog eat"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="枚舉-Enum"><a href="#枚舉-Enum" class="headerlink" title="枚舉(Enum)"></a>枚舉(Enum)</h2><p>1.枚舉是一個特殊的類別，其中包含一組特定對象，這些對象不會發生改變 2.關鍵字 enum 用來宣告一個枚舉 3.枚舉會將對象放置在最前面,後面用分號隔開 4.枚舉不能創建對象，它是在內部創建的</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> basic<span class="token punctuation">;</span>
-
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">JavaEnum</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>City<span class="token punctuation">.</span>TAIPEI<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>City<span class="token punctuation">.</span>TAICHUNG<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token keyword">enum</span> City<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token function">TAIPEI</span><span class="token punctuation">(</span><span class="token string">"台北"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">TAICHUNG</span><span class="token punctuation">(</span><span class="token string">"台中"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">TAINAN</span><span class="token punctuation">(</span><span class="token string">"台南"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">City</span><span class="token punctuation">(</span>String name<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token operator">=</span>name<span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> String name<span class="token punctuation">;</span>
-
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="匿名類-Anonymous"><a href="#匿名類-Anonymous" class="headerlink" title="匿名類(Anonymous)"></a>匿名類(Anonymous)</h2><p>在某些場合，類的名子不重要，指向使用類中的方法或功能<br>如下範例，直接在方法中建立一個類，並且實作方法，並且在方法中使用</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> basic<span class="token punctuation">;</span>
-
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">JavaAnonymousClass</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    Me me <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Me</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    me<span class="token punctuation">.</span><span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token keyword">public</span> String <span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-            <span class="token keyword">return</span> <span class="token string">"John"</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">abstract</span> String <span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token keyword">class</span> <span class="token class-name">Me</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sayHello</span><span class="token punctuation">(</span>Person person<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello "</span> <span class="token operator">+</span> person<span class="token punctuation">.</span><span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-        </p>
-        <a class="stretched-link" href="/2024/01/25/Java-%E7%89%B9%E6%AE%8A%E9%A1%9E%E5%88%A5-%E4%BB%8B%E9%9D%A2%E3%80%81%E6%8A%BD%E8%B1%A1%E3%80%81%E6%9E%9A%E8%88%89%E3%80%81%E5%8C%BF%E5%90%8D%E9%A1%9E/"></a>
-      </div>
-    </div>
-  </article>
-</li>
-
-        
       </ul>
     </div>
 
     <nav class="mb-7 mb-md-9" aria-label="Page navigation">
       <ul class="pagination justify-content-center gap-3">
         
-          <li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/">1</a></li><li class="page-item"><span class="page-link text-primary-700 rounded-1 border-0 active">2</span></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/3/">3</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/4/">4</a></li><span class="space">&hellip;</span><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/9/">9</a></li>
+          <li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/">1</a></li><li class="page-item"><span class="page-link text-primary-700 rounded-1 border-0 active">2</span></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/3/">3</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/4/">4</a></li><span class="space">&hellip;</span><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/10/">10</a></li>
         
       </ul>
     </nav>

@@ -153,22 +153,8 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          TypeHero
-        </a>
-      </li>
-    
-      
-      <li class="flex-shrink-0">
         <a href="/tags/VS-Code/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           VS Code
-        </a>
-      </li>
-    
-      
-      <li class="flex-shrink-0">
-        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          ejs
         </a>
       </li>
     
@@ -181,8 +167,22 @@
     
       
       <li class="flex-shrink-0">
+        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          TypeHero
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
         <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           Hooks
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
         </a>
       </li>
     
@@ -193,11 +193,237 @@
         </a>
       </li>
     
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          axios
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/javascript/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          javascript
+        </a>
+      </li>
+    
   </ul>
 </aside>
       </div>
 
       <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-MySQL-SQL語法介紹-DQL-資料查詢語言"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-MySQL-SQL語法介紹-DQL 資料查詢語言"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2024/1/18
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              MySQL
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              SQL
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          MySQL-SQL語法介紹-DQL 資料查詢語言
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>DQL(Data Query Language) 資料查詢語言</p>
+<span id="more"></span>
+
+<h3 id="基礎查詢資料"><a href="#基礎查詢資料" class="headerlink" title="基礎查詢資料"></a>基礎查詢資料</h3><h4 id="查詢資料"><a href="#查詢資料" class="headerlink" title="查詢資料"></a>查詢資料</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 欄位名<span class="token number">1</span><span class="token punctuation">,</span> 欄位名<span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">WHERE</span> 條件<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="去除重複資料"><a href="#去除重複資料" class="headerlink" title="去除重複資料"></a>去除重複資料</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token keyword">DISTINCT</span> 欄位名<span class="token number">1</span><span class="token punctuation">,</span> 欄位名<span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">WHERE</span> 條件<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="取別名"><a href="#取別名" class="headerlink" title="取別名"></a>取別名</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 欄位名<span class="token number">1</span> <span class="token keyword">AS</span> 別名<span class="token number">1</span><span class="token punctuation">,</span> 欄位名<span class="token number">2</span> <span class="token keyword">AS</span> 別名<span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">WHERE</span> 條件<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="條件查詢"><a href="#條件查詢" class="headerlink" title="條件查詢"></a>條件查詢</h3><h4 id="基本語法"><a href="#基本語法" class="headerlink" title="基本語法"></a>基本語法</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 欄位名<span class="token number">1</span><span class="token punctuation">,</span> 欄位名<span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">WHERE</span> 條件<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="條件查詢關鍵字表格"><a href="#條件查詢關鍵字表格" class="headerlink" title="條件查詢關鍵字表格"></a>條件查詢關鍵字表格</h4><table>
+<thead>
+<tr>
+<th>關鍵字</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&gt;</td>
+<td>大於</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>小於</td>
+</tr>
+<tr>
+<td>&gt;&#x3D;</td>
+<td>大於等於</td>
+</tr>
+<tr>
+<td>&lt;&#x3D;</td>
+<td>小於等於</td>
+</tr>
+<tr>
+<td>&#x3D;</td>
+<td>等於</td>
+</tr>
+<tr>
+<td>!&#x3D;</td>
+<td>不等於</td>
+</tr>
+<tr>
+<td>&lt;&gt;</td>
+<td>不等於</td>
+</tr>
+<tr>
+<td>BETWEEN…AND…</td>
+<td>在…之間</td>
+</tr>
+<tr>
+<td>IN(…)</td>
+<td>在…群組之中</td>
+</tr>
+<tr>
+<td>LIKE</td>
+<td>模糊查詢</td>
+</tr>
+<tr>
+<td>IS NULL</td>
+<td>為空值</td>
+</tr>
+<tr>
+<td>IS NOT NULL</td>
+<td>不為空值</td>
+</tr>
+<tr>
+<td>AND</td>
+<td>且</td>
+</tr>
+<tr>
+<td>OR</td>
+<td>或</td>
+</tr>
+<tr>
+<td>NOT</td>
+<td>非</td>
+</tr>
+</tbody></table>
+<h4 id="條件查詢範例"><a href="#條件查詢範例" class="headerlink" title="條件查詢範例"></a>條件查詢範例</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">WHERE</span> 欄位名<span class="token number">1</span> <span class="token operator">></span> <span class="token number">100</span><span class="token punctuation">;</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">WHERE</span> 欄位名<span class="token number">1</span> <span class="token operator">BETWEEN</span> <span class="token number">100</span> <span class="token operator">AND</span> <span class="token number">200</span><span class="token punctuation">;</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">WHERE</span> 欄位名<span class="token number">1</span> <span class="token operator">IN</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">WHERE</span> 欄位名<span class="token number">1</span> <span class="token operator">LIKE</span> <span class="token string">'A%'</span><span class="token punctuation">;</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">WHERE</span> 欄位名<span class="token number">1</span> <span class="token operator">IS</span> <span class="token boolean">NULL</span><span class="token punctuation">;</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">WHERE</span> 欄位名<span class="token number">1</span> <span class="token operator">IS</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">;</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">WHERE</span> 欄位名<span class="token number">1</span> <span class="token operator">></span> <span class="token number">100</span> <span class="token operator">AND</span> 欄位名<span class="token number">2</span> <span class="token operator">&lt;</span> <span class="token number">200</span><span class="token punctuation">;</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">WHERE</span> 欄位名<span class="token number">1</span> <span class="token operator">></span> <span class="token number">100</span> <span class="token operator">OR</span> 欄位名<span class="token number">2</span> <span class="token operator">&lt;</span> <span class="token number">200</span><span class="token punctuation">;</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">WHERE</span> <span class="token operator">NOT</span> 欄位名<span class="token number">1</span> <span class="token operator">></span> <span class="token number">100</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="like-模糊查詢介紹"><a href="#like-模糊查詢介紹" class="headerlink" title="like 模糊查詢介紹"></a>like 模糊查詢介紹</h4><p>XX%XX 代表任意長度的字串</p>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">WHERE</span> 欄位名<span class="token number">1</span> <span class="token operator">LIKE</span> <span class="token string">'%A%'</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>XX_XX 代表任意一個字元</p>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">WHERE</span> 欄位名<span class="token number">1</span> <span class="token operator">LIKE</span> <span class="token string">'A_'</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="排序查詢"><a href="#排序查詢" class="headerlink" title="排序查詢"></a>排序查詢</h3><h4 id="排序查詢語法"><a href="#排序查詢語法" class="headerlink" title="排序查詢語法"></a>排序查詢語法</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 欄位名<span class="token number">1</span><span class="token punctuation">,</span> 欄位名<span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">WHERE</span> 條件 <span class="token keyword">ORDER</span> <span class="token keyword">BY</span> 欄位名<span class="token number">1</span> <span class="token keyword">ASC</span><span class="token operator">/</span><span class="token keyword">DESC</span><span class="token punctuation">,</span> 欄位名<span class="token number">2</span> <span class="token keyword">ASC</span><span class="token operator">/</span><span class="token keyword">DESC</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<blockquote>
+<p>如果有多個欄位，會先以第一個欄位排序，如果第一個欄位有相同的值，再以第二個欄位排序，以此類推</p>
+</blockquote>
+<h4 id="聚合函數語法"><a href="#聚合函數語法" class="headerlink" title="聚合函數語法"></a>聚合函數語法</h4><table>
+<thead>
+<tr>
+<th>聚合函數</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>COUNT(欄位名)</td>
+<td>計算欄位名的總數</td>
+</tr>
+<tr>
+<td>SUM(欄位名)</td>
+<td>計算欄位名的總和</td>
+</tr>
+<tr>
+<td>AVG(欄位名)</td>
+<td>計算欄位名的平均值</td>
+</tr>
+<tr>
+<td>MAX(欄位名)</td>
+<td>計算欄位名的最大值</td>
+</tr>
+<tr>
+<td>MIN(欄位名)</td>
+<td>計算欄位名的最小值</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>所有聚合函數都會忽略 NULL 值</p>
+</blockquote>
+<h4 id="聚合函數範例"><a href="#聚合函數範例" class="headerlink" title="聚合函數範例"></a>聚合函數範例</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token function">COUNT</span><span class="token punctuation">(</span>欄位名<span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">SUM</span><span class="token punctuation">(</span>欄位名<span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">AVG</span><span class="token punctuation">(</span>欄位名<span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">MAX</span><span class="token punctuation">(</span>欄位名<span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">MIN</span><span class="token punctuation">(</span>欄位名<span class="token number">5</span><span class="token punctuation">)</span> <span class="token keyword">FROM</span> 資料表名<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="分組查詢語法"><a href="#分組查詢語法" class="headerlink" title="分組查詢語法"></a>分組查詢語法</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 欄位名<span class="token number">1</span><span class="token punctuation">,</span> 聚合函數<span class="token number">1</span><span class="token punctuation">,</span> 聚合函數<span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">GROUP</span> <span class="token keyword">BY</span> 欄位名<span class="token number">1</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="分組查詢範例-搭配-where"><a href="#分組查詢範例-搭配-where" class="headerlink" title="分組查詢範例(搭配 where)"></a>分組查詢範例(搭配 where)</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 欄位名<span class="token number">1</span><span class="token punctuation">,</span> 聚合函數<span class="token number">1</span><span class="token punctuation">,</span> 聚合函數<span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">WHERE</span> 條件 <span class="token keyword">GROUP</span> <span class="token keyword">BY</span> 欄位名<span class="token number">1</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="分組查詢範例-搭配-having"><a href="#分組查詢範例-搭配-having" class="headerlink" title="分組查詢範例(搭配 having)"></a>分組查詢範例(搭配 having)</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 欄位名<span class="token number">1</span><span class="token punctuation">,</span> 聚合函數<span class="token number">1</span><span class="token punctuation">,</span> 聚合函數<span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">GROUP</span> <span class="token keyword">BY</span> 欄位名<span class="token number">1</span> <span class="token keyword">HAVING</span> 條件<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<blockquote>
+<p>執行順序: WHERE -&gt; 聚合函數 -&gt; HAVING</p>
+</blockquote>
+<h4 id="分頁查詢語法"><a href="#分頁查詢語法" class="headerlink" title="分頁查詢語法"></a>分頁查詢語法</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 欄位名<span class="token number">1</span><span class="token punctuation">,</span> 欄位名<span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">LIMIT</span> 起始位置<span class="token punctuation">,</span> 查詢筆數<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<blockquote>
+<p>起始索引計算方式&#x3D; (頁數 - 1) * 每頁筆數</p>
+</blockquote>
+<h4 id="分頁查詢範例"><a href="#分頁查詢範例" class="headerlink" title="分頁查詢範例"></a>分頁查詢範例</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> 資料表名 <span class="token keyword">LIMIT</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<blockquote>
+<p>LIMIT 是 MySQL 的語法，不是標準 SQL 語法，不同的資料庫可能會有不同的寫法</p>
+</blockquote>
+<h3 id="DQL-小結"><a href="#DQL-小結" class="headerlink" title="DQL 小結"></a>DQL 小結</h3><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> 欄位名<span class="token number">1</span><span class="token punctuation">,</span> 欄位名<span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword">FROM</span> 資料表名
+<span class="token keyword">WHERE</span> 條件
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> 欄位名<span class="token number">1</span>
+<span class="token keyword">HAVING</span> 條件
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> 欄位名<span class="token number">1</span> <span class="token keyword">ASC</span><span class="token operator">/</span><span class="token keyword">DESC</span><span class="token punctuation">,</span> 欄位名<span class="token number">2</span> <span class="token keyword">ASC</span><span class="token operator">/</span><span class="token keyword">DESC</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword">LIMIT</span> 起始位置<span class="token punctuation">,</span> 查詢筆數<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+        </p>
+        <a class="stretched-link" href="/2024/01/18/MySQL-SQL%E8%AA%9E%E6%B3%95%E4%BB%8B%E7%B4%B9-DQL-%E8%B3%87%E6%96%99%E6%9F%A5%E8%A9%A2%E8%AA%9E%E8%A8%80/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
         
           
    <!-- prevent image appear -->
@@ -626,116 +852,13 @@
 </li>
 
         
-          
-   <!-- prevent image appear -->
-
-
-<li
-  id="post-window-body"
-  class="card border-0"
-  itemprop="blogPost"
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
->
-  <article class="row g-0">
-    <div class="col-12 col-lg-4">
-      <img
-        src="/images/default-cover.png"
-        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
-        alt="article-window&amp;body"
-      >
-    </div>
-    <div class="col-12 col-lg-8">
-      <div class="card-body pt-lg-0 pe-lg-0">
-        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
-          <p class="card-text mb-0 fs-6 text-primary-600">
-            <small class="text-body-secondary">
-              2023/12/29
-            </small>
-          </p>
-
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              html
-            </span>
-          
-
-        </div>
-        <h5 class="card-title mb-3 text-primary-700">
-          window&body
-        </h5>
-        <div class="cutoff-text mb-0 text-primary-700">
-          <h2 id="文字版"><a href="#文字版" class="headerlink" title="文字版"></a>文字版</h2><p>在 JavaScript 中，window 和 document.body 是兩個重要的全局物件，它們代表瀏覽器視窗和網頁文件的主體部分。讓我們來看一下它們之間的差異：</p>
-<span id="more"></span>
-
-<ol>
-<li>window：</li>
-</ol>
-<ul>
-<li>window 是瀏覽器中的全局物件，代表整個瀏覽器視窗。</li>
-<li>它是所有全局變數和函式的最高級別的容器，可以透過它來訪問和操作全局範圍的變數和函式。</li>
-<li>它提供了許多瀏覽器相關的屬性和方法，比如 window.location 可以用來獲取當前網址，window.alert() 可以用來顯示警告對話框，等等。</li>
-</ul>
-<ol start="2">
-<li>document.body：</li>
-</ol>
-<ul>
-<li>document.body 是 document 物件的一部分，代表 HTML 文件的主體部分。</li>
-<li>它表示網頁中的 <body> 元素，即網頁中的主要內容區域。 *透過 document.body 可以訪問和操作網頁主體中的元素，例如透過 document.body.appendChild(element) 可以將元素添加到主體中。</li>
-</ul>
-<p>總結來說，window 是瀏覽器視窗的全局物件，而 document.body 是 HTML 文件的主體部分。它們都提供了許多功能來處理瀏覽器和網頁的相關操作。在網頁開發中，你會經常使用這兩個物件來操作網頁和處理事件。</p>
-<h2 id="表格整理版"><a href="#表格整理版" class="headerlink" title="表格整理版"></a>表格整理版</h2><p>當前瀏覽器視窗和網頁文件主體的差異如下：</p>
-<table>
-<thead>
-<tr>
-<th>特性</th>
-<th><code>window</code></th>
-<th><code>document.body</code></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>定義位置</td>
-<td>全局範圍（在所有地方可訪問）</td>
-<td><code>document</code> 物件的一部分（HTML 文件內）</td>
-</tr>
-<tr>
-<td>代表的物件</td>
-<td>瀏覽器視窗</td>
-<td>HTML 文件的主體部分（<code>&lt;body&gt;</code> 元素）</td>
-</tr>
-<tr>
-<td>功能</td>
-<td>提供瀏覽器相關的屬性和方法</td>
-<td>提供操作網頁主體內容的屬性和方法</td>
-</tr>
-<tr>
-<td>例子</td>
-<td><code>window.location</code></td>
-<td><code>document.body.appendChild(element)</code></td>
-</tr>
-<tr>
-<td>使用場景</td>
-<td>瀏覽器操作、全局變數和函式</td>
-<td>操作網頁內容、處理網頁事件</td>
-</tr>
-</tbody></table>
-<p><code>window</code> 物件是瀏覽器中的全局物件，它提供了許多瀏覽器相關的屬性和方法，可以在任何地方訪問。而 <code>document.body</code> 則是 <code>document</code> 物件的一部分，代表 HTML 文件的主體部分，主要用於操作網頁主體內容，例如添加元素或處理事件。在網頁開發中，你會經常使用這兩個物件來處理瀏覽器和網頁的相關操作。</p>
-
-        </p>
-        <a class="stretched-link" href="/2023/12/29/window-body/"></a>
-      </div>
-    </div>
-  </article>
-</li>
-
-        
       </ul>
     </div>
 
     <nav class="mb-7 mb-md-9" aria-label="Page navigation">
       <ul class="pagination justify-content-center gap-3">
         
-          <li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/">1</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/2/">2</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/3/">3</a></li><li class="page-item"><span class="page-link text-primary-700 rounded-1 border-0 active">4</span></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/5/">5</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/6/">6</a></li><span class="space">&hellip;</span><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/9/">9</a></li>
+          <li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/">1</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/2/">2</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/3/">3</a></li><li class="page-item"><span class="page-link text-primary-700 rounded-1 border-0 active">4</span></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/5/">5</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/6/">6</a></li><span class="space">&hellip;</span><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/10/">10</a></li>
         
       </ul>
     </nav>

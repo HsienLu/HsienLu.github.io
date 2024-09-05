@@ -153,22 +153,8 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          TypeHero
-        </a>
-      </li>
-    
-      
-      <li class="flex-shrink-0">
         <a href="/tags/VS-Code/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           VS Code
-        </a>
-      </li>
-    
-      
-      <li class="flex-shrink-0">
-        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          ejs
         </a>
       </li>
     
@@ -181,8 +167,22 @@
     
       
       <li class="flex-shrink-0">
+        <a href="/tags/TypeHero/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          TypeHero
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
         <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
           Hooks
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
         </a>
       </li>
     
@@ -193,11 +193,96 @@
         </a>
       </li>
     
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          axios
+        </a>
+      </li>
+    
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/javascript/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          javascript
+        </a>
+      </li>
+    
   </ul>
 </aside>
       </div>
 
       <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-仿axios套件實做"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-仿axios套件實做"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2024/9/5
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              axios
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              javascript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          仿axios套件實做
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>嘗試模仿axios試做一個簡單的get請求</p>
+<span id="more"></span>
+
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">const</span> url<span class="token operator">=</span><span class="token string">"https://randomuser.me/api/"</span>
+
+<span class="token keyword">const</span> axios <span class="token operator">=</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">get</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>reslove<span class="token punctuation">,</span>reject<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'GET'</span><span class="token punctuation">,</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            xhr<span class="token punctuation">.</span>onload <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token function">reslove</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>responseText<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            xhr<span class="token punctuation">.</span>onerror<span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token function">reject</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>statusText<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>data<span class="token operator">=</span><span class="token operator">></span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err<span class="token operator">=</span><span class="token operator">></span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+        </p>
+        <a class="stretched-link" href="/2024/09/05/%E4%BB%BFaxios%E5%A5%97%E4%BB%B6%E5%AF%A6%E5%81%9A/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
         
           
    <!-- prevent image appear -->
@@ -627,91 +712,13 @@
 </li>
 
         
-          
-   <!-- prevent image appear -->
-
-
-<li
-  id="post-TypeScript-Exclude"
-  class="card border-0"
-  itemprop="blogPost"
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
->
-  <article class="row g-0">
-    <div class="col-12 col-lg-4">
-      <img
-        src="/images/default-cover.png"
-        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
-        alt="article-TypeScript-Exclude"
-      >
-    </div>
-    <div class="col-12 col-lg-8">
-      <div class="card-body pt-lg-0 pe-lg-0">
-        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
-          <p class="card-text mb-0 fs-6 text-primary-600">
-            <small class="text-body-secondary">
-              2024/2/1
-            </small>
-          </p>
-
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              TypeScript
-            </span>
-          
-
-        </div>
-        <h5 class="card-title mb-3 text-primary-700">
-          TypeScript-Exclude
-        </h5>
-        <div class="cutoff-text mb-0 text-primary-700">
-          <h3 id="Exclude"><a href="#Exclude" class="headerlink" title="Exclude&lt;UnionType, ExcludedMembers&gt;"></a>Exclude&lt;UnionType, ExcludedMembers&gt;</h3><p>顧名思義，就是排除某些類型的意思。<br>引用官方的說法：從 UnionType 中排除所有可分配給 ExcludedMembers 的聯合成員，以構建一個新的類型。</p>
-<blockquote>
-<p>Constructs a type by excluding from UnionType all union members that are assignable to ExcludedMembers</p>
-</blockquote>
-<span id="more"></span>
-
-<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><p>1.排除某個型別</p>
-<pre class="line-numbers language-typescript"><code class="language-typescript">type T0 <span class="token operator">=</span> Exclude<span class="token operator">&lt;</span><span class="token string">"a"</span> <span class="token operator">|</span> <span class="token string">"b"</span> <span class="token operator">|</span> <span class="token string">"c"</span><span class="token punctuation">,</span> <span class="token string">"a"</span><span class="token operator">></span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// "b" | "c"</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>2.排除多個型別</p>
-<pre class="line-numbers language-typescript"><code class="language-typescript">type text <span class="token operator">=</span> <span class="token string">"A"</span> <span class="token operator">|</span> <span class="token string">"B"</span> <span class="token operator">|</span> <span class="token string">"C"</span> <span class="token operator">|</span> <span class="token string">"D"</span> <span class="token operator">|</span> <span class="token string">"E"</span><span class="token punctuation">;</span>
-type T1 <span class="token operator">=</span> Exclude<span class="token operator">&lt;</span>text<span class="token punctuation">,</span> <span class="token string">"A"</span> <span class="token operator">|</span> <span class="token string">"B"</span> <span class="token operator">|</span> <span class="token string">"C"</span><span class="token operator">></span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// "D" | "E"</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>3.排除某個類型</p>
-<pre class="line-numbers language-typescript"><code class="language-typescript">type T2 <span class="token operator">=</span> Exclude<span class="token operator">&lt;</span><span class="token keyword">number</span> <span class="token operator">|</span> <span class="token string">"b"</span> <span class="token operator">|</span> <span class="token string">"c"</span><span class="token punctuation">,</span> <span class="token keyword">string</span><span class="token operator">></span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// number</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>4.排除物件類型</p>
-<pre class="line-numbers language-typescript"><code class="language-typescript">type animal <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span> <span class="token string">"dog"</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">|</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span> <span class="token string">"cat"</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">|</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span> <span class="token string">"pig"</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
-type T3 <span class="token operator">=</span> Exclude<span class="token operator">&lt;</span>animal<span class="token punctuation">,</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span> <span class="token string">"dog"</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">></span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// &amp;#123;name:"cat"&amp;#125; | &amp;#123;name:"pig"&amp;#125;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>5.藉由形狀排除型別</p>
-<pre class="line-numbers language-typescript"><code class="language-typescript">type animal <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span> <span class="token string">"dog"</span><span class="token punctuation">;</span> age<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">|</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span> <span class="token string">"cat"</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">|</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token punctuation">:</span> <span class="token string">"pig"</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
-type T4 <span class="token operator">=</span> Exclude<span class="token operator">&lt;</span>animal<span class="token punctuation">,</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>age<span class="token punctuation">:</span> <span class="token keyword">number</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">></span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// &amp;#123;name:"cat"&amp;#125; | &amp;#123;name:"pig"&amp;#125;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>6.藉由樣板文字排除型別</p>
-<pre class="line-numbers language-typescript"><code class="language-typescript">type animal <span class="token operator">=</span> <span class="token string">"Adog"</span> <span class="token operator">|</span> <span class="token string">"Bcat"</span> <span class="token operator">|</span> <span class="token string">"Cdog"</span> <span class="token operator">|</span> <span class="token string">"Dpig"</span><span class="token punctuation">;</span>
-type T5 <span class="token operator">=</span> Exclude<span class="token operator">&lt;</span>animal<span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`$&amp;#123;string&amp;#125;$&amp;#123;"dog" | "cat"&amp;#125;`</span></span><span class="token operator">></span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//"Dpig"</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h3 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h3><p>Exclude 用來排除某些型別，可以用來排除單一型別、多個型別、某個類型、物件類型、形狀、樣板文字等等。</p>
-<h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><p><a target="_blank" rel="noopener" href="https://www.typescriptlang.org/docs/handbook/utility-types.html#excludetype-excludedunion">Exclude</a><br><a target="_blank" rel="noopener" href="https://www.totaltypescript.com/uses-for-exclude-type-helper">9 Ways to Use Exclude in TypeScript-Matt Pocock</a></p>
-
-        </p>
-        <a class="stretched-link" href="/2024/02/01/TypeScript-Exclude/"></a>
-      </div>
-    </div>
-  </article>
-</li>
-
-        
       </ul>
     </div>
 
     <nav class="mb-7 mb-md-9" aria-label="Page navigation">
       <ul class="pagination justify-content-center gap-3">
         
-          <li class="page-item"><span class="page-link text-primary-700 rounded-1 border-0 active">1</span></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/2/">2</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/3/">3</a></li><span class="space">&hellip;</span><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/9/">9</a></li>
+          <li class="page-item"><span class="page-link text-primary-700 rounded-1 border-0 active">1</span></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/2/">2</a></li><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/3/">3</a></li><span class="space">&hellip;</span><li class="page-item"><a class="page-link text-primary-700 rounded-1 border-0" href="/blog/10/">10</a></li>
         
       </ul>
     </nav>
