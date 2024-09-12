@@ -25,6 +25,15 @@ permalink: /404.html
   fa-share{
     display: none;
   }
+  a>span{
+    display: none;
+  }
+  h1{
+    text-align: center;
+  }
+  h2{
+    text-align: center;
+  }
 </style>
 <center>
 
