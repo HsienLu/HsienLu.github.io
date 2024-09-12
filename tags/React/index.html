@@ -174,15 +174,15 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          ejs
+        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Hooks
         </a>
       </li>
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          Hooks
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
         </a>
       </li>
     
@@ -1091,7 +1091,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
 
 <li
-  id="post-Day 24 React的橋樑-Prpos"
+  id="post-Day 23 React中的JavaScript"
   class="card border-0"
   itemprop="blogPost"
   itemscope
@@ -1102,7 +1102,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
       <img
         src="/images/default-cover.png"
         class="img-fluid w-100 h-100 object-fit-cover rounded-3"
-        alt="article-Day 24 React 的橋樑-Prpos"
+        alt="article-Day 23 React 中的 JavaScript"
       >
     </div>
     <div class="col-12 col-lg-8">
@@ -1126,66 +1126,79 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
         </div>
         <h5 class="card-title mb-3 text-primary-700">
-          Day 24 React 的橋樑-Prpos
+          Day 23 React 中的 JavaScript
         </h5>
         <div class="cutoff-text mb-0 text-primary-700">
-          <h1 id="Day24-React-的橋樑-Prpos"><a href="#Day24-React-的橋樑-Prpos" class="headerlink" title="Day24 React 的橋樑-Prpos"></a>Day24 React 的橋樑-Prpos</h1><p>Props 是一個元件之間傳遞資料的手段，它其實有點像是 HTML 標籤的屬性，實際上很多像是 HTML 標籤的屬性也被預設為 Props，例如 img 標籤的 src,alt 等等，但也可以自定義，有點像是 data-set 那樣，接下來就開始今天的主題吧!</p>
+          <p>今天要介紹的是 JSX 重要的部分，就是如何在 JSX 中寫 JavaScript，其實很理所當然的 JSX 來就是 JavaScript，所以能寫 JavaScript 是一件蠻合理的一件事情，但依然有些規則需要遵守。接下來就依序來介紹吧!</p>
 <span id="more"></span>
 
-<h2 id="Props-的特性"><a href="#Props-的特性" class="headerlink" title="Props 的特性"></a>Props 的特性</h2><h4 id="1-只能允許單向資料流"><a href="#1-只能允許單向資料流" class="headerlink" title="1.只能允許單向資料流"></a>1.只能允許單向資料流</h4><p>簡單來說就是只能從父元件傳到子元件，要從子元件傳回去需要用其它特殊方法</p>
-<h4 id="2-資料類型為物件"><a href="#2-資料類型為物件" class="headerlink" title="2.資料類型為物件"></a>2.資料類型為物件</h4><h4 id="3-不可被元件本身自己改變"><a href="#3-不可被元件本身自己改變" class="headerlink" title="3.不可被元件本身自己改變"></a>3.不可被元件本身自己改變</h4><h4 id="4-但可以被父元件改變"><a href="#4-但可以被父元件改變" class="headerlink" title="4.但可以被父元件改變"></a>4.但可以被父元件改變</h4><h4 id="5-可以自訂預設值，父元件如果沒給定值會自行套用"><a href="#5-可以自訂預設值，父元件如果沒給定值會自行套用" class="headerlink" title="5.可以自訂預設值，父元件如果沒給定值會自行套用"></a>5.可以自訂預設值，父元件如果沒給定值會自行套用</h4><h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><p>1.將 props 傳給子元件</p>
-<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Child</span> <span class="token attr-name">test</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>AAA<span class="token punctuation">"</span></span> <span class="token attr-name">num</span><span class="token attr-value"><span class="token punctuation">=</span>&amp;#123;100&amp;#125;</span> <span class="token punctuation">/></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>2.在子元件讀取傳遞的值</p>
-<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token function">Child</span><span class="token punctuation">(</span><span class="token entity" title="&#123;">&amp;#123;</span>test<span class="token punctuation">,</span> num<span class="token entity" title="&#125;">&amp;#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>3.可以自訂預設參數</p>
-<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Child</span> <span class="token attr-name">test</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>AAA<span class="token punctuation">"</span></span> <span class="token attr-name">num</span><span class="token attr-value"><span class="token punctuation">=</span>&amp;#123;100&amp;#125;</span> <span class="token punctuation">/></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id="總結程式"><a href="#總結程式" class="headerlink" title="總結程式"></a>總結程式</h3><p>父元件</p>
-<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token keyword">import</span> Child <span class="token keyword">from</span> <span class="token string">"./child"</span><span class="token punctuation">;</span>
+<h3 id="1-使用大括號-處理-Javascript"><a href="#1-使用大括號-處理-Javascript" class="headerlink" title="1.使用大括號{}處理 Javascript"></a>1.使用大括號{}處理 Javascript</h3><p>(1) 像是變數或是函式都可以在大括號裡被使用舉例如下:</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> name <span class="token operator">=</span> <span class="token string">"AAA"</span><span class="token punctuation">;</span>
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token entity" title="&#123;">&amp;#123;</span>
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
     <span class="token operator">&lt;</span><span class="token operator">></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>啟用預設值<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Child</span> <span class="token punctuation">/></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>父元件改變props<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Child</span> <span class="token attr-name">test</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>AAA<span class="token punctuation">"</span></span> <span class="token attr-name">num</span><span class="token attr-value"><span class="token punctuation">=</span>&amp;#123;100&amp;#125;</span> <span class="token punctuation">/></span></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">></span>
-  <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token entity" title="&#125;">&amp;#125;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>子元件</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Child</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> test <span class="token operator">=</span> <span class="token string">"BBB"</span><span class="token punctuation">,</span> num <span class="token operator">=</span> <span class="token number">10</span><span class="token comment" spellcheck="true">//自訂預設值&amp;#125;) &amp;#123;</span>
-  <span class="token keyword">return</span> <span class="token punctuation">(</span>
-    <span class="token operator">&lt;</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>h4<span class="token operator">></span>Child<span class="token operator">&lt;</span><span class="token operator">/</span>h4<span class="token operator">></span>
-      <span class="token operator">&lt;</span>p<span class="token operator">></span>text<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>test<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
-      <span class="token operator">&lt;</span>p<span class="token operator">></span>num<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>num<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+      <span class="token operator">&lt;</span>p<span class="token operator">></span>My name is <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
     <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="props-傳遞參數的解構賦值"><a href="#props-傳遞參數的解構賦值" class="headerlink" title="props 傳遞參數的解構賦值"></a>props 傳遞參數的解構賦值</h3><p>事實上，上述的範例已經也在使用了，在一開始就提到 Props 是一個物件，如果照最原始的寫法應該如下，所以重頭到尾都只傳遞一個名為 props 物件的參數而已。</p>
-<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Child</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token entity" title="&#123;">&amp;#123;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>(2) 大括號的使用範圍</p>
+<ul>
+<li>標籤內的文本</li>
+</ul>
+<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>My name is <span class="token entity" title="&#123;">&amp;#123;</span>name<span class="token entity" title="&#125;">&amp;#125;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>在&#x3D;後面的屬性</li>
+</ul>
+<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token operator">&lt;</span>src<span class="token operator">=</span><span class="token entity" title="&#123;">&amp;#123;</span>picture<span class="token entity" title="&#125;">&amp;#125;</span> img<span class="token operator">/</span><span class="token operator">></span><span class="token comment" spellcheck="true">//pictrue可能為一個變數</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2-使用-CSS-inline-styles"><a href="#2-使用-CSS-inline-styles" class="headerlink" title="2.使用 CSS inline styles"></a>2.使用 CSS inline styles</h3><p>需要使用兩層大括號，第一層是 JSX 要使用 JavaScript 規定的;第二層是因為 inline styles 被當作一個物件傳遞所以有大括號</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>p style<span class="token operator">=</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>color<span class="token punctuation">:</span> <span class="token string">"white"</span><span class="token punctuation">,</span> backgroundColor<span class="token punctuation">:</span> <span class="token string">"black"</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">></span>My name is <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>name<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="3-在大括弧中放表達式，不能陳述式"><a href="#3-在大括弧中放表達式，不能陳述式" class="headerlink" title="3.在大括弧中放表達式，不能陳述式"></a>3.在大括弧中放表達式，不能陳述式</h3><p>首先來複習一下什麼式表達式，可回傳一個結果的程式片斷就是一個表達式簡單來說，下列就是一個表達式，因為 console.log 會回傳 3</p>
+<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token number">1</span> <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>為什麼會突然提這個呢?因為常用流程控制 if else 就是陳述式，所以這樣寫會報錯的喔!下面就是一個很經典的例子，這裡先留一個梗後續的文章會在說明，簡單來說三元運算子不是陳述式。</p>
+<ul>
+<li>錯誤示範</li>
+</ul>
+<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token entity" title="&#123;">&amp;#123;</span>
+  <span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token string">"true"</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> b <span class="token operator">=</span><span class="token string">"false"</span>
+<span class="token keyword">const</span> judge <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
     <span class="token operator">&lt;</span><span class="token operator">></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">></span></span>Child<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>text<span class="token punctuation">:</span> <span class="token entity" title="&#123;">&amp;#123;</span>props<span class="token punctuation">.</span>test<span class="token entity" title="&#125;">&amp;#125;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>num<span class="token punctuation">:</span> <span class="token entity" title="&#123;">&amp;#123;</span>props<span class="token punctuation">.</span>num<span class="token entity" title="&#125;">&amp;#125;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+      <span class="token entity" title="&#123;">&amp;#123;</span><span class="token keyword">if</span><span class="token punctuation">(</span>judge<span class="token punctuation">)</span><span class="token entity" title="&#123;">&amp;#123;</span>
+        <span class="token entity" title="&#123;">&amp;#123;</span>a<span class="token entity" title="&#125;">&amp;#125;</span>
+      <span class="token entity" title="&#125;">&amp;#125;</span><span class="token keyword">else</span><span class="token entity" title="&#123;">&amp;#123;</span>
+        <span class="token entity" title="&#123;">&amp;#123;</span>b<span class="token entity" title="&#125;">&amp;#125;</span>
+      <span class="token entity" title="&#125;">&amp;#125;</span><span class="token entity" title="&#125;">&amp;#125;</span>
     <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token entity" title="&#125;">&amp;#125;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>正確示範</li>
+</ul>
+<pre class="line-numbers language-jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token entity" title="&#123;">&amp;#123;</span>
+  <span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token string">"true"</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token string">"false"</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> judge <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token operator">&lt;</span><span class="token operator">></span><span class="token entity" title="&#123;">&amp;#123;</span>judge <span class="token operator">?</span> a <span class="token punctuation">:</span> b<span class="token entity" title="&#125;">&amp;#125;</span><span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">;</span>
+<span class="token entity" title="&#125;">&amp;#125;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="ESLint-處理"><a href="#ESLint-處理" class="headerlink" title="ESLint 處理"></a>ESLint 處理</h3><p>PS:如果遇到”is missing in props validation”<br>在.eslintrc.cjs 的 rules 加上下面這段</p>
-<pre><code>&quot;react/prop-types&quot;: &quot;off&quot;,
-</code></pre>
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>props 使用起來蠻直覺的，但是有其限制所在，如果需要更進一步的活用，要了解更後面的內容包刮 Hook 之類的內容，基本上在這著系列應該沒有什麼機會介紹到，畢竟是入門向的文章，如果有機會後續再作補充，明天就會介紹到比較偏向實作的內容了。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a target="_blank" rel="noopener" href="https://react.dev/">React 官方網站</a></p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>今天的重點其實很簡單，要寫 JavaScript 就在{}裡面寫就對了，但不能寫陳述式。</p>
 
         </p>
-        <a class="stretched-link" href="/2023/10/07/Day%2024%20React%E7%9A%84%E6%A9%8B%E6%A8%91-Prpos/"></a>
+        <a class="stretched-link" href="/2023/10/07/Day%2023%20React%E4%B8%AD%E7%9A%84JavaScript/"></a>
       </div>
     </div>
   </article>
