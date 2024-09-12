@@ -8,6 +8,24 @@ permalink: /404.html
 
 ## 這是一個不存在的頁面
 <!-- 圖片 -->
+<style>
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: 768px) {
+    img {
+      width: 50%;
+    }
+  }
+  time{
+    display: none;
+  }
+  fa-share{
+    display: none;
+  }
+</style>
 <center>
 
 <img src="https://github.com/HsienLu/HsienLu.github.io/blob/gh-pages/404/NotFound.png?raw=true" style="">
