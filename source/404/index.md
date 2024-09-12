@@ -1,13 +1,26 @@
+---
+title: "404 - 真巧，竟然在這裡遇到你！"
+comments: false
+permalink: /404.html
+---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-<img src="https://github.com/HsienLu/HsienLu.github.io/blob/gh-pages/404/NotFound.png?raw=true" alt="">
+<!-- markdownlint-disable MD039 MD033 -->
+
+## 這是一個不存在的頁面
+<!-- 圖片 -->
+<style>
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: 768px) {
+    img {
+      width: 50%;
+    }
+  }
+</style>
+<img src="https://github.com/HsienLu/HsienLu.github.io/blob/gh-pages/404/NotFound.png?raw=true">
 
 很抱歉，你目前存取的頁面並不存在。
 
@@ -32,6 +45,3 @@ function count() {
 
 count();
 </script>
-  
-</body>
-</html>
