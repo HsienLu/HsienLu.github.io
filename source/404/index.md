@@ -34,6 +34,12 @@ permalink: /404.html
   h2{
     text-align: center;
   }
+  .navbar{
+    display: none;
+  }
+  footer{
+    display: none;
+  }
 </style>
 <center>
 
