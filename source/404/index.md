@@ -1,7 +1,5 @@
 ---
 title: "404 - 真巧，竟然在這裡遇到你！"
-comments: false
-permalink: /404.html
 ---
 
 <!-- markdownlint-disable MD039 MD033 -->
@@ -20,6 +18,7 @@ permalink: /404.html
     }
   }
 </style>
+<div style="margin: 0 auto">
 <img src="https://github.com/HsienLu/HsienLu.github.io/blob/gh-pages/404/NotFound.png?raw=true">
 
 很抱歉，你目前存取的頁面並不存在。
@@ -27,6 +26,7 @@ permalink: /404.html
 預計將在約 <span id="">5</span> 秒後返回首頁。
 
 如果你很急著想看文章，你可以 **[點這裡](https://hsienlu.github.io/)** 返回首頁。
+</div>
 
 <script>
 let countTime = 5;
