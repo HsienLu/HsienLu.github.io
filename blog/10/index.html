@@ -174,15 +174,15 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          Hooks
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
         </a>
       </li>
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          ejs
+        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Hooks
         </a>
       </li>
     
@@ -195,8 +195,8 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          axios
+        <a href="/tags/Closure/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Closure
         </a>
       </li>
     
@@ -207,11 +207,129 @@
         </a>
       </li>
     
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          axios
+        </a>
+      </li>
+    
   </ul>
 </aside>
       </div>
 
       <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 2 My VS Code Tour"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 2 My VS Code Tour"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/16
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 2 My VS Code Tour
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>首先第一邊當然是介紹我們的生財工具 VS Code 啦~相信大家都有自己習慣的環境和模式，今天來分享我的 VS Code 相關的開發設定。</p>
+<span id="more"></span>
+
+<h2 id="VS-Code-概述"><a href="#VS-Code-概述" class="headerlink" title="VS Code 概述"></a>VS Code 概述</h2><p>VS Code 是一個功能豐富的程式碼編輯器，支援多種程式語言，例如 JavaScript、HTML&#x2F;CSS 等等。對於軟體開發者來說，它是一個非常靈活且易於使用的工具。</p>
+<p>除了強大的基本功能外，VS Code 還可以透過安裝套件來擴展其功能。這些套件提供了各種方便的功能，幫助我們更有效率地開發。</p>
+<h2 id="背景知識"><a href="#背景知識" class="headerlink" title="背景知識"></a>背景知識</h2><ul>
+<li>VS Code</li>
+</ul>
+<h2 id="內容"><a href="#內容" class="headerlink" title="內容"></a>內容</h2><h3 id="一-VS-Code-常用基本設置"><a href="#一-VS-Code-常用基本設置" class="headerlink" title="(一) VS Code 常用基本設置"></a>(一) VS Code 常用基本設置</h3><ol>
+<li><p>自動換行</p>
+<ul>
+<li>設置方法:<ul>
+<li>點擊左下角小齒輪進入設定選單<br></li>
+<li>搜尋欄搜尋 “Wrap”</li>
+<li>在 “Word Wrap” 設置中設定成 “On”<br></li>
+</ul>
+</li>
+<li>效果:<br>Before<br><br>After<br></li>
+</ul>
+</li>
+<li><p>括弧顏色:可以協助整理巢狀結構</p>
+<ul>
+<li>設置方法:<ul>
+<li>在設定中找到 “Colorized Bracket Pairs”，進入 setting.json，貼上下列程式碼<br><pre class="line-numbers language-javaScript"><code class="language-javaScript">"editor.bracketPairColorization.enabled": true, //Bracket Pair Colorizer 協助大中小括號（&#123;&#125;、[]、()）一的獨立補上不同色彩(不用可以刪掉)
+"editor.guides.bracketPairs": "active", //Bracket Pair Colorizer 協助大中小括號（&#123;&#125;、[]、()）一一(不用可以刪掉)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+<li>效果:<br></li>
+</ul>
+</li>
+<li><p>自動儲存格式化(自動排版):可以幫忙整理排的散亂的程式碼</p>
+<ul>
+<li>設置方法:<ul>
+<li>找到下列選項設置 “Format On Save” 打勾，就完成了。<br></li>
+</ul>
+</li>
+<li>效果:<br>Before<br><br>After<br></li>
+</ul>
+</li>
+</ol>
+<h3 id="二-常用套件"><a href="#二-常用套件" class="headerlink" title="(二) 常用套件"></a>(二) 常用套件</h3><ul>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag">Auto Close Tag</a><br>HTML 自動封閉的套件</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">Auto Rename Tag</a><br>HTML 可以一起更改頭尾標籤的套件</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hant">Chinese (Traditional) Language</a><br>中文化套件</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker">Code Spell Checker</a><br>檢查拼字錯誤的套件，debug 的好幫手，效果有點像 Word 拼字檢查那樣<br></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">Git Graph</a><br>對於 Git 有漂亮的 GUI 可以看，方便查閱分支以及版本紀錄<br></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow">Indent-rainbow</a><br>縮排好幫手，下圖彩虹就是它的效果<br></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a><br>好用的網頁預覽套件，不過有時候要注意一下路徑位置，有時候會預覽不出來，這時候就要檢查一下路徑位置了</p>
+</li>
+</ul>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>總結而言，VS Code 擁有強大的功能和豐富的套件生態系統，適合各種程式開發需求。透過介紹常用的基本設置，如自動換行、括弧顏色設置以及自動儲存格式化，我們可以提高程式碼的可讀性和整潔性。此外，常用的套件如 Auto Close Tag、Auto Rename Tag、Chinese (Traditional) Language、Code Spell Checker、Git Graph、Indent-rainbow 以及 Live Server 更進一步提升了開發效率，讓我們能更專注於寫程式，而不用花費太多時間處理繁瑣的細節。</p>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/16/Day%202%20My%20VS%20Code%20Tour/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
         
           
    <!-- prevent image appear -->

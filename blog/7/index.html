@@ -174,15 +174,15 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          Hooks
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
         </a>
       </li>
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          ejs
+        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Hooks
         </a>
       </li>
     
@@ -195,8 +195,8 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          axios
+        <a href="/tags/Closure/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Closure
         </a>
       </li>
     
@@ -207,11 +207,92 @@
         </a>
       </li>
     
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          axios
+        </a>
+      </li>
+    
   </ul>
 </aside>
       </div>
 
       <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 20 React 環境建置-Vite"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 20 React 環境建置-Vite"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/10/4
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 20 React 環境建置-Vite
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>在接下來的範例中，比較沒辦法像之前的範例一樣直接丟到瀏覽器，檢查的開發者工具直接執行，需要建置基本的環境，我有想過幾種方式進行建置，甚至是在 codesandbox 直接線上進行，但比起線上的環境還是比較喜歡在本地端用 VS Code 進行開發，在追求方便簡單的前提下，選擇了 Vite 進行部屬。</p>
+<span id="more"></span>
+
+<h2 id="環境建置前的準備-NPM-Node-Package-Manager"><a href="#環境建置前的準備-NPM-Node-Package-Manager" class="headerlink" title="環境建置前的準備-NPM(Node Package Manager)"></a>環境建置前的準備-NPM(Node Package Manager)</h2><p>在使用 Vite 部屬前需要安裝 node 套件管理器(npm)來方便進行 Vite 部屬，而 NPM 是 Node 的安裝管理套件，簡單來說就是綁定 Node，所以安裝 node 就可以使用囉!</p>
+<h3 id="Node-下載與安裝"><a href="#Node-下載與安裝" class="headerlink" title="Node 下載與安裝"></a>Node 下載與安裝</h3><p>Node.js:<a target="_blank" rel="noopener" href="https://nodejs.org/en">https://nodejs.org/en</a><br>推薦 LTS 版本，因為是長期維護的版本使用起來也會比最新版本還穩定，而安裝方式跟其他應用程式一樣簡單，只要一直按下一步就可以安裝完成了。</p>
+<h2 id="使用-Vite-進行環境建置"><a href="#使用-Vite-進行環境建置" class="headerlink" title="使用 Vite 進行環境建置"></a>使用 Vite 進行環境建置</h2><p><strong>1.找到 VS Code 的終端機</strong><br></p>
+<p><strong>2.輸入指令</strong></p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">npm create vite@latest <span class="token comment" spellcheck="true">//創建最新版本的專案</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>3.然後 vite 會詢問一系列的設定</strong></p>
+<p>(1)確定是否要執行程序&#x3D;&gt;按 y<br></p>
+<p>(2)取專案名子&#x3D;&gt;可以隨便取或是用預設<br></p>
+<p>(3)選擇哪一個框架&#x3D;&gt;選擇 React<br></p>
+<p>(4)選擇使用哪一個語言&#x3D;&gt;選擇 JavaScript<br></p>
+<p>(5)基本上就大致完成了，接下來是進行測試有無建置成功的部份，也很單純就照著 vite 提供的指令一行一行打就好了</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">  cd vite<span class="token operator">-</span>project <span class="token comment" spellcheck="true">//切換到專案目錄的資料夾</span>
+  npm install <span class="token comment" spellcheck="true">//安裝模組</span>
+  npm run dev <span class="token comment" spellcheck="true">//開啟測試環境</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><strong>4.如此一來就完成了，理論上應該是可以在下列網址(<a target="_blank" rel="noopener" href="http://localhost:5173/)%E4%B8%AD%E7%9C%8B%E5%88%B0%E4%B8%8B%E9%9D%A2%E7%9A%84%E7%95%AB%E9%9D%A2">http://localhost:5173/)中看到下面的畫面</a></strong><br>(1)終端機回饋的網址<br><br>(2)出現的測試畫面<br></p>
+<p><strong>5.操作的檔案位置(src&#x3D;&gt;App.js)</strong><br>位在 src 資料夾的 App.js，未來的操作範例都可以在這個檔案進行。<br></p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>雖然步驟還是有點多或是有點麻煩，但如果要在本地端開發，這已經是相對簡單快速的方法了，明天就會正式進入 React 囉~</p>
+
+        </p>
+        <a class="stretched-link" href="/2023/10/04/Day%2020%20React%20%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE-Vite/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
         
           
    <!-- prevent image appear -->
@@ -648,87 +729,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
         </p>
         <a class="stretched-link" href="/2023/09/29/Day%2015%20%E8%99%95%E7%90%86%E5%90%8C%E6%AD%A5(Synchronous)%E5%92%8C%E9%9D%9E%E5%90%8C%E6%AD%A5(Asynchronous)%E7%9A%84%E6%96%B9%E6%B3%95Part.1/"></a>
-      </div>
-    </div>
-  </article>
-</li>
-
-        
-          
-   <!-- prevent image appear -->
-
-
-<li
-  id="post-Day 14 同步&amp;非同步(Synchronous &amp; Asynchronous)"
-  class="card border-0"
-  itemprop="blogPost"
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
->
-  <article class="row g-0">
-    <div class="col-12 col-lg-4">
-      <img
-        src="/images/default-cover.png"
-        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
-        alt="article-Day14 同步&amp;非同步(Synchronous &amp; Asynchronous)"
-      >
-    </div>
-    <div class="col-12 col-lg-8">
-      <div class="card-body pt-lg-0 pe-lg-0">
-        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
-          <p class="card-text mb-0 fs-6 text-primary-600">
-            <small class="text-body-secondary">
-              2023/9/28
-            </small>
-          </p>
-
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              React
-            </span>
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              JavaScript
-            </span>
-          
-
-        </div>
-        <h5 class="card-title mb-3 text-primary-700">
-          Day14 同步&非同步(Synchronous & Asynchronous)
-        </h5>
-        <div class="cutoff-text mb-0 text-primary-700">
-          <p>就中文來看這兩種的意思其實相當容易被搞混的，我自己常常在閱讀文章時也很常莫名的被這兩個名詞搞昏頭。所以我會直接用例子來幫助記憶接說明如下:</p>
-<span id="more"></span>
-
-<ol>
-<li><p>同步(Synchronous):就是 A 處理完再處理再處理 C</p>
-<p>A -&gt; B -&gt; C-&gt;</p>
-</li>
-<li><p>非同步(Asynchronous):就是可以同時處理 ABC</p>
-<p>–&gt;A<br>|<br>–&gt;B<br>|<br>–&gt;C</p>
-</li>
-</ol>
-<p>那話又說回來 JavaScript 是屬哪一種呢?</p>
-<p>引用 MDN 的定義</p>
-<blockquote>
-<p>Javascript 基本上是一個同步性的、阻塞的，且是跑在單一執行緒的程式語言，也就是在同一時間只能執行一個操作。但是瀏覽器所定義的函式和 API 允許我們註冊一個不該被同步執行的函式，且這個函式應該在某些事件發生時需要非同步的被呼叫（到達指定的時間、使用者透過滑鼠互動，或者取得透過從網路所取到的資料）。這代表你可以讓你的程式碼在同時間做一些事情而不需暫停或阻塞你的主執行緒。</p>
-</blockquote>
-<p>簡單來說，MDN 很明確的定義 javascript 是一個同步性的語言，但可以處理或是說可以執行非同步的方法。下面的例子可以說明:</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"registering click handler"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-button<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"get click"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"all done"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>PS:上述是簡化後的例子，真的需要執行的話如下網址:<br><a target="_blank" rel="noopener" href="https://codepen.io/Hsienlu/pen/PoXevrJ">https://codepen.io/Hsienlu/pen/PoXevrJ</a></p>
-<p>可以發現實際在執行的時候，”all done”並不會等到”get click”被觸發時才會出現，而是會直接執行，所以才會說雖然 JavaScript 是同步性的語言，但可以處理需要非同步處理的事情。</p>
-<p>但是，非同步的事情常常會具有不確定性存在(不知道哪個會先發生哪個會後發生)，於是就有了一些處理同步和非同步的方法，這些方法明天會繼續介紹。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p>1.<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Learn/JavaScript/Asynchronous/Introducing">非同步的 JavaScript 介紹</a></p>
-
-        </p>
-        <a class="stretched-link" href="/2023/09/28/Day%2014%20%E5%90%8C%E6%AD%A5&%E9%9D%9E%E5%90%8C%E6%AD%A5(Synchronous%20&%20Asynchronous)/"></a>
       </div>
     </div>
   </article>

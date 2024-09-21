@@ -174,15 +174,15 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          Hooks
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
         </a>
       </li>
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          ejs
+        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Hooks
         </a>
       </li>
     
@@ -195,8 +195,8 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          axios
+        <a href="/tags/Closure/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Closure
         </a>
       </li>
     
@@ -207,11 +207,123 @@
         </a>
       </li>
     
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          axios
+        </a>
+      </li>
+    
   </ul>
 </aside>
       </div>
 
       <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-閉包-Closure"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-閉包 Closure"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2024/9/21
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              Closure
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              javascript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          閉包 Closure
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>什麼是閉包 (Closure)？</p>
+<span id="more"></span>
+
+<blockquote>
+<p>當內部 (inner) 函式被回傳後，除了自己本身的程式碼外，也可以 穿越 取得了內部函式「當時環境」的變數值，記住了執行當時的環境，這就是「閉包」。</p>
+</blockquote>
+<p>參考 Kuro 大這篇文章說明:<a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10193009">重新認識 JavaScript: Day 19 閉包 Closure</a></p>
+<p>舉個簡單的例子:</p>
+<p>一個計數器的例子，每次調用內部函式時，count 增加，並返回當前的 count 值。</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">createCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 外部函式中的變數</span>
+
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 內部函式，形成閉包</span>
+    count <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 每次調用內部函式時，count 增加</span>
+    <span class="token keyword">return</span> count<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 返回當前的 count 值</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> counter <span class="token operator">=</span> <span class="token function">createCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 建立閉包</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 3</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>但是我今天建立不同的變數去儲存閉包，發現每個變數都是獨立的，不會互相影響。</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">createCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 外部函式中的變數</span>
+
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 內部函式，形成閉包</span>
+    count <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 每次調用內部函式時，count 增加</span>
+    <span class="token keyword">return</span> count<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 返回當前的 count 值</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> counter1 <span class="token operator">=</span> <span class="token function">createCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 建立閉包1</span>
+<span class="token keyword">const</span> counter2 <span class="token operator">=</span> <span class="token function">createCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 建立閉包2</span>
+<span class="token keyword">const</span> counter3 <span class="token operator">=</span> <span class="token function">createCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 建立閉包3</span>
+
+<span class="token comment" spellcheck="true">//測試閉包1</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">counter1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">counter1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">counter1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 3</span>
+
+<span class="token comment" spellcheck="true">//測試閉包2</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">counter2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">counter2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2</span>
+
+<span class="token comment" spellcheck="true">//測試閉包3</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">counter3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>所以閉包是可以取得內部函式，並取得當前變數，並記住當時的上下文環境。且每個閉包是獨立的，不會互相影響。</p>
+
+        </p>
+        <a class="stretched-link" href="/2024/09/21/%E9%96%89%E5%8C%85-Closure/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
         
           
    <!-- prevent image appear -->
@@ -243,11 +355,11 @@
 
           
             <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              axios
+              javascript
             </span>
           
             <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              javascript
+              axios
             </span>
           
 
@@ -601,111 +713,6 @@ axios<span class="token punctuation">.</span><span class="token keyword">get</sp
 
         </p>
         <a class="stretched-link" href="/2024/03/06/React-Hook-useContext/"></a>
-      </div>
-    </div>
-  </article>
-</li>
-
-        
-          
-   <!-- prevent image appear -->
-
-
-<li
-  id="post-XML-介紹"
-  class="card border-0"
-  itemprop="blogPost"
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
->
-  <article class="row g-0">
-    <div class="col-12 col-lg-4">
-      <img
-        src="/images/default-cover.png"
-        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
-        alt="article-XML-介紹"
-      >
-    </div>
-    <div class="col-12 col-lg-8">
-      <div class="card-body pt-lg-0 pe-lg-0">
-        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
-          <p class="card-text mb-0 fs-6 text-primary-600">
-            <small class="text-body-secondary">
-              2024/2/2
-            </small>
-          </p>
-
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              XML
-            </span>
-          
-
-        </div>
-        <h5 class="card-title mb-3 text-primary-700">
-          XML-介紹
-        </h5>
-        <div class="cutoff-text mb-0 text-primary-700">
-          <h3 id="什麼是-XML"><a href="#什麼是-XML" class="headerlink" title="什麼是 XML"></a>什麼是 XML</h3><p>xml 是可擴展標記性的語言，</p>
-<span id="more"></span>
-
-<p>像是，下方具有儲存格式</p>
-<pre class="line-numbers language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!--  這是一個xml的範例 --></span>
-<span class="token comment" spellcheck="true">&lt;!-- student.xml --></span>
-<span class="token comment" spellcheck="true">&lt;!-- Student[id=1, name=John ] --></span>
-<span class="token comment" spellcheck="true">&lt;!-- Student[id=2, name=Mary ] --></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>students</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>student</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>John<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>student</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>student</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>Mary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>student</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>students</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="XML-的作用"><a href="#XML-的作用" class="headerlink" title="XML 的作用"></a>XML 的作用</h3><p>1.用來保存數據，而且這些數據具有自我描述性 2.它還可以做為項目或著模塊的配置文件 3.用來傳輸數據(但現在以 JSON 為主)</p>
-<h3 id="XML-的語法"><a href="#XML-的語法" class="headerlink" title="XML 的語法"></a>XML 的語法</h3><p>1.文檔聲明</p>
-<pre class="line-numbers language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="utf-8" ?></span>
-<span class="token comment" spellcheck="true">&lt;!--
-    version: 版本
-    encoding: 編碼
- --></span>
-<span class="token prolog">&lt;?xml version="1.0" encoding="utf-8" ?></span>
-<span class="token comment" spellcheck="true">&lt;!----></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>books</span><span class="token punctuation">></span></span><span class="token comment" spellcheck="true">&lt;!--表示多個圖書訊息--></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>book</span> <span class="token attr-name">sn</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>123456<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token comment" spellcheck="true">&lt;!--表示一個圖書訊息--></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Book 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span><span class="token comment" spellcheck="true">&lt;!--圖書訊息--></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>author</span><span class="token punctuation">></span></span>Author 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>author</span><span class="token punctuation">></span></span><span class="token comment" spellcheck="true">&lt;!--圖書訊息--></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>price</span><span class="token punctuation">></span></span>100<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>price</span><span class="token punctuation">></span></span><span class="token comment" spellcheck="true">&lt;!--圖書訊息--></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>book</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>book</span> <span class="token attr-name">sn</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>46546<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Book 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>author</span><span class="token punctuation">></span></span>Author 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>author</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>price</span><span class="token punctuation">></span></span>200<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>price</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>book</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>book</span> <span class="token attr-name">sn</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>5465465<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Book 3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>author</span><span class="token punctuation">></span></span>Author 3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>author</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>price</span><span class="token punctuation">></span></span>300<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>price</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>book</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>books</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="什麼是-XML-標籤"><a href="#什麼是-XML-標籤" class="headerlink" title="什麼是 XML 標籤"></a>什麼是 XML 標籤</h3><p>1.也分單標籤和雙標籤 2.與 HTML 一樣，XML 也是由標籤組成的，標籤是 XML 的基本組成單元，它是 XML 的一個重要特點。 3.屬性可以提供有關元素的其他信息，每個屬性值必須用引號括起來</p>
-<h3 id="XML-標籤的命名"><a href="#XML-標籤的命名" class="headerlink" title="XML 標籤的命名"></a>XML 標籤的命名</h3><p>1.標籤名稱可以包含字母、數字和其他字符 2.標籤名稱不能以數字或標點符號開頭 3.標籤名稱不能包含空格 4.標籤名稱不能包含 xml 等字符</p>
-<h3 id="xml-的規則"><a href="#xml-的規則" class="headerlink" title="xml 的規則"></a>xml 的規則</h3><p>1.所有的 xml 元素都必須有一個關閉標籤 2.標籤是大小寫敏感的 3.所有的 xml 標籤都必須合理的嵌套 4.所有的 xml 文檔都必須有一個根元素(頂級元素)<br>5.CDATA 區塊用於將文本片段包括在內，這些片段中可能包含一些特殊字符，這些特殊字符在 xml 中是非法的，但是在 CDATA 區塊中是合法的</p>
-<pre class="line-numbers language-xml"><code class="language-xml"><span class="token cdata">&lt;![CDATA[&lt;html>
-    &lt;head>
-        &lt;title>Example&lt;/title>
-    &lt;/head>
-    &lt;body>
-        &lt;p>CDATA example&lt;/p>
-    &lt;/body>
-&lt;/html>]]></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-        </p>
-        <a class="stretched-link" href="/2024/02/02/XML-%E4%BB%8B%E7%B4%B9/"></a>
       </div>
     </div>
   </article>

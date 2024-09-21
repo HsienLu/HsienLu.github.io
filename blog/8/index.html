@@ -174,15 +174,15 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          Hooks
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
         </a>
       </li>
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          ejs
+        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Hooks
         </a>
       </li>
     
@@ -195,8 +195,8 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          axios
+        <a href="/tags/Closure/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Closure
         </a>
       </li>
     
@@ -207,11 +207,99 @@
         </a>
       </li>
     
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          axios
+        </a>
+      </li>
+    
   </ul>
 </aside>
       </div>
 
       <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 14 同步&amp;非同步(Synchronous &amp; Asynchronous)"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day14 同步&amp;非同步(Synchronous &amp; Asynchronous)"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/28
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day14 同步&非同步(Synchronous & Asynchronous)
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>就中文來看這兩種的意思其實相當容易被搞混的，我自己常常在閱讀文章時也很常莫名的被這兩個名詞搞昏頭。所以我會直接用例子來幫助記憶接說明如下:</p>
+<span id="more"></span>
+
+<ol>
+<li><p>同步(Synchronous):就是 A 處理完再處理再處理 C</p>
+<p>A -&gt; B -&gt; C-&gt;</p>
+</li>
+<li><p>非同步(Asynchronous):就是可以同時處理 ABC</p>
+<p>–&gt;A<br>|<br>–&gt;B<br>|<br>–&gt;C</p>
+</li>
+</ol>
+<p>那話又說回來 JavaScript 是屬哪一種呢?</p>
+<p>引用 MDN 的定義</p>
+<blockquote>
+<p>Javascript 基本上是一個同步性的、阻塞的，且是跑在單一執行緒的程式語言，也就是在同一時間只能執行一個操作。但是瀏覽器所定義的函式和 API 允許我們註冊一個不該被同步執行的函式，且這個函式應該在某些事件發生時需要非同步的被呼叫（到達指定的時間、使用者透過滑鼠互動，或者取得透過從網路所取到的資料）。這代表你可以讓你的程式碼在同時間做一些事情而不需暫停或阻塞你的主執行緒。</p>
+</blockquote>
+<p>簡單來說，MDN 很明確的定義 javascript 是一個同步性的語言，但可以處理或是說可以執行非同步的方法。下面的例子可以說明:</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"registering click handler"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+button<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"get click"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"all done"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>PS:上述是簡化後的例子，真的需要執行的話如下網址:<br><a target="_blank" rel="noopener" href="https://codepen.io/Hsienlu/pen/PoXevrJ">https://codepen.io/Hsienlu/pen/PoXevrJ</a></p>
+<p>可以發現實際在執行的時候，”all done”並不會等到”get click”被觸發時才會出現，而是會直接執行，所以才會說雖然 JavaScript 是同步性的語言，但可以處理需要非同步處理的事情。</p>
+<p>但是，非同步的事情常常會具有不確定性存在(不知道哪個會先發生哪個會後發生)，於是就有了一些處理同步和非同步的方法，這些方法明天會繼續介紹。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p>1.<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Learn/JavaScript/Asynchronous/Introducing">非同步的 JavaScript 介紹</a></p>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/28/Day%2014%20%E5%90%8C%E6%AD%A5&%E9%9D%9E%E5%90%8C%E6%AD%A5(Synchronous%20&%20Asynchronous)/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
         
           
    <!-- prevent image appear -->
@@ -793,87 +881,6 @@ name<span class="token punctuation">.</span><span class="token function">callNam
 
         </p>
         <a class="stretched-link" href="/2023/09/23/Day%209%20%E5%87%BD%E5%BC%8F%E8%88%87%E7%AE%AD%E9%A0%AD%E5%87%BD%E5%BC%8F/"></a>
-      </div>
-    </div>
-  </article>
-</li>
-
-        
-          
-   <!-- prevent image appear -->
-
-
-<li
-  id="post-Day 8 字串陣列互相變化的方法 split &amp; join"
-  class="card border-0"
-  itemprop="blogPost"
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
->
-  <article class="row g-0">
-    <div class="col-12 col-lg-4">
-      <img
-        src="/images/default-cover.png"
-        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
-        alt="article-Day 8 字串陣列互相變化的方法 split &amp; join"
-      >
-    </div>
-    <div class="col-12 col-lg-8">
-      <div class="card-body pt-lg-0 pe-lg-0">
-        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
-          <p class="card-text mb-0 fs-6 text-primary-600">
-            <small class="text-body-secondary">
-              2023/9/22
-            </small>
-          </p>
-
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              React
-            </span>
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              JavaScript
-            </span>
-          
-
-        </div>
-        <h5 class="card-title mb-3 text-primary-700">
-          Day 8 字串陣列互相變化的方法 split & join
-        </h5>
-        <div class="cutoff-text mb-0 text-primary-700">
-          <p>今天要來介紹的是字串怎麼變成陣列還有陣列怎麼變成字串，在陣列的方法中已經存在著與字串互相轉換的方法，只是分別是不同的語法，首先是字串轉陣列的方法</p>
-<span id="more"></span>
-
-<h3 id="split"><a href="#split" class="headerlink" title=".split()"></a>.split()</h3><p>顧名思義，split 有分開的意思，在這裡就是把字串分開成陣列那要怎麼分開?可以在小括弧裡面指定需要分開的字符，有三種狀況範例如下:</p>
-<p>狀況一:裡面不帶值，會把一串字串包在同一個陣列的 index 裡，也就是長度為 1 的陣列</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">"12345"</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> newArray <span class="token operator">=</span> string<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p></p>
-<p>狀況二:裡面有帶參數但其值為空,會把一個字一個字的拆開來變成陣列，換句話說每個字就是一個 index</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">"12345"</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> newArray <span class="token operator">=</span> string<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p></p>
-<p>狀況三:裡面有帶參數其值為空白鍵字符</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">"1 2 3 4 5"</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//用空白鍵字符分開</span>
-<span class="token keyword">let</span> newArray <span class="token operator">=</span> string<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p></p>
-<h3 id="join"><a href="#join" class="headerlink" title=".join()"></a>.join()</h3><p>使用方法其實與 split 極為相似只是整個倒過來了，小括弧裡決定要用什麼連接成字串，以陣列而言通常是”,”預設也是”,”</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">let</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">let</span> string <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//決定要用什麼連接成字串，以陣列而言通常是","預設也是","</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>以上是字串與陣列互換的方法~</p>
-<h2 id="引用資料"><a href="#引用資料" class="headerlink" title="引用資料"></a>引用資料</h2><p>MDN <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/find">Array.prototype.join</a></p>
-
-        </p>
-        <a class="stretched-link" href="/2023/09/22/Day%208%20%E5%AD%97%E4%B8%B2%E9%99%A3%E5%88%97%E4%BA%92%E7%9B%B8%E8%AE%8A%E5%8C%96%E7%9A%84%E6%96%B9%E6%B3%95%20split%20&%20join/"></a>
       </div>
     </div>
   </article>

@@ -174,15 +174,15 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          Hooks
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
         </a>
       </li>
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          ejs
+        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Hooks
         </a>
       </li>
     
@@ -195,8 +195,8 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          axios
+        <a href="/tags/Closure/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Closure
         </a>
       </li>
     
@@ -207,11 +207,104 @@
         </a>
       </li>
     
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          axios
+        </a>
+      </li>
+    
   </ul>
 </aside>
       </div>
 
       <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 26 React的多重渲染-列表與Key"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 26 React 的多重渲染-列表與 Key"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/10/10
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 26 React 的多重渲染-列表與 Key
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <span id="more"></span>
+<p>在 react 使用遍歷陣列的方法來呈現畫面是挺常見的，我們今天想要呈現一個陣列裡面的資料如下:</p>
+<pre><code>  const tasks = [
+    &#123; id: 1, text: &quot;看完 React的文件 &quot; &#125;,
+    &#123; id: 2, text: &quot;寫一篇部落格文章&quot; &#125;,
+    &#123; id: 3, text: &quot;學習 JavaScript&quot; &#125;,
+  ];
+</code></pre>
+<p>基本上我們不可能一個一個複製貼上，所以會利用 JSX 的 JavaScript 方法，去讀取資料並呈現畫面，有點像是 PHP 那樣的感覺。看範例寫法如下:</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> tasks <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>id<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> text<span class="token punctuation">:</span> <span class="token string">"看完 React的文件 "</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+    <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>id<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> text<span class="token punctuation">:</span> <span class="token string">"寫一篇部落格文章"</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+    <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>id<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> text<span class="token punctuation">:</span> <span class="token string">"學習 JavaScript"</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">></span>
+      <span class="token operator">&lt;</span>h1<span class="token operator">></span>我的任務清單<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+      <span class="token operator">&lt;</span>ul<span class="token operator">></span>
+        <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>tasks<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>task<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span>
+          <span class="token operator">&lt;</span>li key<span class="token operator">=</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>task<span class="token punctuation">.</span>id<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">></span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>task<span class="token punctuation">.</span>text<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
+        <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>上面的範例是使用 map 的方法，不過這裡使用 forEach 也可以，差異是 map 會回傳新陣列但是 forEach 不會，至於 React 中為什麼會慣用 map 的原因與 hook 中的 useState 有關，這裡就先不多做贅述。</p>
+<h3 id="key-值的作用"><a href="#key-值的作用" class="headerlink" title="key 值的作用"></a>key 值的作用</h3><p>仔細看上述的程式碼，會發現與正常遍歷陣列的方法不同的是多了一個 Key 值，它的作用是讓 react 能區別每一筆資料，雖然如果不給 key 值 react 會預設 index 當作 key 值，但是這不是一個好的寫法，因為可能會產生不穩定性(像是在對陣列操作增加、刪除之類的)，造成渲染畫面的不確定性。</p>
+<p>所以設定 key 值需要注意以下條件: 1.唯一性 2.必須從外部設定，不要再遍歷函示產生 3.不能隨意地被改變</p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>以上就是渲染陣列物件基本的方法，而且會與後續在使用 Hook 的順暢度會有直接的關係。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a target="_blank" rel="noopener" href="https://react.dev/">React 官方網站</a></p>
+
+        </p>
+        <a class="stretched-link" href="/2023/10/10/Day%2026%20React%E7%9A%84%E5%A4%9A%E9%87%8D%E6%B8%B2%E6%9F%93-%E5%88%97%E8%A1%A8%E8%88%87Key/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
         
           
    <!-- prevent image appear -->
@@ -756,80 +849,6 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">cre
 
         </p>
         <a class="stretched-link" href="/2023/10/05/Day%2021%20React%E7%9A%84%E5%85%83%E4%BB%B6%E5%BD%A2%E5%BC%8F/"></a>
-      </div>
-    </div>
-  </article>
-</li>
-
-        
-          
-   <!-- prevent image appear -->
-
-
-<li
-  id="post-Day 20 React 環境建置-Vite"
-  class="card border-0"
-  itemprop="blogPost"
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
->
-  <article class="row g-0">
-    <div class="col-12 col-lg-4">
-      <img
-        src="/images/default-cover.png"
-        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
-        alt="article-Day 20 React 環境建置-Vite"
-      >
-    </div>
-    <div class="col-12 col-lg-8">
-      <div class="card-body pt-lg-0 pe-lg-0">
-        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
-          <p class="card-text mb-0 fs-6 text-primary-600">
-            <small class="text-body-secondary">
-              2023/10/4
-            </small>
-          </p>
-
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              React
-            </span>
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              JavaScript
-            </span>
-          
-
-        </div>
-        <h5 class="card-title mb-3 text-primary-700">
-          Day 20 React 環境建置-Vite
-        </h5>
-        <div class="cutoff-text mb-0 text-primary-700">
-          <p>在接下來的範例中，比較沒辦法像之前的範例一樣直接丟到瀏覽器，檢查的開發者工具直接執行，需要建置基本的環境，我有想過幾種方式進行建置，甚至是在 codesandbox 直接線上進行，但比起線上的環境還是比較喜歡在本地端用 VS Code 進行開發，在追求方便簡單的前提下，選擇了 Vite 進行部屬。</p>
-<span id="more"></span>
-
-<h2 id="環境建置前的準備-NPM-Node-Package-Manager"><a href="#環境建置前的準備-NPM-Node-Package-Manager" class="headerlink" title="環境建置前的準備-NPM(Node Package Manager)"></a>環境建置前的準備-NPM(Node Package Manager)</h2><p>在使用 Vite 部屬前需要安裝 node 套件管理器(npm)來方便進行 Vite 部屬，而 NPM 是 Node 的安裝管理套件，簡單來說就是綁定 Node，所以安裝 node 就可以使用囉!</p>
-<h3 id="Node-下載與安裝"><a href="#Node-下載與安裝" class="headerlink" title="Node 下載與安裝"></a>Node 下載與安裝</h3><p>Node.js:<a target="_blank" rel="noopener" href="https://nodejs.org/en">https://nodejs.org/en</a><br>推薦 LTS 版本，因為是長期維護的版本使用起來也會比最新版本還穩定，而安裝方式跟其他應用程式一樣簡單，只要一直按下一步就可以安裝完成了。</p>
-<h2 id="使用-Vite-進行環境建置"><a href="#使用-Vite-進行環境建置" class="headerlink" title="使用 Vite 進行環境建置"></a>使用 Vite 進行環境建置</h2><p><strong>1.找到 VS Code 的終端機</strong><br></p>
-<p><strong>2.輸入指令</strong></p>
-<pre class="line-numbers language-javascript"><code class="language-javascript">npm create vite@latest <span class="token comment" spellcheck="true">//創建最新版本的專案</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><strong>3.然後 vite 會詢問一系列的設定</strong></p>
-<p>(1)確定是否要執行程序&#x3D;&gt;按 y<br></p>
-<p>(2)取專案名子&#x3D;&gt;可以隨便取或是用預設<br></p>
-<p>(3)選擇哪一個框架&#x3D;&gt;選擇 React<br></p>
-<p>(4)選擇使用哪一個語言&#x3D;&gt;選擇 JavaScript<br></p>
-<p>(5)基本上就大致完成了，接下來是進行測試有無建置成功的部份，也很單純就照著 vite 提供的指令一行一行打就好了</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript">  cd vite<span class="token operator">-</span>project <span class="token comment" spellcheck="true">//切換到專案目錄的資料夾</span>
-  npm install <span class="token comment" spellcheck="true">//安裝模組</span>
-  npm run dev <span class="token comment" spellcheck="true">//開啟測試環境</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p><strong>4.如此一來就完成了，理論上應該是可以在下列網址(<a target="_blank" rel="noopener" href="http://localhost:5173/)%E4%B8%AD%E7%9C%8B%E5%88%B0%E4%B8%8B%E9%9D%A2%E7%9A%84%E7%95%AB%E9%9D%A2">http://localhost:5173/)中看到下面的畫面</a></strong><br>(1)終端機回饋的網址<br><br>(2)出現的測試畫面<br></p>
-<p><strong>5.操作的檔案位置(src&#x3D;&gt;App.js)</strong><br>位在 src 資料夾的 App.js，未來的操作範例都可以在這個檔案進行。<br></p>
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>雖然步驟還是有點多或是有點麻煩，但如果要在本地端開發，這已經是相對簡單快速的方法了，明天就會正式進入 React 囉~</p>
-
-        </p>
-        <a class="stretched-link" href="/2023/10/04/Day%2020%20React%20%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE-Vite/"></a>
       </div>
     </div>
   </article>

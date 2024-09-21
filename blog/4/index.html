@@ -174,15 +174,15 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          Hooks
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
         </a>
       </li>
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          ejs
+        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Hooks
         </a>
       </li>
     
@@ -195,8 +195,8 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          axios
+        <a href="/tags/Closure/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Closure
         </a>
       </li>
     
@@ -207,11 +207,179 @@
         </a>
       </li>
     
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          axios
+        </a>
+      </li>
+    
   </ul>
 </aside>
       </div>
 
       <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-MySQL-關聯資料表查詢"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-MySQL-關聯資料表查詢"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2024/1/18
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              MySQL
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              SQL
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          MySQL-關聯資料表查詢
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>inner join、outer join、子查詢</p>
+<span id="more"></span>
+
+<h2 id="inner-join"><a href="#inner-join" class="headerlink" title="inner join"></a>inner join</h2><p>解釋: 用來查詢兩個表格中有關聯的資料，分成兩種寫法</p>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> table1<span class="token punctuation">,</span> table2 <span class="token keyword">WHERE</span> table1<span class="token punctuation">.</span>id <span class="token operator">=</span> table2<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> table1 <span class="token keyword">INNER</span> <span class="token keyword">JOIN</span> table2 <span class="token keyword">ON</span> table1<span class="token punctuation">.</span>id <span class="token operator">=</span> table2<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<blockquote>
+<p>相當於取交集的意思</p>
+</blockquote>
+<h4 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 建立資料</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> dept<span class="token punctuation">(</span>
+id <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token keyword">auto_increment</span><span class="token punctuation">,</span>
+dep_name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+addr <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> emp<span class="token punctuation">(</span>
+id <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token keyword">auto_increment</span><span class="token punctuation">,</span>
+name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+age <span class="token keyword">int</span><span class="token punctuation">,</span>
+dep_id <span class="token keyword">int</span> <span class="token punctuation">,</span>
+<span class="token keyword">constraint</span> fk_emp_dept <span class="token keyword">foreign</span> <span class="token keyword">key</span><span class="token punctuation">(</span>dep_id<span class="token punctuation">)</span>
+<span class="token keyword">references</span> dept<span class="token punctuation">(</span>id<span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> dept <span class="token punctuation">(</span>dep_name<span class="token punctuation">,</span>addr<span class="token punctuation">)</span> <span class="token keyword">values</span>
+<span class="token punctuation">(</span><span class="token string">"RD"</span><span class="token punctuation">,</span><span class="token string">"台北"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"ME"</span><span class="token punctuation">,</span><span class="token string">"台中"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">insert</span> <span class="token keyword">into</span> emp <span class="token punctuation">(</span>NAMe<span class="token punctuation">,</span>age<span class="token punctuation">,</span>dep_id<span class="token punctuation">)</span> <span class="token keyword">values</span>
+<span class="token punctuation">(</span><span class="token string">"AAA"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"BBB"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"CCC"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"DDD"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"EEE"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"FFF"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">-- 連接語法開始</span>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> emp <span class="token punctuation">,</span> dept <span class="token keyword">where</span> emp<span class="token punctuation">.</span>dep_id <span class="token operator">=</span> dept<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">-- 另外一種寫法</span>
+<span class="token comment" spellcheck="true">-- SELECT * FROM emp JOIN dept ON dept.id = emp.dep_id;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="outer-join"><a href="#outer-join" class="headerlink" title="outer join"></a>outer join</h2><p>解釋: 用來查詢兩個表格中有關聯的資料,並且會把沒有關聯的資料也查詢出來，又分成左外連結、右外連結、全外連結</p>
+<h3 id="left-join"><a href="#left-join" class="headerlink" title="left join"></a>left join</h3><p>解釋: 用來查詢兩個表格中有關聯的資料,並且會把沒有關聯的資料也查詢出來，但是以左邊的表格為主</p>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> table1 <span class="token keyword">LEFT</span> <span class="token keyword">JOIN</span> table2 <span class="token keyword">ON</span> table1<span class="token punctuation">.</span>id <span class="token operator">=</span> table2<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<blockquote>
+<p>取左邊表格的資料，並且把右邊表格的資料也查詢出來，如右邊沒有資料則顯示 null</p>
+</blockquote>
+<h4 id="範例-1"><a href="#範例-1" class="headerlink" title="範例"></a>範例</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> dept<span class="token punctuation">(</span>
+id <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token keyword">auto_increment</span><span class="token punctuation">,</span>
+dep_name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+addr <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> emp<span class="token punctuation">(</span>
+id <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token keyword">auto_increment</span><span class="token punctuation">,</span>
+name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+age <span class="token keyword">int</span><span class="token punctuation">,</span>
+dep_id <span class="token keyword">int</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> dept <span class="token punctuation">(</span>dep_name<span class="token punctuation">,</span>addr<span class="token punctuation">)</span> <span class="token keyword">values</span>
+<span class="token punctuation">(</span><span class="token string">"RD"</span><span class="token punctuation">,</span><span class="token string">"台北"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"ME"</span><span class="token punctuation">,</span><span class="token string">"台中"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">insert</span> <span class="token keyword">into</span> emp <span class="token punctuation">(</span>NAMe<span class="token punctuation">,</span>age<span class="token punctuation">,</span>dep_id<span class="token punctuation">)</span> <span class="token keyword">values</span>
+<span class="token punctuation">(</span><span class="token string">"AAA"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"BBB"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"CCC"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"DDD"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"EEE"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"FFF"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"GGG"</span><span class="token punctuation">,</span><span class="token number">23</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> emp <span class="token keyword">left</span> <span class="token keyword">join</span> dept <span class="token keyword">on</span> emp<span class="token punctuation">.</span>dep_id<span class="token operator">=</span>dept<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="right-join"><a href="#right-join" class="headerlink" title="right join"></a>right join</h3><p>解釋: 用來查詢兩個表格中有關聯的資料,並且會把沒有關聯的資料也查詢出來，但是以右邊的表格為主</p>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> table1 <span class="token keyword">RIGHT</span> <span class="token keyword">JOIN</span> table2 <span class="token keyword">ON</span> table1<span class="token punctuation">.</span>id <span class="token operator">=</span> table2<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<blockquote>
+<p>取右邊表格的資料，並且把左邊表格的資料也查詢出來，如左邊沒有資料則顯示 null</p>
+</blockquote>
+<h4 id="範例-2"><a href="#範例-2" class="headerlink" title="範例"></a>範例</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> dept<span class="token punctuation">(</span>
+id <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token keyword">auto_increment</span><span class="token punctuation">,</span>
+dep_name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+addr <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> emp<span class="token punctuation">(</span>
+id <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token keyword">auto_increment</span><span class="token punctuation">,</span>
+name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+age <span class="token keyword">int</span><span class="token punctuation">,</span>
+dep_id <span class="token keyword">int</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> dept <span class="token punctuation">(</span>dep_name<span class="token punctuation">,</span>addr<span class="token punctuation">)</span> <span class="token keyword">values</span>
+<span class="token punctuation">(</span><span class="token string">"RD"</span><span class="token punctuation">,</span><span class="token string">"台北"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"ME"</span><span class="token punctuation">,</span><span class="token string">"台中"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"QA"</span><span class="token punctuation">,</span><span class="token string">"高雄"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"EE"</span><span class="token punctuation">,</span><span class="token string">"台南"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">insert</span> <span class="token keyword">into</span> emp <span class="token punctuation">(</span>NAMe<span class="token punctuation">,</span>age<span class="token punctuation">,</span>dep_id<span class="token punctuation">)</span> <span class="token keyword">values</span>
+<span class="token punctuation">(</span><span class="token string">"AAA"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"BBB"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"CCC"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"DDD"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"EEE"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"FFF"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">"GGG"</span><span class="token punctuation">,</span><span class="token number">23</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> emp <span class="token keyword">right</span> <span class="token keyword">join</span> dept <span class="token keyword">on</span> emp<span class="token punctuation">.</span>dep_id<span class="token operator">=</span>dept<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="子查詢"><a href="#子查詢" class="headerlink" title="子查詢"></a>子查詢</h3><p>解釋:重點是利用( )去包住查詢結果，並進一步的在外面加上查詢語法<br>基本語法</p>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> table1 <span class="token keyword">WHERE</span> table1<span class="token punctuation">.</span>id <span class="token operator">IN</span> <span class="token punctuation">(</span><span class="token keyword">SELECT</span> table2<span class="token punctuation">.</span>id <span class="token keyword">FROM</span> table2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+        </p>
+        <a class="stretched-link" href="/2024/01/18/MySQL-%E9%97%9C%E8%81%AF%E8%B3%87%E6%96%99%E8%A1%A8%E6%9F%A5%E8%A9%A2/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
         
           
    <!-- prevent image appear -->
@@ -731,121 +899,6 @@
 
         </p>
         <a class="stretched-link" href="/2024/01/09/Day%2030%20%E9%81%B2%E4%BE%86%E7%9A%84%E5%AE%8C%E8%B3%BD/"></a>
-      </div>
-    </div>
-  </article>
-</li>
-
-        
-          
-   <!-- prevent image appear -->
-
-
-<li
-  id="post-Day 29 React的本質-Library"
-  class="card border-0"
-  itemprop="blogPost"
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
->
-  <article class="row g-0">
-    <div class="col-12 col-lg-4">
-      <img
-        src="/images/default-cover.png"
-        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
-        alt="article-Day 29 React的本質-Library"
-      >
-    </div>
-    <div class="col-12 col-lg-8">
-      <div class="card-body pt-lg-0 pe-lg-0">
-        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
-          <p class="card-text mb-0 fs-6 text-primary-600">
-            <small class="text-body-secondary">
-              2024/1/2
-            </small>
-          </p>
-
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              React
-            </span>
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              JavaScript
-            </span>
-          
-
-        </div>
-        <h5 class="card-title mb-3 text-primary-700">
-          Day 29 React的本質-Library
-        </h5>
-        <div class="cutoff-text mb-0 text-primary-700">
-          <p>雖然 React 現在被稱作 3 大框架其中之一，但是如果現在打開 React 的官網，會發現它的定位是一個 Library，而不是一個 Framework，事實上 React 確實保持著高度靈活性，讓開發者可以自由的選擇其他的 Library 來搭配使用，這也是為什麼 React 能夠在短短幾年內就成為主流的原因之一。甚至在搭配的套件上也有許多不同的選擇，像是 Redux、React-Router、React-Bootstrap 等等，這些套件都是為了滿足不同的需求而生的，而且都是由社群開發的，這也意味著 React 的生態系非常的豐富，而且也有許多的資源可以參考，這也是 React 能夠快速成長的原因之一。今天就來試著用一個簡單的例子來說明 React 的本質吧!</p>
-<span id="more"></span>
-
-<h3 id="使用-CDN-引用-React"><a href="#使用-CDN-引用-React" class="headerlink" title="使用 CDN 引用 React"></a>使用 CDN 引用 React</h3><p>跟許多其他的 Library 一樣，React 也可以透過 CDN 的方式來引用，這樣就不需要透過 npm 或是 yarn 來安裝，，只需要在 HTML 中引用 React 的 CDN 就可以使用了，以下是範例，可以直接複製貼上到 HTML 中，然後用套件 liveserver 打開就可以看到 console 結果了。可以看到 React 跟 ReactDOM 可以是使用的方法，而且還有 babel，這是因為 React 的語法是 JSX，所以需要 babel 來轉換成 JavaScript 才能執行。</p>
-<pre class="line-numbers language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>rrot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span>
-      <span class="token attr-name">crossorigin</span>
-      <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://unpkg.com/react@18/umd/react.development.js<span class="token punctuation">"</span></span>
-    <span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span>
-      <span class="token attr-name">crossorigin</span>
-      <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://unpkg.com/react-dom@18/umd/react-dom.development.js<span class="token punctuation">"</span></span>
-    <span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/babel<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript">
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>React<span class="token punctuation">,</span> ReactDOM<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="React-CDN-使用範例"><a href="#React-CDN-使用範例" class="headerlink" title="React CDN 使用範例"></a>React CDN 使用範例</h3><p>接續上一個例子，這次就來試著使用 React 的元件吧!首先要先創造一個元件，然後再把它渲染到 root 根元素上，以下是範例:</p>
-<pre class="line-numbers language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>root<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span>
-      <span class="token attr-name">crossorigin</span>
-      <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://unpkg.com/react@18/umd/react.development.js<span class="token punctuation">"</span></span>
-    <span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span>
-      <span class="token attr-name">crossorigin</span>
-      <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://unpkg.com/react-dom@18/umd/react-dom.development.js<span class="token punctuation">"</span></span>
-    <span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/babel<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript">
-      <span class="token comment" spellcheck="true">// 創造元件</span>
-      <span class="token keyword">const</span> App <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token punctuation">(</span>
-          <span class="token operator">&lt;</span>div<span class="token operator">></span>
-            <span class="token operator">&lt;</span>h1<span class="token operator">></span>Hello World<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
-          <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-        <span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
-      <span class="token comment" spellcheck="true">// 把App元件渲染至root根元素</span>
-      ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h3><p>大家可以發現，我這裡只是單純的使用 HTML 而已，並沒有使用太複雜的環境建置工具，雖然實務上不會這樣使用，但是我這裡只是想要表達 React 並不是那麼的難以接近，在官方定義成 library 的前提下，至少在一開始的學習上心態上可以抱持輕鬆一點的態度，不用太過於緊張。</p>
-
-        </p>
-        <a class="stretched-link" href="/2024/01/02/Day%2029%20React%E7%9A%84%E6%9C%AC%E8%B3%AA-Library/"></a>
       </div>
     </div>
   </article>

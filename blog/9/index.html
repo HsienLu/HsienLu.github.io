@@ -174,15 +174,15 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          Hooks
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
         </a>
       </li>
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          ejs
+        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Hooks
         </a>
       </li>
     
@@ -195,8 +195,8 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          axios
+        <a href="/tags/Closure/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Closure
         </a>
       </li>
     
@@ -207,11 +207,99 @@
         </a>
       </li>
     
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          axios
+        </a>
+      </li>
+    
   </ul>
 </aside>
       </div>
 
       <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Day 8 字串陣列互相變化的方法 split &amp; join"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Day 8 字串陣列互相變化的方法 split &amp; join"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2023/9/22
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              React
+            </span>
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              JavaScript
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Day 8 字串陣列互相變化的方法 split & join
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <p>今天要來介紹的是字串怎麼變成陣列還有陣列怎麼變成字串，在陣列的方法中已經存在著與字串互相轉換的方法，只是分別是不同的語法，首先是字串轉陣列的方法</p>
+<span id="more"></span>
+
+<h3 id="split"><a href="#split" class="headerlink" title=".split()"></a>.split()</h3><p>顧名思義，split 有分開的意思，在這裡就是把字串分開成陣列那要怎麼分開?可以在小括弧裡面指定需要分開的字符，有三種狀況範例如下:</p>
+<p>狀況一:裡面不帶值，會把一串字串包在同一個陣列的 index 裡，也就是長度為 1 的陣列</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">"12345"</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> newArray <span class="token operator">=</span> string<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p></p>
+<p>狀況二:裡面有帶參數但其值為空,會把一個字一個字的拆開來變成陣列，換句話說每個字就是一個 index</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">"12345"</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> newArray <span class="token operator">=</span> string<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p></p>
+<p>狀況三:裡面有帶參數其值為空白鍵字符</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">"1 2 3 4 5"</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//用空白鍵字符分開</span>
+<span class="token keyword">let</span> newArray <span class="token operator">=</span> string<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p></p>
+<h3 id="join"><a href="#join" class="headerlink" title=".join()"></a>.join()</h3><p>使用方法其實與 split 極為相似只是整個倒過來了，小括弧裡決定要用什麼連接成字串，以陣列而言通常是”,”預設也是”,”</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">let</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> string <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//決定要用什麼連接成字串，以陣列而言通常是","預設也是","</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>以上是字串與陣列互換的方法~</p>
+<h2 id="引用資料"><a href="#引用資料" class="headerlink" title="引用資料"></a>引用資料</h2><p>MDN <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/find">Array.prototype.join</a></p>
+
+        </p>
+        <a class="stretched-link" href="/2023/09/22/Day%208%20%E5%AD%97%E4%B8%B2%E9%99%A3%E5%88%97%E4%BA%92%E7%9B%B8%E8%AE%8A%E5%8C%96%E7%9A%84%E6%96%B9%E6%B3%95%20split%20&%20join/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
         
           
    <!-- prevent image appear -->
@@ -693,117 +781,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
         </p>
         <a class="stretched-link" href="/2023/09/17/Day%203%20%E6%9F%A5%E8%A9%A2%E9%99%A3%E5%88%97%E7%9A%84%E6%96%B9%E6%B3%95-forEach%20&%20map/"></a>
-      </div>
-    </div>
-  </article>
-</li>
-
-        
-          
-   <!-- prevent image appear -->
-
-
-<li
-  id="post-Day 2 My VS Code Tour"
-  class="card border-0"
-  itemprop="blogPost"
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
->
-  <article class="row g-0">
-    <div class="col-12 col-lg-4">
-      <img
-        src="/images/default-cover.png"
-        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
-        alt="article-Day 2 My VS Code Tour"
-      >
-    </div>
-    <div class="col-12 col-lg-8">
-      <div class="card-body pt-lg-0 pe-lg-0">
-        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
-          <p class="card-text mb-0 fs-6 text-primary-600">
-            <small class="text-body-secondary">
-              2023/9/16
-            </small>
-          </p>
-
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              React
-            </span>
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              JavaScript
-            </span>
-          
-
-        </div>
-        <h5 class="card-title mb-3 text-primary-700">
-          Day 2 My VS Code Tour
-        </h5>
-        <div class="cutoff-text mb-0 text-primary-700">
-          <h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>首先第一邊當然是介紹我們的生財工具 VS Code 啦~相信大家都有自己習慣的環境和模式，今天來分享我的 VS Code 相關的開發設定。</p>
-<span id="more"></span>
-
-<h2 id="VS-Code-概述"><a href="#VS-Code-概述" class="headerlink" title="VS Code 概述"></a>VS Code 概述</h2><p>VS Code 是一個功能豐富的程式碼編輯器，支援多種程式語言，例如 JavaScript、HTML&#x2F;CSS 等等。對於軟體開發者來說，它是一個非常靈活且易於使用的工具。</p>
-<p>除了強大的基本功能外，VS Code 還可以透過安裝套件來擴展其功能。這些套件提供了各種方便的功能，幫助我們更有效率地開發。</p>
-<h2 id="背景知識"><a href="#背景知識" class="headerlink" title="背景知識"></a>背景知識</h2><ul>
-<li>VS Code</li>
-</ul>
-<h2 id="內容"><a href="#內容" class="headerlink" title="內容"></a>內容</h2><h3 id="一-VS-Code-常用基本設置"><a href="#一-VS-Code-常用基本設置" class="headerlink" title="(一) VS Code 常用基本設置"></a>(一) VS Code 常用基本設置</h3><ol>
-<li><p>自動換行</p>
-<ul>
-<li>設置方法:<ul>
-<li>點擊左下角小齒輪進入設定選單<br></li>
-<li>搜尋欄搜尋 “Wrap”</li>
-<li>在 “Word Wrap” 設置中設定成 “On”<br></li>
-</ul>
-</li>
-<li>效果:<br>Before<br><br>After<br></li>
-</ul>
-</li>
-<li><p>括弧顏色:可以協助整理巢狀結構</p>
-<ul>
-<li>設置方法:<ul>
-<li>在設定中找到 “Colorized Bracket Pairs”，進入 setting.json，貼上下列程式碼<br><pre class="line-numbers language-javaScript"><code class="language-javaScript">"editor.bracketPairColorization.enabled": true, //Bracket Pair Colorizer 協助大中小括號（&#123;&#125;、[]、()）一的獨立補上不同色彩(不用可以刪掉)
-"editor.guides.bracketPairs": "active", //Bracket Pair Colorizer 協助大中小括號（&#123;&#125;、[]、()）一一(不用可以刪掉)
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
-</ul>
-</li>
-<li>效果:<br></li>
-</ul>
-</li>
-<li><p>自動儲存格式化(自動排版):可以幫忙整理排的散亂的程式碼</p>
-<ul>
-<li>設置方法:<ul>
-<li>找到下列選項設置 “Format On Save” 打勾，就完成了。<br></li>
-</ul>
-</li>
-<li>效果:<br>Before<br><br>After<br></li>
-</ul>
-</li>
-</ol>
-<h3 id="二-常用套件"><a href="#二-常用套件" class="headerlink" title="(二) 常用套件"></a>(二) 常用套件</h3><ul>
-<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag">Auto Close Tag</a><br>HTML 自動封閉的套件</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">Auto Rename Tag</a><br>HTML 可以一起更改頭尾標籤的套件</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hant">Chinese (Traditional) Language</a><br>中文化套件</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker">Code Spell Checker</a><br>檢查拼字錯誤的套件，debug 的好幫手，效果有點像 Word 拼字檢查那樣<br></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">Git Graph</a><br>對於 Git 有漂亮的 GUI 可以看，方便查閱分支以及版本紀錄<br></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow">Indent-rainbow</a><br>縮排好幫手，下圖彩虹就是它的效果<br></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a><br>好用的網頁預覽套件，不過有時候要注意一下路徑位置，有時候會預覽不出來，這時候就要檢查一下路徑位置了</p>
-</li>
-</ul>
-<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>總結而言，VS Code 擁有強大的功能和豐富的套件生態系統，適合各種程式開發需求。透過介紹常用的基本設置，如自動換行、括弧顏色設置以及自動儲存格式化，我們可以提高程式碼的可讀性和整潔性。此外，常用的套件如 Auto Close Tag、Auto Rename Tag、Chinese (Traditional) Language、Code Spell Checker、Git Graph、Indent-rainbow 以及 Live Server 更進一步提升了開發效率，讓我們能更專注於寫程式，而不用花費太多時間處理繁瑣的細節。</p>
-
-        </p>
-        <a class="stretched-link" href="/2023/09/16/Day%202%20My%20VS%20Code%20Tour/"></a>
       </div>
     </div>
   </article>

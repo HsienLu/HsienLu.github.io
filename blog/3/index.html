@@ -174,15 +174,15 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          Hooks
+        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          ejs
         </a>
       </li>
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/ejs/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          ejs
+        <a href="/tags/Hooks/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Hooks
         </a>
       </li>
     
@@ -195,8 +195,8 @@
     
       
       <li class="flex-shrink-0">
-        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
-          axios
+        <a href="/tags/Closure/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          Closure
         </a>
       </li>
     
@@ -207,11 +207,115 @@
         </a>
       </li>
     
+      
+      <li class="flex-shrink-0">
+        <a href="/tags/axios/" class=" pb-1 fs-5 text-primary-600 link-primary-500 bg-transparent text-decoration-none">
+          axios
+        </a>
+      </li>
+    
   </ul>
 </aside>
       </div>
 
       <ul class="d-flex flex-column row-gap-7 row-gap-lg-9 gx-9 gx-lg-4 col-12 col-lg-9 mt-9 mt-lg-0 mb-0 pt-9 pt-lg-0">
+        
+          
+   <!-- prevent image appear -->
+
+
+<li
+  id="post-Java-靜態方法"
+  class="card border-0"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <article class="row g-0">
+    <div class="col-12 col-lg-4">
+      <img
+        src="/images/default-cover.png"
+        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
+        alt="article-Java-靜態方法"
+      >
+    </div>
+    <div class="col-12 col-lg-8">
+      <div class="card-body pt-lg-0 pe-lg-0">
+        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
+          <p class="card-text mb-0 fs-6 text-primary-600">
+            <small class="text-body-secondary">
+              2024/1/25
+            </small>
+          </p>
+
+          
+            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
+              Java
+            </span>
+          
+
+        </div>
+        <h5 class="card-title mb-3 text-primary-700">
+          Java-靜態方法
+        </h5>
+        <div class="cutoff-text mb-0 text-primary-700">
+          <ul>
+<li>靜態方法是一種特殊的方法，它可以在不創建類的情況下使用。</li>
+<li>關鍵字 static 表示靜態方法，它屬於類，而不是屬於類的實例。</li>
+<li>靜態方法可以直接使用類名.方法名調用</li>
+<li>靜態方法不能訪問成員屬性和成員方法<span id="more"></span></li>
+</ul>
+<h4 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h4><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> basic<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">helloworld</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        TestStatic test <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TestStatic</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        test<span class="token punctuation">.</span><span class="token function">test1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        TestStatic<span class="token punctuation">.</span><span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">TestStatic</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"non-static Hello world!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Static Hello world!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="靜態代碼塊"><a href="#靜態代碼塊" class="headerlink" title="靜態代碼塊"></a>靜態代碼塊</h3><p>類的程式載入完成後會自動執行的程式碼，只會執行一次。可以完成靜態屬性的初始化。</p>
+<h4 id="範例-1"><a href="#範例-1" class="headerlink" title="範例"></a>範例</h4><pre class="line-numbers language-java"><code class="language-java">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">helloworld</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    TestStatic t<span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TestStatic</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    TestStatic<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">TestStatic</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">static</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"static block"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"test"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>創建實例時也會執行代碼塊，但不是靜態代碼塊，而是代碼塊。</p>
+</blockquote>
+
+        </p>
+        <a class="stretched-link" href="/2024/01/25/Java-%E9%9D%9C%E6%85%8B%E6%96%B9%E6%B3%95/"></a>
+      </div>
+    </div>
+  </article>
+</li>
+
         
           
    <!-- prevent image appear -->
@@ -905,167 +1009,6 @@ dep_id <span class="token keyword">int</span> <span class="token punctuation">,<
 
         </p>
         <a class="stretched-link" href="/2024/01/18/MySQL-%E7%B4%84%E6%9D%9F%E6%A2%9D%E4%BB%B6/"></a>
-      </div>
-    </div>
-  </article>
-</li>
-
-        
-          
-   <!-- prevent image appear -->
-
-
-<li
-  id="post-MySQL-關聯資料表查詢"
-  class="card border-0"
-  itemprop="blogPost"
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
->
-  <article class="row g-0">
-    <div class="col-12 col-lg-4">
-      <img
-        src="/images/default-cover.png"
-        class="img-fluid w-100 h-100 object-fit-cover rounded-3"
-        alt="article-MySQL-關聯資料表查詢"
-      >
-    </div>
-    <div class="col-12 col-lg-8">
-      <div class="card-body pt-lg-0 pe-lg-0">
-        <div class="d-flex justify-content-between justify-content-lg-start align-items-center gap-3 mb-3">
-          <p class="card-text mb-0 fs-6 text-primary-600">
-            <small class="text-body-secondary">
-              2024/1/18
-            </small>
-          </p>
-
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              MySQL
-            </span>
-          
-            <span class="badge fs-6 lh-base fw-normal text-primary-700 bg-primary-200 rounded-4">
-              SQL
-            </span>
-          
-
-        </div>
-        <h5 class="card-title mb-3 text-primary-700">
-          MySQL-關聯資料表查詢
-        </h5>
-        <div class="cutoff-text mb-0 text-primary-700">
-          <p>inner join、outer join、子查詢</p>
-<span id="more"></span>
-
-<h2 id="inner-join"><a href="#inner-join" class="headerlink" title="inner join"></a>inner join</h2><p>解釋: 用來查詢兩個表格中有關聯的資料，分成兩種寫法</p>
-<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> table1<span class="token punctuation">,</span> table2 <span class="token keyword">WHERE</span> table1<span class="token punctuation">.</span>id <span class="token operator">=</span> table2<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> table1 <span class="token keyword">INNER</span> <span class="token keyword">JOIN</span> table2 <span class="token keyword">ON</span> table1<span class="token punctuation">.</span>id <span class="token operator">=</span> table2<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<blockquote>
-<p>相當於取交集的意思</p>
-</blockquote>
-<h4 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 建立資料</span>
-<span class="token keyword">create</span> <span class="token keyword">table</span> dept<span class="token punctuation">(</span>
-id <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token keyword">auto_increment</span><span class="token punctuation">,</span>
-dep_name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-addr <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
-<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">create</span> <span class="token keyword">table</span> emp<span class="token punctuation">(</span>
-id <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token keyword">auto_increment</span><span class="token punctuation">,</span>
-name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-age <span class="token keyword">int</span><span class="token punctuation">,</span>
-dep_id <span class="token keyword">int</span> <span class="token punctuation">,</span>
-<span class="token keyword">constraint</span> fk_emp_dept <span class="token keyword">foreign</span> <span class="token keyword">key</span><span class="token punctuation">(</span>dep_id<span class="token punctuation">)</span>
-<span class="token keyword">references</span> dept<span class="token punctuation">(</span>id<span class="token punctuation">)</span>
-<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">insert</span> <span class="token keyword">into</span> dept <span class="token punctuation">(</span>dep_name<span class="token punctuation">,</span>addr<span class="token punctuation">)</span> <span class="token keyword">values</span>
-<span class="token punctuation">(</span><span class="token string">"RD"</span><span class="token punctuation">,</span><span class="token string">"台北"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"ME"</span><span class="token punctuation">,</span><span class="token string">"台中"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">insert</span> <span class="token keyword">into</span> emp <span class="token punctuation">(</span>NAMe<span class="token punctuation">,</span>age<span class="token punctuation">,</span>dep_id<span class="token punctuation">)</span> <span class="token keyword">values</span>
-<span class="token punctuation">(</span><span class="token string">"AAA"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"BBB"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"CCC"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"DDD"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"EEE"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"FFF"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">-- 連接語法開始</span>
-<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> emp <span class="token punctuation">,</span> dept <span class="token keyword">where</span> emp<span class="token punctuation">.</span>dep_id <span class="token operator">=</span> dept<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">-- 另外一種寫法</span>
-<span class="token comment" spellcheck="true">-- SELECT * FROM emp JOIN dept ON dept.id = emp.dep_id;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="outer-join"><a href="#outer-join" class="headerlink" title="outer join"></a>outer join</h2><p>解釋: 用來查詢兩個表格中有關聯的資料,並且會把沒有關聯的資料也查詢出來，又分成左外連結、右外連結、全外連結</p>
-<h3 id="left-join"><a href="#left-join" class="headerlink" title="left join"></a>left join</h3><p>解釋: 用來查詢兩個表格中有關聯的資料,並且會把沒有關聯的資料也查詢出來，但是以左邊的表格為主</p>
-<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> table1 <span class="token keyword">LEFT</span> <span class="token keyword">JOIN</span> table2 <span class="token keyword">ON</span> table1<span class="token punctuation">.</span>id <span class="token operator">=</span> table2<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<blockquote>
-<p>取左邊表格的資料，並且把右邊表格的資料也查詢出來，如右邊沒有資料則顯示 null</p>
-</blockquote>
-<h4 id="範例-1"><a href="#範例-1" class="headerlink" title="範例"></a>範例</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> dept<span class="token punctuation">(</span>
-id <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token keyword">auto_increment</span><span class="token punctuation">,</span>
-dep_name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-addr <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
-<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">create</span> <span class="token keyword">table</span> emp<span class="token punctuation">(</span>
-id <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token keyword">auto_increment</span><span class="token punctuation">,</span>
-name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-age <span class="token keyword">int</span><span class="token punctuation">,</span>
-dep_id <span class="token keyword">int</span>
-<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">insert</span> <span class="token keyword">into</span> dept <span class="token punctuation">(</span>dep_name<span class="token punctuation">,</span>addr<span class="token punctuation">)</span> <span class="token keyword">values</span>
-<span class="token punctuation">(</span><span class="token string">"RD"</span><span class="token punctuation">,</span><span class="token string">"台北"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"ME"</span><span class="token punctuation">,</span><span class="token string">"台中"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">insert</span> <span class="token keyword">into</span> emp <span class="token punctuation">(</span>NAMe<span class="token punctuation">,</span>age<span class="token punctuation">,</span>dep_id<span class="token punctuation">)</span> <span class="token keyword">values</span>
-<span class="token punctuation">(</span><span class="token string">"AAA"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"BBB"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"CCC"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"DDD"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"EEE"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"FFF"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"GGG"</span><span class="token punctuation">,</span><span class="token number">23</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> emp <span class="token keyword">left</span> <span class="token keyword">join</span> dept <span class="token keyword">on</span> emp<span class="token punctuation">.</span>dep_id<span class="token operator">=</span>dept<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="right-join"><a href="#right-join" class="headerlink" title="right join"></a>right join</h3><p>解釋: 用來查詢兩個表格中有關聯的資料,並且會把沒有關聯的資料也查詢出來，但是以右邊的表格為主</p>
-<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> table1 <span class="token keyword">RIGHT</span> <span class="token keyword">JOIN</span> table2 <span class="token keyword">ON</span> table1<span class="token punctuation">.</span>id <span class="token operator">=</span> table2<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<blockquote>
-<p>取右邊表格的資料，並且把左邊表格的資料也查詢出來，如左邊沒有資料則顯示 null</p>
-</blockquote>
-<h4 id="範例-2"><a href="#範例-2" class="headerlink" title="範例"></a>範例</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> dept<span class="token punctuation">(</span>
-id <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token keyword">auto_increment</span><span class="token punctuation">,</span>
-dep_name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-addr <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
-<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">create</span> <span class="token keyword">table</span> emp<span class="token punctuation">(</span>
-id <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token keyword">auto_increment</span><span class="token punctuation">,</span>
-name <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-age <span class="token keyword">int</span><span class="token punctuation">,</span>
-dep_id <span class="token keyword">int</span>
-<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">insert</span> <span class="token keyword">into</span> dept <span class="token punctuation">(</span>dep_name<span class="token punctuation">,</span>addr<span class="token punctuation">)</span> <span class="token keyword">values</span>
-<span class="token punctuation">(</span><span class="token string">"RD"</span><span class="token punctuation">,</span><span class="token string">"台北"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"ME"</span><span class="token punctuation">,</span><span class="token string">"台中"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"QA"</span><span class="token punctuation">,</span><span class="token string">"高雄"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"EE"</span><span class="token punctuation">,</span><span class="token string">"台南"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">insert</span> <span class="token keyword">into</span> emp <span class="token punctuation">(</span>NAMe<span class="token punctuation">,</span>age<span class="token punctuation">,</span>dep_id<span class="token punctuation">)</span> <span class="token keyword">values</span>
-<span class="token punctuation">(</span><span class="token string">"AAA"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"BBB"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"CCC"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"DDD"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"EEE"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"FFF"</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">(</span><span class="token string">"GGG"</span><span class="token punctuation">,</span><span class="token number">23</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> emp <span class="token keyword">right</span> <span class="token keyword">join</span> dept <span class="token keyword">on</span> emp<span class="token punctuation">.</span>dep_id<span class="token operator">=</span>dept<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="子查詢"><a href="#子查詢" class="headerlink" title="子查詢"></a>子查詢</h3><p>解釋:重點是利用( )去包住查詢結果，並進一步的在外面加上查詢語法<br>基本語法</p>
-<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> table1 <span class="token keyword">WHERE</span> table1<span class="token punctuation">.</span>id <span class="token operator">IN</span> <span class="token punctuation">(</span><span class="token keyword">SELECT</span> table2<span class="token punctuation">.</span>id <span class="token keyword">FROM</span> table2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-        </p>
-        <a class="stretched-link" href="/2024/01/18/MySQL-%E9%97%9C%E8%81%AF%E8%B3%87%E6%96%99%E8%A1%A8%E6%9F%A5%E8%A9%A2/"></a>
       </div>
     </div>
   </article>
