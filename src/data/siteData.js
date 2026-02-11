@@ -39,7 +39,7 @@ export const showcaseProjects = [
         tags: ['React', 'Bootstrap', 'RWD'],
         link: 'https://github.com/HsienLu/Key_traveler_big-stable-',
         bgImage: '/images/Key-travel.png',
-        workImage: null,
+        workImage: '/images/Key-travel.png',
         layout: 'left', // 文左
     },
     {

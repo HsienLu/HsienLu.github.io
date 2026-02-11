@@ -88,7 +88,7 @@ export default function ProjectShowcase({ project }) {
 
             {/* 手機版 */}
             <div className="md:hidden">
-                {bgImage && layout === 'right' && workImage && (
+                {bgImage && workImage && (
                     <div
                         className="pt-9"
                         style={{

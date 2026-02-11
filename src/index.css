@@ -58,6 +58,7 @@
     width: 100px;
     background-image: url("/images/title-deco-left-lg.png");
   }
+
   .title-deco::after {
     width: 100px;
     background-image: url("/images/title-deco-right-lg.png");
@@ -98,6 +99,7 @@
   border-bottom: 2px solid #1E1E1E;
   color: #1E1E1E;
 }
+
 .blog-menu--active:hover {
   border-bottom: 2px solid currentColor;
 }
@@ -107,12 +109,13 @@
   --size: 8px;
   position: relative;
 }
+
 .nav-active-corner::before {
   content: "";
   position: absolute;
   inset: 0;
   border: 1px solid #919191;
-  mask: conic-gradient(at var(--size) var(--size), rgba(0,0,0,0) 75%, #000 0) 0 0/calc(100% - var(--size)) calc(100% - var(--size)), linear-gradient(#000 0 0) content-box;
+  mask: conic-gradient(at var(--size) var(--size), rgba(0, 0, 0, 0) 75%, #000 0) 0 0/calc(100% - var(--size)) calc(100% - var(--size)), linear-gradient(#000 0 0) content-box;
 }
 
 /* 文章內容排版 */
@@ -120,21 +123,26 @@
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
+
 .article-container h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
+
 .article-container h3 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
 }
+
 .article-container p {
   font-size: 1.25rem;
   margin-bottom: 2rem;
 }
+
 .article-container img {
   max-width: 100%;
 }
+
 @media (min-width: 1024px) {
   .article-container p {
     margin-bottom: 2.5rem;
@@ -147,20 +155,28 @@
   border-collapse: collapse;
   margin-bottom: 1rem;
 }
-.article-container table, .article-container th, .article-container td {
+
+.article-container table,
+.article-container th,
+.article-container td {
   border: 1px solid #ddd;
 }
-.article-container th, .article-container td {
+
+.article-container th,
+.article-container td {
   padding: 8px;
   text-align: left;
 }
+
 .article-container th {
   background-color: #f2f2f2;
   color: black;
 }
+
 .article-container tr:nth-child(even) {
   background-color: #f9f9f9;
 }
+
 .article-container tr:hover {
   background-color: #f1f1f1;
 }
@@ -198,6 +214,12 @@
 }
 
 /* Swiper 自訂 pagination */
+.swiper-pagination {
+  position: relative !important;
+  bottom: auto !important;
+  margin-top: 1.5rem;
+}
+
 .swiper-pagination-bullet {
   width: 12px !important;
   height: 12px !important;

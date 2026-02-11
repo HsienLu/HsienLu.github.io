@@ -1,7 +1,9 @@
+import { useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
+import { useLocation } from 'react-router-dom'
 import { usePosts } from '../hooks/usePosts'
 import { skills, socialLinks, showcaseProjects } from '../data/siteData'
 import SkillCard from '../components/SkillCard'
@@ -11,19 +13,36 @@ import ProjectShowcase from '../components/ProjectShowcase'
 export default function HomePage() {
     const { posts, loading } = usePosts()
     const featuredPosts = posts.slice(0, 5)
+    const location = useLocation()
+
+    // 處理跨頁面錨點滾動
+    useEffect(() => {
+        const scrollTo = location.state?.scrollTo
+        if (scrollTo) {
+            // 延遲一點讓頁面渲染完成
+            const timer = setTimeout(() => {
+                const el = document.getElementById(scrollTo)
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' })
+                    window.history.replaceState({}, '', `/#${scrollTo}`)
+                }
+            }, 100)
+            return () => clearTimeout(timer)
+        }
+    }, [location.state])
 
     return (
         <main>
             {/* Hero Section */}
-            <div className="w-full">
-                <div className="flex flex-col-reverse md:flex-row mb-7 md:mb-9">
-                    <div className="w-full md:w-7/12 overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4">
+                <div className="flex flex-col-reverse md:flex-row md:gap-8 items-center mb-7 md:mb-0 pt-8 md:pt-0">
+                    <div className="w-full md:w-7/12">
                         <picture>
                             <source media="(min-width: 768px)" srcSet="/images/heroSection.svg" />
-                            <img className="w-1/2 md:w-full block mx-auto my-5" src="/images/heroSection-sm.svg" alt="hero banner" />
+                            <img className="w-1/2 md:w-full block mx-auto my-5 md:mb-0 " src="/images/heroSection-sm.svg" alt="hero banner" />
                         </picture>
                     </div>
-                    <div className="w-10/12 md:w-4/12 mx-auto md:mx-0">
+                    <div className="w-10/12 md:w-5/12 mx-auto md:mx-0">
                         <div className="flex flex-col justify-center items-center md:items-start h-full">
                             <h1 className="mb-4 text-primary-700 font-semibold text-3xl">Hi！我是 咸儒</h1>
                             <p className="text-center md:text-left text-primary-600 text-lg mb-0">
